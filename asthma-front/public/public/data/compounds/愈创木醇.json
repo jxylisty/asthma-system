@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00000824",
+  "name": "愈创木醇",
+  "smiles": "C(=O)OCC(C)CCCOC",
+  "mw": 442.2,
+  "logp": 0.19,
+  "bloodEntryProbability": 0.49,
+  "radarScores": {
+    "antiInflammatory": 88,
+    "immuneRegulation": 94,
+    "airwayRepair": 74
+  },
+  "targets": [
+    {
+      "gene": "Pseudomonas aeruginosa",
+      "targetType": "Organism",
+      "species": "Pseudomonas aeruginosa",
+      "activityType": "IZ",
+      "activityValue": 17,
+      "activityUnit": "mm",
+      "reference": "17385913",
+      "asthmaRelated": false,
+      "networkCentrality": 0.4,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000824_0"
+    },
+    {
+      "gene": "Escherichia coli",
+      "targetType": "Organism",
+      "species": "Escherichia coli",
+      "activityType": "IZ",
+      "activityValue": 16,
+      "activityUnit": "mm",
+      "reference": "17385913",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000824_1"
+    },
+    {
+      "gene": "Bacillus subtilis",
+      "targetType": "Organism",
+      "species": "Bacillus subtilis",
+      "activityType": "IZ",
+      "activityValue": 15,
+      "activityUnit": "mm",
+      "reference": "17385913",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "CTD",
+      "id": "ccMon00000824_2"
+    },
+    {
+      "gene": "Salmonella typhi",
+      "targetType": "Organism",
+      "species": "Salmonella enterica subsp. enterica serovar Typhi",
+      "activityType": "IZ",
+      "activityValue": 24,
+      "activityUnit": "mm",
+      "reference": "17385913",
+      "asthmaRelated": false,
+      "networkCentrality": 0.49,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000824_3"
+    },
+    {
+      "gene": "Shigella flexneri",
+      "targetType": "Organism",
+      "species": "Shigella flexneri",
+      "activityType": "IZ",
+      "activityValue": 17,
+      "activityUnit": "mm",
+      "reference": "17385913",
+      "asthmaRelated": true,
+      "networkCentrality": 0.83,
+      "sourceDB": "CTD",
+      "id": "ccMon00000824_4"
+    }
+  ],
+  "asthmaRelated": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00001100",
+  "name": "橙花醇乙酸酯",
+  "smiles": "C=CC(=O)OOCc1ccccc1C(=O)O",
+  "mw": 413.26,
+  "logp": -0.19,
+  "bloodEntryProbability": 0.58,
+  "radarScores": {
+    "antiInflammatory": 90,
+    "immuneRegulation": 57,
+    "airwayRepair": 62
+  },
+  "targets": [
+    {
+      "gene": "Trpa1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "EC50",
+      "activityValue": 13300,
+      "activityUnit": "nM",
+      "reference": "25455494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001100_0"
+    },
+    {
+      "gene": "Trpa1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 20700,
+      "activityUnit": "nM",
+      "reference": "25455494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.82,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001100_1"
+    },
+    {
+      "gene": "Trpm8",
+      "targetType": "Transient receptor potential cation channel subfamily M member 8 (Cold menthol receptor 1)",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "25455494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.66,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001100_2"
+    },
+    {
+      "gene": "TRPV1",
+      "targetType": "Transient receptor potential cation channel subfamily V member 1 (TrpV1) (Capsaicin receptor) (Osm-9-like TRP channel 1) (OTRPC1) (Vanilloid receptor 1)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "25455494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "CTD",
+      "id": "ccMon00001100_3"
+    }
+  ],
+  "asthmaRelated": false
+}

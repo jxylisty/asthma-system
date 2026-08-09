@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00000162",
+  "name": "3-己烯-1-醇",
+  "smiles": "c1ccccc1CCNCC(=O)OOCCOc1ccncc1",
+  "mw": 317.14,
+  "logp": 3.5,
+  "bloodEntryProbability": 0.43,
+  "radarScores": {
+    "antiInflammatory": 81,
+    "immuneRegulation": 58,
+    "airwayRepair": 42
+  },
+  "targets": [
+    {
+      "gene": "POMC",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^expression",
+      "activityUnit": "",
+      "reference": "21515296",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "CTD",
+      "id": "ccMon00000162_0"
+    },
+    {
+      "gene": "POMC",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^expression",
+      "activityUnit": "",
+      "reference": "19103229",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "CTD",
+      "id": "ccMon00000162_1"
+    },
+    {
+      "gene": "POMC",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "21515296",
+      "asthmaRelated": false,
+      "networkCentrality": 0.1,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000162_2"
+    }
+  ],
+  "asthmaRelated": false
+}

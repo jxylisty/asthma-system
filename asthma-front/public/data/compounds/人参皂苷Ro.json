@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00000807",
+  "name": "人参皂苷Ro",
+  "smiles": "C=CCCNc1ccncc1CCOC",
+  "mw": 458.2,
+  "logp": 0.79,
+  "bloodEntryProbability": 0.79,
+  "radarScores": {
+    "antiInflammatory": 83,
+    "immuneRegulation": 70,
+    "airwayRepair": 69
+  },
+  "targets": [
+    {
+      "gene": "LPL",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^secretion",
+      "activityUnit": "",
+      "reference": "8988629",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000807_0"
+    },
+    {
+      "gene": "GSK3B",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "32535096",
+      "asthmaRelated": false,
+      "networkCentrality": 0.01,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000807_1"
+    },
+    {
+      "gene": "DPP4",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^activity|increases^abundance",
+      "activityUnit": "",
+      "reference": "32535096",
+      "asthmaRelated": false,
+      "networkCentrality": 0.86,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000807_2"
+    }
+  ],
+  "asthmaRelated": false
+}

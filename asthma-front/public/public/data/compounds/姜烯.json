@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00001492",
+  "name": "姜烯",
+  "smiles": "OCCOc1ccc(O)cc1c1ccncc1CCCC",
+  "mw": 493.97,
+  "logp": -0.93,
+  "bloodEntryProbability": 0.32,
+  "radarScores": {
+    "antiInflammatory": 47,
+    "immuneRegulation": 86,
+    "airwayRepair": 87
+  },
+  "targets": [
+    {
+      "gene": "MAOA",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29844252",
+      "asthmaRelated": false,
+      "networkCentrality": 0.55,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001492_0"
+    }
+  ],
+  "asthmaRelated": false
+}

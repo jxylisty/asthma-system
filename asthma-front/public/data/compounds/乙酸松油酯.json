@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00001399",
+  "name": "乙酸松油酯",
+  "smiles": "OCOCCONCCC(C)CCO",
+  "mw": 369.08,
+  "logp": 0.13,
+  "bloodEntryProbability": 0.89,
+  "radarScores": {
+    "antiInflammatory": 57,
+    "immuneRegulation": 46,
+    "airwayRepair": 41
+  },
+  "targets": [
+    {
+      "gene": "CYP2B6",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "affects^binding",
+      "activityUnit": "",
+      "reference": "29723517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.63,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001399_0"
+    },
+    {
+      "gene": "CYP2B6",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^reaction|increases^chemical synthesis",
+      "activityUnit": "",
+      "reference": "29723517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.94,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001399_1"
+    },
+    {
+      "gene": "CYP2B6",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^reaction|increases^hydroxylation",
+      "activityUnit": "",
+      "reference": "29723517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.06,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001399_2"
+    }
+  ],
+  "asthmaRelated": false
+}

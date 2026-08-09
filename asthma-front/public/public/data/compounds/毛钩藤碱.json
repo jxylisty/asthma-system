@@ -1,0 +1,119 @@
+{
+  "id": "ccMon00000848",
+  "name": "毛钩藤碱",
+  "smiles": "C(=O)ONCNC",
+  "mw": 202.71,
+  "logp": 4.18,
+  "bloodEntryProbability": 0.44,
+  "radarScores": {
+    "antiInflammatory": 69,
+    "immuneRegulation": 74,
+    "airwayRepair": 73
+  },
+  "targets": [
+    {
+      "gene": "CYP2D6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "31707106",
+      "asthmaRelated": false,
+      "networkCentrality": 0.24,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000848_0"
+    },
+    {
+      "gene": "Acetylcholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Electrophorus electricus",
+      "activityType": "Inhibition",
+      "activityValue": 9.09,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000848_1"
+    },
+    {
+      "gene": "Cholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Equus caballus",
+      "activityType": "IC50",
+      "activityValue": 4970,
+      "activityUnit": "nM",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.02,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000848_2"
+    },
+    {
+      "gene": "Cholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Equus caballus",
+      "activityType": "Inhibition",
+      "activityValue": 87.06,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000848_3"
+    },
+    {
+      "gene": "MDCK",
+      "targetType": "Cell Line",
+      "species": "Canis lupus familiaris",
+      "activityType": "CC50",
+      "activityValue": 23.5,
+      "activityUnit": "ug/ml",
+      "reference": "10.1016/S0960-894X(97)10154-8",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000848_4"
+    },
+    {
+      "gene": "MDCK",
+      "targetType": "Cell Line",
+      "species": "Canis lupus familiaris",
+      "activityType": "EC50",
+      "activityValue": 23.5,
+      "activityUnit": "ug/ml",
+      "reference": "10.1016/S0960-894X(97)10154-8",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000848_5"
+    },
+    {
+      "gene": "MDCK",
+      "targetType": "Cell Line",
+      "species": "Canis lupus familiaris",
+      "activityType": "EC50",
+      "activityValue": 0.4,
+      "activityUnit": "ug/ml",
+      "reference": "10.1016/S0960-894X(97)10154-8",
+      "asthmaRelated": false,
+      "networkCentrality": 0.95,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000848_6"
+    },
+    {
+      "gene": "BCHE",
+      "targetType": "Cholinesterase (EC 3.1.1.8) (Acylcholine acylhydrolase) (Butyrylcholine esterase) (Choline esterase II) (Pseudocholinesterase)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 1970,
+      "activityUnit": "nM",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.97,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000848_7"
+    }
+  ],
+  "asthmaRelated": false
+}

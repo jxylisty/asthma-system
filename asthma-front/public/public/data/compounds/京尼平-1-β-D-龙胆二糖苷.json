@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000771",
+  "name": "京尼平-1-β-D-龙胆二糖苷",
+  "smiles": "CC(C)CC(C)NCOCCOCOCc1ccccc1",
+  "mw": 445.75,
+  "logp": 2.67,
+  "bloodEntryProbability": 0.77,
+  "radarScores": {
+    "antiInflammatory": 76,
+    "immuneRegulation": 45,
+    "airwayRepair": 57
+  },
+  "targets": [
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "23305920",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000771_0"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000549",
+  "name": "贝母兰宁(2,7-二羟基-4-甲氧基-9,10-二氢菲)",
+  "smiles": "OCCCOCCCCOCCC=C",
+  "mw": 294.48,
+  "logp": 2.27,
+  "bloodEntryProbability": 0.71,
+  "radarScores": {
+    "antiInflammatory": 41,
+    "immuneRegulation": 73,
+    "airwayRepair": 93
+  },
+  "targets": [
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 10200,
+      "activityUnit": "nM",
+      "reference": "20483604",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000549_0"
+    }
+  ],
+  "asthmaRelated": false
+}

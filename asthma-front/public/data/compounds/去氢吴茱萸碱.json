@@ -1,0 +1,131 @@
+{
+  "id": "ccMon00000632",
+  "name": "去氢吴茱萸碱",
+  "smiles": "CCNC=Cc1ccncc1C=C",
+  "mw": 433.66,
+  "logp": 0.77,
+  "bloodEntryProbability": 0.38,
+  "radarScores": {
+    "antiInflammatory": 66,
+    "immuneRegulation": 52,
+    "airwayRepair": 68
+  },
+  "targets": [
+    {
+      "gene": "ACHE",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "8923803",
+      "asthmaRelated": false,
+      "networkCentrality": 0.4,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000632_0"
+    },
+    {
+      "gene": "NOS2",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "17109845",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000632_1"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "Activity",
+      "activityValue": 84.3,
+      "activityUnit": "%",
+      "reference": "9249975",
+      "asthmaRelated": false,
+      "networkCentrality": 0.2,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000632_2"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "Inhibition",
+      "activityValue": 80.6,
+      "activityUnit": "%",
+      "reference": "9249975",
+      "asthmaRelated": false,
+      "networkCentrality": 0.97,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000632_3"
+    },
+    {
+      "gene": "Aorta",
+      "targetType": "Tissue",
+      "species": "Rattus norvegicus",
+      "activityType": "EC50",
+      "activityValue": 1640,
+      "activityUnit": "nM",
+      "reference": "8699182",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000632_4"
+    },
+    {
+      "gene": "CYP1A2",
+      "targetType": "Cytochrome P450 1A2 (EC 1.14.14.1) (CYPIA2) (Cholesterol 25-hydroxylase) (Cytochrome P(3)450) (Cytochrome P450 4) (Cytochrome P450-P3) (Hydroperoxy icosatetraenoate dehydratase) (EC 4.2.1.152)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 5630,
+      "activityUnit": "nM",
+      "reference": "12852960",
+      "asthmaRelated": false,
+      "networkCentrality": 0.13,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000632_5"
+    },
+    {
+      "gene": "CYP1A1",
+      "targetType": "Cytochrome P450 1A1 (CYPIA1) (EC 1.14.14.1) (Cytochrome P450 form 6) (Cytochrome P450-C) (Cytochrome P450-P1) (Hydroperoxy icosatetraenoate dehydratase) (EC 4.2.1.152)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 18050,
+      "activityUnit": "nM",
+      "reference": "12852960",
+      "asthmaRelated": false,
+      "networkCentrality": 0.2,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000632_6"
+    },
+    {
+      "gene": "CYP1B1",
+      "targetType": "Cytochrome P450 1B1 (EC 1.14.14.1) (CYPIB1) (Hydroperoxy icosatetraenoate dehydratase) (EC 4.2.1.152)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 330,
+      "activityUnit": "nM",
+      "reference": "12852960",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "CTD",
+      "id": "ccMon00000632_7"
+    },
+    {
+      "gene": "HTR1A",
+      "targetType": "5-hydroxytryptamine receptor 1A (5-HT-1A) (5-HT1A) (G-21) (Serotonin receptor 1A)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 36000,
+      "activityUnit": "nM",
+      "reference": "10.1021/np960678l",
+      "asthmaRelated": true,
+      "networkCentrality": 0.28,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000632_8"
+    }
+  ],
+  "asthmaRelated": true
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ccMon00001454",
+  "name": "姜黄酮",
+  "smiles": "C(=O)OC=CCOCNCOCCOCC(C)",
+  "mw": 448.9,
+  "logp": 0.08,
+  "bloodEntryProbability": 0.81,
+  "radarScores": {
+    "antiInflammatory": 42,
+    "immuneRegulation": 87,
+    "airwayRepair": 78
+  },
+  "targets": [
+    {
+      "gene": "Phytophthora infestans",
+      "targetType": "Organism",
+      "species": "Phytophthora infestans",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "12617587",
+      "asthmaRelated": false,
+      "networkCentrality": 0.89,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001454_0"
+    },
+    {
+      "gene": "Blumeria graminis",
+      "targetType": "Organism",
+      "species": "Blumeria graminis",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "12617587",
+      "asthmaRelated": false,
+      "networkCentrality": 0.98,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001454_1"
+    },
+    {
+      "gene": "Puccinia recondita",
+      "targetType": "Organism",
+      "species": "Puccinia recondita",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "12617587",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001454_2"
+    },
+    {
+      "gene": "Botryotinia fuckeliana",
+      "targetType": "Organism",
+      "species": "Botryotinia fuckeliana",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "12617587",
+      "asthmaRelated": false,
+      "networkCentrality": 0.65,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001454_3"
+    },
+    {
+      "gene": "Rhizoctonia solani",
+      "targetType": "Organism",
+      "species": "Rhizoctonia solani",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "12617587",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001454_4"
+    },
+    {
+      "gene": "Magnaporthe grisea",
+      "targetType": "Organism",
+      "species": "Magnaporthe grisea",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "12617587",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001454_5"
+    }
+  ],
+  "asthmaRelated": false
+}

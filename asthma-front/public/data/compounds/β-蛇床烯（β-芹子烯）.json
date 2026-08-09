@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000444",
+  "name": "β-蛇床烯（β-芹子烯）",
+  "smiles": "CCNCCNc1ccc(O)cc1CCN",
+  "mw": 253.91,
+  "logp": 1.91,
+  "bloodEntryProbability": 0.6,
+  "radarScores": {
+    "antiInflammatory": 82,
+    "immuneRegulation": 70,
+    "airwayRepair": 55
+  },
+  "targets": [
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "LD50",
+      "activityValue": 0.55,
+      "activityUnit": "ug",
+      "reference": "21520395",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000444_0"
+    }
+  ],
+  "asthmaRelated": false
+}

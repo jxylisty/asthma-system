@@ -1,0 +1,67 @@
+{
+  "id": "ccMon00000565",
+  "name": "补骨脂宁",
+  "smiles": "OCCCNC=CCCOCCN",
+  "mw": 274.85,
+  "logp": -0.29,
+  "bloodEntryProbability": 0.69,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 68,
+    "airwayRepair": 90
+  },
+  "targets": [
+    {
+      "gene": "CES1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26560012",
+      "asthmaRelated": false,
+      "networkCentrality": 0.65,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000565_0"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "25710081",
+      "asthmaRelated": false,
+      "networkCentrality": 0.07,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000565_1"
+    },
+    {
+      "gene": "K562",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "25710081",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000565_2"
+    },
+    {
+      "gene": "Neuraminidase",
+      "targetType": "Individual Protein",
+      "species": "Influenza A virus",
+      "activityType": "IC50",
+      "activityValue": 50,
+      "activityUnit": "ug/ml",
+      "reference": "20934335",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "CTD",
+      "id": "ccMon00000565_3"
+    }
+  ],
+  "asthmaRelated": false
+}

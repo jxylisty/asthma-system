@@ -1,0 +1,64 @@
+{
+  "id": "ccMon00000506",
+  "name": "鹅去氧胆酸",
+  "smiles": "OCc1ccncc1CCOOC",
+  "mw": 380.76,
+  "logp": 1.28,
+  "bloodEntryProbability": 0.48,
+  "radarScores": {
+    "antiInflammatory": 70,
+    "immuneRegulation": 100,
+    "airwayRepair": 90
+  },
+  "targets": [
+    {
+      "gene": "NR1I2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17963371",
+      "asthmaRelated": false,
+      "networkCentrality": 0.36,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000506_0"
+    },
+    {
+      "gene": "AKR1C2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "substrate",
+      "activityUnit": "",
+      "reference": "8486699",
+      "asthmaRelated": false,
+      "networkCentrality": 0.4,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000506_1"
+    },
+    {
+      "gene": "NR1H4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "other",
+      "activityUnit": "",
+      "reference": "10334992|20104269",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "CTD",
+      "id": "ccMon00000506_2"
+    },
+    {
+      "gene": "GPBAR1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17963371|18180267",
+      "asthmaRelated": false,
+      "networkCentrality": 0.85,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000506_3"
+    }
+  ],
+  "asthmaRelated": false
+}

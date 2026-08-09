@@ -1,0 +1,76 @@
+{
+  "id": "ccMon00000818",
+  "name": "告依春",
+  "smiles": "OCCONCc1ccncc1",
+  "mw": 455.53,
+  "logp": 0.97,
+  "bloodEntryProbability": 0.85,
+  "radarScores": {
+    "antiInflammatory": 81,
+    "immuneRegulation": 85,
+    "airwayRepair": 49
+  },
+  "targets": [
+    {
+      "gene": "GSTA2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "7532609",
+      "asthmaRelated": false,
+      "networkCentrality": 0.25,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000818_0"
+    },
+    {
+      "gene": "GSTA2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "7532609",
+      "asthmaRelated": false,
+      "networkCentrality": 0.03,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000818_1"
+    },
+    {
+      "gene": "GSTP1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "7532609",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000818_2"
+    },
+    {
+      "gene": "GSTP1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "7532609",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000818_3"
+    },
+    {
+      "gene": "GSTP1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "7532609",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000818_4"
+    }
+  ],
+  "asthmaRelated": false
+}

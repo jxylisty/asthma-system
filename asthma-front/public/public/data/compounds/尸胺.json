@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000472",
+  "name": "尸胺",
+  "smiles": "NCc1ccncc1C(=O)OC(=O)OCCOCOC",
+  "mw": 477.39,
+  "logp": 0.46,
+  "bloodEntryProbability": 0.33,
+  "radarScores": {
+    "antiInflammatory": 72,
+    "immuneRegulation": 80,
+    "airwayRepair": 40
+  },
+  "targets": [
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000472_0"
+    }
+  ],
+  "asthmaRelated": false
+}

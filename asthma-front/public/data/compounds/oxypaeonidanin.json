@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00001159",
+  "name": "oxypaeonidanin",
+  "smiles": "C=CCCCCO",
+  "mw": 419.62,
+  "logp": 0.36,
+  "bloodEntryProbability": 0.64,
+  "radarScores": {
+    "antiInflammatory": 80,
+    "immuneRegulation": 53,
+    "airwayRepair": 65
+  },
+  "targets": [
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 90880,
+      "activityUnit": "nM",
+      "reference": "23067550",
+      "asthmaRelated": false,
+      "networkCentrality": 0.13,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001159_0"
+    }
+  ],
+  "asthmaRelated": false
+}

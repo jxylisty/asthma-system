@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00001453",
+  "name": "土克甾酮",
+  "smiles": "C=CC=CC(=O)Oc1ccccc1",
+  "mw": 235.01,
+  "logp": 0.9,
+  "bloodEntryProbability": 0.42,
+  "radarScores": {
+    "antiInflammatory": 41,
+    "immuneRegulation": 56,
+    "airwayRepair": 55
+  },
+  "targets": [
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Ratio",
+      "activityValue": 0.93,
+      "activityUnit": "",
+      "reference": "22578055",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001453_0"
+    },
+    {
+      "gene": "Dengue virus 2",
+      "targetType": "Organism",
+      "species": "Dengue virus 2",
+      "activityType": "EC50",
+      "activityValue": 38150,
+      "activityUnit": "nM",
+      "reference": "26988299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.69,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001453_1"
+    }
+  ],
+  "asthmaRelated": false
+}

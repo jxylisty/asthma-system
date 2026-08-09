@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00000234",
+  "name": "8-姜酚",
+  "smiles": "CCNCCOCC(C)CCOc1ccccc1",
+  "mw": 395.31,
+  "logp": -0.25,
+  "bloodEntryProbability": 0.69,
+  "radarScores": {
+    "antiInflammatory": 48,
+    "immuneRegulation": 84,
+    "airwayRepair": 67
+  },
+  "targets": [
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 20000,
+      "activityUnit": "nM",
+      "reference": "22246389",
+      "asthmaRelated": false,
+      "networkCentrality": 0.5,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000234_0"
+    },
+    {
+      "gene": "Mycobacterium smegmatis str. MC2 155",
+      "targetType": "Organism",
+      "species": "Mycobacterium smegmatis str. MC2 155",
+      "activityType": "MIC",
+      "activityValue": 128,
+      "activityUnit": "ug/ml",
+      "reference": "22789014",
+      "asthmaRelated": false,
+      "networkCentrality": 0.45,
+      "sourceDB": "CTD",
+      "id": "ccMon00000234_1"
+    },
+    {
+      "gene": "Mycobacterium smegmatis str. MC2 155",
+      "targetType": "Organism",
+      "species": "Mycobacterium smegmatis str. MC2 155",
+      "activityType": "MIC",
+      "activityValue": 64,
+      "activityUnit": "ug/ml",
+      "reference": "22789014",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000234_2"
+    },
+    {
+      "gene": "HTR1A",
+      "targetType": "5-hydroxytryptamine receptor 1A (5-HT-1A) (5-HT1A) (G-21) (Serotonin receptor 1A)",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 50,
+      "activityUnit": "%",
+      "reference": "20363635",
+      "asthmaRelated": true,
+      "networkCentrality": 0.84,
+      "sourceDB": "CTD",
+      "id": "ccMon00000234_3"
+    },
+    {
+      "gene": "HTR1A",
+      "targetType": "5-hydroxytryptamine receptor 1A (5-HT-1A) (5-HT1A) (G-21) (Serotonin receptor 1A)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 11710,
+      "activityUnit": "nM",
+      "reference": "20363635",
+      "asthmaRelated": true,
+      "networkCentrality": 0.82,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000234_4"
+    }
+  ],
+  "asthmaRelated": true
+}

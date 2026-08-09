@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000573",
+  "name": "西红花酸（藏红花酸）",
+  "smiles": "C(=O)OC(=O)ONCc1ccncc1OCCOCOC",
+  "mw": 258.23,
+  "logp": 1.35,
+  "bloodEntryProbability": 0.66,
+  "radarScores": {
+    "antiInflammatory": 65,
+    "immuneRegulation": 52,
+    "airwayRepair": 60
+  },
+  "targets": [
+    {
+      "gene": "PTGS1",
+      "targetType": "Prostaglandin G/H synthase 1 (EC 1.14.99.1) (Cyclooxygenase-1) (COX-1) (Prostaglandin H2 synthase 1) (PGH synthase 1) (PGHS-1) (PHS 1) (Prostaglandin-endoperoxide synthase 1)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 28000,
+      "activityUnit": "nM",
+      "reference": "16038536",
+      "asthmaRelated": true,
+      "networkCentrality": 0.91,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000573_0"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 5990,
+      "activityUnit": "nM",
+      "reference": "23305920",
+      "asthmaRelated": false,
+      "networkCentrality": 0.91,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000573_1"
+    }
+  ],
+  "asthmaRelated": true
+}

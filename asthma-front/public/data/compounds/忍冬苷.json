@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00001014",
+  "name": "忍冬苷",
+  "smiles": "C(=O)Oc1ccc(O)cc1CCOC=OCCOCCO",
+  "mw": 329.77,
+  "logp": 2.24,
+  "bloodEntryProbability": 0.45,
+  "radarScores": {
+    "antiInflammatory": 77,
+    "immuneRegulation": 54,
+    "airwayRepair": 60
+  },
+  "targets": [
+    {
+      "gene": "Xanthine dehydrogenase",
+      "targetType": "Individual Protein",
+      "species": "Bos taurus",
+      "activityType": "Inhibition",
+      "activityValue": 20.1,
+      "activityUnit": "%",
+      "reference": "3379415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001014_0"
+    },
+    {
+      "gene": "XDH",
+      "targetType": "Xanthine dehydrogenase/oxidase [Includes: Xanthine dehydrogenase (XD) (EC 1.17.1.4); Xanthine oxidase (XO) (EC 1.17.3.2) (Xanthine oxidoreductase) (XOR)]",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 11900,
+      "activityUnit": "nM",
+      "reference": "9461655",
+      "asthmaRelated": false,
+      "networkCentrality": 0.37,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001014_1"
+    }
+  ],
+  "asthmaRelated": false
+}

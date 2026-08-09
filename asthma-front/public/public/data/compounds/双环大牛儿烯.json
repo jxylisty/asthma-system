@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000453",
+  "name": "双环大牛儿烯",
+  "smiles": "NCc1ccccc1c1ccncc1C(=O)OCCO",
+  "mw": 473.97,
+  "logp": 2.22,
+  "bloodEntryProbability": 0.53,
+  "radarScores": {
+    "antiInflammatory": 83,
+    "immuneRegulation": 69,
+    "airwayRepair": 57
+  },
+  "targets": [
+    {
+      "gene": "Ileum",
+      "targetType": "Tissue",
+      "species": "Cavia porcellus",
+      "activityType": "IC50",
+      "activityValue": 1490,
+      "activityUnit": "nM",
+      "reference": "16933870",
+      "asthmaRelated": false,
+      "networkCentrality": 0.62,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000453_0"
+    }
+  ],
+  "asthmaRelated": false
+}

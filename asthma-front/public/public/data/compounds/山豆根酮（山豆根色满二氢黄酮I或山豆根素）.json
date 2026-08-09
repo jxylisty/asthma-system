@@ -1,0 +1,77 @@
+{
+  "id": "ccMon00001362",
+  "name": "山豆根酮（山豆根色满二氢黄酮I或山豆根素）",
+  "smiles": "c1ccccc1COCCCNOC",
+  "mw": 249.93,
+  "logp": 4.45,
+  "bloodEntryProbability": 0.94,
+  "radarScores": {
+    "antiInflammatory": 48,
+    "immuneRegulation": 47,
+    "airwayRepair": 75
+  },
+  "targets": [
+    {
+      "gene": "CYP3A4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29753067",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "CTD",
+      "id": "ccMon00001362_0"
+    },
+    {
+      "gene": "CYP2D6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29753067",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001362_1"
+    },
+    {
+      "gene": "CYP2C9",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29753067",
+      "asthmaRelated": false,
+      "networkCentrality": 0.18,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001362_2"
+    },
+    {
+      "gene": "CYP2C19",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29753067",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001362_3"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 28100,
+      "activityUnit": "nM",
+      "reference": "25592708",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001362_4"
+    }
+  ],
+  "asthmaRelated": false
+}

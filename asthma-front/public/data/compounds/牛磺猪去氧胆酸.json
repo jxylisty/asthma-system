@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00001388",
+  "name": "牛磺猪去氧胆酸",
+  "smiles": "COCc1ccc(O)cc1OCCO",
+  "mw": 448.08,
+  "logp": 1.23,
+  "bloodEntryProbability": 0.66,
+  "radarScores": {
+    "antiInflammatory": 93,
+    "immuneRegulation": 50,
+    "airwayRepair": 42
+  },
+  "targets": [
+    {
+      "gene": "AHR",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^secretion",
+      "activityUnit": "",
+      "reference": "32679164",
+      "asthmaRelated": false,
+      "networkCentrality": 0.04,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001388_0"
+    },
+    {
+      "gene": "SLCO1A1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^abundance",
+      "activityUnit": "",
+      "reference": "22461449",
+      "asthmaRelated": false,
+      "networkCentrality": 0.66,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001388_1"
+    }
+  ],
+  "asthmaRelated": false
+}

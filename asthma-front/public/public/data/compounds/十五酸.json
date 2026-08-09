@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00001191",
+  "name": "十五酸",
+  "smiles": "CCC(=O)OCCNOCCO",
+  "mw": 352.25,
+  "logp": 4.04,
+  "bloodEntryProbability": 0.3,
+  "radarScores": {
+    "antiInflammatory": 67,
+    "immuneRegulation": 71,
+    "airwayRepair": 46
+  },
+  "targets": [
+    {
+      "gene": "Cyclooxygenase-2",
+      "targetType": "Individual Protein",
+      "species": "Ovis aries",
+      "activityType": "IC50",
+      "activityValue": 500000,
+      "activityUnit": "nM",
+      "reference": "11421736",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "CTD",
+      "id": "ccMon00001191_0"
+    },
+    {
+      "gene": "AR",
+      "targetType": "Androgen receptor (Dihydrotestosterone receptor) (Nuclear receptor subfamily 3 group C member 4)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 15402.2,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.59,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001191_1"
+    },
+    {
+      "gene": "PPARD",
+      "targetType": "Peroxisome proliferator-activated receptor delta (PPAR-delta) (NUCI) (Nuclear hormone receptor 1) (NUC1) (Nuclear receptor subfamily 1 group C member 2) (Peroxisome proliferator-activated receptor beta) (PPAR-beta)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 55122.5,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.38,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001191_2"
+    },
+    {
+      "gene": "CYP19A1",
+      "targetType": "Aromatase (EC 1.14.14.14) (CYPXIX) (Cytochrome P-450AROM) (Cytochrome P450 19A1) (Estrogen synthase)",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 76.2,
+      "activityUnit": "%",
+      "reference": "16643058",
+      "asthmaRelated": false,
+      "networkCentrality": 0.35,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001191_3"
+    },
+    {
+      "gene": "Cyclooxygenase-1",
+      "targetType": "Individual Protein",
+      "species": "Bos taurus",
+      "activityType": "IC50",
+      "activityValue": 500000,
+      "activityUnit": "nM",
+      "reference": "11421736",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001191_4"
+    }
+  ],
+  "asthmaRelated": false
+}

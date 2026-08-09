@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00000930",
+  "name": "异夏佛托苷",
+  "smiles": "c1ccncc1C(=O)ONCCCc1ccncc1C=C",
+  "mw": 270.49,
+  "logp": 0.29,
+  "bloodEntryProbability": 0.7,
+  "radarScores": {
+    "antiInflammatory": 69,
+    "immuneRegulation": 63,
+    "airwayRepair": 45
+  },
+  "targets": [
+    {
+      "gene": "BCHE",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26297990",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000930_0"
+    },
+    {
+      "gene": "ACHE",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26297990",
+      "asthmaRelated": false,
+      "networkCentrality": 0.19,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000930_1"
+    }
+  ],
+  "asthmaRelated": false
+}

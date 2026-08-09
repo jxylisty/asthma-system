@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00001449",
+  "name": "对叶百部碱",
+  "smiles": "OCCOCCOOCCOOCCONCC(=O)O",
+  "mw": 406.39,
+  "logp": 2.41,
+  "bloodEntryProbability": 0.82,
+  "radarScores": {
+    "antiInflammatory": 46,
+    "immuneRegulation": 82,
+    "airwayRepair": 70
+  },
+  "targets": [
+    {
+      "gene": "Spodoptera littoralis",
+      "targetType": "Organism",
+      "species": "Spodoptera littoralis",
+      "activityType": "LC50",
+      "activityValue": 500,
+      "activityUnit": "ppm",
+      "reference": "12381121",
+      "asthmaRelated": false,
+      "networkCentrality": 0.99,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001449_0"
+    },
+    {
+      "gene": "Spodoptera littoralis",
+      "targetType": "Organism",
+      "species": "Spodoptera littoralis",
+      "activityType": "LC50",
+      "activityValue": 500,
+      "activityUnit": "ppm",
+      "reference": "12381121",
+      "asthmaRelated": false,
+      "networkCentrality": 0.54,
+      "sourceDB": "CTD",
+      "id": "ccMon00001449_1"
+    },
+    {
+      "gene": "Spodoptera littoralis",
+      "targetType": "Organism",
+      "species": "Spodoptera littoralis",
+      "activityType": "Survival",
+      "activityValue": 100,
+      "activityUnit": "%",
+      "reference": "12381121",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001449_2"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000614",
+  "name": "胞嘧啶",
+  "smiles": "NCc1ccc(O)cc1CCNCCOC(=O)O",
+  "mw": 156.24,
+  "logp": -0.56,
+  "bloodEntryProbability": 0.36,
+  "radarScores": {
+    "antiInflammatory": 97,
+    "immuneRegulation": 55,
+    "airwayRepair": 53
+  },
+  "targets": [
+    {
+      "gene": "GMNN",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 1778.3,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.53,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000614_0"
+    },
+    {
+      "gene": "IDH1",
+      "targetType": "Isocitrate dehydrogenase [NADP] cytoplasmic (IDH) (IDH1) (EC 1.1.1.42) (Cytosolic NADP-isocitrate dehydrogenase) (IDPc) (NADP(+)-specific ICDH) (Oxalosuccinate decarboxylase)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 29092.9,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000614_1"
+    },
+    {
+      "gene": "Dck",
+      "targetType": "Deoxycytidine kinase (dCK) (EC 2.7.1.74) (Deoxyadenosine kinase) (EC 2.7.1.76) (Deoxyguanosine kinase) (EC 2.7.1.113)",
+      "species": "Rattus norvegicus",
+      "activityType": "IC",
+      "activityValue": 0.00001,
+      "activityUnit": "nM",
+      "reference": "189030",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000614_2"
+    },
+    {
+      "gene": "Dck",
+      "targetType": "Deoxycytidine kinase (dCK) (EC 2.7.1.74) (Deoxyadenosine kinase) (EC 2.7.1.76) (Deoxyguanosine kinase) (EC 2.7.1.113)",
+      "species": "Rattus norvegicus",
+      "activityType": "Ratio",
+      "activityValue": 1,
+      "activityUnit": "",
+      "reference": "189030",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "CTD",
+      "id": "ccMon00000614_3"
+    }
+  ],
+  "asthmaRelated": false
+}

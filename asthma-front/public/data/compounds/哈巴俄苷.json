@@ -1,0 +1,107 @@
+{
+  "id": "ccMon00000832",
+  "name": "哈巴俄苷",
+  "smiles": "CC(C)C=OCCOCOC",
+  "mw": 213.31,
+  "logp": 2.53,
+  "bloodEntryProbability": 0.79,
+  "radarScores": {
+    "antiInflammatory": 81,
+    "immuneRegulation": 96,
+    "airwayRepair": 85
+  },
+  "targets": [
+    {
+      "gene": "GMNN",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 115.8,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000832_0"
+    },
+    {
+      "gene": "Thioredoxin glutathione reductase",
+      "targetType": "Individual Protein",
+      "species": "Schistosoma mansoni",
+      "activityType": "Potency",
+      "activityValue": 3548.1,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000832_1"
+    },
+    {
+      "gene": "Hepatitis C virus",
+      "targetType": "Organism",
+      "species": "Hepatitis C virus",
+      "activityType": "Inhibition",
+      "activityValue": -41.7,
+      "activityUnit": "%",
+      "reference": "19904996",
+      "asthmaRelated": false,
+      "networkCentrality": 0.5,
+      "sourceDB": "CTD",
+      "id": "ccMon00000832_2"
+    },
+    {
+      "gene": "CBX1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 89125.1,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.5,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000832_3"
+    },
+    {
+      "gene": "HUVEC",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 88200,
+      "activityUnit": "nM",
+      "reference": "20621474",
+      "asthmaRelated": false,
+      "networkCentrality": 0.18,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000832_4"
+    },
+    {
+      "gene": "EHMT2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 17782.8,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.75,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000832_5"
+    },
+    {
+      "gene": "Sus scrofa",
+      "targetType": "Organism",
+      "species": "Sus scrofa",
+      "activityType": "Inhibition",
+      "activityValue": 50,
+      "activityUnit": "%",
+      "reference": "18412394",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000832_6"
+    }
+  ],
+  "asthmaRelated": false
+}

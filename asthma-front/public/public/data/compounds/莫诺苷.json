@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00001063",
+  "name": "莫诺苷",
+  "smiles": "c1ccc(O)cc1C=OCOCCOCCCNCCN",
+  "mw": 388.18,
+  "logp": 2.72,
+  "bloodEntryProbability": 0.64,
+  "radarScores": {
+    "antiInflammatory": 99,
+    "immuneRegulation": 83,
+    "airwayRepair": 95
+  },
+  "targets": [
+    {
+      "gene": "HeLa",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 50000,
+      "activityUnit": "nM",
+      "reference": "23002924",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001063_0"
+    }
+  ],
+  "asthmaRelated": false
+}

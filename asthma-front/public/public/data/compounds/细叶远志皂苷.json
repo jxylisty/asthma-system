@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00001392",
+  "name": "细叶远志皂苷",
+  "smiles": "CC(C)CCCOCCCO",
+  "mw": 328.23,
+  "logp": 2.32,
+  "bloodEntryProbability": 0.9,
+  "radarScores": {
+    "antiInflammatory": 89,
+    "immuneRegulation": 51,
+    "airwayRepair": 76
+  },
+  "targets": [
+    {
+      "gene": "LNCaP",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 223000,
+      "activityUnit": "nM",
+      "reference": "19754130",
+      "asthmaRelated": false,
+      "networkCentrality": 0.3,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001392_0"
+    },
+    {
+      "gene": "DU-145",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 500000,
+      "activityUnit": "nM",
+      "reference": "19754130",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "CTD",
+      "id": "ccMon00001392_1"
+    }
+  ],
+  "asthmaRelated": false
+}

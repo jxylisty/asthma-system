@@ -1,0 +1,76 @@
+{
+  "id": "ccMon00000406",
+  "name": "苯甲酰次乌头原碱",
+  "smiles": "OCc1ccc(O)cc1COCC=ONCc1ccc(O)cc1",
+  "mw": 280.2,
+  "logp": -0.18,
+  "bloodEntryProbability": 0.37,
+  "radarScores": {
+    "antiInflammatory": 85,
+    "immuneRegulation": 63,
+    "airwayRepair": 62
+  },
+  "targets": [
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000406_0"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000406_1"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000406_2"
+    },
+    {
+      "gene": "ABCC2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000406_3"
+    },
+    {
+      "gene": "ABCG2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000406_4"
+    }
+  ],
+  "asthmaRelated": false
+}

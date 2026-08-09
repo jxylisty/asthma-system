@@ -1,0 +1,79 @@
+{
+  "id": "ccMon00000347",
+  "name": "牛蒡子苷",
+  "smiles": "c1ccccc1C=CCCO",
+  "mw": 380.36,
+  "logp": 4.61,
+  "bloodEntryProbability": 0.48,
+  "radarScores": {
+    "antiInflammatory": 44,
+    "immuneRegulation": 79,
+    "airwayRepair": 95
+  },
+  "targets": [
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "19524415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "CTD",
+      "id": "ccMon00000347_0"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "19524415",
+      "asthmaRelated": true,
+      "networkCentrality": 0.08,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000347_1"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 300000,
+      "activityUnit": "nM",
+      "reference": "18986199",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "CTD",
+      "id": "ccMon00000347_2"
+    },
+    {
+      "gene": "MRC5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "CC50",
+      "activityValue": 240000,
+      "activityUnit": "nM",
+      "reference": "17239594",
+      "asthmaRelated": false,
+      "networkCentrality": 0.66,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000347_3"
+    },
+    {
+      "gene": "Human herpesvirus 5",
+      "targetType": "Organism",
+      "species": "Human herpesvirus 5",
+      "activityType": "IC50",
+      "activityValue": 16000,
+      "activityUnit": "nM",
+      "reference": "17239594",
+      "asthmaRelated": false,
+      "networkCentrality": 0.28,
+      "sourceDB": "CTD",
+      "id": "ccMon00000347_4"
+    }
+  ],
+  "asthmaRelated": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00001470",
+  "name": "马鞭草苷（山茱萸苷）",
+  "smiles": "C=OCOCCC(C)",
+  "mw": 300.07,
+  "logp": 0.33,
+  "bloodEntryProbability": 0.78,
+  "radarScores": {
+    "antiInflammatory": 72,
+    "immuneRegulation": 63,
+    "airwayRepair": 67
+  },
+  "targets": [
+    {
+      "gene": "ATAD5",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 5802.4,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001470_0"
+    },
+    {
+      "gene": "Hepatitis C virus",
+      "targetType": "Organism",
+      "species": "Hepatitis C virus",
+      "activityType": "Inhibition",
+      "activityValue": 21.9,
+      "activityUnit": "%",
+      "reference": "19904996",
+      "asthmaRelated": false,
+      "networkCentrality": 0.06,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001470_1"
+    },
+    {
+      "gene": "SMAD3",
+      "targetType": "Mothers against decapentaplegic homolog 3 (MAD homolog 3) (Mad3) (Mothers against DPP homolog 3) (hMAD-3) (JV15-2) (SMAD family member 3) (SMAD 3) (Smad3) (hSMAD3)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 3548.1,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.97,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001470_2"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ccMon00000801",
+  "name": "人参皂苷Rg5",
+  "smiles": "CCOOCCOOCCOCCOCC(C)",
+  "mw": 326.53,
+  "logp": 1.75,
+  "bloodEntryProbability": 0.63,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 100,
+    "airwayRepair": 63
+  },
+  "targets": [
+    {
+      "gene": "DPP4",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^activity|increases^abundance",
+      "activityUnit": "",
+      "reference": "32535096",
+      "asthmaRelated": false,
+      "networkCentrality": 0.59,
+      "sourceDB": "CTD",
+      "id": "ccMon00000801_0"
+    },
+    {
+      "gene": "HIF1A",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29298510",
+      "asthmaRelated": true,
+      "networkCentrality": 0.01,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000801_1"
+    },
+    {
+      "gene": "NOS3",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "29298510",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000801_2"
+    },
+    {
+      "gene": "PDE5A",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29298510",
+      "asthmaRelated": true,
+      "networkCentrality": 0.66,
+      "sourceDB": "CTD",
+      "id": "ccMon00000801_3"
+    },
+    {
+      "gene": "PDE5A",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity|decreases^degradation",
+      "activityUnit": "",
+      "reference": "29298510",
+      "asthmaRelated": true,
+      "networkCentrality": 0.56,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000801_4"
+    }
+  ],
+  "asthmaRelated": true
+}

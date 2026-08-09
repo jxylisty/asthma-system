@@ -1,0 +1,112 @@
+{
+  "id": "ccMon00001024",
+  "name": "辛夷脂素",
+  "smiles": "c1ccc(O)cc1CC(C)c1ccncc1CCC(=O)O",
+  "mw": 177.81,
+  "logp": 0.75,
+  "bloodEntryProbability": 0.93,
+  "radarScores": {
+    "antiInflammatory": 56,
+    "immuneRegulation": 79,
+    "airwayRepair": 66
+  },
+  "targets": [
+    {
+      "gene": "JUN",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^localization|affects^reaction",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001024_0"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.19,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001024_1"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression|increases^reaction",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.7,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001024_2"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression|increases^reaction",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.85,
+      "sourceDB": "CTD",
+      "id": "ccMon00001024_3"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.2,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001024_4"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001024_5"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.97,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001024_6"
+    },
+    {
+      "gene": "NFKB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^localization|affects^reaction",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": true,
+      "networkCentrality": 0.65,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001024_7"
+    }
+  ],
+  "asthmaRelated": true
+}

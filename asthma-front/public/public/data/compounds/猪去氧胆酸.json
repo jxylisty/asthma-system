@@ -1,0 +1,124 @@
+{
+  "id": "ccMon00000862",
+  "name": "猪去氧胆酸",
+  "smiles": "COCNCc1ccccc1c1ccncc1C=C",
+  "mw": 424.19,
+  "logp": 2.56,
+  "bloodEntryProbability": 0.32,
+  "radarScores": {
+    "antiInflammatory": 56,
+    "immuneRegulation": 85,
+    "airwayRepair": 88
+  },
+  "targets": [
+    {
+      "gene": "UGT2B7",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^metabolic processing",
+      "activityUnit": "",
+      "reference": "21415305",
+      "asthmaRelated": false,
+      "networkCentrality": 0.61,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000862_0"
+    },
+    {
+      "gene": "UGT2B7",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^glucuronidation",
+      "activityUnit": "",
+      "reference": "12527334|8517101",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000862_1"
+    },
+    {
+      "gene": "UGT2B7",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^glucuronidation",
+      "activityUnit": "",
+      "reference": "8423545",
+      "asthmaRelated": false,
+      "networkCentrality": 0.32,
+      "sourceDB": "CTD",
+      "id": "ccMon00000862_2"
+    },
+    {
+      "gene": "UGT2B7",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^glycosylation",
+      "activityUnit": "",
+      "reference": "12527334",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000862_3"
+    },
+    {
+      "gene": "CYP3A4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^abundance|increases^metabolic processing",
+      "activityUnit": "",
+      "reference": "19487251",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000862_4"
+    },
+    {
+      "gene": "AHR",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^secretion",
+      "activityUnit": "",
+      "reference": "32679164",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000862_5"
+    },
+    {
+      "gene": "CYP2D6",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^chemical synthesis|increases^metabolic processing",
+      "activityUnit": "",
+      "reference": "18039809",
+      "asthmaRelated": false,
+      "networkCentrality": 0.03,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000862_6"
+    },
+    {
+      "gene": "HSD11B1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^abundance",
+      "activityUnit": "",
+      "reference": "25061560",
+      "asthmaRelated": false,
+      "networkCentrality": 0.75,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000862_7"
+    },
+    {
+      "gene": "UGT2B4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^glucuronidation",
+      "activityUnit": "",
+      "reference": "1909626",
+      "asthmaRelated": false,
+      "networkCentrality": 0.8,
+      "sourceDB": "CTD",
+      "id": "ccMon00000862_8"
+    }
+  ],
+  "asthmaRelated": false
+}

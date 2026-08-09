@@ -1,0 +1,143 @@
+{
+  "id": "ccMon00000735",
+  "name": "葑酮",
+  "smiles": "CC(C)CCNCOC",
+  "mw": 285.47,
+  "logp": 0.21,
+  "bloodEntryProbability": 0.73,
+  "radarScores": {
+    "antiInflammatory": 67,
+    "immuneRegulation": 86,
+    "airwayRepair": 73
+  },
+  "targets": [
+    {
+      "gene": "NR3C1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "27633901",
+      "asthmaRelated": true,
+      "networkCentrality": 0.17,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000735_0"
+    },
+    {
+      "gene": "PPARG",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "27633901",
+      "asthmaRelated": true,
+      "networkCentrality": 0.64,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000735_1"
+    },
+    {
+      "gene": "ACHE",
+      "targetType": "Protein",
+      "species": "Electrophorus electricus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "25636489",
+      "asthmaRelated": false,
+      "networkCentrality": 0.89,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000735_2"
+    },
+    {
+      "gene": "Rattus norvegicus",
+      "targetType": "Organism",
+      "species": "Rattus norvegicus",
+      "activityType": "LD50",
+      "activityValue": 6.16,
+      "activityUnit": "mg/kg",
+      "reference": "15137830",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000735_3"
+    },
+    {
+      "gene": "Acetylcholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Electrophorus electricus",
+      "activityType": "Inhibition",
+      "activityValue": 90.67,
+      "activityUnit": "%",
+      "reference": "10.1016/j.indcrop.2009.11.005",
+      "asthmaRelated": false,
+      "networkCentrality": 0.66,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000735_4"
+    },
+    {
+      "gene": "Acetylcholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Electrophorus electricus",
+      "activityType": "Ki",
+      "activityValue": 400000,
+      "activityUnit": "nM",
+      "reference": "10.1016/j.indcrop.2009.11.005",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000735_5"
+    },
+    {
+      "gene": "Leptinotarsa decemlineata",
+      "targetType": "Organism",
+      "species": "Leptinotarsa decemlineata",
+      "activityType": "EC50",
+      "activityValue": 50,
+      "activityUnit": "microg/cm2",
+      "reference": "10.1016/j.bse.2006.02.006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.37,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000735_6"
+    },
+    {
+      "gene": "Myzus persicae",
+      "targetType": "Organism",
+      "species": "Myzus persicae",
+      "activityType": "Activity",
+      "activityValue": 30,
+      "activityUnit": "%",
+      "reference": "10.1016/j.bse.2006.02.006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000735_7"
+    },
+    {
+      "gene": "Spodoptera littoralis",
+      "targetType": "Organism",
+      "species": "Spodoptera littoralis",
+      "activityType": "Activity",
+      "activityValue": 91,
+      "activityUnit": "%",
+      "reference": "10.1016/j.bse.2006.02.006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.3,
+      "sourceDB": "CTD",
+      "id": "ccMon00000735_8"
+    },
+    {
+      "gene": "Spodoptera littoralis",
+      "targetType": "Organism",
+      "species": "Spodoptera littoralis",
+      "activityType": "EC50",
+      "activityValue": 50,
+      "activityUnit": "microg/cm2",
+      "reference": "10.1016/j.bse.2006.02.006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "CTD",
+      "id": "ccMon00000735_9"
+    }
+  ],
+  "asthmaRelated": true
+}

@@ -1,0 +1,103 @@
+{
+  "id": "ccMon00000691",
+  "name": "麻黄碱",
+  "smiles": "C(=O)OCC(C)OCCOc1ccncc1CCN",
+  "mw": 473.93,
+  "logp": 1.29,
+  "bloodEntryProbability": 0.37,
+  "radarScores": {
+    "antiInflammatory": 78,
+    "immuneRegulation": 55,
+    "airwayRepair": 91
+  },
+  "targets": [
+    {
+      "gene": "ADRB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "agonist",
+      "activityUnit": "",
+      "reference": "31613441",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000691_0"
+    },
+    {
+      "gene": "ADRB2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "agonist",
+      "activityUnit": "",
+      "reference": "31613441",
+      "asthmaRelated": true,
+      "networkCentrality": 0.42,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000691_1"
+    },
+    {
+      "gene": "SLC6A2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "inverse agonist",
+      "activityUnit": "",
+      "reference": "14570629|12757963|17209801|15955613",
+      "asthmaRelated": false,
+      "networkCentrality": 0.32,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000691_2"
+    },
+    {
+      "gene": "Canis familiaris",
+      "targetType": "Organism",
+      "species": "Canis lupus familiaris",
+      "activityType": "Activity",
+      "activityValue": 40,
+      "activityUnit": "mmHg",
+      "reference": "1246053",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000691_3"
+    },
+    {
+      "gene": "INPP5D",
+      "targetType": "Phosphatidylinositol 3,4,5-trisphosphate 5-phosphatase 1 (EC 3.1.3.86) (Inositol polyphosphate-5-phosphatase D) (EC 3.1.3.56) (Inositol polyphosphate-5-phosphatase of 145 kDa) (SIP-145) (Phosphatidylinositol 4,5-bisphosphate 5-phosphatase) (EC 3.1.3.36) ",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "26453006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000691_4"
+    },
+    {
+      "gene": "INPPL1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "26453006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000691_5"
+    },
+    {
+      "gene": "ADRA1A",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "agonist",
+      "activityUnit": "",
+      "reference": "17405867|12557268|10592235|31613441",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000691_6"
+    }
+  ],
+  "asthmaRelated": true
+}

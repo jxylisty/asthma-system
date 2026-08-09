@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000626",
+  "name": "癸醛",
+  "smiles": "CCNOCC(=O)Oc1ccc(O)cc1",
+  "mw": 218.62,
+  "logp": 3.38,
+  "bloodEntryProbability": 0.87,
+  "radarScores": {
+    "antiInflammatory": 92,
+    "immuneRegulation": 47,
+    "airwayRepair": 68
+  },
+  "targets": [
+    {
+      "gene": "AR",
+      "targetType": "Androgen receptor (Dihydrotestosterone receptor) (Nuclear receptor subfamily 3 group C member 4)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 38895.2,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000626_0"
+    }
+  ],
+  "asthmaRelated": false
+}

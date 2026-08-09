@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00000516",
+  "name": "猫眼草黄素",
+  "smiles": "c1ccccc1C=OCC",
+  "mw": 484.94,
+  "logp": 4.23,
+  "bloodEntryProbability": 0.52,
+  "radarScores": {
+    "antiInflammatory": 78,
+    "immuneRegulation": 80,
+    "airwayRepair": 72
+  },
+  "targets": [
+    {
+      "gene": "CYP3A4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^activity",
+      "activityUnit": "",
+      "reference": "29753067",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "CTD",
+      "id": "ccMon00000516_0"
+    },
+    {
+      "gene": "CYP2C19",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29753067",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000516_1"
+    }
+  ],
+  "asthmaRelated": false
+}

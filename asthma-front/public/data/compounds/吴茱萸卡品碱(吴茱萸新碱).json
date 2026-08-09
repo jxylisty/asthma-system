@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000727",
+  "name": "吴茱萸卡品碱(吴茱萸新碱)",
+  "smiles": "c1ccc(O)cc1CC(C)CCC=OCC(C)",
+  "mw": 219.96,
+  "logp": 0.77,
+  "bloodEntryProbability": 0.63,
+  "radarScores": {
+    "antiInflammatory": 68,
+    "immuneRegulation": 95,
+    "airwayRepair": 71
+  },
+  "targets": [
+    {
+      "gene": "MRC5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 87.6,
+      "activityUnit": "%",
+      "reference": "21106378",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000727_0"
+    },
+    {
+      "gene": "Mycobacterium smegmatis",
+      "targetType": "Organism",
+      "species": "Mycobacterium smegmatis",
+      "activityType": "MIC",
+      "activityValue": 5900,
+      "activityUnit": "nM",
+      "reference": "21106378",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000727_1"
+    },
+    {
+      "gene": "Mycobacterium fortuitum",
+      "targetType": "Organism",
+      "species": "Mycobacterium fortuitum",
+      "activityType": "MIC",
+      "activityValue": 2,
+      "activityUnit": "ug/ml",
+      "reference": "21106378",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "CTD",
+      "id": "ccMon00000727_2"
+    },
+    {
+      "gene": "Mycobacterium phlei",
+      "targetType": "Organism",
+      "species": "Mycobacterium phlei",
+      "activityType": "MIC",
+      "activityValue": 2,
+      "activityUnit": "ug/ml",
+      "reference": "21106378",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000727_3"
+    }
+  ],
+  "asthmaRelated": false
+}

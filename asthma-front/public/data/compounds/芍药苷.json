@@ -1,0 +1,107 @@
+{
+  "id": "ccMon00001167",
+  "name": "芍药苷",
+  "smiles": "CCONCCOCC=CC=O",
+  "mw": 151.07,
+  "logp": 2.59,
+  "bloodEntryProbability": 0.87,
+  "radarScores": {
+    "antiInflammatory": 98,
+    "immuneRegulation": 90,
+    "airwayRepair": 73
+  },
+  "targets": [
+    {
+      "gene": "Akr1b1",
+      "targetType": "Aldo-keto reductase family 1 member B1 (EC 1.1.1.21) (EC 1.1.1.300) (EC 1.1.1.372) (EC 1.1.1.54) (Aldehyde reductase) (Aldose reductase) (AR)",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 50000,
+      "activityUnit": "nM",
+      "reference": "19670875",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "CTD",
+      "id": "ccMon00001167_0"
+    },
+    {
+      "gene": "SLCO1B3",
+      "targetType": "Solute carrier organic anion transporter family member 1B3 (Liver-specific organic anion transporter 2) (LST-2) (Organic anion transporter 8) (Organic anion-transporting polypeptide 8) (OATP-8) (Solute carrier family 21 member 8)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 101.83,
+      "activityUnit": "%",
+      "reference": "23571415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001167_1"
+    },
+    {
+      "gene": "SLCO1B1",
+      "targetType": "Solute carrier organic anion transporter family member 1B1 (Liver-specific organic anion transporter 1) (LST-1) (OATP-C) (Sodium-independent organic anion-transporting polypeptide 2) (OATP-2) (Solute carrier family 21 member 6)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 109.48,
+      "activityUnit": "%",
+      "reference": "23571415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.99,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001167_2"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "23067550",
+      "asthmaRelated": false,
+      "networkCentrality": 0.28,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001167_3"
+    },
+    {
+      "gene": "ESR1",
+      "targetType": "Estrogen receptor (ER) (ER-alpha) (Estradiol receptor) (Nuclear receptor subfamily 3 group A member 1)",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 70.16,
+      "activityUnit": "%",
+      "reference": "22137340",
+      "asthmaRelated": false,
+      "networkCentrality": 0.94,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001167_4"
+    },
+    {
+      "gene": "N9",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 27800,
+      "activityUnit": "nM",
+      "reference": "19691309",
+      "asthmaRelated": false,
+      "networkCentrality": 0,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001167_5"
+    },
+    {
+      "gene": "N9",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 100.3,
+      "activityUnit": "%",
+      "reference": "19691309",
+      "asthmaRelated": false,
+      "networkCentrality": 0.88,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001167_6"
+    }
+  ],
+  "asthmaRelated": false
+}

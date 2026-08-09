@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000993",
+  "name": "蒙花苷",
+  "smiles": "C(=O)OC=CC=O",
+  "mw": 395.21,
+  "logp": 2.44,
+  "bloodEntryProbability": 0.37,
+  "radarScores": {
+    "antiInflammatory": 53,
+    "immuneRegulation": 98,
+    "airwayRepair": 93
+  },
+  "targets": [
+    {
+      "gene": "NOS3",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|increases^expression",
+      "activityUnit": "",
+      "reference": "29052401",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000993_0"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,89 @@
+{
+  "id": "ccMon00000264",
+  "name": "白芍苷(芍药内酯苷)",
+  "smiles": "CCc1ccccc1OCCC(C)CCNCC",
+  "mw": 414.29,
+  "logp": 2.4,
+  "bloodEntryProbability": 0.65,
+  "radarScores": {
+    "antiInflammatory": 50,
+    "immuneRegulation": 54,
+    "airwayRepair": 63
+  },
+  "targets": [
+    {
+      "gene": "TH",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^expression",
+      "activityUnit": "",
+      "reference": "26475043",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "CTD",
+      "id": "ccMon00000264_0"
+    },
+    {
+      "gene": "DRD2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^expression",
+      "activityUnit": "",
+      "reference": "26475043",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "CTD",
+      "id": "ccMon00000264_1"
+    },
+    {
+      "gene": "HTR1A",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^expression",
+      "activityUnit": "",
+      "reference": "26475043",
+      "asthmaRelated": true,
+      "networkCentrality": 0.07,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000264_2"
+    },
+    {
+      "gene": "HTR2A",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^expression",
+      "activityUnit": "",
+      "reference": "26475043",
+      "asthmaRelated": true,
+      "networkCentrality": 0.69,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000264_3"
+    },
+    {
+      "gene": "SLC6A3",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^expression",
+      "activityUnit": "",
+      "reference": "26475043",
+      "asthmaRelated": false,
+      "networkCentrality": 0.4,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000264_4"
+    },
+    {
+      "gene": "ESR1",
+      "targetType": "Estrogen receptor (ER) (ER-alpha) (Estradiol receptor) (Nuclear receptor subfamily 3 group A member 1)",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 78.47,
+      "activityUnit": "%",
+      "reference": "22137340",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "CTD",
+      "id": "ccMon00000264_5"
+    }
+  ],
+  "asthmaRelated": true
+}

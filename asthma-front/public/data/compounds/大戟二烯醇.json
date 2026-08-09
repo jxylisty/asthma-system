@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000725",
+  "name": "大戟二烯醇",
+  "smiles": "OCCOC=OOCCO",
+  "mw": 450.75,
+  "logp": 1.76,
+  "bloodEntryProbability": 0.93,
+  "radarScores": {
+    "antiInflammatory": 58,
+    "immuneRegulation": 73,
+    "airwayRepair": 51
+  },
+  "targets": [
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 70,
+      "activityUnit": "%",
+      "reference": "11858748",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000725_0"
+    }
+  ],
+  "asthmaRelated": false
+}

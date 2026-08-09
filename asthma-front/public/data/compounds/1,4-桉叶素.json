@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000054",
+  "name": "1,4-桉叶素",
+  "smiles": "OCCOCCONCOCCO",
+  "mw": 293.01,
+  "logp": 2.07,
+  "bloodEntryProbability": 0.48,
+  "radarScores": {
+    "antiInflammatory": 51,
+    "immuneRegulation": 43,
+    "airwayRepair": 70
+  },
+  "targets": [
+    {
+      "gene": "Musca domestica",
+      "targetType": "Organism",
+      "species": "Musca domestica",
+      "activityType": "LD50",
+      "activityValue": 151.7,
+      "activityUnit": "ug",
+      "reference": "22461383",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000054_0"
+    },
+    {
+      "gene": "GABA receptor subunit",
+      "targetType": "Individual Protein",
+      "species": "Musca domestica",
+      "activityType": "Activity",
+      "activityValue": 117,
+      "activityUnit": "%",
+      "reference": "22461383",
+      "asthmaRelated": false,
+      "networkCentrality": 0.1,
+      "sourceDB": "CTD",
+      "id": "ccMon00000054_1"
+    }
+  ],
+  "asthmaRelated": false
+}

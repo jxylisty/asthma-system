@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000785",
+  "name": "人参皂苷F2",
+  "smiles": "OCCOc1ccc(O)cc1NCCCN",
+  "mw": 192.59,
+  "logp": -0.18,
+  "bloodEntryProbability": 0.42,
+  "radarScores": {
+    "antiInflammatory": 77,
+    "immuneRegulation": 58,
+    "airwayRepair": 90
+  },
+  "targets": [
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^transport",
+      "activityUnit": "",
+      "reference": "24380838",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000785_0"
+    }
+  ],
+  "asthmaRelated": false
+}

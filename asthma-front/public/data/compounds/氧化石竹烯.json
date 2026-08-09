@@ -1,0 +1,100 @@
+{
+  "id": "ccMon00000496",
+  "name": "氧化石竹烯",
+  "smiles": "C=Cc1ccncc1C=CCCOC(=O)O",
+  "mw": 189.33,
+  "logp": 1.98,
+  "bloodEntryProbability": 0.79,
+  "radarScores": {
+    "antiInflammatory": 96,
+    "immuneRegulation": 43,
+    "airwayRepair": 78
+  },
+  "targets": [
+    {
+      "gene": "CYP1A2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29074051",
+      "asthmaRelated": false,
+      "networkCentrality": 0.54,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000496_0"
+    },
+    {
+      "gene": "IFNG",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28344896",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000496_1"
+    },
+    {
+      "gene": "IFNG",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28344896",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000496_2"
+    },
+    {
+      "gene": "CYP1A2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29074051",
+      "asthmaRelated": false,
+      "networkCentrality": 0.82,
+      "sourceDB": "CTD",
+      "id": "ccMon00000496_3"
+    },
+    {
+      "gene": "IL4",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28344896",
+      "asthmaRelated": true,
+      "networkCentrality": 0.89,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000496_4"
+    },
+    {
+      "gene": "IL12RB2",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28344896",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000496_5"
+    },
+    {
+      "gene": "TBX21",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28344896",
+      "asthmaRelated": true,
+      "networkCentrality": 0.75,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000496_6"
+    }
+  ],
+  "asthmaRelated": true
+}

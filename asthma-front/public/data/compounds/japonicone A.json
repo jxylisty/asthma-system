@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000940",
+  "name": "japonicone A",
+  "smiles": "C=Oc1ccncc1COC",
+  "mw": 209.45,
+  "logp": -0.27,
+  "bloodEntryProbability": 0.6,
+  "radarScores": {
+    "antiInflammatory": 51,
+    "immuneRegulation": 59,
+    "airwayRepair": 93
+  },
+  "targets": [
+    {
+      "gene": "HSF1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "34170685",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000940_0"
+    }
+  ],
+  "asthmaRelated": false
+}

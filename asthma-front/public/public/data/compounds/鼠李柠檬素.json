@@ -1,0 +1,120 @@
+{
+  "id": "ccMon00001279",
+  "name": "鼠李柠檬素",
+  "smiles": "c1ccccc1C=OCC(C)CC(C)COC",
+  "mw": 359.77,
+  "logp": 3.75,
+  "bloodEntryProbability": 0.36,
+  "radarScores": {
+    "antiInflammatory": 41,
+    "immuneRegulation": 92,
+    "airwayRepair": 72
+  },
+  "targets": [
+    {
+      "gene": "Mus musculus",
+      "targetType": "Organism",
+      "species": "Mus musculus",
+      "activityType": "Inhibition",
+      "activityValue": 78,
+      "activityUnit": "%",
+      "reference": "10217718",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "CTD",
+      "id": "ccMon00001279_0"
+    },
+    {
+      "gene": "Streptococcus mutans",
+      "targetType": "Organism",
+      "species": "Streptococcus mutans",
+      "activityType": "MIC",
+      "activityValue": 1250,
+      "activityUnit": "ug/ml",
+      "reference": "8904847",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001279_1"
+    },
+    {
+      "gene": "Mycobacterium tuberculosis H37Rv",
+      "targetType": "Organism",
+      "species": "Mycobacterium tuberculosis H37Rv",
+      "activityType": "MIC",
+      "activityValue": 15.3,
+      "activityUnit": "ug/ml",
+      "reference": "10.1007/s00044-013-0485-8",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001279_2"
+    },
+    {
+      "gene": "Neuraminidase",
+      "targetType": "Individual Protein",
+      "species": "Influenza A virus",
+      "activityType": "IC50",
+      "activityValue": 51500,
+      "activityUnit": "nM",
+      "reference": "18640042",
+      "asthmaRelated": false,
+      "networkCentrality": 0.35,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001279_3"
+    },
+    {
+      "gene": "Neuraminidase",
+      "targetType": "Individual Protein",
+      "species": "Influenza A virus (A/Puerto Rico/8/1934(H1N1))",
+      "activityType": "IC50",
+      "activityValue": 15.46,
+      "activityUnit": "ug/ml",
+      "reference": "20116898",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001279_4"
+    },
+    {
+      "gene": "Actinomyces viscosus",
+      "targetType": "Organism",
+      "species": "Actinomyces viscosus",
+      "activityType": "MIC",
+      "activityValue": 1250,
+      "activityUnit": "ug/ml",
+      "reference": "8904847",
+      "asthmaRelated": false,
+      "networkCentrality": 0.6,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001279_5"
+    },
+    {
+      "gene": "Prevotella intermedia",
+      "targetType": "Organism",
+      "species": "Prevotella intermedia",
+      "activityType": "MIC",
+      "activityValue": 625,
+      "activityUnit": "ug/ml",
+      "reference": "8904847",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "CTD",
+      "id": "ccMon00001279_6"
+    },
+    {
+      "gene": "Porphyromonas gingivalis",
+      "targetType": "Organism",
+      "species": "Porphyromonas gingivalis",
+      "activityType": "MIC",
+      "activityValue": 625,
+      "activityUnit": "ug/ml",
+      "reference": "8904847",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001279_7"
+    }
+  ],
+  "asthmaRelated": false
+}

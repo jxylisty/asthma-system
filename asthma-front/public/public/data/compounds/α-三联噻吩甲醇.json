@@ -1,0 +1,101 @@
+{
+  "id": "ccMon00000323",
+  "name": "α-三联噻吩甲醇",
+  "smiles": "c1ccc(O)cc1c1ccc(O)cc1OCCOC=Oc1ccccc1OC",
+  "mw": 397.41,
+  "logp": 4.9,
+  "bloodEntryProbability": 0.77,
+  "radarScores": {
+    "antiInflammatory": 80,
+    "immuneRegulation": 99,
+    "airwayRepair": 49
+  },
+  "targets": [
+    {
+      "gene": "CDK2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "28506552",
+      "asthmaRelated": false,
+      "networkCentrality": 0.86,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000323_0"
+    },
+    {
+      "gene": "H2AX",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "28506552",
+      "asthmaRelated": false,
+      "networkCentrality": 0.1,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000323_1"
+    },
+    {
+      "gene": "H2AX",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "28506552",
+      "asthmaRelated": false,
+      "networkCentrality": 0.63,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000323_2"
+    },
+    {
+      "gene": "CCNA2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28506552",
+      "asthmaRelated": false,
+      "networkCentrality": 0.62,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000323_3"
+    },
+    {
+      "gene": "CCNA2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "28506552",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "CTD",
+      "id": "ccMon00000323_4"
+    },
+    {
+      "gene": "CCND2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "28506552",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000323_5"
+    },
+    {
+      "gene": "DPP4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 3350,
+      "activityUnit": "nM",
+      "reference": "25443644",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000323_6"
+    }
+  ],
+  "asthmaRelated": false
+}

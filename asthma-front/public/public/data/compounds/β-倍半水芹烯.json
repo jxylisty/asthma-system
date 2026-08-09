@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000445",
+  "name": "β-倍半水芹烯",
+  "smiles": "c1ccc(O)cc1CCONC",
+  "mw": 243.41,
+  "logp": 2.55,
+  "bloodEntryProbability": 0.48,
+  "radarScores": {
+    "antiInflammatory": 99,
+    "immuneRegulation": 64,
+    "airwayRepair": 54
+  },
+  "targets": [
+    {
+      "gene": "Human rhinovirus 1B",
+      "targetType": "Organism",
+      "species": "Human rhinovirus 1B",
+      "activityType": "ED50",
+      "activityValue": 0.9,
+      "activityUnit": "ug",
+      "reference": "8064299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.17,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000445_0"
+    },
+    {
+      "gene": "Human rhinovirus 1B",
+      "targetType": "Organism",
+      "species": "Human rhinovirus 1B",
+      "activityType": "IC50",
+      "activityValue": 440,
+      "activityUnit": "nM",
+      "reference": "8064299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "CTD",
+      "id": "ccMon00000445_1"
+    }
+  ],
+  "asthmaRelated": false
+}

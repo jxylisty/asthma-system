@@ -1,0 +1,148 @@
+{
+  "id": "ccMon00001077",
+  "name": "桃金娘醛",
+  "smiles": "c1ccncc1CCc1ccncc1",
+  "mw": 305.69,
+  "logp": 1.99,
+  "bloodEntryProbability": 0.55,
+  "radarScores": {
+    "antiInflammatory": 100,
+    "immuneRegulation": 66,
+    "airwayRepair": 52
+  },
+  "targets": [
+    {
+      "gene": "TDP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29248742",
+      "asthmaRelated": false,
+      "networkCentrality": 0.25,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001077_0"
+    },
+    {
+      "gene": "AKT1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "27417257",
+      "asthmaRelated": true,
+      "networkCentrality": 0.48,
+      "sourceDB": "CTD",
+      "id": "ccMon00001077_1"
+    },
+    {
+      "gene": "INS1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "27417257",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001077_2"
+    },
+    {
+      "gene": "SLC2A4",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "27417257",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001077_3"
+    },
+    {
+      "gene": "SLC2A2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "27417257",
+      "asthmaRelated": false,
+      "networkCentrality": 0.38,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001077_4"
+    },
+    {
+      "gene": "GLB1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^reaction|increases^activity",
+      "activityUnit": "",
+      "reference": "22436021",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001077_5"
+    },
+    {
+      "gene": "GUSB",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^reaction|increases^activity",
+      "activityUnit": "",
+      "reference": "22436021",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001077_6"
+    },
+    {
+      "gene": "TP53",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "22436021",
+      "asthmaRelated": false,
+      "networkCentrality": 0.82,
+      "sourceDB": "CTD",
+      "id": "ccMon00001077_7"
+    },
+    {
+      "gene": "TP53",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "22436021",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001077_8"
+    },
+    {
+      "gene": "OGDH",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^activity|decreases^reaction",
+      "activityUnit": "",
+      "reference": "22436021",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001077_9"
+    },
+    {
+      "gene": "IRS2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "27417257",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001077_10"
+    }
+  ],
+  "asthmaRelated": true
+}

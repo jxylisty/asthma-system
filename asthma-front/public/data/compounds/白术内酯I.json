@@ -1,0 +1,124 @@
+{
+  "id": "ccMon00000384",
+  "name": "白术内酯I",
+  "smiles": "c1ccccc1c1ccc(O)cc1c1ccccc1c1ccc(O)cc1C=O",
+  "mw": 213.49,
+  "logp": 1.72,
+  "bloodEntryProbability": 0.78,
+  "radarScores": {
+    "antiInflammatory": 85,
+    "immuneRegulation": 50,
+    "airwayRepair": 51
+  },
+  "targets": [
+    {
+      "gene": "BAX",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28481321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "CTD",
+      "id": "ccMon00000384_0"
+    },
+    {
+      "gene": "HMOX1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "28481321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000384_1"
+    },
+    {
+      "gene": "HMOX1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "28481321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.8,
+      "sourceDB": "CTD",
+      "id": "ccMon00000384_2"
+    },
+    {
+      "gene": "CASP3",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28481321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.4,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000384_3"
+    },
+    {
+      "gene": "TP53",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28481321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.94,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000384_4"
+    },
+    {
+      "gene": "PARP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28481321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.18,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000384_5"
+    },
+    {
+      "gene": "BCL2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "28481321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000384_6"
+    },
+    {
+      "gene": "IL1B",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "21347999",
+      "asthmaRelated": false,
+      "networkCentrality": 0.16,
+      "sourceDB": "CTD",
+      "id": "ccMon00000384_7"
+    },
+    {
+      "gene": "MMP13",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "21347999",
+      "asthmaRelated": false,
+      "networkCentrality": 0.77,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000384_8"
+    }
+  ],
+  "asthmaRelated": false
+}

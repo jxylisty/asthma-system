@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00001089",
+  "name": "新蛇床酞内酯",
+  "smiles": "OCOCCOOCCONC",
+  "mw": 242.33,
+  "logp": 3.59,
+  "bloodEntryProbability": 0.9,
+  "radarScores": {
+    "antiInflammatory": 89,
+    "immuneRegulation": 96,
+    "airwayRepair": 46
+  },
+  "targets": [
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "LC50",
+      "activityValue": 9900000,
+      "activityUnit": "nM",
+      "reference": "15998112",
+      "asthmaRelated": false,
+      "networkCentrality": 0.4,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001089_0"
+    },
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "LD50",
+      "activityValue": 10.82,
+      "activityUnit": "ug",
+      "reference": "15998112",
+      "asthmaRelated": false,
+      "networkCentrality": 0.25,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001089_1"
+    },
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "Ratio",
+      "activityValue": 0.34,
+      "activityUnit": "",
+      "reference": "15998112",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001089_2"
+    },
+    {
+      "gene": "Acetylcholine receptor subunit beta-like 2",
+      "targetType": "Individual Protein",
+      "species": "Drosophila melanogaster",
+      "activityType": "IC50",
+      "activityValue": 840000,
+      "activityUnit": "nM",
+      "reference": "15998112",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001089_3"
+    }
+  ],
+  "asthmaRelated": false
+}

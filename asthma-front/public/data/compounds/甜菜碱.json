@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000434",
+  "name": "甜菜碱",
+  "smiles": "CC(C)CCOCCC=O",
+  "mw": 189.68,
+  "logp": 2.77,
+  "bloodEntryProbability": 0.41,
+  "radarScores": {
+    "antiInflammatory": 46,
+    "immuneRegulation": 57,
+    "airwayRepair": 59
+  },
+  "targets": [
+    {
+      "gene": "BCL2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "25765238",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000434_0"
+    }
+  ],
+  "asthmaRelated": false
+}

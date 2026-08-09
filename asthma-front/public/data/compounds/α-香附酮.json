@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000298",
+  "name": "α-香附酮",
+  "smiles": "CCC=CC(=O)O",
+  "mw": 381.11,
+  "logp": 3.74,
+  "bloodEntryProbability": 0.66,
+  "radarScores": {
+    "antiInflammatory": 54,
+    "immuneRegulation": 84,
+    "airwayRepair": 49
+  },
+  "targets": [
+    {
+      "gene": "ESR1",
+      "targetType": "Estrogen receptor (ER) (ER-alpha) (Estradiol receptor) (Nuclear receptor subfamily 3 group A member 1)",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 51.41,
+      "activityUnit": "%",
+      "reference": "22137340",
+      "asthmaRelated": false,
+      "networkCentrality": 0.25,
+      "sourceDB": "CTD",
+      "id": "ccMon00000298_0"
+    },
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "LD50",
+      "activityValue": 4.99,
+      "activityUnit": "umol/ml",
+      "reference": "10.1016/j.indcrop.2012.05.026",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000298_1"
+    }
+  ],
+  "asthmaRelated": false
+}

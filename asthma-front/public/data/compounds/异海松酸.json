@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000917",
+  "name": "异海松酸",
+  "smiles": "COCC=Cc1ccncc1c1ccc(O)cc1CCO",
+  "mw": 401.38,
+  "logp": 1.17,
+  "bloodEntryProbability": 0.32,
+  "radarScores": {
+    "antiInflammatory": 55,
+    "immuneRegulation": 58,
+    "airwayRepair": 45
+  },
+  "targets": [
+    {
+      "gene": "KB",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 60000,
+      "activityUnit": "nM",
+      "reference": "11000026",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000917_0"
+    },
+    {
+      "gene": "KAT2A",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 39810.7,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000917_1"
+    },
+    {
+      "gene": "Odc1",
+      "targetType": "Ornithine decarboxylase (ODC) (EC 4.1.1.17)",
+      "species": "Mus musculus",
+      "activityType": "Activity",
+      "activityValue": 0.86,
+      "activityUnit": "nM",
+      "reference": "11000026",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000917_2"
+    }
+  ],
+  "asthmaRelated": false
+}

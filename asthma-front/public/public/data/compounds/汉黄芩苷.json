@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00001482",
+  "name": "汉黄芩苷",
+  "smiles": "OCCOOCCOCCOCOCCOC",
+  "mw": 161.92,
+  "logp": -0.39,
+  "bloodEntryProbability": 0.64,
+  "radarScores": {
+    "antiInflammatory": 65,
+    "immuneRegulation": 85,
+    "airwayRepair": 76
+  },
+  "targets": [
+    {
+      "gene": "MAPK1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "19428938",
+      "asthmaRelated": true,
+      "networkCentrality": 0.53,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001482_0"
+    },
+    {
+      "gene": "MAPK3",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "19428938",
+      "asthmaRelated": true,
+      "networkCentrality": 0.96,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001482_1"
+    },
+    {
+      "gene": "TLR4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "19428938",
+      "asthmaRelated": false,
+      "networkCentrality": 0.19,
+      "sourceDB": "CTD",
+      "id": "ccMon00001482_2"
+    }
+  ],
+  "asthmaRelated": true
+}

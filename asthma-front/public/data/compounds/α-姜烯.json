@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000328",
+  "name": "α-姜烯",
+  "smiles": "c1ccc(O)cc1C=CC(=O)OC=CNCOC",
+  "mw": 231.76,
+  "logp": 4.98,
+  "bloodEntryProbability": 0.59,
+  "radarScores": {
+    "antiInflammatory": 82,
+    "immuneRegulation": 84,
+    "airwayRepair": 77
+  },
+  "targets": [
+    {
+      "gene": "Human rhinovirus 1B",
+      "targetType": "Organism",
+      "species": "Human rhinovirus 1B",
+      "activityType": "ED50",
+      "activityValue": 1.9,
+      "activityUnit": "ug",
+      "reference": "8064299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.98,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000328_0"
+    }
+  ],
+  "asthmaRelated": false
+}

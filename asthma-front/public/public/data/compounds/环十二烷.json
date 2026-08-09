@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000602",
+  "name": "环十二烷",
+  "smiles": "c1ccc(O)cc1NCCCOC=C",
+  "mw": 494.69,
+  "logp": 4.94,
+  "bloodEntryProbability": 0.9,
+  "radarScores": {
+    "antiInflammatory": 87,
+    "immuneRegulation": 47,
+    "airwayRepair": 52
+  },
+  "targets": [
+    {
+      "gene": "AR",
+      "targetType": "Androgen receptor (Dihydrotestosterone receptor) (Nuclear receptor subfamily 3 group C member 4)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 6754.7,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000602_0"
+    }
+  ],
+  "asthmaRelated": false
+}

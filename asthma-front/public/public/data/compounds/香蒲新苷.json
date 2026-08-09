@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00001457",
+  "name": "香蒲新苷",
+  "smiles": "NCOCCOCCNC",
+  "mw": 407.21,
+  "logp": 1.03,
+  "bloodEntryProbability": 0.43,
+  "radarScores": {
+    "antiInflammatory": 68,
+    "immuneRegulation": 46,
+    "airwayRepair": 49
+  },
+  "targets": [
+    {
+      "gene": "MAPK1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "33621091",
+      "asthmaRelated": true,
+      "networkCentrality": 0.38,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001457_0"
+    },
+    {
+      "gene": "MAPK3",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "33621091",
+      "asthmaRelated": true,
+      "networkCentrality": 0.93,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001457_1"
+    },
+    {
+      "gene": "SYN1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^cotreatment|decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "33621091",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "CTD",
+      "id": "ccMon00001457_2"
+    }
+  ],
+  "asthmaRelated": true
+}

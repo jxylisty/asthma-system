@@ -1,0 +1,118 @@
+{
+  "id": "ccMon00000976",
+  "name": "乳酸",
+  "smiles": "CCNc1ccncc1OCC=C",
+  "mw": 317.3,
+  "logp": -0.9,
+  "bloodEntryProbability": 0.72,
+  "radarScores": {
+    "antiInflammatory": 88,
+    "immuneRegulation": 58,
+    "airwayRepair": 57
+  },
+  "targets": [
+    {
+      "gene": "JUN",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 477.2,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000976_0"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 26610000,
+      "activityUnit": "nM",
+      "reference": "25299679",
+      "asthmaRelated": false,
+      "networkCentrality": 0.91,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000976_1"
+    },
+    {
+      "gene": "AR",
+      "targetType": "Androgen receptor (Dihydrotestosterone receptor) (Nuclear receptor subfamily 3 group C member 4)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 33491.5,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000976_2"
+    },
+    {
+      "gene": "TP53",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 25.1,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.37,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000976_3"
+    },
+    {
+      "gene": "Homo sapiens",
+      "targetType": "Organism",
+      "species": "Homo sapiens",
+      "activityType": "FC",
+      "activityValue": 1.4,
+      "activityUnit": "",
+      "reference": "22579618",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "CTD",
+      "id": "ccMon00000976_4"
+    },
+    {
+      "gene": "MRC5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 23930000,
+      "activityUnit": "nM",
+      "reference": "25299679",
+      "asthmaRelated": false,
+      "networkCentrality": 0.65,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000976_5"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "15449943|12514740",
+      "asthmaRelated": false,
+      "networkCentrality": 0.3,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000976_6"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000976_7"
+    }
+  ],
+  "asthmaRelated": false
+}

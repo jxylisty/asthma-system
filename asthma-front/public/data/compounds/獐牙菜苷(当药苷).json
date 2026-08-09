@@ -1,0 +1,114 @@
+{
+  "id": "ccMon00001375",
+  "name": "獐牙菜苷(当药苷)",
+  "smiles": "OCCC(C)c1ccc(O)cc1c1ccccc1",
+  "mw": 300.81,
+  "logp": 3.79,
+  "bloodEntryProbability": 0.41,
+  "radarScores": {
+    "antiInflammatory": 49,
+    "immuneRegulation": 98,
+    "airwayRepair": 43
+  },
+  "targets": [
+    {
+      "gene": "TYR",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "26051519",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001375_0"
+    },
+    {
+      "gene": "DCT",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "26051519",
+      "asthmaRelated": false,
+      "networkCentrality": 0.5,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001375_1"
+    },
+    {
+      "gene": "TYRP1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "26051519",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001375_2"
+    },
+    {
+      "gene": "MITF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "26051519",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "CTD",
+      "id": "ccMon00001375_3"
+    },
+    {
+      "gene": "MITF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "26051519",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001375_4"
+    },
+    {
+      "gene": "TYR",
+      "targetType": "Protein",
+      "species": "Danio rerio",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "26051519",
+      "asthmaRelated": false,
+      "networkCentrality": 0.17,
+      "sourceDB": "CTD",
+      "id": "ccMon00001375_5"
+    },
+    {
+      "gene": "Plasmodium falciparum",
+      "targetType": "Organism",
+      "species": "Plasmodium falciparum",
+      "activityType": "IC50",
+      "activityValue": 50,
+      "activityUnit": "ug/ml",
+      "reference": "19053508",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "CTD",
+      "id": "ccMon00001375_6"
+    },
+    {
+      "gene": "HeLa",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 50000,
+      "activityUnit": "nM",
+      "reference": "23002924",
+      "asthmaRelated": false,
+      "networkCentrality": 0.24,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001375_7"
+    }
+  ],
+  "asthmaRelated": false
+}

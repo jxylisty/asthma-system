@@ -1,0 +1,64 @@
+{
+  "id": "ccMon00000189",
+  "name": "对羟基苯甲醇",
+  "smiles": "c1ccccc1OCCOc1ccncc1NC",
+  "mw": 232.57,
+  "logp": 1.44,
+  "bloodEntryProbability": 0.51,
+  "radarScores": {
+    "antiInflammatory": 94,
+    "immuneRegulation": 52,
+    "airwayRepair": 85
+  },
+  "targets": [
+    {
+      "gene": "TYR",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "increases^oxidation",
+      "activityUnit": "",
+      "reference": "19944085",
+      "asthmaRelated": false,
+      "networkCentrality": 0.34,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000189_0"
+    },
+    {
+      "gene": "CS",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "30273962",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000189_1"
+    },
+    {
+      "gene": "PNLIP",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "30273962",
+      "asthmaRelated": false,
+      "networkCentrality": 0.97,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000189_2"
+    },
+    {
+      "gene": "PNLIP",
+      "targetType": "Protein",
+      "species": "Sus scrofa",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "30273962",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000189_3"
+    }
+  ],
+  "asthmaRelated": false
+}

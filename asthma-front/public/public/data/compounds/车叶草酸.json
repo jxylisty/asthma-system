@@ -1,0 +1,67 @@
+{
+  "id": "ccMon00000375",
+  "name": "车叶草酸",
+  "smiles": "c1ccc(O)cc1OCCC(C)CCOCOCC(=O)O",
+  "mw": 150.22,
+  "logp": 4.72,
+  "bloodEntryProbability": 0.35,
+  "radarScores": {
+    "antiInflammatory": 46,
+    "immuneRegulation": 82,
+    "airwayRepair": 45
+  },
+  "targets": [
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "16508180",
+      "asthmaRelated": true,
+      "networkCentrality": 0.96,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000375_0"
+    },
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 30000,
+      "activityUnit": "nM",
+      "reference": "15844957",
+      "asthmaRelated": false,
+      "networkCentrality": 0.89,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000375_1"
+    },
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 60,
+      "activityUnit": "%",
+      "reference": "17480098",
+      "asthmaRelated": false,
+      "networkCentrality": 0.19,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000375_2"
+    },
+    {
+      "gene": "Human herpesvirus 4",
+      "targetType": "Organism",
+      "species": "Human herpesvirus 4",
+      "activityType": "Activity",
+      "activityValue": 13.5,
+      "activityUnit": "%",
+      "reference": "17480098",
+      "asthmaRelated": false,
+      "networkCentrality": 0.04,
+      "sourceDB": "CTD",
+      "id": "ccMon00000375_3"
+    }
+  ],
+  "asthmaRelated": true
+}

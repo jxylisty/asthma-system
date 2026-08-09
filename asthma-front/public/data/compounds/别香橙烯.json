@@ -1,0 +1,120 @@
+{
+  "id": "ccMon00000277",
+  "name": "别香橙烯",
+  "smiles": "CCNCOCCOOCCOc1ccc(O)cc1C=C",
+  "mw": 198.84,
+  "logp": -0.3,
+  "bloodEntryProbability": 0.35,
+  "radarScores": {
+    "antiInflammatory": 64,
+    "immuneRegulation": 67,
+    "airwayRepair": 44
+  },
+  "targets": [
+    {
+      "gene": "PC-3",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 23.29,
+      "activityUnit": "%",
+      "reference": "24852278",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "CTD",
+      "id": "ccMon00000277_0"
+    },
+    {
+      "gene": "PC-3",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "FC",
+      "activityValue": 2.1,
+      "activityUnit": "",
+      "reference": "24852278",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000277_1"
+    },
+    {
+      "gene": "PC-3",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 35000,
+      "activityUnit": "nM",
+      "reference": "20045651",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000277_2"
+    },
+    {
+      "gene": "MCF7",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 20000,
+      "activityUnit": "nM",
+      "reference": "24852278",
+      "asthmaRelated": false,
+      "networkCentrality": 0.61,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000277_3"
+    },
+    {
+      "gene": "HepG2",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 20000,
+      "activityUnit": "nM",
+      "reference": "24852278",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000277_4"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 79000,
+      "activityUnit": "nM",
+      "reference": "20045651",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000277_5"
+    },
+    {
+      "gene": "SK-MEL-28",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "20045651",
+      "asthmaRelated": false,
+      "networkCentrality": 0.14,
+      "sourceDB": "CTD",
+      "id": "ccMon00000277_6"
+    },
+    {
+      "gene": "LoVo",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 63000,
+      "activityUnit": "nM",
+      "reference": "20045651",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000277_7"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,139 @@
+{
+  "id": "ccMon00001151",
+  "name": "荭草苷",
+  "smiles": "c1ccc(O)cc1OCc1ccncc1C=C",
+  "mw": 310.21,
+  "logp": 3.48,
+  "bloodEntryProbability": 0.61,
+  "radarScores": {
+    "antiInflammatory": 59,
+    "immuneRegulation": 97,
+    "airwayRepair": 45
+  },
+  "targets": [
+    {
+      "gene": "PPARG",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "32044341",
+      "asthmaRelated": true,
+      "networkCentrality": 0.28,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001151_0"
+    },
+    {
+      "gene": "ADIPOQ",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "32044341",
+      "asthmaRelated": false,
+      "networkCentrality": 0.32,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001151_1"
+    },
+    {
+      "gene": "IRS1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "32044341",
+      "asthmaRelated": false,
+      "networkCentrality": 0.69,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001151_2"
+    },
+    {
+      "gene": "SLC2A4",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "32044341",
+      "asthmaRelated": false,
+      "networkCentrality": 0.34,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001151_3"
+    },
+    {
+      "gene": "PPARGC1A",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "32044341",
+      "asthmaRelated": true,
+      "networkCentrality": 0.46,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001151_4"
+    },
+    {
+      "gene": "INSR",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "32044341",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001151_5"
+    },
+    {
+      "gene": "PLA2G4A",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "32044341",
+      "asthmaRelated": false,
+      "networkCentrality": 0.95,
+      "sourceDB": "CTD",
+      "id": "ccMon00001151_6"
+    },
+    {
+      "gene": "KB",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "ED50",
+      "activityValue": 25,
+      "activityUnit": "ug/ml",
+      "reference": "469554",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001151_7"
+    },
+    {
+      "gene": "Xanthine dehydrogenase",
+      "targetType": "Individual Protein",
+      "species": "Bos taurus",
+      "activityType": "Inhibition",
+      "activityValue": 15.3,
+      "activityUnit": "%",
+      "reference": "3379415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.05,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001151_8"
+    },
+    {
+      "gene": "HUVEC",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 71,
+      "activityUnit": "%",
+      "reference": "26410076",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001151_9"
+    }
+  ],
+  "asthmaRelated": true
+}

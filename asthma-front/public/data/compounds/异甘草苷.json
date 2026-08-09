@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000910",
+  "name": "异甘草苷",
+  "smiles": "OCCOc1ccccc1CCN",
+  "mw": 400.95,
+  "logp": -0.53,
+  "bloodEntryProbability": 0.6,
+  "radarScores": {
+    "antiInflammatory": 47,
+    "immuneRegulation": 67,
+    "airwayRepair": 57
+  },
+  "targets": [
+    {
+      "gene": "AKR1B1",
+      "targetType": "Aldo-keto reductase family 1 member B1 (EC 1.1.1.300) (EC 1.1.1.372) (EC 1.1.1.54) (Aldehyde reductase) (Aldose reductase) (AR) (EC 1.1.1.21)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 720,
+      "activityUnit": "nM",
+      "reference": "22261024",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000910_0"
+    },
+    {
+      "gene": "PTPN1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 50,
+      "activityUnit": "%",
+      "reference": "24047800",
+      "asthmaRelated": false,
+      "networkCentrality": 0.8,
+      "sourceDB": "CTD",
+      "id": "ccMon00000910_1"
+    },
+    {
+      "gene": "DPP4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 26920,
+      "activityUnit": "nM",
+      "reference": "10.1039/C0MD00245C",
+      "asthmaRelated": false,
+      "networkCentrality": 0.38,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000910_2"
+    }
+  ],
+  "asthmaRelated": false
+}

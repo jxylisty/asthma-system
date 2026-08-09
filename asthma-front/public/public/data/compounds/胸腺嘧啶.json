@@ -1,0 +1,118 @@
+{
+  "id": "ccMon00001407",
+  "name": "胸腺嘧啶",
+  "smiles": "COCc1ccncc1NCC=Oc1ccncc1",
+  "mw": 207.45,
+  "logp": 4.6,
+  "bloodEntryProbability": 0.53,
+  "radarScores": {
+    "antiInflammatory": 97,
+    "immuneRegulation": 68,
+    "airwayRepair": 75
+  },
+  "targets": [
+    {
+      "gene": "CCRF-CEM",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "15081000",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001407_0"
+    },
+    {
+      "gene": "Vero",
+      "targetType": "Cell Line",
+      "species": "Chlorocebus aethiops",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "15081000",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001407_1"
+    },
+    {
+      "gene": "ATAD2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Kd",
+      "activityValue": 10000000,
+      "activityUnit": "nM",
+      "reference": "10.1039/C4MD00237G",
+      "asthmaRelated": false,
+      "networkCentrality": 0.85,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001407_2"
+    },
+    {
+      "gene": "MDCK",
+      "targetType": "Cell Line",
+      "species": "Canis lupus familiaris",
+      "activityType": "IC50",
+      "activityValue": 100,
+      "activityUnit": "ug/ml",
+      "reference": "20674371",
+      "asthmaRelated": false,
+      "networkCentrality": 0.98,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001407_3"
+    },
+    {
+      "gene": "Influenza A virus",
+      "targetType": "Organism",
+      "species": "Influenza A virus",
+      "activityType": "EC50",
+      "activityValue": 100,
+      "activityUnit": "ug/ml",
+      "reference": "20674371",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001407_4"
+    },
+    {
+      "gene": "Tymp",
+      "targetType": "Thymidine phosphorylase (TP) (EC 2.4.2.4) (TdRPase)",
+      "species": "Mus musculus",
+      "activityType": "Ki",
+      "activityValue": 347000000,
+      "activityUnit": "nM",
+      "reference": "14552762",
+      "asthmaRelated": false,
+      "networkCentrality": 0.16,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001407_5"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423",
+      "asthmaRelated": false,
+      "networkCentrality": 0.36,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001407_6"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001407_7"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000260",
+  "name": "穗花牡荆苷",
+  "smiles": "c1ccncc1c1ccncc1CCOc1ccccc1c1ccc(O)cc1C(=O)O",
+  "mw": 185.19,
+  "logp": 0.77,
+  "bloodEntryProbability": 0.49,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 83,
+    "airwayRepair": 52
+  },
+  "targets": [
+    {
+      "gene": "PTGS1",
+      "targetType": "Prostaglandin G/H synthase 1 (EC 1.14.99.1) (Cyclooxygenase-1) (COX-1) (Prostaglandin H2 synthase 1) (PGH synthase 1) (PGHS-1) (PHS 1) (Prostaglandin-endoperoxide synthase 1)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 40.3,
+      "activityUnit": "%",
+      "reference": "26351040",
+      "asthmaRelated": true,
+      "networkCentrality": 0.79,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000260_0"
+    },
+    {
+      "gene": "PTGS2",
+      "targetType": "Prostaglandin G/H synthase 2 (EC 1.14.99.1) (Cyclooxygenase-2) (COX-2) (PHS II) (Prostaglandin H2 synthase 2) (PGH synthase 2) (PGHS-2) (Prostaglandin-endoperoxide synthase 2)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 30,
+      "activityUnit": "%",
+      "reference": "26351040",
+      "asthmaRelated": true,
+      "networkCentrality": 0.44,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000260_1"
+    },
+    {
+      "gene": "Hepatitis C virus",
+      "targetType": "Organism",
+      "species": "Hepatitis C virus",
+      "activityType": "Inhibition",
+      "activityValue": 12.9,
+      "activityUnit": "%",
+      "reference": "19904996",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "CTD",
+      "id": "ccMon00000260_2"
+    }
+  ],
+  "asthmaRelated": true
+}

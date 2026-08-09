@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00000806",
+  "name": "人参皂苷Rk3",
+  "smiles": "CCOCCOC(=O)OC=O",
+  "mw": 344.7,
+  "logp": 0.27,
+  "bloodEntryProbability": 0.76,
+  "radarScores": {
+    "antiInflammatory": 61,
+    "immuneRegulation": 71,
+    "airwayRepair": 74
+  },
+  "targets": [
+    {
+      "gene": "DPP4",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^activity|increases^abundance",
+      "activityUnit": "",
+      "reference": "32535096",
+      "asthmaRelated": false,
+      "networkCentrality": 0.45,
+      "sourceDB": "CTD",
+      "id": "ccMon00000806_0"
+    },
+    {
+      "gene": "PDE5A",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29298510",
+      "asthmaRelated": true,
+      "networkCentrality": 0.06,
+      "sourceDB": "CTD",
+      "id": "ccMon00000806_1"
+    },
+    {
+      "gene": "PDE5A",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity|decreases^degradation",
+      "activityUnit": "",
+      "reference": "29298510",
+      "asthmaRelated": true,
+      "networkCentrality": 0.88,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000806_2"
+    }
+  ],
+  "asthmaRelated": true
+}

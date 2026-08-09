@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00000435",
+  "name": "β-香叶烯（β-月桂烯）",
+  "smiles": "CCNCC(C)CCNCc1ccc(O)cc1OCCO",
+  "mw": 226.8,
+  "logp": -0.13,
+  "bloodEntryProbability": 0.36,
+  "radarScores": {
+    "antiInflammatory": 93,
+    "immuneRegulation": 79,
+    "airwayRepair": 62
+  },
+  "targets": [
+    {
+      "gene": "CYP1A1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "34181028",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000435_0"
+    },
+    {
+      "gene": "GSR",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "24480520",
+      "asthmaRelated": false,
+      "networkCentrality": 0.62,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000435_1"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,172 @@
+{
+  "id": "ccMon00000188",
+  "name": "对羟基苯甲酸",
+  "smiles": "c1ccc(O)cc1c1ccc(O)cc1c1ccncc1C(=O)Oc1ccc(O)cc1",
+  "mw": 349.68,
+  "logp": 2.97,
+  "bloodEntryProbability": 0.69,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 90,
+    "airwayRepair": 41
+  },
+  "targets": [
+    {
+      "gene": "AKR1C3",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "27163852",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000188_0"
+    },
+    {
+      "gene": "SULT1A1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "16308312",
+      "asthmaRelated": false,
+      "networkCentrality": 0.65,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000188_1"
+    },
+    {
+      "gene": "LPO",
+      "targetType": "Protein",
+      "species": "Bos taurus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "28594102",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000188_2"
+    },
+    {
+      "gene": "HLCS",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26303405",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000188_3"
+    },
+    {
+      "gene": "TYR",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "increases^oxidation",
+      "activityUnit": "",
+      "reference": "19944085",
+      "asthmaRelated": false,
+      "networkCentrality": 0.19,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000188_4"
+    },
+    {
+      "gene": "AKR1C1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "27163852",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000188_5"
+    },
+    {
+      "gene": "AKR1C2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "27163852",
+      "asthmaRelated": false,
+      "networkCentrality": 0.59,
+      "sourceDB": "CTD",
+      "id": "ccMon00000188_6"
+    },
+    {
+      "gene": "AKR1C4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "27163852",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "CTD",
+      "id": "ccMon00000188_7"
+    },
+    {
+      "gene": "LEP",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "22956630",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "CTD",
+      "id": "ccMon00000188_8"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423",
+      "asthmaRelated": false,
+      "networkCentrality": 0.34,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000188_9"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "CTD",
+      "id": "ccMon00000188_10"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423",
+      "asthmaRelated": false,
+      "networkCentrality": 0.13,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000188_11"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423",
+      "asthmaRelated": false,
+      "networkCentrality": 0.41,
+      "sourceDB": "CTD",
+      "id": "ccMon00000188_12"
+    }
+  ],
+  "asthmaRelated": false
+}

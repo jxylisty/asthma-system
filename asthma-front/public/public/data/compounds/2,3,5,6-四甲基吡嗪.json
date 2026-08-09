@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00000096",
+  "name": "2,3,5,6-四甲基吡嗪",
+  "smiles": "NCCCNc1ccccc1",
+  "mw": 286.66,
+  "logp": 3.68,
+  "bloodEntryProbability": 0.76,
+  "radarScores": {
+    "antiInflammatory": 70,
+    "immuneRegulation": 44,
+    "airwayRepair": 99
+  },
+  "targets": [
+    {
+      "gene": "Rattus norvegicus",
+      "targetType": "Organism",
+      "species": "Rattus norvegicus",
+      "activityType": "Activity",
+      "activityValue": 46.3,
+      "activityUnit": "%",
+      "reference": "18790647",
+      "asthmaRelated": false,
+      "networkCentrality": 0.06,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000096_0"
+    },
+    {
+      "gene": "Rattus norvegicus",
+      "targetType": "Organism",
+      "species": "Rattus norvegicus",
+      "activityType": "Inhibition",
+      "activityValue": 71.2,
+      "activityUnit": "%",
+      "reference": "18790647",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000096_1"
+    },
+    {
+      "gene": "Plasma",
+      "targetType": "Tissue",
+      "species": "Oryctolagus cuniculus",
+      "activityType": "Activity",
+      "activityValue": 7.86,
+      "activityUnit": "%",
+      "reference": "17383884",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "CTD",
+      "id": "ccMon00000096_2"
+    },
+    {
+      "gene": "ECV-304",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 22.08,
+      "activityUnit": "%",
+      "reference": "21993151",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000096_3"
+    },
+    {
+      "gene": "ECV-304",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "EC50",
+      "activityValue": 452000,
+      "activityUnit": "nM",
+      "reference": "17383884",
+      "asthmaRelated": false,
+      "networkCentrality": 0.7,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000096_4"
+    }
+  ],
+  "asthmaRelated": false
+}

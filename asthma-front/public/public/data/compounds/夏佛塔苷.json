@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00001314",
+  "name": "夏佛塔苷",
+  "smiles": "C=OOCOCCO",
+  "mw": 369.02,
+  "logp": 2.56,
+  "bloodEntryProbability": 0.61,
+  "radarScores": {
+    "antiInflammatory": 67,
+    "immuneRegulation": 70,
+    "airwayRepair": 50
+  },
+  "targets": [
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|decreases^uptake",
+      "activityUnit": "",
+      "reference": "34217736",
+      "asthmaRelated": false,
+      "networkCentrality": 0.04,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001314_0"
+    },
+    {
+      "gene": "BACE1",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26297990",
+      "asthmaRelated": false,
+      "networkCentrality": 1,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001314_1"
+    },
+    {
+      "gene": "BCHE",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26297990",
+      "asthmaRelated": false,
+      "networkCentrality": 0.66,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001314_2"
+    }
+  ],
+  "asthmaRelated": false
+}

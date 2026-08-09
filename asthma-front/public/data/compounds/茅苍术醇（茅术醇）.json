@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000845",
+  "name": "茅苍术醇（茅术醇）",
+  "smiles": "CCCC(C)CCOc1ccncc1",
+  "mw": 235.29,
+  "logp": 2.91,
+  "bloodEntryProbability": 0.95,
+  "radarScores": {
+    "antiInflammatory": 63,
+    "immuneRegulation": 90,
+    "airwayRepair": 61
+  },
+  "targets": [
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "LD50",
+      "activityValue": 0.71,
+      "activityUnit": "ug",
+      "reference": "21520395",
+      "asthmaRelated": false,
+      "networkCentrality": 0.45,
+      "sourceDB": "CTD",
+      "id": "ccMon00000845_0"
+    },
+    {
+      "gene": "Hepatocyte",
+      "targetType": "Cell Line",
+      "species": "Rattus norvegicus",
+      "activityType": "Activity",
+      "activityValue": 73,
+      "activityUnit": "%",
+      "reference": "6418860",
+      "asthmaRelated": false,
+      "networkCentrality": 0.61,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000845_1"
+    },
+    {
+      "gene": "Gpt",
+      "targetType": "Alanine aminotransferase 1 (ALT1) (EC 2.6.1.2) (Glutamate pyruvate transaminase 1) (GPT 1) (Glutamic--alanine transaminase 1) (Glutamic--pyruvic transaminase 1)",
+      "species": "Rattus norvegicus",
+      "activityType": "Activity",
+      "activityValue": 105,
+      "activityUnit": "%",
+      "reference": "6418860",
+      "asthmaRelated": false,
+      "networkCentrality": 0.77,
+      "sourceDB": "CTD",
+      "id": "ccMon00000845_2"
+    }
+  ],
+  "asthmaRelated": false
+}

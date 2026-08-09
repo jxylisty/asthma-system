@@ -1,0 +1,131 @@
+{
+  "id": "ccMon00001257",
+  "name": "胡薄荷酮",
+  "smiles": "c1ccc(O)cc1CCOOCCCO",
+  "mw": 353.58,
+  "logp": 0.71,
+  "bloodEntryProbability": 0.38,
+  "radarScores": {
+    "antiInflammatory": 80,
+    "immuneRegulation": 81,
+    "airwayRepair": 59
+  },
+  "targets": [
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "15135310",
+      "asthmaRelated": true,
+      "networkCentrality": 0.43,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001257_0"
+    },
+    {
+      "gene": "LDLR",
+      "targetType": "Protein",
+      "species": "Ovis aries",
+      "activityType": "affects^activity",
+      "activityUnit": "",
+      "reference": "15663186",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "CTD",
+      "id": "ccMon00001257_1"
+    },
+    {
+      "gene": "Meloidogyne incognita",
+      "targetType": "Organism",
+      "species": "Meloidogyne incognita",
+      "activityType": "EC50",
+      "activityValue": 150,
+      "activityUnit": "ug/ml",
+      "reference": "20527965",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001257_2"
+    },
+    {
+      "gene": "Meloidogyne incognita",
+      "targetType": "Organism",
+      "species": "Meloidogyne incognita",
+      "activityType": "EC50",
+      "activityValue": 117,
+      "activityUnit": "ug/ml",
+      "reference": "20527965",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "CTD",
+      "id": "ccMon00001257_3"
+    },
+    {
+      "gene": "AR",
+      "targetType": "Androgen receptor (Dihydrotestosterone receptor) (Nuclear receptor subfamily 3 group C member 4)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 8643.7,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001257_4"
+    },
+    {
+      "gene": "Musca domestica",
+      "targetType": "Organism",
+      "species": "Musca domestica",
+      "activityType": "LD50",
+      "activityValue": 92.2,
+      "activityUnit": "ug",
+      "reference": "22461383",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001257_5"
+    },
+    {
+      "gene": "GABA receptor subunit",
+      "targetType": "Individual Protein",
+      "species": "Musca domestica",
+      "activityType": "Activity",
+      "activityValue": 132,
+      "activityUnit": "%",
+      "reference": "22461383",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001257_6"
+    },
+    {
+      "gene": "NFKB1",
+      "targetType": "Nuclear factor NF-kappa-B p105 subunit (DNA-binding factor KBF1) (EBP-1) (Nuclear factor of kappa light polypeptide gene enhancer in B-cells 1) [Cleaved into: Nuclear factor NF-kappa-B p50 subunit]",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 6.2,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": true,
+      "networkCentrality": 0.03,
+      "sourceDB": "CTD",
+      "id": "ccMon00001257_7"
+    },
+    {
+      "gene": "Meloidogyne javanica",
+      "targetType": "Organism",
+      "species": "Meloidogyne javanica",
+      "activityType": "EC50",
+      "activityValue": 0.205,
+      "activityUnit": "uL/ml",
+      "reference": "20527965",
+      "asthmaRelated": false,
+      "networkCentrality": 0.05,
+      "sourceDB": "CTD",
+      "id": "ccMon00001257_8"
+    }
+  ],
+  "asthmaRelated": true
+}

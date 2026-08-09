@@ -1,0 +1,112 @@
+{
+  "id": "ccMon00001050",
+  "name": "棕榈酸甲酯",
+  "smiles": "CCCCNc1ccc(O)cc1C=Oc1ccccc1CCO",
+  "mw": 341.1,
+  "logp": 2.37,
+  "bloodEntryProbability": 0.53,
+  "radarScores": {
+    "antiInflammatory": 92,
+    "immuneRegulation": 80,
+    "airwayRepair": 71
+  },
+  "targets": [
+    {
+      "gene": "RELA",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "21575650",
+      "asthmaRelated": true,
+      "networkCentrality": 0.79,
+      "sourceDB": "CTD",
+      "id": "ccMon00001050_0"
+    },
+    {
+      "gene": "RELA",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "21575650",
+      "asthmaRelated": true,
+      "networkCentrality": 0.68,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001050_1"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "21575650",
+      "asthmaRelated": true,
+      "networkCentrality": 0.22,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001050_2"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^secretion",
+      "activityUnit": "",
+      "reference": "21575650",
+      "asthmaRelated": true,
+      "networkCentrality": 0.39,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001050_3"
+    },
+    {
+      "gene": "ESR1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|increases^activity",
+      "activityUnit": "",
+      "reference": "27633901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.36,
+      "sourceDB": "CTD",
+      "id": "ccMon00001050_4"
+    },
+    {
+      "gene": "IL10",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "21575650",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "CTD",
+      "id": "ccMon00001050_5"
+    },
+    {
+      "gene": "NFKBIA",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "21575650",
+      "asthmaRelated": true,
+      "networkCentrality": 0.55,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001050_6"
+    },
+    {
+      "gene": "ESR2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "27633901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.36,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001050_7"
+    }
+  ],
+  "asthmaRelated": true
+}

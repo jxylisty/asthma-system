@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00001358",
+  "name": "槐黄醇",
+  "smiles": "CCOCC(C)CC(C)c1ccccc1CCCC(C)",
+  "mw": 456.05,
+  "logp": 0.94,
+  "bloodEntryProbability": 0.46,
+  "radarScores": {
+    "antiInflammatory": 95,
+    "immuneRegulation": 54,
+    "airwayRepair": 57
+  },
+  "targets": [
+    {
+      "gene": "Human herpesvirus 1",
+      "targetType": "Organism",
+      "species": "Human herpesvirus 1",
+      "activityType": "EC50",
+      "activityValue": 300,
+      "activityUnit": "ug/ml",
+      "reference": "9868163",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "CTD",
+      "id": "ccMon00001358_0"
+    },
+    {
+      "gene": "Pde4a",
+      "targetType": "cAMP-specific 3',5'-cyclic phosphodiesterase 4A (EC 3.1.4.53) (DPDE2)",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 2550,
+      "activityUnit": "nM",
+      "reference": "12161123",
+      "asthmaRelated": true,
+      "networkCentrality": 0.54,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001358_1"
+    },
+    {
+      "gene": "Pde5a",
+      "targetType": "cGMP-specific 3',5'-cyclic phosphodiesterase (EC 3.1.4.35) (cGMP-binding cGMP-specific phosphodiesterase) (CGB-PDE)",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 13,
+      "activityUnit": "nM",
+      "reference": "12161123",
+      "asthmaRelated": true,
+      "networkCentrality": 0.09,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001358_2"
+    },
+    {
+      "gene": "Pde5a",
+      "targetType": "cGMP-specific 3',5'-cyclic phosphodiesterase (EC 3.1.4.35) (cGMP-binding cGMP-specific phosphodiesterase) (CGB-PDE)",
+      "species": "Rattus norvegicus",
+      "activityType": "Ki",
+      "activityValue": 5,
+      "activityUnit": "nM",
+      "reference": "12161123",
+      "asthmaRelated": true,
+      "networkCentrality": 0.04,
+      "sourceDB": "CTD",
+      "id": "ccMon00001358_3"
+    }
+  ],
+  "asthmaRelated": true
+}

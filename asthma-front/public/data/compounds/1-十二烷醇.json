@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00000073",
+  "name": "1-十二烷醇",
+  "smiles": "CCCC(C)CCc1ccccc1C=OC=O",
+  "mw": 284.25,
+  "logp": 3.96,
+  "bloodEntryProbability": 0.89,
+  "radarScores": {
+    "antiInflammatory": 69,
+    "immuneRegulation": 50,
+    "airwayRepair": 52
+  },
+  "targets": [
+    {
+      "gene": "FAAH",
+      "targetType": "Fatty-acid amide hydrolase 1 (EC 3.5.1.99) (Anandamide amidohydrolase 1) (Fatty acid ester hydrolase) (EC 3.1.1.-) (Oleamide hydrolase 1)",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "10592235",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "CTD",
+      "id": "ccMon00000073_0"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "10592235",
+      "asthmaRelated": false,
+      "networkCentrality": 0.67,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000073_1"
+    }
+  ],
+  "asthmaRelated": false
+}

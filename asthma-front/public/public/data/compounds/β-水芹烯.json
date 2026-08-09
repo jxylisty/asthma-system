@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000440",
+  "name": "β-水芹烯",
+  "smiles": "CCNNCOCCOc1ccc(O)cc1NC",
+  "mw": 238.81,
+  "logp": 0.85,
+  "bloodEntryProbability": 0.65,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 95,
+    "airwayRepair": 45
+  },
+  "targets": [
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "EC50",
+      "activityValue": 127700,
+      "activityUnit": "ug/ml",
+      "reference": "8594153",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000440_0"
+    },
+    {
+      "gene": "Glomerella acutata",
+      "targetType": "Organism",
+      "species": "Glomerella acutata",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "mm",
+      "reference": "17894463",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000440_1"
+    },
+    {
+      "gene": "Colletotrichum gloeosporioides",
+      "targetType": "Organism",
+      "species": "Colletotrichum gloeosporioides",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "mm",
+      "reference": "17894463",
+      "asthmaRelated": false,
+      "networkCentrality": 0.99,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000440_2"
+    },
+    {
+      "gene": "Colletotrichum fragariae",
+      "targetType": "Organism",
+      "species": "Colletotrichum fragariae",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "mm",
+      "reference": "17894463",
+      "asthmaRelated": false,
+      "networkCentrality": 0.69,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000440_3"
+    }
+  ],
+  "asthmaRelated": false
+}

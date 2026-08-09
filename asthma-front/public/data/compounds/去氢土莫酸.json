@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000636",
+  "name": "去氢土莫酸",
+  "smiles": "NCc1ccccc1COC",
+  "mw": 445.21,
+  "logp": 0.31,
+  "bloodEntryProbability": 0.92,
+  "radarScores": {
+    "antiInflammatory": 65,
+    "immuneRegulation": 68,
+    "airwayRepair": 82
+  },
+  "targets": [
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 70,
+      "activityUnit": "%",
+      "reference": "11975480",
+      "asthmaRelated": false,
+      "networkCentrality": 0.1,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000636_0"
+    },
+    {
+      "gene": "Phospholipase A2, acidic",
+      "targetType": "Individual Protein",
+      "species": "Naja naja",
+      "activityType": "IC50",
+      "activityValue": 845000,
+      "activityUnit": "nM",
+      "reference": "8984162",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000636_1"
+    },
+    {
+      "gene": "Phospholipase A2, acidic",
+      "targetType": "Individual Protein",
+      "species": "Naja naja",
+      "activityType": "Inhibition",
+      "activityValue": 58.6,
+      "activityUnit": "%",
+      "reference": "8984162",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000636_2"
+    }
+  ],
+  "asthmaRelated": false
+}

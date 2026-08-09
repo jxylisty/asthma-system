@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000873",
+  "name": "吲哚乙酸酯",
+  "smiles": "OCc1ccc(O)cc1c1ccccc1c1ccncc1",
+  "mw": 351.12,
+  "logp": 3.91,
+  "bloodEntryProbability": 0.66,
+  "radarScores": {
+    "antiInflammatory": 65,
+    "immuneRegulation": 76,
+    "airwayRepair": 74
+  },
+  "targets": [
+    {
+      "gene": "AHR",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "20000589",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000873_0"
+    }
+  ],
+  "asthmaRelated": false
+}
