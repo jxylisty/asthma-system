@@ -1,0 +1,172 @@
+{
+  "id": "ccMon00000568",
+  "name": "柯诺辛B",
+  "smiles": "C=Oc1ccc(O)cc1OCCCC(=O)OCCO",
+  "mw": 330.45,
+  "logp": 1.89,
+  "bloodEntryProbability": 0.56,
+  "radarScores": {
+    "antiInflammatory": 77,
+    "immuneRegulation": 100,
+    "airwayRepair": 49
+  },
+  "targets": [
+    {
+      "gene": "HMGB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|affects^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.88,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000568_0"
+    },
+    {
+      "gene": "HMGB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^reaction|increases^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000568_1"
+    },
+    {
+      "gene": "BCL2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^reaction|increases^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000568_2"
+    },
+    {
+      "gene": "EIF4EBP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^phosphorylation",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "CTD",
+      "id": "ccMon00000568_3"
+    },
+    {
+      "gene": "EIF4EBP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^phosphorylation|increases^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.88,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000568_4"
+    },
+    {
+      "gene": "SQSTM1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^expression|affects^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.97,
+      "sourceDB": "CTD",
+      "id": "ccMon00000568_5"
+    },
+    {
+      "gene": "MTOR",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^phosphorylation",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": true,
+      "networkCentrality": 0.52,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000568_6"
+    },
+    {
+      "gene": "MTOR",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^phosphorylation|increases^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": true,
+      "networkCentrality": 0.4,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000568_7"
+    },
+    {
+      "gene": "RPS6KB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^phosphorylation",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.99,
+      "sourceDB": "CTD",
+      "id": "ccMon00000568_8"
+    },
+    {
+      "gene": "RPS6KB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^phosphorylation|increases^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.32,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000568_9"
+    },
+    {
+      "gene": "SNCA",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^reaction|increases^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.79,
+      "sourceDB": "CTD",
+      "id": "ccMon00000568_10"
+    },
+    {
+      "gene": "BECN1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|affects^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000568_11"
+    },
+    {
+      "gene": "BECN1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^reaction|increases^reaction",
+      "activityUnit": "",
+      "reference": "30578841",
+      "asthmaRelated": false,
+      "networkCentrality": 0.22,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000568_12"
+    }
+  ],
+  "asthmaRelated": true
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00001339",
+  "name": "山栀苷",
+  "smiles": "NCCCNOCCC",
+  "mw": 308.03,
+  "logp": 3.41,
+  "bloodEntryProbability": 0.45,
+  "radarScores": {
+    "antiInflammatory": 89,
+    "immuneRegulation": 46,
+    "airwayRepair": 58
+  },
+  "targets": [
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 78.6,
+      "activityUnit": "ug/ml",
+      "reference": "25611215",
+      "asthmaRelated": false,
+      "networkCentrality": 0.32,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001339_0"
+    }
+  ],
+  "asthmaRelated": false
+}

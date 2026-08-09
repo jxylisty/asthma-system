@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000755",
+  "name": "没食子酰基芍药苷",
+  "smiles": "CC(C)C=OCCC=C",
+  "mw": 367.19,
+  "logp": 3.75,
+  "bloodEntryProbability": 0.51,
+  "radarScores": {
+    "antiInflammatory": 84,
+    "immuneRegulation": 58,
+    "airwayRepair": 97
+  },
+  "targets": [
+    {
+      "gene": "Akr1b1",
+      "targetType": "Aldo-keto reductase family 1 member B1 (EC 1.1.1.21) (EC 1.1.1.300) (EC 1.1.1.372) (EC 1.1.1.54) (Aldehyde reductase) (Aldose reductase) (AR)",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 44600,
+      "activityUnit": "nM",
+      "reference": "19670875",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000755_0"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 36130,
+      "activityUnit": "nM",
+      "reference": "23067550",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000755_1"
+    },
+    {
+      "gene": "N9",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 82.1,
+      "activityUnit": "%",
+      "reference": "19691309",
+      "asthmaRelated": false,
+      "networkCentrality": 0.95,
+      "sourceDB": "CTD",
+      "id": "ccMon00000755_2"
+    }
+  ],
+  "asthmaRelated": false
+}

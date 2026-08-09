@@ -1,0 +1,53 @@
+{
+  "id": "ccMon00000731",
+  "name": "木兰脂素",
+  "smiles": "CCCC(C)C(=O)O",
+  "mw": 364.36,
+  "logp": 2.81,
+  "bloodEntryProbability": 0.71,
+  "radarScores": {
+    "antiInflammatory": 50,
+    "immuneRegulation": 99,
+    "airwayRepair": 56
+  },
+  "targets": [
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.18,
+      "sourceDB": "CTD",
+      "id": "ccMon00000731_0"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "30919561",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000731_1"
+    },
+    {
+      "gene": "HEK293",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 29.8,
+      "activityUnit": "%",
+      "reference": "24018191",
+      "asthmaRelated": false,
+      "networkCentrality": 0.45,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000731_2"
+    }
+  ],
+  "asthmaRelated": false
+}

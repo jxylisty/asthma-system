@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000041",
+  "name": "1, 2, 3, 4-四氢化萘",
+  "smiles": "CCOOCCCOCC(C)c1ccccc1c1ccncc1",
+  "mw": 246.95,
+  "logp": 3.11,
+  "bloodEntryProbability": 0.32,
+  "radarScores": {
+    "antiInflammatory": 65,
+    "immuneRegulation": 92,
+    "airwayRepair": 63
+  },
+  "targets": [
+    {
+      "gene": "TSHR",
+      "targetType": "Thyrotropin receptor (Thyroid-stimulating hormone receptor) (TSH-R)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 39810.7,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.77,
+      "sourceDB": "CTD",
+      "id": "ccMon00000041_0"
+    }
+  ],
+  "asthmaRelated": false
+}

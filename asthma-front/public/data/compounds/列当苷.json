@@ -1,0 +1,91 @@
+{
+  "id": "ccMon00000572",
+  "name": "列当苷",
+  "smiles": "CCCCc1ccccc1CCOCc1ccncc1",
+  "mw": 246.98,
+  "logp": 0.7,
+  "bloodEntryProbability": 0.67,
+  "radarScores": {
+    "antiInflammatory": 61,
+    "immuneRegulation": 45,
+    "airwayRepair": 75
+  },
+  "targets": [
+    {
+      "gene": "ITGB2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "16393473",
+      "asthmaRelated": false,
+      "networkCentrality": 0.88,
+      "sourceDB": "CTD",
+      "id": "ccMon00000572_0"
+    },
+    {
+      "gene": "ITGB2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "16393473",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "CTD",
+      "id": "ccMon00000572_1"
+    },
+    {
+      "gene": "NOX1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "16393473",
+      "asthmaRelated": false,
+      "networkCentrality": 0.7,
+      "sourceDB": "CTD",
+      "id": "ccMon00000572_2"
+    },
+    {
+      "gene": "Neuraminidase",
+      "targetType": "Individual Protein",
+      "species": "Influenza A virus",
+      "activityType": "IC50",
+      "activityValue": 89.81,
+      "activityUnit": "ug/ml",
+      "reference": "26774928",
+      "asthmaRelated": false,
+      "networkCentrality": 0.03,
+      "sourceDB": "CTD",
+      "id": "ccMon00000572_3"
+    },
+    {
+      "gene": "Neuraminidase",
+      "targetType": "Individual Protein",
+      "species": "Influenza A virus",
+      "activityType": "Inhibition",
+      "activityValue": 89.24,
+      "activityUnit": "%",
+      "reference": "26774928",
+      "asthmaRelated": false,
+      "networkCentrality": 0.28,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000572_4"
+    },
+    {
+      "gene": "ACE",
+      "targetType": "Angiotensin-converting enzyme (ACE) (EC 3.2.1.-) (EC 3.4.15.1) (Dipeptidyl carboxypeptidase I) (Kininase II) (CD antigen CD143) [Cleaved into: Angiotensin-converting enzyme, soluble form]",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 99.7,
+      "activityUnit": "%",
+      "reference": "15217277",
+      "asthmaRelated": true,
+      "networkCentrality": 0.4,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000572_5"
+    }
+  ],
+  "asthmaRelated": true
+}

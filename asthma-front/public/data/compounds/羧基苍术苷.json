@@ -1,0 +1,76 @@
+{
+  "id": "ccMon00000489",
+  "name": "羧基苍术苷",
+  "smiles": "CCOCOCOCC=C",
+  "mw": 384.08,
+  "logp": 3.64,
+  "bloodEntryProbability": 0.62,
+  "radarScores": {
+    "antiInflammatory": 51,
+    "immuneRegulation": 82,
+    "airwayRepair": 80
+  },
+  "targets": [
+    {
+      "gene": "SLC25A5",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26746582",
+      "asthmaRelated": false,
+      "networkCentrality": 0.3,
+      "sourceDB": "CTD",
+      "id": "ccMon00000489_0"
+    },
+    {
+      "gene": "ICAM1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "12952965",
+      "asthmaRelated": false,
+      "networkCentrality": 0.8,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000489_1"
+    },
+    {
+      "gene": "SLC25A4",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^binding",
+      "activityUnit": "",
+      "reference": "18667415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000489_2"
+    },
+    {
+      "gene": "SLC25A4",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "18667415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000489_3"
+    },
+    {
+      "gene": "SLC25A4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423|10592235",
+      "asthmaRelated": false,
+      "networkCentrality": 0.67,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000489_4"
+    }
+  ],
+  "asthmaRelated": false
+}

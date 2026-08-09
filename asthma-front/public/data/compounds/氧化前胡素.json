@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00001161",
+  "name": "氧化前胡素",
+  "smiles": "CCNCCCC(C)",
+  "mw": 359.21,
+  "logp": 4.51,
+  "bloodEntryProbability": 0.49,
+  "radarScores": {
+    "antiInflammatory": 57,
+    "immuneRegulation": 80,
+    "airwayRepair": 75
+  },
+  "targets": [
+    {
+      "gene": "Mus musculus",
+      "targetType": "Organism",
+      "species": "Mus musculus",
+      "activityType": "Activity",
+      "activityValue": 142.6,
+      "activityUnit": "%",
+      "reference": "9157191",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001161_0"
+    },
+    {
+      "gene": "BACE1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 359200,
+      "activityUnit": "nM",
+      "reference": "22222157",
+      "asthmaRelated": false,
+      "networkCentrality": 0.45,
+      "sourceDB": "CTD",
+      "id": "ccMon00001161_1"
+    },
+    {
+      "gene": "Cladosporium cucumerinum",
+      "targetType": "Organism",
+      "species": "Cladosporium cucumerinum",
+      "activityType": "Activity",
+      "activityValue": 1,
+      "activityUnit": "ug",
+      "reference": "7760070",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001161_2"
+    },
+    {
+      "gene": "Aedes aegypti",
+      "targetType": "Organism",
+      "species": "Aedes aegypti",
+      "activityType": "LD100",
+      "activityValue": 25,
+      "activityUnit": "ppm",
+      "reference": "7760070",
+      "asthmaRelated": false,
+      "networkCentrality": 0.6,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001161_3"
+    }
+  ],
+  "asthmaRelated": false
+}

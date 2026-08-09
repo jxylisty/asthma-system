@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000996",
+  "name": "钓樟内酯(乌药内酯)",
+  "smiles": "CC(C)CC(C)CCCOCCCO",
+  "mw": 334.06,
+  "logp": 2.42,
+  "bloodEntryProbability": 0.91,
+  "radarScores": {
+    "antiInflammatory": 90,
+    "immuneRegulation": 52,
+    "airwayRepair": 77
+  },
+  "targets": [
+    {
+      "gene": "HepG2",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "EC50",
+      "activityValue": 98000,
+      "activityUnit": "nM",
+      "reference": "19639966",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000996_0"
+    }
+  ],
+  "asthmaRelated": false
+}

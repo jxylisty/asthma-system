@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00000948",
+  "name": "山奈苷",
+  "smiles": "C(=O)OCCOc1ccccc1",
+  "mw": 400.3,
+  "logp": 3.17,
+  "bloodEntryProbability": 0.3,
+  "radarScores": {
+    "antiInflammatory": 56,
+    "immuneRegulation": 81,
+    "airwayRepair": 84
+  },
+  "targets": [
+    {
+      "gene": "Rattus norvegicus",
+      "targetType": "Organism",
+      "species": "Rattus norvegicus",
+      "activityType": "Activity",
+      "activityValue": 5.5,
+      "activityUnit": "umol/ml",
+      "reference": "15165145",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000948_0"
+    },
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 84000,
+      "activityUnit": "nM",
+      "reference": "15165145",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "CTD",
+      "id": "ccMon00000948_1"
+    },
+    {
+      "gene": "Tyrosinase",
+      "targetType": "Individual Protein",
+      "species": "Agaricus bisporus",
+      "activityType": "IC50",
+      "activityValue": 400000,
+      "activityUnit": "nM",
+      "reference": "21050756",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000948_2"
+    },
+    {
+      "gene": "Xanthine dehydrogenase",
+      "targetType": "Individual Protein",
+      "species": "Bos taurus",
+      "activityType": "Inhibition",
+      "activityValue": 15.5,
+      "activityUnit": "%",
+      "reference": "3379415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000948_3"
+    },
+    {
+      "gene": "Liver microsomes",
+      "targetType": "Subcellular",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 320000,
+      "activityUnit": "nM",
+      "reference": "15165145",
+      "asthmaRelated": false,
+      "networkCentrality": 0.01,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000948_4"
+    }
+  ],
+  "asthmaRelated": false
+}

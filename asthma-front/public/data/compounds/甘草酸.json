@@ -1,0 +1,64 @@
+{
+  "id": "ccMon00000817",
+  "name": "甘草酸",
+  "smiles": "CCOC(=O)OC=Cc1ccncc1",
+  "mw": 162.28,
+  "logp": 3.03,
+  "bloodEntryProbability": 0.39,
+  "radarScores": {
+    "antiInflammatory": 60,
+    "immuneRegulation": 62,
+    "airwayRepair": 82
+  },
+  "targets": [
+    {
+      "gene": "CASP3",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "antagonist",
+      "activityUnit": "",
+      "reference": "24963489",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "CTD",
+      "id": "ccMon00000817_0"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "antagonist",
+      "activityUnit": "",
+      "reference": "24963489",
+      "asthmaRelated": true,
+      "networkCentrality": 0.34,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000817_1"
+    },
+    {
+      "gene": "LPL",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "inducer",
+      "activityUnit": "",
+      "reference": "23678825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000817_2"
+    },
+    {
+      "gene": "HSD11B1",
+      "targetType": "11-beta-hydroxysteroid dehydrogenase 1 (11-DH) (11-beta-HSD1) (EC 1.1.1.146) (7-oxosteroid reductase) (EC 1.1.1.201) (Corticosteroid 11-beta-dehydrogenase isozyme 1) (Short chain dehydrogenase/reductase family 26C member 1)",
+      "species": "Homo sapiens",
+      "activityType": "antagonist",
+      "activityUnit": "",
+      "reference": "",
+      "asthmaRelated": false,
+      "networkCentrality": 0.89,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000817_3"
+    }
+  ],
+  "asthmaRelated": true
+}

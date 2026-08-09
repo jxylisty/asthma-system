@@ -1,0 +1,133 @@
+{
+  "id": "ccMon00000392",
+  "name": "扁蓄苷（广寄生苷）",
+  "smiles": "c1ccccc1CCCOCCOC",
+  "mw": 212.42,
+  "logp": 4.19,
+  "bloodEntryProbability": 0.55,
+  "radarScores": {
+    "antiInflammatory": 61,
+    "immuneRegulation": 99,
+    "airwayRepair": 84
+  },
+  "targets": [
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 16.13,
+      "activityUnit": "ug/ml",
+      "reference": "25862199",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "CTD",
+      "id": "ccMon00000392_0"
+    },
+    {
+      "gene": "AKR1B1",
+      "targetType": "Aldo-keto reductase family 1 member B1 (EC 1.1.1.300) (EC 1.1.1.372) (EC 1.1.1.54) (Aldehyde reductase) (Aldose reductase) (AR) (EC 1.1.1.21)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 19050,
+      "activityUnit": "nM",
+      "reference": "22261024",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "CTD",
+      "id": "ccMon00000392_1"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10,
+      "activityUnit": "ug/ml",
+      "reference": "25862199",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000392_2"
+    },
+    {
+      "gene": "Xanthine dehydrogenase",
+      "targetType": "Individual Protein",
+      "species": "Bos taurus",
+      "activityType": "Inhibition",
+      "activityValue": 30.8,
+      "activityUnit": "%",
+      "reference": "3379415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.35,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000392_3"
+    },
+    {
+      "gene": "HeLa",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10,
+      "activityUnit": "ug/ml",
+      "reference": "25862199",
+      "asthmaRelated": false,
+      "networkCentrality": 0.18,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000392_4"
+    },
+    {
+      "gene": "Microcystis aeruginosa",
+      "targetType": "Organism",
+      "species": "Microcystis aeruginosa",
+      "activityType": "IC50",
+      "activityValue": 180000,
+      "activityUnit": "nM",
+      "reference": "10.1021/np50066a004",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000392_5"
+    },
+    {
+      "gene": "Anabaena flos-aquae",
+      "targetType": "Organism",
+      "species": "Dolichospermum flos-aquae",
+      "activityType": "IC50",
+      "activityValue": 28000,
+      "activityUnit": "nM",
+      "reference": "10.1021/np50066a004",
+      "asthmaRelated": false,
+      "networkCentrality": 0.99,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000392_6"
+    },
+    {
+      "gene": "Dengue virus",
+      "targetType": "Organism",
+      "species": "Dengue virus",
+      "activityType": "IC50",
+      "activityValue": 1700,
+      "activityUnit": "nM",
+      "reference": "25305334",
+      "asthmaRelated": false,
+      "networkCentrality": 0.4,
+      "sourceDB": "CTD",
+      "id": "ccMon00000392_7"
+    },
+    {
+      "gene": "Fatty acid synthase",
+      "targetType": "Individual Protein",
+      "species": "Gallus gallus",
+      "activityType": "IC50",
+      "activityValue": 6150,
+      "activityUnit": "nM",
+      "reference": "21726077",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000392_8"
+    }
+  ],
+  "asthmaRelated": false
+}

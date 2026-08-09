@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00001224",
+  "name": "车前胍酸(车前素)",
+  "smiles": "CCNCC(C)c1ccc(O)cc1C=CCCO",
+  "mw": 448.79,
+  "logp": 0.38,
+  "bloodEntryProbability": 0.91,
+  "radarScores": {
+    "antiInflammatory": 50,
+    "immuneRegulation": 92,
+    "airwayRepair": 76
+  },
+  "targets": [
+    {
+      "gene": "MDA-MB-231",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "26394911",
+      "asthmaRelated": false,
+      "networkCentrality": 0.67,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001224_0"
+    },
+    {
+      "gene": "PANC-1",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "26316467",
+      "asthmaRelated": false,
+      "networkCentrality": 0.98,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001224_1"
+    },
+    {
+      "gene": "Hepatocyte",
+      "targetType": "Cell Line",
+      "species": "",
+      "activityType": "Inhibition",
+      "activityValue": 12.5,
+      "activityUnit": "%",
+      "reference": "25055342",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001224_2"
+    }
+  ],
+  "asthmaRelated": false
+}

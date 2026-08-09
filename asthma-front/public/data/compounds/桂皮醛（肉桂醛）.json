@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000523",
+  "name": "桂皮醛（肉桂醛）",
+  "smiles": "C(=O)OCOCNCCC(C)",
+  "mw": 409.08,
+  "logp": -0.42,
+  "bloodEntryProbability": 0.57,
+  "radarScores": {
+    "antiInflammatory": 57,
+    "immuneRegulation": 67,
+    "airwayRepair": 44
+  },
+  "targets": [
+    {
+      "gene": "Meloidogyne incognita",
+      "targetType": "Organism",
+      "species": "Meloidogyne incognita",
+      "activityType": "EC100",
+      "activityValue": 250,
+      "activityUnit": "ug/ml",
+      "reference": "23379671",
+      "asthmaRelated": false,
+      "networkCentrality": 0.36,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000523_0"
+    },
+    {
+      "gene": "Meloidogyne incognita",
+      "targetType": "Organism",
+      "species": "Meloidogyne incognita",
+      "activityType": "EC50",
+      "activityValue": 12,
+      "activityUnit": "ug/ml",
+      "reference": "23379671",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000523_1"
+    }
+  ],
+  "asthmaRelated": false
+}

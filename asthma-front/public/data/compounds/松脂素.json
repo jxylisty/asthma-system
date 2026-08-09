@@ -1,0 +1,120 @@
+{
+  "id": "ccMon00001215",
+  "name": "松脂素",
+  "smiles": "CCNc1ccncc1C=Cc1ccc(O)cc1",
+  "mw": 349.61,
+  "logp": 3.73,
+  "bloodEntryProbability": 0.5,
+  "radarScores": {
+    "antiInflammatory": 82,
+    "immuneRegulation": 83,
+    "airwayRepair": 72
+  },
+  "targets": [
+    {
+      "gene": "ATAD5",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 11577.4,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.3,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001215_0"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 39500,
+      "activityUnit": "nM",
+      "reference": "24963714",
+      "asthmaRelated": false,
+      "networkCentrality": 0.97,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001215_1"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 50000,
+      "activityUnit": "nM",
+      "reference": "24963714",
+      "asthmaRelated": false,
+      "networkCentrality": 0.34,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001215_2"
+    },
+    {
+      "gene": "PPARD",
+      "targetType": "Peroxisome proliferator-activated receptor delta (PPAR-delta) (NUCI) (Nuclear hormone receptor 1) (NUC1) (Nuclear receptor subfamily 1 group C member 2) (Peroxisome proliferator-activated receptor beta) (PPAR-beta)",
+      "species": "Homo sapiens",
+      "activityType": "EC50",
+      "activityValue": 49500,
+      "activityUnit": "nM",
+      "reference": "22381047",
+      "asthmaRelated": false,
+      "networkCentrality": 0.02,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001215_3"
+    },
+    {
+      "gene": "Artemia",
+      "targetType": "Organism",
+      "species": "Artemia",
+      "activityType": "LC50",
+      "activityValue": 377,
+      "activityUnit": "ppm",
+      "reference": "3379414",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001215_4"
+    },
+    {
+      "gene": "PPARG",
+      "targetType": "Peroxisome proliferator-activated receptor gamma (PPAR-gamma) (Nuclear receptor subfamily 1 group C member 3)",
+      "species": "Homo sapiens",
+      "activityType": "EC50",
+      "activityValue": 58600,
+      "activityUnit": "nM",
+      "reference": "22381047",
+      "asthmaRelated": true,
+      "networkCentrality": 0.31,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001215_5"
+    },
+    {
+      "gene": "PPARA",
+      "targetType": "Peroxisome proliferator-activated receptor alpha (PPAR-alpha) (Nuclear receptor subfamily 1 group C member 1)",
+      "species": "Homo sapiens",
+      "activityType": "EC50",
+      "activityValue": 60000,
+      "activityUnit": "nM",
+      "reference": "22381047",
+      "asthmaRelated": true,
+      "networkCentrality": 0.72,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001215_6"
+    },
+    {
+      "gene": "RACGAP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 171320,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.6,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001215_7"
+    }
+  ],
+  "asthmaRelated": true
+}

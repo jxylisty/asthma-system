@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000567",
+  "name": "柯诺辛",
+  "smiles": "c1ccc(O)cc1c1ccncc1NC",
+  "mw": 305.98,
+  "logp": 0.63,
+  "bloodEntryProbability": 0.55,
+  "radarScores": {
+    "antiInflammatory": 48,
+    "immuneRegulation": 62,
+    "airwayRepair": 83
+  },
+  "targets": [
+    {
+      "gene": "HL-60",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 40000,
+      "activityUnit": "nM",
+      "reference": "21070010",
+      "asthmaRelated": false,
+      "networkCentrality": 0.24,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000567_0"
+    },
+    {
+      "gene": "Aorta",
+      "targetType": "Tissue",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 30,
+      "activityUnit": "ug/ml",
+      "reference": "21070010",
+      "asthmaRelated": false,
+      "networkCentrality": 0.7,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000567_1"
+    },
+    {
+      "gene": "SW480",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 40000,
+      "activityUnit": "nM",
+      "reference": "21070010",
+      "asthmaRelated": false,
+      "networkCentrality": 0.17,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000567_2"
+    }
+  ],
+  "asthmaRelated": false
+}

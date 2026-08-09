@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000901",
+  "name": "异莪术醇",
+  "smiles": "C=COCC(=O)O",
+  "mw": 455.99,
+  "logp": 3.13,
+  "bloodEntryProbability": 0.93,
+  "radarScores": {
+    "antiInflammatory": 58,
+    "immuneRegulation": 65,
+    "airwayRepair": 70
+  },
+  "targets": [
+    {
+      "gene": "Rattus norvegicus",
+      "targetType": "Organism",
+      "species": "Rattus norvegicus",
+      "activityType": "Inhibition",
+      "activityValue": 14.2,
+      "activityUnit": "%",
+      "reference": "9871681",
+      "asthmaRelated": false,
+      "networkCentrality": 0.19,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000901_0"
+    },
+    {
+      "gene": "Mus musculus",
+      "targetType": "Organism",
+      "species": "Mus musculus",
+      "activityType": "Inhibition",
+      "activityValue": 77.3,
+      "activityUnit": "%",
+      "reference": "9871681",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000901_1"
+    },
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 9800,
+      "activityUnit": "nM",
+      "reference": "23755850",
+      "asthmaRelated": false,
+      "networkCentrality": 0.63,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000901_2"
+    },
+    {
+      "gene": "PTPN1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 65,
+      "activityUnit": "%",
+      "reference": "23387824",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000901_3"
+    }
+  ],
+  "asthmaRelated": false
+}

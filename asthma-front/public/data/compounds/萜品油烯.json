@@ -1,0 +1,79 @@
+{
+  "id": "ccMon00001398",
+  "name": "萜品油烯",
+  "smiles": "C=Cc1ccccc1c1ccncc1",
+  "mw": 257.92,
+  "logp": -0.4,
+  "bloodEntryProbability": 0.75,
+  "radarScores": {
+    "antiInflammatory": 97,
+    "immuneRegulation": 69,
+    "airwayRepair": 71
+  },
+  "targets": [
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^uptake",
+      "activityUnit": "",
+      "reference": "16904803",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001398_0"
+    },
+    {
+      "gene": "AKT1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "22740904",
+      "asthmaRelated": true,
+      "networkCentrality": 0.94,
+      "sourceDB": "CTD",
+      "id": "ccMon00001398_1"
+    },
+    {
+      "gene": "PPARD",
+      "targetType": "Peroxisome proliferator-activated receptor delta (PPAR-delta) (NUCI) (Nuclear hormone receptor 1) (NUC1) (Nuclear receptor subfamily 1 group C member 2) (Peroxisome proliferator-activated receptor beta) (PPAR-beta)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 61652.4,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.69,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001398_2"
+    },
+    {
+      "gene": "Propionibacterium acnes",
+      "targetType": "Organism",
+      "species": "Propionibacterium acnes",
+      "activityType": "MIC",
+      "activityValue": 50,
+      "activityUnit": "ug/ml",
+      "reference": "8158169",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "CTD",
+      "id": "ccMon00001398_3"
+    },
+    {
+      "gene": "Aspergillus flavus",
+      "targetType": "Organism",
+      "species": "Aspergillus flavus",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "17658828",
+      "asthmaRelated": false,
+      "networkCentrality": 0.69,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001398_4"
+    }
+  ],
+  "asthmaRelated": true
+}

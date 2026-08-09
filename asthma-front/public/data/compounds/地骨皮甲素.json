@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00000966",
+  "name": "地骨皮甲素",
+  "smiles": "COCc1ccccc1OCCOc1ccncc1",
+  "mw": 229.07,
+  "logp": 1.57,
+  "bloodEntryProbability": 0.94,
+  "radarScores": {
+    "antiInflammatory": 83,
+    "immuneRegulation": 86,
+    "airwayRepair": 46
+  },
+  "targets": [
+    {
+      "gene": "APP",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "31267354",
+      "asthmaRelated": false,
+      "networkCentrality": 0.41,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000966_0"
+    },
+    {
+      "gene": "IAPP",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "31267354",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "CTD",
+      "id": "ccMon00000966_1"
+    }
+  ],
+  "asthmaRelated": false
+}

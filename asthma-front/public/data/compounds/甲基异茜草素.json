@@ -1,0 +1,163 @@
+{
+  "id": "ccMon00001287",
+  "name": "甲基异茜草素",
+  "smiles": "c1ccc(O)cc1NCCC(C)COCNC",
+  "mw": 457.31,
+  "logp": 3.89,
+  "bloodEntryProbability": 0.57,
+  "radarScores": {
+    "antiInflammatory": 49,
+    "immuneRegulation": 91,
+    "airwayRepair": 48
+  },
+  "targets": [
+    {
+      "gene": "NFKBIA",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": true,
+      "networkCentrality": 0.63,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001287_0"
+    },
+    {
+      "gene": "TNFRSF11B",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": true,
+      "networkCentrality": 0.19,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001287_1"
+    },
+    {
+      "gene": "TNFRSF11B",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": true,
+      "networkCentrality": 0.56,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001287_2"
+    },
+    {
+      "gene": "TNFSF11",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": true,
+      "networkCentrality": 0.02,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001287_3"
+    },
+    {
+      "gene": "TNFSF11",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": true,
+      "networkCentrality": 0.8,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001287_4"
+    },
+    {
+      "gene": "TNFSF11",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": true,
+      "networkCentrality": 0.88,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001287_5"
+    },
+    {
+      "gene": "CA2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": false,
+      "networkCentrality": 0.41,
+      "sourceDB": "CTD",
+      "id": "ccMon00001287_6"
+    },
+    {
+      "gene": "CALCR",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": false,
+      "networkCentrality": 0.85,
+      "sourceDB": "CTD",
+      "id": "ccMon00001287_7"
+    },
+    {
+      "gene": "CTSK",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "21945525",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001287_8"
+    },
+    {
+      "gene": "MCF7",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 56000,
+      "activityUnit": "nM",
+      "reference": "10.1007/s00044-012-0197-5",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "CTD",
+      "id": "ccMon00001287_9"
+    },
+    {
+      "gene": "DU-145",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 32000,
+      "activityUnit": "nM",
+      "reference": "10.1007/s00044-012-0197-5",
+      "asthmaRelated": false,
+      "networkCentrality": 0.67,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001287_10"
+    },
+    {
+      "gene": "MES-SA",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 38000,
+      "activityUnit": "nM",
+      "reference": "10.1007/s00044-012-0197-5",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001287_11"
+    }
+  ],
+  "asthmaRelated": true
+}

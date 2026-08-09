@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00001340",
+  "name": "山栀苷甲酯",
+  "smiles": "c1ccc(O)cc1CC(C)CCNC(=O)O",
+  "mw": 368.09,
+  "logp": 4.24,
+  "bloodEntryProbability": 0.43,
+  "radarScores": {
+    "antiInflammatory": 54,
+    "immuneRegulation": 51,
+    "airwayRepair": 69
+  },
+  "targets": [
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 97.5,
+      "activityUnit": "ug/ml",
+      "reference": "25611215",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001340_0"
+    },
+    {
+      "gene": "Hepatitis C virus",
+      "targetType": "Organism",
+      "species": "Hepatitis C virus",
+      "activityType": "IC50",
+      "activityValue": 18,
+      "activityUnit": "ug/ml",
+      "reference": "19904996",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001340_1"
+    },
+    {
+      "gene": "Hepatitis C virus",
+      "targetType": "Organism",
+      "species": "Hepatitis C virus",
+      "activityType": "Inhibition",
+      "activityValue": 49,
+      "activityUnit": "%",
+      "reference": "19904996",
+      "asthmaRelated": false,
+      "networkCentrality": 0.22,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001340_2"
+    }
+  ],
+  "asthmaRelated": false
+}

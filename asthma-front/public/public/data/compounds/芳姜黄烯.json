@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000348",
+  "name": "芳姜黄烯",
+  "smiles": "CCONCC=C",
+  "mw": 200.96,
+  "logp": 1.96,
+  "bloodEntryProbability": 0.33,
+  "radarScores": {
+    "antiInflammatory": 57,
+    "immuneRegulation": 69,
+    "airwayRepair": 44
+  },
+  "targets": [
+    {
+      "gene": "HL-60",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 108600,
+      "activityUnit": "nM",
+      "reference": "22575162",
+      "asthmaRelated": false,
+      "networkCentrality": 0.04,
+      "sourceDB": "CTD",
+      "id": "ccMon00000348_0"
+    },
+    {
+      "gene": "Human rhinovirus 1B",
+      "targetType": "Organism",
+      "species": "Human rhinovirus 1B",
+      "activityType": "ED50",
+      "activityValue": 20.4,
+      "activityUnit": "ug",
+      "reference": "8064299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.02,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000348_1"
+    }
+  ],
+  "asthmaRelated": false
+}

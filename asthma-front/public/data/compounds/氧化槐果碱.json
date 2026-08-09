@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00001164",
+  "name": "氧化槐果碱",
+  "smiles": "OCC(=O)OCOCC=OCCNNC",
+  "mw": 465.87,
+  "logp": 0.18,
+  "bloodEntryProbability": 0.69,
+  "radarScores": {
+    "antiInflammatory": 43,
+    "immuneRegulation": 48,
+    "airwayRepair": 76
+  },
+  "targets": [
+    {
+      "gene": "HepG2",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 25,
+      "activityUnit": "%",
+      "reference": "16364643",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001164_0"
+    },
+    {
+      "gene": "Hepatitis B virus",
+      "targetType": "Organism",
+      "species": "Hepatitis B virus",
+      "activityType": "Activity",
+      "activityValue": 48.3,
+      "activityUnit": "%",
+      "reference": "16364643",
+      "asthmaRelated": false,
+      "networkCentrality": 0.59,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001164_1"
+    },
+    {
+      "gene": "MDCK",
+      "targetType": "Cell Line",
+      "species": "Canis lupus familiaris",
+      "activityType": "TC50",
+      "activityValue": 762.34,
+      "activityUnit": "nM",
+      "reference": "26132528",
+      "asthmaRelated": false,
+      "networkCentrality": 0.36,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001164_2"
+    },
+    {
+      "gene": "Influenza A virus",
+      "targetType": "Organism",
+      "species": "Influenza A virus",
+      "activityType": "IC50",
+      "activityValue": 402820,
+      "activityUnit": "nM",
+      "reference": "26132528",
+      "asthmaRelated": false,
+      "networkCentrality": 0.08,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001164_3"
+    },
+    {
+      "gene": "Human enterovirus 71",
+      "targetType": "Organism",
+      "species": "Human enterovirus 71",
+      "activityType": "Activity",
+      "activityValue": 25,
+      "activityUnit": "%",
+      "reference": "26189894",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001164_4"
+    }
+  ],
+  "asthmaRelated": false
+}

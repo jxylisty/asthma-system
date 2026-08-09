@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00001252",
+  "name": "补骨脂定",
+  "smiles": "C=OCCOCC(C)c1ccc(O)cc1OC",
+  "mw": 481.31,
+  "logp": 2.02,
+  "bloodEntryProbability": 0.92,
+  "radarScores": {
+    "antiInflammatory": 91,
+    "immuneRegulation": 98,
+    "airwayRepair": 67
+  },
+  "targets": [
+    {
+      "gene": "CYP3A4",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "31870919",
+      "asthmaRelated": false,
+      "networkCentrality": 0.64,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001252_0"
+    },
+    {
+      "gene": "CYP2E1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "31870919",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "CTD",
+      "id": "ccMon00001252_1"
+    },
+    {
+      "gene": "CYP2E1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^chemical synthesis|increases^metabolic processing",
+      "activityUnit": "",
+      "reference": "31870919",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001252_2"
+    }
+  ],
+  "asthmaRelated": false
+}

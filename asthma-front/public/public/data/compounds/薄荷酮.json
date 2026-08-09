@@ -1,0 +1,78 @@
+{
+  "id": "ccMon00001039",
+  "name": "薄荷酮",
+  "smiles": "COCc1ccncc1C=CC=OCCO",
+  "mw": 242.93,
+  "logp": 4.23,
+  "bloodEntryProbability": 0.71,
+  "radarScores": {
+    "antiInflammatory": 52,
+    "immuneRegulation": 89,
+    "airwayRepair": 63
+  },
+  "targets": [
+    {
+      "gene": "GABRA1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|increases^activity|increases^reaction",
+      "activityUnit": "",
+      "reference": "15588619",
+      "asthmaRelated": false,
+      "networkCentrality": 0.62,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001039_0"
+    },
+    {
+      "gene": "GABRB2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|increases^activity|increases^reaction",
+      "activityUnit": "",
+      "reference": "15588619",
+      "asthmaRelated": false,
+      "networkCentrality": 0.88,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001039_1"
+    },
+    {
+      "gene": "GABRG2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|increases^activity|increases^reaction",
+      "activityUnit": "",
+      "reference": "15588619",
+      "asthmaRelated": false,
+      "networkCentrality": 0.8,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001039_2"
+    },
+    {
+      "gene": "SLCO1B3",
+      "targetType": "Solute carrier organic anion transporter family member 1B3 (Liver-specific organic anion transporter 2) (LST-2) (Organic anion transporter 8) (Organic anion-transporting polypeptide 8) (OATP-8) (Solute carrier family 21 member 8)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 100.16,
+      "activityUnit": "%",
+      "reference": "23571415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.35,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001039_3"
+    },
+    {
+      "gene": "SLCO1B1",
+      "targetType": "Solute carrier organic anion transporter family member 1B1 (Liver-specific organic anion transporter 1) (LST-1) (OATP-C) (Sodium-independent organic anion-transporting polypeptide 2) (OATP-2) (Solute carrier family 21 member 6)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 96.98,
+      "activityUnit": "%",
+      "reference": "23571415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "CTD",
+      "id": "ccMon00001039_4"
+    }
+  ],
+  "asthmaRelated": false
+}

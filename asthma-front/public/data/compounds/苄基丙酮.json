@@ -1,0 +1,107 @@
+{
+  "id": "ccMon00000411",
+  "name": "苄基丙酮",
+  "smiles": "COCC=OC(=O)OCCNC=O",
+  "mw": 379.31,
+  "logp": 4.67,
+  "bloodEntryProbability": 0.6,
+  "radarScores": {
+    "antiInflammatory": 76,
+    "immuneRegulation": 83,
+    "airwayRepair": 79
+  },
+  "targets": [
+    {
+      "gene": "Plasmodium falciparum",
+      "targetType": "Organism",
+      "species": "Plasmodium falciparum",
+      "activityType": "Potency",
+      "activityValue": 9285,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000411_0"
+    },
+    {
+      "gene": "PPARD",
+      "targetType": "Peroxisome proliferator-activated receptor delta (PPAR-delta) (NUCI) (Nuclear hormone receptor 1) (NUC1) (Nuclear receptor subfamily 1 group C member 2) (Peroxisome proliferator-activated receptor beta) (PPAR-beta)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 389,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.14,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000411_1"
+    },
+    {
+      "gene": "Pythium",
+      "targetType": "Organism",
+      "species": "Pythium",
+      "activityType": "GI",
+      "activityValue": 100,
+      "activityUnit": "%",
+      "reference": "10.1584/jpestics.19.4_299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.5,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000411_2"
+    },
+    {
+      "gene": "ALDH1A1",
+      "targetType": "Aldehyde dehydrogenase 1A1 (EC 1.2.1.19) (EC 1.2.1.28) (EC 1.2.1.3) (EC 1.2.1.36) (3-deoxyglucosone dehydrogenase) (ALDH-E1) (ALHDII) (Aldehyde dehydrogenase family 1 member A1) (Aldehyde dehydrogenase, cytosolic) (Retinal dehydrogenase 1) (RALDH 1) (Ral",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 25118.9,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000411_3"
+    },
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 222,
+      "activityUnit": "molar ratio",
+      "reference": "26796952",
+      "asthmaRelated": false,
+      "networkCentrality": 0.37,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000411_4"
+    },
+    {
+      "gene": "Cruzipain",
+      "targetType": "Individual Protein",
+      "species": "Trypanosoma cruzi",
+      "activityType": "Potency",
+      "activityValue": 5011.9,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.66,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000411_5"
+    },
+    {
+      "gene": "Corticium",
+      "targetType": "Organism",
+      "species": "Corticium",
+      "activityType": "GI",
+      "activityValue": 100,
+      "activityUnit": "%",
+      "reference": "10.1584/jpestics.19.4_299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000411_6"
+    }
+  ],
+  "asthmaRelated": false
+}

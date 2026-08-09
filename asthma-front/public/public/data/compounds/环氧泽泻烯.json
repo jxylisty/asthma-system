@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000267",
+  "name": "环氧泽泻烯",
+  "smiles": "NCC=Oc1ccncc1CCNCC",
+  "mw": 314.18,
+  "logp": -0.49,
+  "bloodEntryProbability": 0.92,
+  "radarScores": {
+    "antiInflammatory": 46,
+    "immuneRegulation": 43,
+    "airwayRepair": 45
+  },
+  "targets": [
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 4300,
+      "activityUnit": "nM",
+      "reference": "23755850",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000267_0"
+    }
+  ],
+  "asthmaRelated": false
+}

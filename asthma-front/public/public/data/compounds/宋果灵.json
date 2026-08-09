@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00001356",
+  "name": "宋果灵",
+  "smiles": "C(=O)OCOCNC",
+  "mw": 271.42,
+  "logp": 3.89,
+  "bloodEntryProbability": 0.54,
+  "radarScores": {
+    "antiInflammatory": 59,
+    "immuneRegulation": 43,
+    "airwayRepair": 95
+  },
+  "targets": [
+    {
+      "gene": "Acetylcholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Electrophorus electricus",
+      "activityType": "Inhibition",
+      "activityValue": 26.3,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001356_0"
+    },
+    {
+      "gene": "Cholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Equus caballus",
+      "activityType": "Inhibition",
+      "activityValue": 1.01,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001356_1"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000635",
+  "name": "松苓新酸",
+  "smiles": "COCc1ccc(O)cc1CCNOCCOC",
+  "mw": 175.66,
+  "logp": -0.06,
+  "bloodEntryProbability": 0.37,
+  "radarScores": {
+    "antiInflammatory": 56,
+    "immuneRegulation": 71,
+    "airwayRepair": 68
+  },
+  "targets": [
+    {
+      "gene": "J82",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "GI50",
+      "activityValue": 26700,
+      "activityUnit": "nM",
+      "reference": "23092389",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000635_0"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000058",
+  "name": "10-姜酚",
+  "smiles": "CCOCOCCCO",
+  "mw": 291.35,
+  "logp": 2.69,
+  "bloodEntryProbability": 0.91,
+  "radarScores": {
+    "antiInflammatory": 59,
+    "immuneRegulation": 58,
+    "airwayRepair": 81
+  },
+  "targets": [
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 12000,
+      "activityUnit": "nM",
+      "reference": "22246389",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "CTD",
+      "id": "ccMon00000058_0"
+    },
+    {
+      "gene": "RBL-2H3",
+      "targetType": "Cell Line",
+      "species": "Rattus norvegicus",
+      "activityType": "Inhibition",
+      "activityValue": 60,
+      "activityUnit": "%",
+      "reference": "19271742",
+      "asthmaRelated": true,
+      "networkCentrality": 0.77,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000058_1"
+    },
+    {
+      "gene": "HTR1A",
+      "targetType": "5-hydroxytryptamine receptor 1A (5-HT-1A) (5-HT1A) (G-21) (Serotonin receptor 1A)",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 50,
+      "activityUnit": "%",
+      "reference": "20363635",
+      "asthmaRelated": true,
+      "networkCentrality": 0.03,
+      "sourceDB": "CTD",
+      "id": "ccMon00000058_2"
+    },
+    {
+      "gene": "HTR1A",
+      "targetType": "5-hydroxytryptamine receptor 1A (5-HT-1A) (5-HT1A) (G-21) (Serotonin receptor 1A)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 3740,
+      "activityUnit": "nM",
+      "reference": "20363635",
+      "asthmaRelated": true,
+      "networkCentrality": 0.4,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000058_3"
+    }
+  ],
+  "asthmaRelated": true
+}

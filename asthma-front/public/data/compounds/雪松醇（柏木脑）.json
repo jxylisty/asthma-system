@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00000501",
+  "name": "雪松醇（柏木脑）",
+  "smiles": "C=OC=COC",
+  "mw": 307.75,
+  "logp": 1.4,
+  "bloodEntryProbability": 0.58,
+  "radarScores": {
+    "antiInflammatory": 66,
+    "immuneRegulation": 72,
+    "airwayRepair": 51
+  },
+  "targets": [
+    {
+      "gene": "ESR1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|increases^activity",
+      "activityUnit": "",
+      "reference": "27633901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.13,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000501_0"
+    },
+    {
+      "gene": "ESR2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|increases^activity",
+      "activityUnit": "",
+      "reference": "27633901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.41,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000501_1"
+    },
+    {
+      "gene": "PTAFR",
+      "targetType": "Protein",
+      "species": "Oryctolagus cuniculus",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "11488464",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000501_2"
+    }
+  ],
+  "asthmaRelated": false
+}

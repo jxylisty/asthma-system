@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000443",
+  "name": "β-檀香醇",
+  "smiles": "COCOCCOCC(C)c1ccc(O)cc1C(=O)O",
+  "mw": 269.9,
+  "logp": 2.51,
+  "bloodEntryProbability": 0.91,
+  "radarScores": {
+    "antiInflammatory": 78,
+    "immuneRegulation": 46,
+    "airwayRepair": 50
+  },
+  "targets": [
+    {
+      "gene": "Tubulin",
+      "targetType": "Protein Family",
+      "species": "Sus scrofa",
+      "activityType": "FC",
+      "activityValue": 7000,
+      "activityUnit": "",
+      "reference": "25993496",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000443_0"
+    },
+    {
+      "gene": "HN5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "GI50",
+      "activityValue": 6300,
+      "activityUnit": "nM",
+      "reference": "25993496",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000443_1"
+    },
+    {
+      "gene": "HN5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "LC50",
+      "activityValue": 15900,
+      "activityUnit": "nM",
+      "reference": "25993496",
+      "asthmaRelated": false,
+      "networkCentrality": 0.17,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000443_2"
+    },
+    {
+      "gene": "HN5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "TGI",
+      "activityValue": 9600,
+      "activityUnit": "nM",
+      "reference": "25993496",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000443_3"
+    }
+  ],
+  "asthmaRelated": false
+}

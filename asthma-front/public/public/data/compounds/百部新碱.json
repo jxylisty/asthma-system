@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00001371",
+  "name": "百部新碱",
+  "smiles": "OCC=CCCNOC",
+  "mw": 491.29,
+  "logp": 2.86,
+  "bloodEntryProbability": 0.79,
+  "radarScores": {
+    "antiInflammatory": 47,
+    "immuneRegulation": 92,
+    "airwayRepair": 40
+  },
+  "targets": [
+    {
+      "gene": "Cavia porcellus",
+      "targetType": "Organism",
+      "species": "Cavia porcellus",
+      "activityType": "Activity",
+      "activityValue": 70,
+      "activityUnit": "%",
+      "reference": "18452334",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001371_0"
+    },
+    {
+      "gene": "Cavia porcellus",
+      "targetType": "Organism",
+      "species": "Cavia porcellus",
+      "activityType": "ID50",
+      "activityValue": 0.197,
+      "activityUnit": "umol/kg",
+      "reference": "18452334",
+      "asthmaRelated": false,
+      "networkCentrality": 0.94,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001371_1"
+    },
+    {
+      "gene": "Cavia porcellus",
+      "targetType": "Organism",
+      "species": "Cavia porcellus",
+      "activityType": "Inhibition",
+      "activityValue": 90,
+      "activityUnit": "%",
+      "reference": "18452334",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001371_2"
+    }
+  ],
+  "asthmaRelated": false
+}

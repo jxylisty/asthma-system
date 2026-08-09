@@ -1,0 +1,80 @@
+{
+  "id": "ccMon00001155",
+  "name": "草酸",
+  "smiles": "c1ccc(O)cc1c1ccccc1C=OCC",
+  "mw": 478.11,
+  "logp": 2.48,
+  "bloodEntryProbability": 0.6,
+  "radarScores": {
+    "antiInflammatory": 62,
+    "immuneRegulation": 97,
+    "airwayRepair": 96
+  },
+  "targets": [
+    {
+      "gene": "SRC",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423|10592235",
+      "asthmaRelated": false,
+      "networkCentrality": 0.27,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001155_0"
+    },
+    {
+      "gene": "SRC",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 40000000,
+      "activityUnit": "nM",
+      "reference": "14613321",
+      "asthmaRelated": false,
+      "networkCentrality": 0.98,
+      "sourceDB": "CTD",
+      "id": "ccMon00001155_1"
+    },
+    {
+      "gene": "SLCO2B1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 83.9,
+      "activityUnit": "%",
+      "reference": "12724351",
+      "asthmaRelated": false,
+      "networkCentrality": 0.25,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001155_2"
+    },
+    {
+      "gene": "AR",
+      "targetType": "Androgen receptor (Dihydrotestosterone receptor) (Nuclear receptor subfamily 3 group C member 4)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 61652.4,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "CTD",
+      "id": "ccMon00001155_3"
+    },
+    {
+      "gene": "PPARD",
+      "targetType": "Peroxisome proliferator-activated receptor delta (PPAR-delta) (NUCI) (Nuclear hormone receptor 1) (NUC1) (Nuclear receptor subfamily 1 group C member 2) (Peroxisome proliferator-activated receptor beta) (PPAR-beta)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 19823.4,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.94,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001155_4"
+    }
+  ],
+  "asthmaRelated": false
+}

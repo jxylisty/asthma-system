@@ -1,0 +1,76 @@
+{
+  "id": "ccMon00000975",
+  "name": "桑皮酮H(桑黄酮H)",
+  "smiles": "C(=O)OCCOC=OC=O",
+  "mw": 341.9,
+  "logp": 4.36,
+  "bloodEntryProbability": 0.67,
+  "radarScores": {
+    "antiInflammatory": 69,
+    "immuneRegulation": 83,
+    "airwayRepair": 86
+  },
+  "targets": [
+    {
+      "gene": "GRP",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "7646517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000975_0"
+    },
+    {
+      "gene": "GRPR",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "7646517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.1,
+      "sourceDB": "CTD",
+      "id": "ccMon00000975_1"
+    },
+    {
+      "gene": "GRPR",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "7646517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000975_2"
+    },
+    {
+      "gene": "GRP",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "7646517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.49,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000975_3"
+    },
+    {
+      "gene": "NMBR",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "affects^binding|decreases^reaction",
+      "activityUnit": "",
+      "reference": "7646517",
+      "asthmaRelated": false,
+      "networkCentrality": 0.55,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000975_4"
+    }
+  ],
+  "asthmaRelated": false
+}

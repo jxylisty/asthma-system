@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000543",
+  "name": "蛇床酞内酯",
+  "smiles": "C=OCCNCCO",
+  "mw": 340.93,
+  "logp": -0.66,
+  "bloodEntryProbability": 0.88,
+  "radarScores": {
+    "antiInflammatory": 98,
+    "immuneRegulation": 62,
+    "airwayRepair": 76
+  },
+  "targets": [
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "LC50",
+      "activityValue": 16000000,
+      "activityUnit": "nM",
+      "reference": "15998112",
+      "asthmaRelated": false,
+      "networkCentrality": 0.1,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000543_0"
+    },
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "LD50",
+      "activityValue": 9.17,
+      "activityUnit": "ug",
+      "reference": "15998112",
+      "asthmaRelated": false,
+      "networkCentrality": 0.75,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000543_1"
+    },
+    {
+      "gene": "Drosophila melanogaster",
+      "targetType": "Organism",
+      "species": "Drosophila melanogaster",
+      "activityType": "Ratio",
+      "activityValue": 0.4,
+      "activityUnit": "",
+      "reference": "15998112",
+      "asthmaRelated": false,
+      "networkCentrality": 0.16,
+      "sourceDB": "CTD",
+      "id": "ccMon00000543_2"
+    }
+  ],
+  "asthmaRelated": false
+}

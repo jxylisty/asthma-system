@@ -1,0 +1,107 @@
+{
+  "id": "ccMon00000894",
+  "name": "异丁酰紫草素",
+  "smiles": "CC(C)OCCOc1ccncc1",
+  "mw": 247.36,
+  "logp": 2.42,
+  "bloodEntryProbability": 0.45,
+  "radarScores": {
+    "antiInflammatory": 76,
+    "immuneRegulation": 74,
+    "airwayRepair": 83
+  },
+  "targets": [
+    {
+      "gene": "HepG2",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 220,
+      "activityUnit": "nM",
+      "reference": "17949858",
+      "asthmaRelated": false,
+      "networkCentrality": 0.04,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000894_0"
+    },
+    {
+      "gene": "HCT-116",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 340,
+      "activityUnit": "nM",
+      "reference": "17949858",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000894_1"
+    },
+    {
+      "gene": "SOAT1",
+      "targetType": "Sterol O-acyltransferase 1 (EC 2.3.1.26) (Acyl-coenzyme A:cholesterol acyltransferase 1) (ACAT-1) (Cholesterol acyltransferase 1)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 32,
+      "activityUnit": "%",
+      "reference": "17157006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.33,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000894_2"
+    },
+    {
+      "gene": "TOP1",
+      "targetType": "DNA topoisomerase 1 (EC 5.6.2.1) (DNA topoisomerase I)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 84000,
+      "activityUnit": "nM",
+      "reference": "7699697",
+      "asthmaRelated": false,
+      "networkCentrality": 0.28,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000894_3"
+    },
+    {
+      "gene": "Tobacco mosaic virus",
+      "targetType": "Organism",
+      "species": "Tobacco mosaic virus",
+      "activityType": "Inhibition",
+      "activityValue": 49.5,
+      "activityUnit": "%",
+      "reference": "10.1584/jpestics.23.54",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000894_4"
+    },
+    {
+      "gene": "SOAT2",
+      "targetType": "Sterol O-acyltransferase 2 (EC 2.3.1.26) (Acyl-coenzyme A:cholesterol acyltransferase 2) (ACAT-2) (Cholesterol acyltransferase 2)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 57500,
+      "activityUnit": "nM",
+      "reference": "17157006",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000894_5"
+    },
+    {
+      "gene": "Neuraminidase",
+      "targetType": "Individual Protein",
+      "species": "Influenza A virus (strain A/Brevig Mission/1/1918 H1N1) (Influenza Avirus (strain A/South Carolina/1/1918 H1N1))",
+      "activityType": "IC50",
+      "activityValue": 40500,
+      "activityUnit": "nM",
+      "reference": "22300884",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000894_6"
+    }
+  ],
+  "asthmaRelated": false
+}

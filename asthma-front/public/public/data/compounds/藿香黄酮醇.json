@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00001166",
+  "name": "藿香黄酮醇",
+  "smiles": "CC(C)NCc1ccccc1C=O",
+  "mw": 284.88,
+  "logp": 1.96,
+  "bloodEntryProbability": 0.5,
+  "radarScores": {
+    "antiInflammatory": 41,
+    "immuneRegulation": 43,
+    "airwayRepair": 83
+  },
+  "targets": [
+    {
+      "gene": "Poliovirus",
+      "targetType": "Organism",
+      "species": "Human enterovirus C",
+      "activityType": "ED99",
+      "activityValue": 2.5,
+      "activityUnit": "ug/ml",
+      "reference": "1847431",
+      "asthmaRelated": false,
+      "networkCentrality": 0.33,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001166_0"
+    },
+    {
+      "gene": "ABCG2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 17200,
+      "activityUnit": "nM",
+      "reference": "21275386",
+      "asthmaRelated": false,
+      "networkCentrality": 0.88,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001166_1"
+    }
+  ],
+  "asthmaRelated": false
+}

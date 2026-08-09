@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000303",
+  "name": "α-三联噻吩甲醛",
+  "smiles": "CC(C)c1ccncc1c1ccccc1COCC=C",
+  "mw": 339.45,
+  "logp": 2.75,
+  "bloodEntryProbability": 0.42,
+  "radarScores": {
+    "antiInflammatory": 52,
+    "immuneRegulation": 83,
+    "airwayRepair": 85
+  },
+  "targets": [
+    {
+      "gene": "DPP4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 890,
+      "activityUnit": "nM",
+      "reference": "316462",
+      "asthmaRelated": false,
+      "networkCentrality": 0.66,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000303_0"
+    }
+  ],
+  "asthmaRelated": false
+}

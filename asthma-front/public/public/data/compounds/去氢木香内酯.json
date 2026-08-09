@@ -1,0 +1,88 @@
+{
+  "id": "ccMon00000631",
+  "name": "去氢木香内酯",
+  "smiles": "CCNCOCCCOCC(C)C(=O)O",
+  "mw": 421.82,
+  "logp": 2.11,
+  "bloodEntryProbability": 0.7,
+  "radarScores": {
+    "antiInflammatory": 84,
+    "immuneRegulation": 75,
+    "airwayRepair": 90
+  },
+  "targets": [
+    {
+      "gene": "HMOX1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "23942037",
+      "asthmaRelated": false,
+      "networkCentrality": 0.54,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000631_0"
+    },
+    {
+      "gene": "PTGS2",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "26970604",
+      "asthmaRelated": true,
+      "networkCentrality": 0.99,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000631_1"
+    },
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "19457452",
+      "asthmaRelated": false,
+      "networkCentrality": 0.18,
+      "sourceDB": "CTD",
+      "id": "ccMon00000631_2"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "26970604",
+      "asthmaRelated": true,
+      "networkCentrality": 0.37,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000631_3"
+    },
+    {
+      "gene": "NOS2",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "26970604",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000631_4"
+    },
+    {
+      "gene": "TNFSF11",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^secretion",
+      "activityUnit": "",
+      "reference": "19457452",
+      "asthmaRelated": true,
+      "networkCentrality": 0.78,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000631_5"
+    }
+  ],
+  "asthmaRelated": true
+}

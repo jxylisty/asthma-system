@@ -1,0 +1,49 @@
+# === 开发环境 ===
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.opensquilla/
+.opensquilla-cache/
+.trae/
+
+# === 原始数据与训练代码（不公开） ===
+入血预测/
+*.xlsx
+*.xls
+*.csv
+
+# === 数据库文件 ===
+*.db
+*.sqlite
+*.sqlite3
+
+# === 旧版数据库目录 ===
+database/
+database_v2/
+
+# === 压缩包 ===
+*.zip
+*.7z
+*.tar.gz
+*.rar
+
+# === 文档（非代码） ===
+*.docx
+*.doc
+*.pdf
+
+# === 系统文件 ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === 临时文件 ===
+*.log
+*.tmp
+tmp/
+temp/
+~$*

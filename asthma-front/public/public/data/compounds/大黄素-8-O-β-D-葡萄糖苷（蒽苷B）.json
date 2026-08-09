@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000688",
+  "name": "大黄素-8-O-β-D-葡萄糖苷（蒽苷B）",
+  "smiles": "CCOCCCCOCC(C)OCCOCOC",
+  "mw": 275.37,
+  "logp": 4,
+  "bloodEntryProbability": 0.4,
+  "radarScores": {
+    "antiInflammatory": 85,
+    "immuneRegulation": 66,
+    "airwayRepair": 61
+  },
+  "targets": [
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^reaction|increases^abundance",
+      "activityUnit": "",
+      "reference": "21245807",
+      "asthmaRelated": true,
+      "networkCentrality": 0.79,
+      "sourceDB": "CTD",
+      "id": "ccMon00000688_0"
+    }
+  ],
+  "asthmaRelated": true
+}

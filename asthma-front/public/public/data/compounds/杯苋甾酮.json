@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00000599",
+  "name": "杯苋甾酮",
+  "smiles": "C=OCOCCCNC=OC(=O)O",
+  "mw": 350.33,
+  "logp": 4.07,
+  "bloodEntryProbability": 0.87,
+  "radarScores": {
+    "antiInflammatory": 98,
+    "immuneRegulation": 70,
+    "airwayRepair": 91
+  },
+  "targets": [
+    {
+      "gene": "Mus musculus",
+      "targetType": "Organism",
+      "species": "Mus musculus",
+      "activityType": "Activity",
+      "activityValue": 80,
+      "activityUnit": "%",
+      "reference": "10425119",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000599_0"
+    },
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 70,
+      "activityUnit": "%",
+      "reference": "10425119",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000599_1"
+    },
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 80,
+      "activityUnit": "%",
+      "reference": "10425119",
+      "asthmaRelated": false,
+      "networkCentrality": 0.62,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000599_2"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Ratio",
+      "activityValue": 0.75,
+      "activityUnit": "",
+      "reference": "22578055",
+      "asthmaRelated": false,
+      "networkCentrality": 0.59,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000599_3"
+    },
+    {
+      "gene": "Ecdysone receptor",
+      "targetType": "Individual Protein",
+      "species": "Drosophila melanogaster",
+      "activityType": "IC50",
+      "activityValue": 61.66,
+      "activityUnit": "nM",
+      "reference": "19631551",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000599_4"
+    }
+  ],
+  "asthmaRelated": false
+}

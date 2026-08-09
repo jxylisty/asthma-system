@@ -1,0 +1,76 @@
+{
+  "id": "ccMon00000913",
+  "name": "异薄荷酮",
+  "smiles": "CCc1ccncc1c1ccc(O)cc1NC",
+  "mw": 346.11,
+  "logp": 3.14,
+  "bloodEntryProbability": 0.6,
+  "radarScores": {
+    "antiInflammatory": 48,
+    "immuneRegulation": 78,
+    "airwayRepair": 43
+  },
+  "targets": [
+    {
+      "gene": "CASP3",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^activity|increases^cleavage",
+      "activityUnit": "",
+      "reference": "22796318",
+      "asthmaRelated": false,
+      "networkCentrality": 0.33,
+      "sourceDB": "CTD",
+      "id": "ccMon00000913_0"
+    },
+    {
+      "gene": "PARP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^cleavage",
+      "activityUnit": "",
+      "reference": "22796318",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000913_1"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "22796318",
+      "asthmaRelated": true,
+      "networkCentrality": 0.86,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000913_2"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^activity|increases^cleavage",
+      "activityUnit": "",
+      "reference": "22796318",
+      "asthmaRelated": true,
+      "networkCentrality": 0.6,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000913_3"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^cleavage",
+      "activityUnit": "",
+      "reference": "22796318",
+      "asthmaRelated": true,
+      "networkCentrality": 0.56,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000913_4"
+    }
+  ],
+  "asthmaRelated": true
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000137",
+  "name": "甲基正壬酮",
+  "smiles": "OCCOc1ccc(O)cc1C(=O)Oc1ccc(O)cc1",
+  "mw": 471.64,
+  "logp": 1.99,
+  "bloodEntryProbability": 0.74,
+  "radarScores": {
+    "antiInflammatory": 92,
+    "immuneRegulation": 95,
+    "airwayRepair": 96
+  },
+  "targets": [
+    {
+      "gene": "ACOT13",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "10592235",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000137_0"
+    }
+  ],
+  "asthmaRelated": false
+}

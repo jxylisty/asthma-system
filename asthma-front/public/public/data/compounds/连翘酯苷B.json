@@ -1,0 +1,64 @@
+{
+  "id": "ccMon00000742",
+  "name": "连翘酯苷B",
+  "smiles": "CCNC=CCCCOC",
+  "mw": 191.01,
+  "logp": -0.09,
+  "bloodEntryProbability": 0.93,
+  "radarScores": {
+    "antiInflammatory": 95,
+    "immuneRegulation": 92,
+    "airwayRepair": 66
+  },
+  "targets": [
+    {
+      "gene": "HMOX1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "22735309",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000742_0"
+    },
+    {
+      "gene": "HMOX1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "22735309",
+      "asthmaRelated": false,
+      "networkCentrality": 0.17,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000742_1"
+    },
+    {
+      "gene": "NFE2L2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^localization|increases^activity",
+      "activityUnit": "",
+      "reference": "22735309",
+      "asthmaRelated": true,
+      "networkCentrality": 0.54,
+      "sourceDB": "CTD",
+      "id": "ccMon00000742_2"
+    },
+    {
+      "gene": "BACH1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "22735309",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000742_3"
+    }
+  ],
+  "asthmaRelated": true
+}

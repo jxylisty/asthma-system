@@ -1,0 +1,64 @@
+{
+  "id": "ccMon00000405",
+  "name": "苯甲酰乌头原碱",
+  "smiles": "COCc1ccccc1CCNOCCOc1ccccc1",
+  "mw": 457.83,
+  "logp": 1.7,
+  "bloodEntryProbability": 0.49,
+  "radarScores": {
+    "antiInflammatory": 54,
+    "immuneRegulation": 63,
+    "airwayRepair": 85
+  },
+  "targets": [
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000405_0"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000405_1"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000405_2"
+    },
+    {
+      "gene": "ABCC2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000405_3"
+    }
+  ],
+  "asthmaRelated": false
+}

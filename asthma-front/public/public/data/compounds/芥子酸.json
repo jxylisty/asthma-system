@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00001350",
+  "name": "芥子酸",
+  "smiles": "C=CCCOc1ccc(O)cc1OCCO",
+  "mw": 295.22,
+  "logp": 1.64,
+  "bloodEntryProbability": 0.79,
+  "radarScores": {
+    "antiInflammatory": 99,
+    "immuneRegulation": 91,
+    "airwayRepair": 44
+  },
+  "targets": [
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "10592235",
+      "asthmaRelated": false,
+      "networkCentrality": 0.35,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001350_0"
+    }
+  ],
+  "asthmaRelated": false
+}

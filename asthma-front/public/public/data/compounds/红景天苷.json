@@ -1,0 +1,107 @@
+{
+  "id": "ccMon00001303",
+  "name": "红景天苷",
+  "smiles": "C(=O)OC(=O)Oc1ccccc1C=O",
+  "mw": 389.24,
+  "logp": 3.85,
+  "bloodEntryProbability": 0.64,
+  "radarScores": {
+    "antiInflammatory": 65,
+    "immuneRegulation": 85,
+    "airwayRepair": 95
+  },
+  "targets": [
+    {
+      "gene": "PTGS1",
+      "targetType": "Prostaglandin G/H synthase 1 (EC 1.14.99.1) (Cyclooxygenase-1) (COX-1) (Prostaglandin H2 synthase 1) (PGH synthase 1) (PGHS-1) (PHS 1) (Prostaglandin-endoperoxide synthase 1)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 72000,
+      "activityUnit": "nM",
+      "reference": "16038536",
+      "asthmaRelated": true,
+      "networkCentrality": 0.49,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001303_0"
+    },
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "EC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "21955940",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001303_1"
+    },
+    {
+      "gene": "PC-12",
+      "targetType": "Cell Line",
+      "species": "Rattus norvegicus",
+      "activityType": "Activity",
+      "activityValue": 65.62,
+      "activityUnit": "%",
+      "reference": "21855355",
+      "asthmaRelated": false,
+      "networkCentrality": 0.78,
+      "sourceDB": "CTD",
+      "id": "ccMon00001303_2"
+    },
+    {
+      "gene": "PC-12",
+      "targetType": "Cell Line",
+      "species": "Rattus norvegicus",
+      "activityType": "FC",
+      "activityValue": 1.97,
+      "activityUnit": "",
+      "reference": "21855355",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001303_3"
+    },
+    {
+      "gene": "L929",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "Inhibition",
+      "activityValue": -1.2,
+      "activityUnit": "%",
+      "reference": "20159656",
+      "asthmaRelated": false,
+      "networkCentrality": 0.68,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001303_4"
+    },
+    {
+      "gene": "Hepatocyte",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "Inhibition",
+      "activityValue": 0.9,
+      "activityUnit": "%",
+      "reference": "20159656",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001303_5"
+    },
+    {
+      "gene": "Ribonuclease HI",
+      "targetType": "Individual Protein",
+      "species": "Escherichia coli (strain K12)",
+      "activityType": "IC50",
+      "activityValue": 20000,
+      "activityUnit": "nM",
+      "reference": "21489793",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001303_6"
+    }
+  ],
+  "asthmaRelated": true
+}

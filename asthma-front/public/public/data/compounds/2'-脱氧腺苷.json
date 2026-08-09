@@ -1,0 +1,148 @@
+{
+  "id": "ccMon00000115",
+  "name": "2'-脱氧腺苷",
+  "smiles": "c1ccncc1CCOC(=O)OCC(C)",
+  "mw": 352.13,
+  "logp": 2.9,
+  "bloodEntryProbability": 0.38,
+  "radarScores": {
+    "antiInflammatory": 88,
+    "immuneRegulation": 59,
+    "airwayRepair": 64
+  },
+  "targets": [
+    {
+      "gene": "ADA",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^amination",
+      "activityUnit": "",
+      "reference": "21138280",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000115_0"
+    },
+    {
+      "gene": "CDKN1A",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "24211769",
+      "asthmaRelated": false,
+      "networkCentrality": 0.54,
+      "sourceDB": "CTD",
+      "id": "ccMon00000115_1"
+    },
+    {
+      "gene": "GNMT",
+      "targetType": "Protein",
+      "species": "Oryctolagus cuniculus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "15181470",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000115_2"
+    },
+    {
+      "gene": "POLB",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "26098310",
+      "asthmaRelated": false,
+      "networkCentrality": 0.06,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000115_3"
+    },
+    {
+      "gene": "POLI",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "26098310",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000115_4"
+    },
+    {
+      "gene": "POLI",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity|decreases^reaction",
+      "activityUnit": "",
+      "reference": "26098310",
+      "asthmaRelated": false,
+      "networkCentrality": 0.13,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000115_5"
+    },
+    {
+      "gene": "POLK",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "26098310",
+      "asthmaRelated": false,
+      "networkCentrality": 0.32,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000115_6"
+    },
+    {
+      "gene": "POLN",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity",
+      "activityUnit": "",
+      "reference": "26098310",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000115_7"
+    },
+    {
+      "gene": "POLN",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^binding|decreases^activity|decreases^reaction",
+      "activityUnit": "",
+      "reference": "26098310",
+      "asthmaRelated": false,
+      "networkCentrality": 0.64,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000115_8"
+    },
+    {
+      "gene": "SLC29A1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^uptake",
+      "activityUnit": "",
+      "reference": "11085929",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000115_9"
+    },
+    {
+      "gene": "SLC29A2",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^uptake",
+      "activityUnit": "",
+      "reference": "11085929",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000115_10"
+    }
+  ],
+  "asthmaRelated": false
+}

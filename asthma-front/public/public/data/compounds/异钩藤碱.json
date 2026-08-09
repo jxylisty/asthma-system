@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000929",
+  "name": "异钩藤碱",
+  "smiles": "OCCOC(=O)OC=OCCCOCCC(C)",
+  "mw": 294.74,
+  "logp": 2.85,
+  "bloodEntryProbability": 0.57,
+  "radarScores": {
+    "antiInflammatory": 77,
+    "immuneRegulation": 90,
+    "airwayRepair": 59
+  },
+  "targets": [
+    {
+      "gene": "HL-60",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 40000,
+      "activityUnit": "nM",
+      "reference": "21070010",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000929_0"
+    },
+    {
+      "gene": "Aorta",
+      "targetType": "Tissue",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 18.41,
+      "activityUnit": "ug/ml",
+      "reference": "21070010",
+      "asthmaRelated": false,
+      "networkCentrality": 0.27,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000929_1"
+    },
+    {
+      "gene": "Aorta",
+      "targetType": "Tissue",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 30,
+      "activityUnit": "ug/ml",
+      "reference": "21070010",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000929_2"
+    },
+    {
+      "gene": "SW480",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 40000,
+      "activityUnit": "nM",
+      "reference": "21070010",
+      "asthmaRelated": false,
+      "networkCentrality": 0.34,
+      "sourceDB": "CTD",
+      "id": "ccMon00000929_3"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,106 @@
+{
+  "id": "ccMon00001116",
+  "name": "圆柚酮（努特卡酮）",
+  "smiles": "C(=O)OC=OOCCO",
+  "mw": 251.6,
+  "logp": 0.47,
+  "bloodEntryProbability": 0.63,
+  "radarScores": {
+    "antiInflammatory": 86,
+    "immuneRegulation": 53,
+    "airwayRepair": 89
+  },
+  "targets": [
+    {
+      "gene": "AR",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^activity",
+      "activityUnit": "",
+      "reference": "18324785",
+      "asthmaRelated": false,
+      "networkCentrality": 0.24,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001116_0"
+    },
+    {
+      "gene": "SLCO1B3",
+      "targetType": "Solute carrier organic anion transporter family member 1B3 (Liver-specific organic anion transporter 2) (LST-2) (Organic anion transporter 8) (Organic anion-transporting polypeptide 8) (OATP-8) (Solute carrier family 21 member 8)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": -3.2,
+      "activityUnit": "%",
+      "reference": "22541068",
+      "asthmaRelated": false,
+      "networkCentrality": 0.65,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001116_1"
+    },
+    {
+      "gene": "SLCO1B1",
+      "targetType": "Solute carrier organic anion transporter family member 1B1 (Liver-specific organic anion transporter 1) (LST-1) (OATP-C) (Sodium-independent organic anion-transporting polypeptide 2) (OATP-2) (Solute carrier family 21 member 6)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 25.6,
+      "activityUnit": "%",
+      "reference": "22541068",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001116_2"
+    },
+    {
+      "gene": "HL-60",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "ID50",
+      "activityValue": 4.27,
+      "activityUnit": "ug/ml",
+      "reference": "21377882",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001116_3"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "ID50",
+      "activityValue": 58.4,
+      "activityUnit": "ug/ml",
+      "reference": "21377882",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001116_4"
+    },
+    {
+      "gene": "SLCO2B1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": -72.2,
+      "activityUnit": "%",
+      "reference": "22541068",
+      "asthmaRelated": false,
+      "networkCentrality": 0.22,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001116_5"
+    },
+    {
+      "gene": "RBL-2H3",
+      "targetType": "Cell Line",
+      "species": "Rattus norvegicus",
+      "activityType": "Inhibition",
+      "activityValue": 8.2,
+      "activityUnit": "%",
+      "reference": "12398545",
+      "asthmaRelated": true,
+      "networkCentrality": 0.11,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001116_6"
+    }
+  ],
+  "asthmaRelated": true
+}

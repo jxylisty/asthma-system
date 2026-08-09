@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000870",
+  "name": "西贝母碱(西贝素)",
+  "smiles": "NCCCNCC(C)c1ccncc1c1ccncc1COC",
+  "mw": 177.2,
+  "logp": -0.14,
+  "bloodEntryProbability": 0.57,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 74,
+    "airwayRepair": 53
+  },
+  "targets": [
+    {
+      "gene": "Acetylcholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Electrophorus electricus",
+      "activityType": "Inhibition",
+      "activityValue": 24.89,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.77,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000870_0"
+    },
+    {
+      "gene": "Cholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Equus caballus",
+      "activityType": "Inhibition",
+      "activityValue": 6.5,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000870_1"
+    }
+  ],
+  "asthmaRelated": false
+}

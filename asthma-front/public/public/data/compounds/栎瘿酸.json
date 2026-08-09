@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00001285",
+  "name": "栎瘿酸",
+  "smiles": "C=Cc1ccc(O)cc1C(=O)OOC",
+  "mw": 496.06,
+  "logp": 1.59,
+  "bloodEntryProbability": 0.91,
+  "radarScores": {
+    "antiInflammatory": 94,
+    "immuneRegulation": 79,
+    "airwayRepair": 45
+  },
+  "targets": [
+    {
+      "gene": "PTGS2",
+      "targetType": "Prostaglandin G/H synthase 2 (EC 1.14.99.1) (Cyclooxygenase-2) (COX-2) (PHS II) (Prostaglandin H2 synthase 2) (PGH synthase 2) (PGHS-2) (Prostaglandin-endoperoxide synthase 2)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "24844534",
+      "asthmaRelated": true,
+      "networkCentrality": 0.25,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001285_0"
+    },
+    {
+      "gene": "Cyclooxygenase-1",
+      "targetType": "Individual Protein",
+      "species": "Ovis aries",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "24844534",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001285_1"
+    },
+    {
+      "gene": "PTGES",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 83.9,
+      "activityUnit": "%",
+      "reference": "24844534",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001285_2"
+    },
+    {
+      "gene": "PTGES",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "24844534",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001285_3"
+    }
+  ],
+  "asthmaRelated": true
+}

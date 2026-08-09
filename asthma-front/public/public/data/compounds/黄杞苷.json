@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000689",
+  "name": "黄杞苷",
+  "smiles": "C=Cc1ccc(O)cc1C=CC=Oc1ccccc1",
+  "mw": 323.92,
+  "logp": -0.97,
+  "bloodEntryProbability": 0.53,
+  "radarScores": {
+    "antiInflammatory": 56,
+    "immuneRegulation": 65,
+    "airwayRepair": 41
+  },
+  "targets": [
+    {
+      "gene": "PTGS1",
+      "targetType": "Prostaglandin G/H synthase 1 (EC 1.14.99.1) (Cyclooxygenase-1) (COX-1) (Prostaglandin H2 synthase 1) (PGH synthase 1) (PGHS-1) (PHS 1) (Prostaglandin-endoperoxide synthase 1)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100,
+      "activityUnit": "ug/ml",
+      "reference": "11858749",
+      "asthmaRelated": true,
+      "networkCentrality": 0.5,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000689_0"
+    },
+    {
+      "gene": "PTGS2",
+      "targetType": "Prostaglandin G/H synthase 2 (EC 1.14.99.1) (Cyclooxygenase-2) (COX-2) (PHS II) (Prostaglandin H2 synthase 2) (PGH synthase 2) (PGHS-2) (Prostaglandin-endoperoxide synthase 2)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100,
+      "activityUnit": "ug/ml",
+      "reference": "11858749",
+      "asthmaRelated": true,
+      "networkCentrality": 0.24,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000689_1"
+    }
+  ],
+  "asthmaRelated": true
+}

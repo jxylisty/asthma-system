@@ -1,0 +1,160 @@
+{
+  "id": "ccMon00000809",
+  "name": "萝卜硫苷",
+  "smiles": "CCNCCNCOCCCOOCCOC",
+  "mw": 415.37,
+  "logp": 1.12,
+  "bloodEntryProbability": 0.34,
+  "radarScores": {
+    "antiInflammatory": 72,
+    "immuneRegulation": 69,
+    "airwayRepair": 75
+  },
+  "targets": [
+    {
+      "gene": "NFE2L2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "affects^localization",
+      "activityUnit": "",
+      "reference": "20868228",
+      "asthmaRelated": true,
+      "networkCentrality": 0.81,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000809_0"
+    },
+    {
+      "gene": "CYP1A2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "20833222",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000809_1"
+    },
+    {
+      "gene": "NQO1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "20833222",
+      "asthmaRelated": false,
+      "networkCentrality": 0.14,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000809_2"
+    },
+    {
+      "gene": "NQO1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^activity",
+      "activityUnit": "",
+      "reference": "20868228",
+      "asthmaRelated": false,
+      "networkCentrality": 0.79,
+      "sourceDB": "CTD",
+      "id": "ccMon00000809_3"
+    },
+    {
+      "gene": "NQO1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "20868228",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000809_4"
+    },
+    {
+      "gene": "CYP1A1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "20833222",
+      "asthmaRelated": false,
+      "networkCentrality": 0.03,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000809_5"
+    },
+    {
+      "gene": "GPX2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "20868228",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000809_6"
+    },
+    {
+      "gene": "GPX2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "20868228",
+      "asthmaRelated": false,
+      "networkCentrality": 0.06,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000809_7"
+    },
+    {
+      "gene": "GPX2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "20868228",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000809_8"
+    },
+    {
+      "gene": "GPX2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "20868228",
+      "asthmaRelated": false,
+      "networkCentrality": 0.05,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000809_9"
+    },
+    {
+      "gene": "CYP1B1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "20833222",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000809_10"
+    },
+    {
+      "gene": "EPHX1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "21132492",
+      "asthmaRelated": false,
+      "networkCentrality": 0.8,
+      "sourceDB": "CTD",
+      "id": "ccMon00000809_11"
+    }
+  ],
+  "asthmaRelated": true
+}

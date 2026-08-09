@@ -1,0 +1,119 @@
+{
+  "id": "ccMon00001007",
+  "name": "紫草酸",
+  "smiles": "CCOc1ccccc1C=Oc1ccncc1CC",
+  "mw": 256.6,
+  "logp": 4.84,
+  "bloodEntryProbability": 0.46,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 42,
+    "airwayRepair": 92
+  },
+  "targets": [
+    {
+      "gene": "XDH",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "18694741",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "CTD",
+      "id": "ccMon00001007_0"
+    },
+    {
+      "gene": "Mmp2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "IC50",
+      "activityValue": 10200,
+      "activityUnit": "nM",
+      "reference": "19711986",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001007_1"
+    },
+    {
+      "gene": "CA12",
+      "targetType": "Carbonic anhydrase 12 (EC 4.2.1.1) (Carbonate dehydratase XII) (Carbonic anhydrase XII) (CA-XII) (Tumor antigen HOM-RCC-3.1.3)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 4.8,
+      "activityUnit": "nM",
+      "reference": "26498393",
+      "asthmaRelated": true,
+      "networkCentrality": 0.74,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001007_2"
+    },
+    {
+      "gene": "CA7",
+      "targetType": "Carbonic anhydrase 7 (EC 4.2.1.1) (Carbonate dehydratase VII) (Carbonic anhydrase VII) (CA-VII)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 268.3,
+      "activityUnit": "nM",
+      "reference": "26498393",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001007_3"
+    },
+    {
+      "gene": "CA4",
+      "targetType": "Carbonic anhydrase 4 (EC 4.2.1.1) (Carbonate dehydratase IV) (Carbonic anhydrase IV) (CA-IV)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 101.2,
+      "activityUnit": "nM",
+      "reference": "26498393",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "CTD",
+      "id": "ccMon00001007_4"
+    },
+    {
+      "gene": "CA2",
+      "targetType": "Carbonic anhydrase 2 (EC 4.2.1.1) (Carbonate dehydratase II) (Carbonic anhydrase C) (CAC) (Carbonic anhydrase II) (CA-II) (Cyanamide hydratase CA2) (EC 4.2.1.69)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "26498393",
+      "asthmaRelated": false,
+      "networkCentrality": 0.3,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001007_5"
+    },
+    {
+      "gene": "CA1",
+      "targetType": "Carbonic anhydrase 1 (EC 4.2.1.1) (Carbonate dehydratase I) (Carbonic anhydrase B) (CAB) (Carbonic anhydrase I) (CA-I) (Cyanamide hydratase CA1) (EC 4.2.1.69)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "26498393",
+      "asthmaRelated": false,
+      "networkCentrality": 0.25,
+      "sourceDB": "CTD",
+      "id": "ccMon00001007_6"
+    },
+    {
+      "gene": "HaCaT",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 121,
+      "activityUnit": "%",
+      "reference": "19217780",
+      "asthmaRelated": false,
+      "networkCentrality": 0.04,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001007_7"
+    }
+  ],
+  "asthmaRelated": true
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ccMon00001092",
+  "name": "新橙皮苷",
+  "smiles": "CCOOCCOCCNC(=O)OOCCONC",
+  "mw": 374.04,
+  "logp": 4.76,
+  "bloodEntryProbability": 0.68,
+  "radarScores": {
+    "antiInflammatory": 70,
+    "immuneRegulation": 85,
+    "airwayRepair": 62
+  },
+  "targets": [
+    {
+      "gene": "Staphylococcus aureus",
+      "targetType": "Organism",
+      "species": "Staphylococcus aureus",
+      "activityType": "MIC90",
+      "activityValue": 300,
+      "activityUnit": "ug/ml",
+      "reference": "10987443",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "CTD",
+      "id": "ccMon00001092_0"
+    },
+    {
+      "gene": "Pseudomonas aeruginosa",
+      "targetType": "Organism",
+      "species": "Pseudomonas aeruginosa",
+      "activityType": "MIC90",
+      "activityValue": 300,
+      "activityUnit": "ug/ml",
+      "reference": "10987443",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001092_1"
+    },
+    {
+      "gene": "Acetylcholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Electrophorus electricus",
+      "activityType": "Inhibition",
+      "activityValue": 4.86,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.22,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001092_2"
+    },
+    {
+      "gene": "Cholinesterase",
+      "targetType": "Individual Protein",
+      "species": "Equus caballus",
+      "activityType": "Inhibition",
+      "activityValue": 0.1,
+      "activityUnit": "%",
+      "reference": "23062825",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001092_3"
+    },
+    {
+      "gene": "Escherichia coli",
+      "targetType": "Organism",
+      "species": "Escherichia coli",
+      "activityType": "MIC90",
+      "activityValue": 300,
+      "activityUnit": "ug/ml",
+      "reference": "10987443",
+      "asthmaRelated": false,
+      "networkCentrality": 0.69,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001092_4"
+    },
+    {
+      "gene": "Proteus mirabilis",
+      "targetType": "Organism",
+      "species": "Proteus mirabilis",
+      "activityType": "MIC90",
+      "activityValue": 300,
+      "activityUnit": "ug/ml",
+      "reference": "10987443",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001092_5"
+    }
+  ],
+  "asthmaRelated": false
+}

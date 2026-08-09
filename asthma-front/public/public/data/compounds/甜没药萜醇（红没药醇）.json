@@ -1,0 +1,106 @@
+{
+  "id": "ccMon00000456",
+  "name": "甜没药萜醇（红没药醇）",
+  "smiles": "CC(C)C=CCCc1ccc(O)cc1",
+  "mw": 468.41,
+  "logp": 2.7,
+  "bloodEntryProbability": 0.38,
+  "radarScores": {
+    "antiInflammatory": 58,
+    "immuneRegulation": 85,
+    "airwayRepair": 82
+  },
+  "targets": [
+    {
+      "gene": "CYP1A1",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "15936245",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000456_0"
+    },
+    {
+      "gene": "Plasmodium falciparum",
+      "targetType": "Organism",
+      "species": "Plasmodium falciparum",
+      "activityType": "Potency",
+      "activityValue": 601.2,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000456_1"
+    },
+    {
+      "gene": "KMT2A",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 562.3,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.87,
+      "sourceDB": "CTD",
+      "id": "ccMon00000456_2"
+    },
+    {
+      "gene": "USP1",
+      "targetType": "Ubiquitin carboxyl-terminal hydrolase 1 (EC 3.4.19.12) (Deubiquitinating enzyme 1) (hUBP) (Ubiquitin thioesterase 1) (Ubiquitin-specific-processing protease 1) [Cleaved into: Ubiquitin carboxyl-terminal hydrolase 1, N-terminal fragment]",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 89125.1,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000456_3"
+    },
+    {
+      "gene": "ALOX15",
+      "targetType": "Polyunsaturated fatty acid lipoxygenase ALOX15 (12/15-lipoxygenase) (Arachidonate 12-lipoxygenase, leukocyte-type) (12-LOX) (EC 1.13.11.31) (Arachidonate 15-lipoxygenase) (15-LOX) (15-LOX-1) (EC 1.13.11.33) (Arachidonate omega-6 lipoxygenase) (Hepoxilin ",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 12589.3,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.91,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000456_4"
+    },
+    {
+      "gene": "CYP3A4",
+      "targetType": "Cytochrome P450 3A4 (EC 1.14.14.1) (1,4-cineole 2-exo-monooxygenase) (1,8-cineole 2-exo-monooxygenase) (EC 1.14.14.56) (Albendazole monooxygenase (sulfoxide-forming)) (EC 1.14.14.73) (Albendazole sulfoxidase) (CYPIIIA3) (CYPIIIA4) (Cholesterol 25-hydroxy",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 39810.7,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000456_5"
+    },
+    {
+      "gene": "MAPK1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 5011.9,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": true,
+      "networkCentrality": 0.75,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000456_6"
+    }
+  ],
+  "asthmaRelated": true
+}

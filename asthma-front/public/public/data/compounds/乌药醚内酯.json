@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000997",
+  "name": "乌药醚内酯",
+  "smiles": "c1ccc(O)cc1C(=O)OC=O",
+  "mw": 334.38,
+  "logp": -0.63,
+  "bloodEntryProbability": 0.94,
+  "radarScores": {
+    "antiInflammatory": 57,
+    "immuneRegulation": 40,
+    "airwayRepair": 50
+  },
+  "targets": [
+    {
+      "gene": "HepG2",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "EC50",
+      "activityValue": 167000,
+      "activityUnit": "nM",
+      "reference": "19639966",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000997_0"
+    }
+  ],
+  "asthmaRelated": false
+}

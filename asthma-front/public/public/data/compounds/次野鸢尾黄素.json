@@ -1,0 +1,66 @@
+{
+  "id": "ccMon00000880",
+  "name": "次野鸢尾黄素",
+  "smiles": "OCc1ccccc1CCNNCC=Cc1ccccc1",
+  "mw": 468.43,
+  "logp": 0.53,
+  "bloodEntryProbability": 0.62,
+  "radarScores": {
+    "antiInflammatory": 42,
+    "immuneRegulation": 51,
+    "airwayRepair": 91
+  },
+  "targets": [
+    {
+      "gene": "ACHE",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^activity",
+      "activityUnit": "",
+      "reference": "31034797",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000880_0"
+    },
+    {
+      "gene": "ACHE",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "31034797",
+      "asthmaRelated": false,
+      "networkCentrality": 0.92,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000880_1"
+    },
+    {
+      "gene": "MCF7",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 50.3,
+      "activityUnit": "nM",
+      "reference": "15787436",
+      "asthmaRelated": false,
+      "networkCentrality": 0.95,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000880_2"
+    },
+    {
+      "gene": "Xanthine dehydrogenase",
+      "targetType": "Individual Protein",
+      "species": "Bos taurus",
+      "activityType": "Inhibition",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "3379415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000880_3"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00000314",
+  "name": "α-水芹烯",
+  "smiles": "C(=O)OC(=O)OOCCC(C)",
+  "mw": 194.05,
+  "logp": 3.62,
+  "bloodEntryProbability": 0.42,
+  "radarScores": {
+    "antiInflammatory": 69,
+    "immuneRegulation": 79,
+    "airwayRepair": 85
+  },
+  "targets": [
+    {
+      "gene": "AR",
+      "targetType": "Androgen receptor (Dihydrotestosterone receptor) (Nuclear receptor subfamily 3 group C member 4)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 43641.2,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000314_0"
+    },
+    {
+      "gene": "NFE2L2",
+      "targetType": "Nuclear factor erythroid 2-related factor 2 (NF-E2-related factor 2) (NFE2-related factor 2) (Nrf-2) (HEBP1) (Nuclear factor, erythroid derived 2, like 2)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 54482.7,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": true,
+      "networkCentrality": 0.57,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000314_1"
+    },
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 80,
+      "activityUnit": "%",
+      "reference": "1659613",
+      "asthmaRelated": false,
+      "networkCentrality": 0.04,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000314_2"
+    },
+    {
+      "gene": "Tetranychus urticae",
+      "targetType": "Organism",
+      "species": "Tetranychus urticae",
+      "activityType": "LC50",
+      "activityValue": 354.7,
+      "activityUnit": "microg/cm3",
+      "reference": "21674753",
+      "asthmaRelated": false,
+      "networkCentrality": 0.22,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000314_3"
+    },
+    {
+      "gene": "Aspergillus flavus",
+      "targetType": "Organism",
+      "species": "Aspergillus flavus",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "17658828",
+      "asthmaRelated": false,
+      "networkCentrality": 0.13,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000314_4"
+    }
+  ],
+  "asthmaRelated": true
+}

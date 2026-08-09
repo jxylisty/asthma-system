@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000877",
+  "name": "碘",
+  "smiles": "OCCOc1ccncc1NC",
+  "mw": 417.62,
+  "logp": 4.76,
+  "bloodEntryProbability": 0.79,
+  "radarScores": {
+    "antiInflammatory": 91,
+    "immuneRegulation": 96,
+    "airwayRepair": 54
+  },
+  "targets": [
+    {
+      "gene": "SLC5A5",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "substrate",
+      "activityUnit": "",
+      "reference": "19196800",
+      "asthmaRelated": false,
+      "networkCentrality": 0.09,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000877_0"
+    }
+  ],
+  "asthmaRelated": false
+}

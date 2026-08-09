@@ -1,0 +1,120 @@
+{
+  "id": "ccMon00000317",
+  "name": "α-檀香醇",
+  "smiles": "CC(C)c1ccncc1CCNCC(C)",
+  "mw": 443.35,
+  "logp": 3.92,
+  "bloodEntryProbability": 0.48,
+  "radarScores": {
+    "antiInflammatory": 86,
+    "immuneRegulation": 43,
+    "airwayRepair": 57
+  },
+  "targets": [
+    {
+      "gene": "Helicobacter pylori",
+      "targetType": "Organism",
+      "species": "Helicobacter pylori",
+      "activityType": "IZ",
+      "activityValue": 21.6,
+      "activityUnit": "mm",
+      "reference": "7807120",
+      "asthmaRelated": false,
+      "networkCentrality": 0.46,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000317_0"
+    },
+    {
+      "gene": "Helicobacter pylori",
+      "targetType": "Organism",
+      "species": "Helicobacter pylori",
+      "activityType": "MIC",
+      "activityValue": 15.6,
+      "activityUnit": "ug/ml",
+      "reference": "22647719",
+      "asthmaRelated": false,
+      "networkCentrality": 0.16,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000317_1"
+    },
+    {
+      "gene": "Helicobacter pylori SS1",
+      "targetType": "Organism",
+      "species": "Helicobacter pylori SS1",
+      "activityType": "IZ",
+      "activityValue": 11.5,
+      "activityUnit": "mm",
+      "reference": "2746258",
+      "asthmaRelated": false,
+      "networkCentrality": 0.22,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000317_2"
+    },
+    {
+      "gene": "Helicobacter pylori SS1",
+      "targetType": "Organism",
+      "species": "Helicobacter pylori SS1",
+      "activityType": "MIC",
+      "activityValue": 31.3,
+      "activityUnit": "ug/ml",
+      "reference": "23398362",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000317_3"
+    },
+    {
+      "gene": "Tubulin",
+      "targetType": "Protein Family",
+      "species": "Sus scrofa",
+      "activityType": "FC",
+      "activityValue": 7000,
+      "activityUnit": "",
+      "reference": "17060533",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000317_4"
+    },
+    {
+      "gene": "HN5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "GI50",
+      "activityValue": 5300,
+      "activityUnit": "nM",
+      "reference": "18474583",
+      "asthmaRelated": false,
+      "networkCentrality": 0.27,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000317_5"
+    },
+    {
+      "gene": "HN5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "LC50",
+      "activityValue": 12200,
+      "activityUnit": "nM",
+      "reference": "23659371",
+      "asthmaRelated": false,
+      "networkCentrality": 0.05,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000317_6"
+    },
+    {
+      "gene": "HN5",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "TGI",
+      "activityValue": 8200,
+      "activityUnit": "nM",
+      "reference": "24063567",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000317_7"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,172 @@
+{
+  "id": "ccMon00001043",
+  "name": "新乌头碱",
+  "smiles": "C(=O)ONCC=Oc1ccncc1C(=O)OOC",
+  "mw": 443.42,
+  "logp": 3.16,
+  "bloodEntryProbability": 0.66,
+  "radarScores": {
+    "antiInflammatory": 49,
+    "immuneRegulation": 49,
+    "airwayRepair": 86
+  },
+  "targets": [
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001043_0"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.54,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001043_1"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.81,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001043_2"
+    },
+    {
+      "gene": "ABCB1A",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^expression|affects^response to substance",
+      "activityUnit": "",
+      "reference": "33171190",
+      "asthmaRelated": false,
+      "networkCentrality": 0.96,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001043_3"
+    },
+    {
+      "gene": "ABCB1A",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^response to substance",
+      "activityUnit": "",
+      "reference": "33171190",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001043_4"
+    },
+    {
+      "gene": "ABCC2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.43,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001043_5"
+    },
+    {
+      "gene": "ABCG2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001043_6"
+    },
+    {
+      "gene": "ABCG2",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.56,
+      "sourceDB": "CTD",
+      "id": "ccMon00001043_7"
+    },
+    {
+      "gene": "ABCG2",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^response to substance",
+      "activityUnit": "",
+      "reference": "33171190",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001043_8"
+    },
+    {
+      "gene": "ABCB1",
+      "targetType": "Protein",
+      "species": "Canis lupus familiaris",
+      "activityType": "increases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001043_9"
+    },
+    {
+      "gene": "ABCG2",
+      "targetType": "Protein",
+      "species": "Canis lupus familiaris",
+      "activityType": "decreases^activity|decreases^transport",
+      "activityUnit": "",
+      "reference": "23200901",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001043_10"
+    },
+    {
+      "gene": "GATA4",
+      "targetType": "Protein",
+      "species": "Danio rerio",
+      "activityType": "decreases^expression",
+      "activityUnit": "",
+      "reference": "30639578",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001043_11"
+    },
+    {
+      "gene": "S100B",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "affects^expression|affects^response to substance",
+      "activityUnit": "",
+      "reference": "33171190",
+      "asthmaRelated": false,
+      "networkCentrality": 0.57,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001043_12"
+    }
+  ],
+  "asthmaRelated": false
+}

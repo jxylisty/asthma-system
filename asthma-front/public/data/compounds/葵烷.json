@@ -1,0 +1,53 @@
+{
+  "id": "ccMon00000627",
+  "name": "葵烷",
+  "smiles": "CCc1ccc(O)cc1C=OCCO",
+  "mw": 260.02,
+  "logp": 4.75,
+  "bloodEntryProbability": 0.82,
+  "radarScores": {
+    "antiInflammatory": 69,
+    "immuneRegulation": 84,
+    "airwayRepair": 53
+  },
+  "targets": [
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression|increases^secretion",
+      "activityUnit": "",
+      "reference": "19720135",
+      "asthmaRelated": false,
+      "networkCentrality": 0.3,
+      "sourceDB": "CTD",
+      "id": "ccMon00000627_0"
+    },
+    {
+      "gene": "CXCL8",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^expression|increases^secretion",
+      "activityUnit": "",
+      "reference": "19720135",
+      "asthmaRelated": true,
+      "networkCentrality": 0.8,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000627_1"
+    },
+    {
+      "gene": "NFE2L2",
+      "targetType": "Nuclear factor erythroid 2-related factor 2 (NF-E2-related factor 2) (NFE2-related factor 2) (Nrf-2) (HEBP1) (Nuclear factor, erythroid derived 2, like 2)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 30637.9,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": true,
+      "networkCentrality": 0.63,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000627_2"
+    }
+  ],
+  "asthmaRelated": true
+}

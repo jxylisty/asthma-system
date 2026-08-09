@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000767",
+  "name": "羟异栀子苷（山栀子苷B）",
+  "smiles": "CC(C)C=Oc1ccc(O)cc1CCN",
+  "mw": 270.06,
+  "logp": 2.91,
+  "bloodEntryProbability": 0.43,
+  "radarScores": {
+    "antiInflammatory": 87,
+    "immuneRegulation": 42,
+    "airwayRepair": 81
+  },
+  "targets": [
+    {
+      "gene": "Hepatitis C virus",
+      "targetType": "Organism",
+      "species": "Hepatitis C virus",
+      "activityType": "Inhibition",
+      "activityValue": -3.4,
+      "activityUnit": "%",
+      "reference": "19904996",
+      "asthmaRelated": false,
+      "networkCentrality": 0.34,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000767_0"
+    },
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 80,
+      "activityUnit": "%",
+      "reference": "1667413",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000767_1"
+    }
+  ],
+  "asthmaRelated": false
+}

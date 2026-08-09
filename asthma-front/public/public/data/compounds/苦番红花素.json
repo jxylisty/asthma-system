@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00001208",
+  "name": "苦番红花素",
+  "smiles": "CCOc1ccc(O)cc1CCOc1ccncc1COC",
+  "mw": 410.94,
+  "logp": 1.98,
+  "bloodEntryProbability": 0.37,
+  "radarScores": {
+    "antiInflammatory": 97,
+    "immuneRegulation": 92,
+    "airwayRepair": 68
+  },
+  "targets": [
+    {
+      "gene": "TRPA1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^activity",
+      "activityUnit": "",
+      "reference": "30636360",
+      "asthmaRelated": false,
+      "networkCentrality": 0.72,
+      "sourceDB": "CTD",
+      "id": "ccMon00001208_0"
+    },
+    {
+      "gene": "TRPA1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "30636360",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001208_1"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,88 @@
+{
+  "id": "ccMon00000505",
+  "name": "诃子次酸",
+  "smiles": "C(=O)ONCC(=O)OOCCO",
+  "mw": 302.33,
+  "logp": 1.32,
+  "bloodEntryProbability": 0.38,
+  "radarScores": {
+    "antiInflammatory": 99,
+    "immuneRegulation": 91,
+    "airwayRepair": 60
+  },
+  "targets": [
+    {
+      "gene": "IL6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28724416",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000505_0"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28724416",
+      "asthmaRelated": true,
+      "networkCentrality": 0.98,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000505_1"
+    },
+    {
+      "gene": "CXCL8",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "28724416",
+      "asthmaRelated": true,
+      "networkCentrality": 0.19,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000505_2"
+    },
+    {
+      "gene": "OCLN",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "28724416",
+      "asthmaRelated": false,
+      "networkCentrality": 0.41,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000505_3"
+    },
+    {
+      "gene": "TJP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "28724416",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000505_4"
+    },
+    {
+      "gene": "TJP1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "28724416",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000505_5"
+    }
+  ],
+  "asthmaRelated": true
+}

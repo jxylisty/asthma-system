@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000907",
+  "name": "异乌药内酯",
+  "smiles": "OCCOC(=O)Oc1ccncc1c1ccc(O)cc1CC(C)",
+  "mw": 457.65,
+  "logp": 3,
+  "bloodEntryProbability": 0.94,
+  "radarScores": {
+    "antiInflammatory": 86,
+    "immuneRegulation": 75,
+    "airwayRepair": 52
+  },
+  "targets": [
+    {
+      "gene": "RAW264.7",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "CC50",
+      "activityValue": 66410,
+      "activityUnit": "nM",
+      "reference": "22148193",
+      "asthmaRelated": false,
+      "networkCentrality": 0.55,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000907_0"
+    },
+    {
+      "gene": "Nos2",
+      "targetType": "Nitric oxide synthase, inducible (EC 1.14.13.39) (Inducible NO synthase) (Inducible NOS) (iNOS) (Macrophage NOS) (MAC-NOS) (NOS type II) (Peptidyl-cysteine S-nitrosylase NOS2)",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 300,
+      "activityUnit": "nM",
+      "reference": "22148193",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000907_1"
+    }
+  ],
+  "asthmaRelated": false
+}

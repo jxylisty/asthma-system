@@ -1,0 +1,112 @@
+{
+  "id": "ccMon00001412",
+  "name": "知母皂苷AIII",
+  "smiles": "OCCOCCNCNC",
+  "mw": 192.59,
+  "logp": 4.38,
+  "bloodEntryProbability": 0.41,
+  "radarScores": {
+    "antiInflammatory": 90,
+    "immuneRegulation": 40,
+    "airwayRepair": 49
+  },
+  "targets": [
+    {
+      "gene": "RELA",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^activity|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": true,
+      "networkCentrality": 0.39,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001412_0"
+    },
+    {
+      "gene": "RELA",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^activity|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": true,
+      "networkCentrality": 0.59,
+      "sourceDB": "CTD",
+      "id": "ccMon00001412_1"
+    },
+    {
+      "gene": "IL1B",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": false,
+      "networkCentrality": 0.94,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001412_2"
+    },
+    {
+      "gene": "ACHE",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": false,
+      "networkCentrality": 0.7,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001412_3"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^activity|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": true,
+      "networkCentrality": 0.12,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001412_4"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": true,
+      "networkCentrality": 0.17,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001412_5"
+    },
+    {
+      "gene": "RELA",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^activity|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": true,
+      "networkCentrality": 0,
+      "sourceDB": "CTD",
+      "id": "ccMon00001412_6"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^reaction|increases^activity|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "19426756",
+      "asthmaRelated": true,
+      "networkCentrality": 0.09,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001412_7"
+    }
+  ],
+  "asthmaRelated": true
+}

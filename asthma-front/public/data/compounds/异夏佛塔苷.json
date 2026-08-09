@@ -1,0 +1,53 @@
+{
+  "id": "ccMon00000931",
+  "name": "异夏佛塔苷",
+  "smiles": "NCNCCCOCC(C)C(=O)OC=C",
+  "mw": 410.14,
+  "logp": 0.23,
+  "bloodEntryProbability": 0.78,
+  "radarScores": {
+    "antiInflammatory": 48,
+    "immuneRegulation": 42,
+    "airwayRepair": 50
+  },
+  "targets": [
+    {
+      "gene": "BCHE",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26297990",
+      "asthmaRelated": false,
+      "networkCentrality": 0.77,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000931_0"
+    },
+    {
+      "gene": "ACHE",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26297990",
+      "asthmaRelated": false,
+      "networkCentrality": 0.36,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000931_1"
+    },
+    {
+      "gene": "PTPN1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 50,
+      "activityUnit": "%",
+      "reference": "24047800",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "CTD",
+      "id": "ccMon00000931_2"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,124 @@
+{
+  "id": "ccMon00000439",
+  "name": "β-广藿香烯",
+  "smiles": "c1ccncc1C(=O)OCCNCOCCCN",
+  "mw": 415,
+  "logp": 1.79,
+  "bloodEntryProbability": 0.79,
+  "radarScores": {
+    "antiInflammatory": 54,
+    "immuneRegulation": 49,
+    "airwayRepair": 95
+  },
+  "targets": [
+    {
+      "gene": "CASP3",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": false,
+      "networkCentrality": 0.61,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000439_0"
+    },
+    {
+      "gene": "IL1B",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": false,
+      "networkCentrality": 0.9,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000439_1"
+    },
+    {
+      "gene": "RELA",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": true,
+      "networkCentrality": 0.04,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000439_2"
+    },
+    {
+      "gene": "TNF",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": true,
+      "networkCentrality": 0.52,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000439_3"
+    },
+    {
+      "gene": "CAT",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity|decreases^reaction",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": false,
+      "networkCentrality": 0.14,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000439_4"
+    },
+    {
+      "gene": "FAS",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000439_5"
+    },
+    {
+      "gene": "FASLG",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000439_6"
+    },
+    {
+      "gene": "IL10",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000439_7"
+    },
+    {
+      "gene": "NFKBIA",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^expression|decreases^reaction|increases^phosphorylation",
+      "activityUnit": "",
+      "reference": "29339218",
+      "asthmaRelated": true,
+      "networkCentrality": 0.36,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000439_8"
+    }
+  ],
+  "asthmaRelated": true
+}

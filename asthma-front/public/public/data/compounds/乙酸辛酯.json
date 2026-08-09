@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00001137",
+  "name": "乙酸辛酯",
+  "smiles": "COCCCOc1ccncc1c1ccc(O)cc1OC",
+  "mw": 297.27,
+  "logp": 3.94,
+  "bloodEntryProbability": 0.9,
+  "radarScores": {
+    "antiInflammatory": 45,
+    "immuneRegulation": 49,
+    "airwayRepair": 85
+  },
+  "targets": [
+    {
+      "gene": "Meloidogyne incognita",
+      "targetType": "Organism",
+      "species": "Meloidogyne incognita",
+      "activityType": "EC50",
+      "activityValue": 37.3,
+      "activityUnit": "ug/ml",
+      "reference": "21631118",
+      "asthmaRelated": false,
+      "networkCentrality": 0.7,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001137_0"
+    },
+    {
+      "gene": "Meloidogyne javanica",
+      "targetType": "Organism",
+      "species": "Meloidogyne javanica",
+      "activityType": "EC50",
+      "activityValue": 61.4,
+      "activityUnit": "ug/ml",
+      "reference": "21631118",
+      "asthmaRelated": false,
+      "networkCentrality": 0.67,
+      "sourceDB": "CTD",
+      "id": "ccMon00001137_1"
+    }
+  ],
+  "asthmaRelated": false
+}

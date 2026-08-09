@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00001058",
+  "name": "大叶茜草素",
+  "smiles": "C=OOCc1ccccc1c1ccccc1CC(C)",
+  "mw": 457.96,
+  "logp": 4.99,
+  "bloodEntryProbability": 0.75,
+  "radarScores": {
+    "antiInflammatory": 42,
+    "immuneRegulation": 72,
+    "airwayRepair": 98
+  },
+  "targets": [
+    {
+      "gene": "Hepatitis B virus",
+      "targetType": "Organism",
+      "species": "Hepatitis B virus",
+      "activityType": "IC50",
+      "activityValue": 2,
+      "activityUnit": "ug/ml",
+      "reference": "8882438",
+      "asthmaRelated": false,
+      "networkCentrality": 0.63,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001058_0"
+    }
+  ],
+  "asthmaRelated": false
+}

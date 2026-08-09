@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00001195",
+  "name": "奈嵌苯酮",
+  "smiles": "C(=O)OC=OCCNCNC",
+  "mw": 301.18,
+  "logp": 3.84,
+  "bloodEntryProbability": 0.94,
+  "radarScores": {
+    "antiInflammatory": 89,
+    "immuneRegulation": 96,
+    "airwayRepair": 74
+  },
+  "targets": [
+    {
+      "gene": "MCF7",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "1431942",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001195_0"
+    },
+    {
+      "gene": "Trypanosoma cruzi",
+      "targetType": "Organism",
+      "species": "Trypanosoma cruzi",
+      "activityType": "IC50",
+      "activityValue": 2.62,
+      "activityUnit": "ug/ml",
+      "reference": "18440233",
+      "asthmaRelated": false,
+      "networkCentrality": 0.58,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001195_1"
+    },
+    {
+      "gene": "Leishmania donovani",
+      "targetType": "Organism",
+      "species": "Leishmania donovani",
+      "activityType": "IC50",
+      "activityValue": 65.07,
+      "activityUnit": "ug/ml",
+      "reference": "10924166",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "CTD",
+      "id": "ccMon00001195_2"
+    },
+    {
+      "gene": "Leishmania amazonensis",
+      "targetType": "Organism",
+      "species": "Leishmania amazonensis",
+      "activityType": "IC50",
+      "activityValue": 27.3,
+      "activityUnit": "ug/ml",
+      "reference": "20155971",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001195_3"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,133 @@
+{
+  "id": "ccMon00001485",
+  "name": "花椒毒酚",
+  "smiles": "CCC=Oc1ccccc1c1ccc(O)cc1c1ccncc1",
+  "mw": 313.06,
+  "logp": 2.01,
+  "bloodEntryProbability": 0.76,
+  "radarScores": {
+    "antiInflammatory": 89,
+    "immuneRegulation": 70,
+    "airwayRepair": 98
+  },
+  "targets": [
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "Activity",
+      "activityValue": 25,
+      "activityUnit": "%",
+      "reference": "23291118",
+      "asthmaRelated": false,
+      "networkCentrality": 0.53,
+      "sourceDB": "CTD",
+      "id": "ccMon00001485_0"
+    },
+    {
+      "gene": "Radical scavenging activity",
+      "targetType": "Others",
+      "species": "",
+      "activityType": "IC50",
+      "activityValue": 69600,
+      "activityUnit": "nM",
+      "reference": "20332056",
+      "asthmaRelated": false,
+      "networkCentrality": 0.99,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001485_1"
+    },
+    {
+      "gene": "HT-29",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 500000,
+      "activityUnit": "nM",
+      "reference": "19054677",
+      "asthmaRelated": false,
+      "networkCentrality": 0,
+      "sourceDB": "CTD",
+      "id": "ccMon00001485_2"
+    },
+    {
+      "gene": "Hepatitis B virus",
+      "targetType": "Organism",
+      "species": "Hepatitis B virus",
+      "activityType": "Inhibition",
+      "activityValue": 19.8,
+      "activityUnit": "%",
+      "reference": "15217285",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001485_3"
+    },
+    {
+      "gene": "BACE1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 500000,
+      "activityUnit": "nM",
+      "reference": "22222157",
+      "asthmaRelated": false,
+      "networkCentrality": 0.19,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001485_4"
+    },
+    {
+      "gene": "BACE1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 32.8,
+      "activityUnit": "%",
+      "reference": "22222157",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001485_5"
+    },
+    {
+      "gene": "3T3-L1",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 500000,
+      "activityUnit": "nM",
+      "reference": "19054677",
+      "asthmaRelated": false,
+      "networkCentrality": 0.71,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001485_6"
+    },
+    {
+      "gene": "SMPD1",
+      "targetType": "Sphingomyelin phosphodiesterase (EC 3.1.4.12) (EC 3.1.4.3) (Acid sphingomyelinase) (aSMase)",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 25118.9,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.5,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001485_7"
+    },
+    {
+      "gene": "Helicobacter pylori SS1",
+      "targetType": "Organism",
+      "species": "Helicobacter pylori SS1",
+      "activityType": "MIC",
+      "activityValue": 50,
+      "activityUnit": "ug/ml",
+      "reference": "20832915",
+      "asthmaRelated": false,
+      "networkCentrality": 0.14,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001485_8"
+    }
+  ],
+  "asthmaRelated": false
+}

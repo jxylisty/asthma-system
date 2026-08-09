@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00001069",
+  "name": "麝香酮",
+  "smiles": "c1ccncc1c1ccccc1C=Oc1ccccc1",
+  "mw": 373.4,
+  "logp": 4.37,
+  "bloodEntryProbability": 0.83,
+  "radarScores": {
+    "antiInflammatory": 41,
+    "immuneRegulation": 84,
+    "airwayRepair": 62
+  },
+  "targets": [
+    {
+      "gene": "CYP3A4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "22178124",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001069_0"
+    },
+    {
+      "gene": "CYP3A4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^metabolic processing|increases^reaction",
+      "activityUnit": "",
+      "reference": "22178124",
+      "asthmaRelated": false,
+      "networkCentrality": 0.38,
+      "sourceDB": "CTD",
+      "id": "ccMon00001069_1"
+    }
+  ],
+  "asthmaRelated": false
+}

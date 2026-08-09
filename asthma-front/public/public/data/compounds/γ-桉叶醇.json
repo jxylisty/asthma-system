@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000760",
+  "name": "γ-桉叶醇",
+  "smiles": "c1ccc(O)cc1c1ccncc1c1ccccc1",
+  "mw": 255.54,
+  "logp": 4.91,
+  "bloodEntryProbability": 0.59,
+  "radarScores": {
+    "antiInflammatory": 77,
+    "immuneRegulation": 46,
+    "airwayRepair": 76
+  },
+  "targets": [
+    {
+      "gene": "HepG2",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 1.5,
+      "activityUnit": "ug/ml",
+      "reference": "11374955",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000760_0"
+    }
+  ],
+  "asthmaRelated": false
+}

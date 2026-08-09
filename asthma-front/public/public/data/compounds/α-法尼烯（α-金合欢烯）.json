@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000300",
+  "name": "α-法尼烯（α-金合欢烯）",
+  "smiles": "CCNOCc1ccc(O)cc1C(=O)O",
+  "mw": 491.83,
+  "logp": -0.54,
+  "bloodEntryProbability": 0.52,
+  "radarScores": {
+    "antiInflammatory": 46,
+    "immuneRegulation": 83,
+    "airwayRepair": 73
+  },
+  "targets": [
+    {
+      "gene": "MAOA",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29844252",
+      "asthmaRelated": false,
+      "networkCentrality": 0.32,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000300_0"
+    }
+  ],
+  "asthmaRelated": false
+}

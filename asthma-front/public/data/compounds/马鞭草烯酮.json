@@ -1,0 +1,142 @@
+{
+  "id": "ccMon00001471",
+  "name": "马鞭草烯酮",
+  "smiles": "OCCOOCCONCC=O",
+  "mw": 156.61,
+  "logp": 4.29,
+  "bloodEntryProbability": 0.77,
+  "radarScores": {
+    "antiInflammatory": 79,
+    "immuneRegulation": 48,
+    "airwayRepair": 100
+  },
+  "targets": [
+    {
+      "gene": "CYP2C11",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^metabolic processing",
+      "activityUnit": "",
+      "reference": "12867494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001471_0"
+    },
+    {
+      "gene": "CYP3A2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^metabolic processing",
+      "activityUnit": "",
+      "reference": "12867494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001471_1"
+    },
+    {
+      "gene": "CYP2B6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^metabolic processing",
+      "activityUnit": "",
+      "reference": "12867494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001471_2"
+    },
+    {
+      "gene": "CYP2A6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "increases^metabolic processing",
+      "activityUnit": "",
+      "reference": "12867494",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001471_3"
+    },
+    {
+      "gene": "Staphylococcus aureus",
+      "targetType": "Organism",
+      "species": "Staphylococcus aureus",
+      "activityType": "MIC",
+      "activityValue": 900,
+      "activityUnit": "uL/ml",
+      "reference": "15161226",
+      "asthmaRelated": false,
+      "networkCentrality": 0.02,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001471_4"
+    },
+    {
+      "gene": "Pseudomonas aeruginosa",
+      "targetType": "Organism",
+      "species": "Pseudomonas aeruginosa",
+      "activityType": "MIC",
+      "activityValue": 900,
+      "activityUnit": "uL/ml",
+      "reference": "15161226",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001471_5"
+    },
+    {
+      "gene": "Candida albicans",
+      "targetType": "Organism",
+      "species": "Candida albicans",
+      "activityType": "MIC",
+      "activityValue": 900,
+      "activityUnit": "uL/ml",
+      "reference": "15161226",
+      "asthmaRelated": false,
+      "networkCentrality": 0.14,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001471_6"
+    },
+    {
+      "gene": "4'-phosphopantetheinyl transferase ffp",
+      "targetType": "Individual Protein",
+      "species": "Bacillus subtilis",
+      "activityType": "Potency",
+      "activityValue": 79432.8,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.86,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001471_7"
+    },
+    {
+      "gene": "Escherichia coli ATCC 8739",
+      "targetType": "Organism",
+      "species": "Escherichia coli ATCC 8739",
+      "activityType": "MIC",
+      "activityValue": 900,
+      "activityUnit": "uL/ml",
+      "reference": "15161226",
+      "asthmaRelated": false,
+      "networkCentrality": 0.45,
+      "sourceDB": "CTD",
+      "id": "ccMon00001471_8"
+    },
+    {
+      "gene": "Staphylococcus epidermidis ATCC 12228",
+      "targetType": "Organism",
+      "species": "Staphylococcus epidermidis ATCC 12228",
+      "activityType": "MIC",
+      "activityValue": 900,
+      "activityUnit": "uL/ml",
+      "reference": "15161226",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001471_9"
+    }
+  ],
+  "asthmaRelated": false
+}

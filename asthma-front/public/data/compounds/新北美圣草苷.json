@@ -1,0 +1,76 @@
+{
+  "id": "ccMon00001091",
+  "name": "新北美圣草苷",
+  "smiles": "c1ccc(O)cc1CCOCCNC(=O)OCCNOCCO",
+  "mw": 438.46,
+  "logp": 4.05,
+  "bloodEntryProbability": 0.43,
+  "radarScores": {
+    "antiInflammatory": 60,
+    "immuneRegulation": 44,
+    "airwayRepair": 71
+  },
+  "targets": [
+    {
+      "gene": "COL1A1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "21741227",
+      "asthmaRelated": false,
+      "networkCentrality": 0.76,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001091_0"
+    },
+    {
+      "gene": "COL1A1",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "21741227",
+      "asthmaRelated": false,
+      "networkCentrality": 0.03,
+      "sourceDB": "CTD",
+      "id": "ccMon00001091_1"
+    },
+    {
+      "gene": "RUNX2",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "21741227",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001091_2"
+    },
+    {
+      "gene": "BGLAP",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^expression|decreases^reaction",
+      "activityUnit": "",
+      "reference": "21741227",
+      "asthmaRelated": false,
+      "networkCentrality": 0.63,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001091_3"
+    },
+    {
+      "gene": "BGLAP",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "21741227",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001091_4"
+    }
+  ],
+  "asthmaRelated": false
+}

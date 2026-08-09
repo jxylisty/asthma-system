@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00001386",
+  "name": "牛磺胆酸",
+  "smiles": "C=OCCOc1ccc(O)cc1CCNCCC(C)",
+  "mw": 307.06,
+  "logp": 4.64,
+  "bloodEntryProbability": 0.56,
+  "radarScores": {
+    "antiInflammatory": 47,
+    "immuneRegulation": 98,
+    "airwayRepair": 44
+  },
+  "targets": [
+    {
+      "gene": "NR1H4",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "19445040",
+      "asthmaRelated": false,
+      "networkCentrality": 0.83,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00001386_0"
+    },
+    {
+      "gene": "FABP6",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "ligand",
+      "activityUnit": "",
+      "reference": "30559664|12486725",
+      "asthmaRelated": false,
+      "networkCentrality": 0.2,
+      "sourceDB": "CTD",
+      "id": "ccMon00001386_1"
+    },
+    {
+      "gene": "CEL",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423|10592235",
+      "asthmaRelated": false,
+      "networkCentrality": 0.33,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00001386_2"
+    }
+  ],
+  "asthmaRelated": false
+}

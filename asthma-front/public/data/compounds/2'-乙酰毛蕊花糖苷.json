@@ -1,0 +1,68 @@
+{
+  "id": "ccMon00000114",
+  "name": "2'-乙酰毛蕊花糖苷",
+  "smiles": "CCNC=CCOCC(=O)O",
+  "mw": 371.69,
+  "logp": 1.18,
+  "bloodEntryProbability": 0.44,
+  "radarScores": {
+    "antiInflammatory": 71,
+    "immuneRegulation": 50,
+    "airwayRepair": 85
+  },
+  "targets": [
+    {
+      "gene": "L929",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 25.7,
+      "activityUnit": "ug/ml",
+      "reference": "21741131",
+      "asthmaRelated": false,
+      "networkCentrality": 0.27,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000114_0"
+    },
+    {
+      "gene": "L929",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "Inhibition",
+      "activityValue": 64.1,
+      "activityUnit": "%",
+      "reference": "DrugMatrix in vivo data: Pathology",
+      "asthmaRelated": false,
+      "networkCentrality": 0.52,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000114_1"
+    },
+    {
+      "gene": "Hepatocyte",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 4800,
+      "activityUnit": "nM",
+      "reference": "19113967",
+      "asthmaRelated": false,
+      "networkCentrality": 0.61,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000114_2"
+    },
+    {
+      "gene": "Hepatocyte",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "Inhibition",
+      "activityValue": 58.4,
+      "activityUnit": "%",
+      "reference": "10.6019/CHEMBL1201861",
+      "asthmaRelated": false,
+      "networkCentrality": 0.06,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000114_3"
+    }
+  ],
+  "asthmaRelated": false
+}

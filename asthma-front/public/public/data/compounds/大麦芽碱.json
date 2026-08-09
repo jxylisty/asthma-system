@@ -1,0 +1,55 @@
+{
+  "id": "ccMon00000856",
+  "name": "大麦芽碱",
+  "smiles": "CCOC=ONCCC",
+  "mw": 184.17,
+  "logp": 0.82,
+  "bloodEntryProbability": 0.55,
+  "radarScores": {
+    "antiInflammatory": 71,
+    "immuneRegulation": 49,
+    "airwayRepair": 75
+  },
+  "targets": [
+    {
+      "gene": "Mus musculus",
+      "targetType": "Organism",
+      "species": "Mus musculus",
+      "activityType": "ED50",
+      "activityValue": 400,
+      "activityUnit": "umol/kg",
+      "reference": "16133",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "CTD",
+      "id": "ccMon00000856_0"
+    },
+    {
+      "gene": "A2780",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 39,
+      "activityUnit": "%",
+      "reference": "15974629",
+      "asthmaRelated": false,
+      "networkCentrality": 0.51,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000856_1"
+    },
+    {
+      "gene": "GLS",
+      "targetType": "Glutaminase kidney isoform, mitochondrial (GLS) (EC 3.5.1.2) (K-glutaminase) (L-glutamine amidohydrolase) [Cleaved into: Glutaminase kidney isoform, mitochondrial 68 kDa chain; Glutaminase kidney isoform, mitochondrial 65 kDa chain]",
+      "species": "Homo sapiens",
+      "activityType": "Potency",
+      "activityValue": 12589.3,
+      "activityUnit": "nM",
+      "reference": "PubChem BioAssay data set",
+      "asthmaRelated": false,
+      "networkCentrality": 0.06,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000856_2"
+    }
+  ],
+  "asthmaRelated": false
+}

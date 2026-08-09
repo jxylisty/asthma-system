@@ -1,0 +1,42 @@
+{
+  "id": "ccMon00000634",
+  "name": "去氢茯苓酸",
+  "smiles": "COCOCCC(C)",
+  "mw": 237.41,
+  "logp": 4.94,
+  "bloodEntryProbability": 0.39,
+  "radarScores": {
+    "antiInflammatory": 68,
+    "immuneRegulation": 79,
+    "airwayRepair": 64
+  },
+  "targets": [
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 70,
+      "activityUnit": "%",
+      "reference": "17488130",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000634_0"
+    },
+    {
+      "gene": "Human herpesvirus 4",
+      "targetType": "Organism",
+      "species": "Human herpesvirus 4",
+      "activityType": "Inhibition",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "17488130",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000634_1"
+    }
+  ],
+  "asthmaRelated": false
+}

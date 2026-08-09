@@ -1,0 +1,94 @@
+{
+  "id": "ccMon00000101",
+  "name": "2,4-二羟基苯乙酮",
+  "smiles": "c1ccncc1CCOC=C",
+  "mw": 314.43,
+  "logp": 3.94,
+  "bloodEntryProbability": 0.45,
+  "radarScores": {
+    "antiInflammatory": 73,
+    "immuneRegulation": 63,
+    "airwayRepair": 100
+  },
+  "targets": [
+    {
+      "gene": "Rattus norvegicus",
+      "targetType": "Organism",
+      "species": "Rattus norvegicus",
+      "activityType": "Activity",
+      "activityValue": 127,
+      "activityUnit": "%",
+      "reference": "926120",
+      "asthmaRelated": false,
+      "networkCentrality": 0.15,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000101_0"
+    },
+    {
+      "gene": "PC-3",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "21696954",
+      "asthmaRelated": false,
+      "networkCentrality": 0.35,
+      "sourceDB": "CTD",
+      "id": "ccMon00000101_1"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "21696954",
+      "asthmaRelated": false,
+      "networkCentrality": 0.48,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000101_2"
+    },
+    {
+      "gene": "SK-MEL-28",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "21696954",
+      "asthmaRelated": false,
+      "networkCentrality": 0.47,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000101_3"
+    },
+    {
+      "gene": "LoVo",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 97000,
+      "activityUnit": "nM",
+      "reference": "21696954",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000101_4"
+    },
+    {
+      "gene": "SLC28A3",
+      "targetType": "Solute carrier family 28 member 3 (Concentrative Na(+)-nucleoside cotransporter 3) (CNT 3) (hCNT3)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 100000,
+      "activityUnit": "nM",
+      "reference": "19097778",
+      "asthmaRelated": false,
+      "networkCentrality": 0.39,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000101_5"
+    }
+  ],
+  "asthmaRelated": false
+}

@@ -1,0 +1,94 @@
+{
+  "id": "ccMon00000961",
+  "name": "多根乌头碱",
+  "smiles": "NCCOCC=CC=Oc1ccc(O)cc1",
+  "mw": 266.7,
+  "logp": 2.25,
+  "bloodEntryProbability": 0.91,
+  "radarScores": {
+    "antiInflammatory": 86,
+    "immuneRegulation": 67,
+    "airwayRepair": 89
+  },
+  "targets": [
+    {
+      "gene": "Mus musculus",
+      "targetType": "Organism",
+      "species": "Mus musculus",
+      "activityType": "LD50",
+      "activityValue": 51.5,
+      "activityUnit": "mg/kg",
+      "reference": "21417277",
+      "asthmaRelated": false,
+      "networkCentrality": 0.67,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000961_0"
+    },
+    {
+      "gene": "KB",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "GI50",
+      "activityValue": 20000,
+      "activityUnit": "nM",
+      "reference": "25770782",
+      "asthmaRelated": false,
+      "networkCentrality": 0.14,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000961_1"
+    },
+    {
+      "gene": "DU-145",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "GI50",
+      "activityValue": 20000,
+      "activityUnit": "nM",
+      "reference": "25770782",
+      "asthmaRelated": false,
+      "networkCentrality": 0.12,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000961_2"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "GI50",
+      "activityValue": 20000,
+      "activityUnit": "nM",
+      "reference": "25770782",
+      "asthmaRelated": false,
+      "networkCentrality": 0.7,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000961_3"
+    },
+    {
+      "gene": "Tribolium castaneum",
+      "targetType": "Organism",
+      "species": "Tribolium castaneum",
+      "activityType": "Activity",
+      "activityValue": 54.66,
+      "activityUnit": "%",
+      "reference": "21417277",
+      "asthmaRelated": false,
+      "networkCentrality": 0.8,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000961_4"
+    },
+    {
+      "gene": "Tribolium castaneum",
+      "targetType": "Organism",
+      "species": "Tribolium castaneum",
+      "activityType": "EC50",
+      "activityValue": 395.2,
+      "activityUnit": "ppm",
+      "reference": "21417277",
+      "asthmaRelated": false,
+      "networkCentrality": 0.33,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000961_5"
+    }
+  ],
+  "asthmaRelated": false
+}

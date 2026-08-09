@@ -1,0 +1,81 @@
+{
+  "id": "ccMon00001391",
+  "name": "鸢尾黄素（鸢尾苷元）",
+  "smiles": "COCOCCONCC=CCOCCCO",
+  "mw": 415.6,
+  "logp": 0.52,
+  "bloodEntryProbability": 0.8,
+  "radarScores": {
+    "antiInflammatory": 56,
+    "immuneRegulation": 58,
+    "airwayRepair": 78
+  },
+  "targets": [
+    {
+      "gene": "MCF7",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 0.3,
+      "activityUnit": "nM",
+      "reference": "15787436",
+      "asthmaRelated": false,
+      "networkCentrality": 0.75,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001391_0"
+    },
+    {
+      "gene": "MCF7",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 0.1,
+      "activityUnit": "nM",
+      "reference": "19928832",
+      "asthmaRelated": false,
+      "networkCentrality": 0.85,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001391_1"
+    },
+    {
+      "gene": "Xanthine dehydrogenase",
+      "targetType": "Individual Protein",
+      "species": "Bos taurus",
+      "activityType": "Inhibition",
+      "activityValue": 0,
+      "activityUnit": "%",
+      "reference": "3379415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.6,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001391_2"
+    },
+    {
+      "gene": "T47D",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 0.04,
+      "activityUnit": "nM",
+      "reference": "15787436",
+      "asthmaRelated": false,
+      "networkCentrality": 0.98,
+      "sourceDB": "PubChem",
+      "id": "ccMon00001391_3"
+    },
+    {
+      "gene": "EGFR",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 3300,
+      "activityUnit": "nM",
+      "reference": "16441060",
+      "asthmaRelated": true,
+      "networkCentrality": 0.15,
+      "sourceDB": "KEGG",
+      "id": "ccMon00001391_4"
+    }
+  ],
+  "asthmaRelated": true
+}

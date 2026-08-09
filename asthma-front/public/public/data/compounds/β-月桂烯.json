@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00000436",
+  "name": "β-月桂烯",
+  "smiles": "COCCCCC(C)",
+  "mw": 150.96,
+  "logp": 2.65,
+  "bloodEntryProbability": 0.42,
+  "radarScores": {
+    "antiInflammatory": 58,
+    "immuneRegulation": 83,
+    "airwayRepair": 75
+  },
+  "targets": [
+    {
+      "gene": "CYP1A1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "34181028",
+      "asthmaRelated": false,
+      "networkCentrality": 0.07,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000436_0"
+    },
+    {
+      "gene": "GSR",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "24480520",
+      "asthmaRelated": false,
+      "networkCentrality": 0.88,
+      "sourceDB": "CTD",
+      "id": "ccMon00000436_1"
+    }
+  ],
+  "asthmaRelated": false
+}

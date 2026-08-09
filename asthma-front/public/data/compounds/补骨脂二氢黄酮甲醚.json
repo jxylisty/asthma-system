@@ -1,0 +1,80 @@
+{
+  "id": "ccMon00000400",
+  "name": "补骨脂二氢黄酮甲醚",
+  "smiles": "CCNCCNCCOc1ccccc1C=COC",
+  "mw": 458.41,
+  "logp": 5,
+  "bloodEntryProbability": 0.49,
+  "radarScores": {
+    "antiInflammatory": 69,
+    "immuneRegulation": 55,
+    "airwayRepair": 88
+  },
+  "targets": [
+    {
+      "gene": "CES1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "26560012",
+      "asthmaRelated": false,
+      "networkCentrality": 0.84,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000400_0"
+    },
+    {
+      "gene": "A549",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "25710081",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000400_1"
+    },
+    {
+      "gene": "K562",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 10000,
+      "activityUnit": "nM",
+      "reference": "25710081",
+      "asthmaRelated": false,
+      "networkCentrality": 0.74,
+      "sourceDB": "CTD",
+      "id": "ccMon00000400_2"
+    },
+    {
+      "gene": "PPARG",
+      "targetType": "Peroxisome proliferator-activated receptor gamma (PPAR-gamma) (Nuclear receptor subfamily 1 group C member 3)",
+      "species": "Homo sapiens",
+      "activityType": "IC50",
+      "activityValue": 488.8,
+      "activityUnit": "nM",
+      "reference": "25978962",
+      "asthmaRelated": true,
+      "networkCentrality": 0.92,
+      "sourceDB": "CTD",
+      "id": "ccMon00000400_3"
+    },
+    {
+      "gene": "PPARG",
+      "targetType": "Peroxisome proliferator-activated receptor gamma (PPAR-gamma) (Nuclear receptor subfamily 1 group C member 3)",
+      "species": "Homo sapiens",
+      "activityType": "Ki",
+      "activityValue": 175.5,
+      "activityUnit": "nM",
+      "reference": "25978962",
+      "asthmaRelated": true,
+      "networkCentrality": 0.37,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000400_4"
+    }
+  ],
+  "asthmaRelated": true
+}

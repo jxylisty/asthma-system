@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000266",
+  "name": "泽泻烯醇",
+  "smiles": "OCCOC(=O)OC=O",
+  "mw": 363.09,
+  "logp": 3.95,
+  "bloodEntryProbability": 0.8,
+  "radarScores": {
+    "antiInflammatory": 73,
+    "immuneRegulation": 79,
+    "airwayRepair": 91
+  },
+  "targets": [
+    {
+      "gene": "NOS2",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^reaction|increases^expression",
+      "activityUnit": "",
+      "reference": "10560729",
+      "asthmaRelated": false,
+      "networkCentrality": 0.05,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000266_0"
+    }
+  ],
+  "asthmaRelated": false
+}

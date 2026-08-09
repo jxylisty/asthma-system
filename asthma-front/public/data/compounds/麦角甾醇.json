@@ -1,0 +1,120 @@
+{
+  "id": "ccMon00000708",
+  "name": "麦角甾醇",
+  "smiles": "OCCOC(=O)OCOCOCCOCC(C)",
+  "mw": 221.64,
+  "logp": -0.34,
+  "bloodEntryProbability": 0.34,
+  "radarScores": {
+    "antiInflammatory": 79,
+    "immuneRegulation": 76,
+    "airwayRepair": 47
+  },
+  "targets": [
+    {
+      "gene": "BV-2",
+      "targetType": "Cell Line",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 30600,
+      "activityUnit": "nM",
+      "reference": "21028898",
+      "asthmaRelated": false,
+      "networkCentrality": 0.6,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000708_0"
+    },
+    {
+      "gene": "Staphylococcus aureus",
+      "targetType": "Organism",
+      "species": "Staphylococcus aureus",
+      "activityType": "IZ",
+      "activityValue": 11.2,
+      "activityUnit": "mm",
+      "reference": "10.1007/s00044-012-0032-z",
+      "asthmaRelated": false,
+      "networkCentrality": 0.44,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000708_1"
+    },
+    {
+      "gene": "Pseudomonas aeruginosa",
+      "targetType": "Organism",
+      "species": "Pseudomonas aeruginosa",
+      "activityType": "IZ",
+      "activityValue": 8.7,
+      "activityUnit": "mm",
+      "reference": "10.1007/s00044-012-0032-z",
+      "asthmaRelated": false,
+      "networkCentrality": 0.23,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000708_2"
+    },
+    {
+      "gene": "SLCO1B3",
+      "targetType": "Solute carrier organic anion transporter family member 1B3 (Liver-specific organic anion transporter 2) (LST-2) (Organic anion transporter 8) (Organic anion-transporting polypeptide 8) (OATP-8) (Solute carrier family 21 member 8)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 52.34,
+      "activityUnit": "%",
+      "reference": "23571415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000708_3"
+    },
+    {
+      "gene": "SLCO1B1",
+      "targetType": "Solute carrier organic anion transporter family member 1B1 (Liver-specific organic anion transporter 1) (LST-1) (OATP-C) (Sodium-independent organic anion-transporting polypeptide 2) (OATP-2) (Solute carrier family 21 member 6)",
+      "species": "Homo sapiens",
+      "activityType": "Inhibition",
+      "activityValue": 31.68,
+      "activityUnit": "%",
+      "reference": "23571415",
+      "asthmaRelated": false,
+      "networkCentrality": 0.53,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000708_4"
+    },
+    {
+      "gene": "UGT1A1",
+      "targetType": "UDP-glucuronosyltransferase 1A1 (UGT1A1) (EC 2.4.1.17) (Bilirubin-specific UDPGT isozyme 1) (hUG-BR1) (UDP-glucuronosyltransferase 1-1) (UDPGT 1-1) (UGT1*1) (UGT1-01) (UGT1.1) (UDP-glucuronosyltransferase 1A isoform 1)",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 0,
+      "activityUnit": "pm/min/mg",
+      "reference": "10836148",
+      "asthmaRelated": false,
+      "networkCentrality": 0.2,
+      "sourceDB": "CTD",
+      "id": "ccMon00000708_5"
+    },
+    {
+      "gene": "Nos2",
+      "targetType": "Nitric oxide synthase, inducible (EC 1.14.13.39) (Inducible NO synthase) (Inducible NOS) (iNOS) (Macrophage NOS) (MAC-NOS) (NOS type II) (Peptidyl-cysteine S-nitrosylase NOS2)",
+      "species": "Mus musculus",
+      "activityType": "IC50",
+      "activityValue": 30600,
+      "activityUnit": "nM",
+      "reference": "21115251",
+      "asthmaRelated": false,
+      "networkCentrality": 0.07,
+      "sourceDB": "BindingDB",
+      "id": "ccMon00000708_6"
+    },
+    {
+      "gene": "Legionella pneumophila",
+      "targetType": "Organism",
+      "species": "Legionella pneumophila",
+      "activityType": "MIC",
+      "activityValue": 250,
+      "activityUnit": "ug/ml",
+      "reference": "21244021",
+      "asthmaRelated": false,
+      "networkCentrality": 0.61,
+      "sourceDB": "CTD",
+      "id": "ccMon00000708_7"
+    }
+  ],
+  "asthmaRelated": false
+}

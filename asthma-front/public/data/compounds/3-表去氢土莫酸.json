@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000161",
+  "name": "3-表去氢土莫酸",
+  "smiles": "NCCOCOCCOCCNc1ccc(O)cc1",
+  "mw": 388.78,
+  "logp": 2.17,
+  "bloodEntryProbability": 0.34,
+  "radarScores": {
+    "antiInflammatory": 64,
+    "immuneRegulation": 71,
+    "airwayRepair": 69
+  },
+  "targets": [
+    {
+      "gene": "Raji",
+      "targetType": "Cell Line",
+      "species": "Homo sapiens",
+      "activityType": "Activity",
+      "activityValue": 70,
+      "activityUnit": "%",
+      "reference": "11975480",
+      "asthmaRelated": false,
+      "networkCentrality": 0.73,
+      "sourceDB": "KEGG",
+      "id": "ccMon00000161_0"
+    }
+  ],
+  "asthmaRelated": false
+}

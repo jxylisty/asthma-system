@@ -1,0 +1,41 @@
+{
+  "id": "ccMon00000813",
+  "name": "甘氨鹅去氧胆酸",
+  "smiles": "CCOCCCC(C)C(=O)O",
+  "mw": 479.78,
+  "logp": 4.02,
+  "bloodEntryProbability": 0.51,
+  "radarScores": {
+    "antiInflammatory": 64,
+    "immuneRegulation": 78,
+    "airwayRepair": 56
+  },
+  "targets": [
+    {
+      "gene": "GPBAR1",
+      "targetType": "Protein",
+      "species": "Homo sapiens",
+      "activityType": "EC50",
+      "activityValue": 33900,
+      "activityUnit": "nM",
+      "reference": "18307294",
+      "asthmaRelated": false,
+      "networkCentrality": 0.26,
+      "sourceDB": "CTD",
+      "id": "ccMon00000813_0"
+    },
+    {
+      "gene": "",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "",
+      "activityUnit": "",
+      "reference": "17139284|17016423",
+      "asthmaRelated": false,
+      "networkCentrality": 0.42,
+      "sourceDB": "CTD",
+      "id": "ccMon00000813_1"
+    }
+  ],
+  "asthmaRelated": false
+}

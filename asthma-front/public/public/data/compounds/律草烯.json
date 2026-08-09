@@ -1,0 +1,28 @@
+{
+  "id": "ccMon00000858",
+  "name": "律草烯",
+  "smiles": "c1ccccc1OCCOOC",
+  "mw": 361.14,
+  "logp": -0.32,
+  "bloodEntryProbability": 0.69,
+  "radarScores": {
+    "antiInflammatory": 85,
+    "immuneRegulation": 85,
+    "airwayRepair": 74
+  },
+  "targets": [
+    {
+      "gene": "CYP1A2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "decreases^activity",
+      "activityUnit": "",
+      "reference": "29074051",
+      "asthmaRelated": false,
+      "networkCentrality": 0.22,
+      "sourceDB": "CTD",
+      "id": "ccMon00000858_0"
+    }
+  ],
+  "asthmaRelated": false
+}

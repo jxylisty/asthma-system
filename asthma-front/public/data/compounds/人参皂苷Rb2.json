@@ -1,0 +1,52 @@
+{
+  "id": "ccMon00000792",
+  "name": "人参皂苷Rb2",
+  "smiles": "CCOCCOOCCOOCCO",
+  "mw": 376.69,
+  "logp": 0.51,
+  "bloodEntryProbability": 0.49,
+  "radarScores": {
+    "antiInflammatory": 41,
+    "immuneRegulation": 91,
+    "airwayRepair": 76
+  },
+  "targets": [
+    {
+      "gene": "LPL",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "decreases^secretion",
+      "activityUnit": "",
+      "reference": "8988629",
+      "asthmaRelated": false,
+      "networkCentrality": 0.29,
+      "sourceDB": "CTD",
+      "id": "ccMon00000792_0"
+    },
+    {
+      "gene": "LPL",
+      "targetType": "Protein",
+      "species": "Mus musculus",
+      "activityType": "increases^secretion",
+      "activityUnit": "",
+      "reference": "8988629",
+      "asthmaRelated": false,
+      "networkCentrality": 0.31,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000792_1"
+    },
+    {
+      "gene": "ABCC2",
+      "targetType": "Protein",
+      "species": "Rattus norvegicus",
+      "activityType": "increases^expression",
+      "activityUnit": "",
+      "reference": "23835644",
+      "asthmaRelated": false,
+      "networkCentrality": 0.93,
+      "sourceDB": "PubChem",
+      "id": "ccMon00000792_2"
+    }
+  ],
+  "asthmaRelated": false
+}

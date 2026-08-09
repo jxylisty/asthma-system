@@ -1,0 +1,40 @@
+{
+  "id": "ccMon00000746",
+  "name": "木栓酮",
+  "smiles": "OCCCOC(=O)O",
+  "mw": 313.43,
+  "logp": 0.86,
+  "bloodEntryProbability": 0.52,
+  "radarScores": {
+    "antiInflammatory": 71,
+    "immuneRegulation": 64,
+    "airwayRepair": 84
+  },
+  "targets": [
+    {
+      "gene": "CASP3",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "increases^activity",
+      "activityUnit": "",
+      "reference": "20026015",
+      "asthmaRelated": false,
+      "networkCentrality": 0.11,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000746_0"
+    },
+    {
+      "gene": "VEGFA",
+      "targetType": "Protein",
+      "species": "",
+      "activityType": "decreases^response to substance",
+      "activityUnit": "",
+      "reference": "20026015",
+      "asthmaRelated": true,
+      "networkCentrality": 0.14,
+      "sourceDB": "CTD",
+      "id": "ccMon00000746_1"
+    }
+  ],
+  "asthmaRelated": true
+}

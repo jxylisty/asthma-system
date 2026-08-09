@@ -1,0 +1,29 @@
+{
+  "id": "ccMon00000417",
+  "name": "β-红没药烯",
+  "smiles": "OCc1ccc(O)cc1OCCO",
+  "mw": 228.3,
+  "logp": 4.13,
+  "bloodEntryProbability": 0.72,
+  "radarScores": {
+    "antiInflammatory": 54,
+    "immuneRegulation": 89,
+    "airwayRepair": 90
+  },
+  "targets": [
+    {
+      "gene": "Human rhinovirus 1B",
+      "targetType": "Organism",
+      "species": "Human rhinovirus 1B",
+      "activityType": "ED50",
+      "activityValue": 14.3,
+      "activityUnit": "ug",
+      "reference": "8064299",
+      "asthmaRelated": false,
+      "networkCentrality": 0.21,
+      "sourceDB": "DrugBank",
+      "id": "ccMon00000417_0"
+    }
+  ],
+  "asthmaRelated": false
+}
