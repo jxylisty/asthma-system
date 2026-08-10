@@ -51,10 +51,11 @@ async def generic_error_handler(request: Request, exc: Exception):
     )
 
 # 配置 CORS 跨域，允许前端访问
+# 若 CORS_ORIGINS 为通配符 ["*"]，则关闭 allow_credentials
 app.add_middleware(
     CORSMiddleware,
     allow_origins=CORS_ORIGINS,
-    allow_credentials=True,
+    allow_credentials=("*" not in CORS_ORIGINS),
     allow_methods=["*"],
     allow_headers=["*"],
 )

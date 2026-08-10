@@ -23,8 +23,11 @@ CORS_ORIGINS = [
 
 # Render / Vercel 生产域名（通过环境变量动态追加）
 # 格式: "https://my-app.vercel.app,https://my-api.onrender.com"
+# 设为 "*" 表示允许所有来源（含 credentials 限制）
 EXTRA_ORIGINS = os.getenv("CORS_EXTRA_ORIGINS", "")
-if EXTRA_ORIGINS:
+if EXTRA_ORIGINS == "*":
+    CORS_ORIGINS = ["*"]
+elif EXTRA_ORIGINS:
     CORS_ORIGINS.extend([o.strip() for o in EXTRA_ORIGINS.split(",") if o.strip()])
 
 # ORM 模型目录路径（已内联到 app/models/tables.py，不再需要外部目录）
