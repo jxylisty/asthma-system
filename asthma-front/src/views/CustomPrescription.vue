@@ -447,7 +447,8 @@ function openHerbDialog() {
 async function loadDialogFilterOptions() {
   dialogFilterLoading.value = true
   try {
-    const data = await getHerbFilterOptions()
+    const raw = await getHerbFilterOptions()
+    const data = raw.data || raw
     dialogFilterOptions.value = { categories: data.categories || [] }
   } catch (e) {
     console.error('加载筛选选项失败:', e)
@@ -459,7 +460,7 @@ async function loadDialogFilterOptions() {
 async function loadDialogHerbs() {
   dialogLoading.value = true
   try {
-    const data = await getHerbs({
+    const rawHerbs = await getHerbs({
       page: dialogCurrentPage.value,
       page_size: dialogPageSize.value,
       keyword: dialogSearchQuery.value,
@@ -467,6 +468,7 @@ async function loadDialogHerbs() {
       asthma_related: dialogAsthmaOnly.value || undefined,
       min_compound_count: dialogMinCompoundCount.value || undefined,
     })
+    const data = rawHerbs.data || rawHerbs
     dialogHerbs.value = (data.items || []).map(item => ({
       id: item.id,
       name: item.name,
@@ -568,7 +570,7 @@ async function runAnalyze() {
   analysisData.value = null
   reportContent.value = ''
   try {
-    const data = await analyzeCustomPrescription(
+    const rawData = await analyzeCustomPrescription(
       {
         prescription_name: prescriptionName.value.trim(),
         herbs: selectedHerbs.value.map(h => ({
@@ -579,6 +581,7 @@ async function runAnalyze() {
       },
       minProb.value,
     )
+    const data = rawData.data || rawData
     analysisData.value = data
     ElMessage.success(`分析完成：${data.stats.compound_count} 个化合物，${data.stats.target_count} 个靶点`)
     await nextTick()

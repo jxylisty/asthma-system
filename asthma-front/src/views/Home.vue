@@ -280,7 +280,8 @@ async function handleSearch() {
 onMounted(async () => {
   initParticles(); drawParticles()
   try {
-    const stats = await getStatistics()
+    const rawStats = await getStatistics()
+    const stats = (rawStats && rawStats.data) || rawStats
     if (stats) {
       if (stats.prescription_count != null) tickerData.value[0].value = stats.prescription_count
       if (stats.herb_count != null) tickerData.value[1].value = stats.herb_count
@@ -290,7 +291,8 @@ onMounted(async () => {
   } catch (e) { console.error('Stats:', e) }
 
   try {
-    const rxData = await getPrescriptions(1, 50)
+    const raw = await getPrescriptions(1, 50)
+    const rxData = raw.data || raw
     const allRx = rxData?.items || []
     if (allRx.length > 0) {
       const sorted = [...allRx].sort((a, b) => (b.blood_compound_count || 0) - (a.blood_compound_count || 0))

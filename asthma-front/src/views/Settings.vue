@@ -199,7 +199,8 @@ watch(maxNetworkNodes, v => localStorage.setItem('settings_maxNetworkNodes', Str
 const dbStats = ref({ prescriptions: '—', herbs: '—', compounds: '—', targets: '—' })
 async function loadDbStats() {
   try {
-    const s = await getStatistics()
+    const raw = await getStatistics()
+    const s = (raw && raw.data) || raw
     if (s) {
       dbStats.value = {
         prescriptions: s.prescription_count ?? '—',

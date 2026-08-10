@@ -282,8 +282,9 @@ async function loadDetail() {
   if (!id) return
 
   try {
-    const detail = await getPrescriptionDetail(id)
-    if (!detail) return
+    const detailRaw = await getPrescriptionDetail(id)
+    if (!detailRaw) return
+    const detail = detailRaw.data || detailRaw
     prescriptionInfo.value = detail
     herbs.value = (detail.herbs || []).map(h => ({
       id: h.id, name: h.name, description: h.functions || '', dosage: h.dosage || ''
@@ -291,7 +292,8 @@ async function loadDetail() {
   } catch (e) { console.error('方剂详情加载失败:', e); return }
 
   loadingCompounds.value = true
-  getPrescriptionCompounds(id, 0.5).then(res => {
+  getPrescriptionCompounds(id, 0.5).then(raw => {
+    const res = raw.data || raw
     if (res) {
       compounds.value = (res.items || []).map(c => ({
         name: `${c.name} (来源: ${c.herb_name || '未知'})`,
@@ -302,7 +304,8 @@ async function loadDetail() {
   }).finally(() => { loadingCompounds.value = false })
 
   loadingRadar.value = true
-  getPrescriptionRadar(id).then(radarRaw => {
+  getPrescriptionRadar(id).then(raw => {
+    const radarRaw = raw.data || raw
     if (radarRaw?.length > 0) {
       radarData.value = radarRaw.map(r => ({ name: r.efficacy_type, value: r.count }))
       nextTick(() => initRadarChart())
@@ -316,8 +319,9 @@ async function loadNetwork() {
   if (!id) return
   loadingNetwork.value = true
   try {
-    const res = await getPrescriptionNetwork(id, networkMinProb.value, asthmaOnly.value)
-    if (res?.nodes?.length > 0) { networkStats.value = { nodes: res.nodes.length, edges: res.edges.length }; await nextTick(); renderNetwork(res.nodes, res.edges) }
+    const netRaw = await getPrescriptionNetwork(id, networkMinProb.value, asthmaOnly.value)
+    const net = netRaw.data || netRaw
+    if (net?.nodes?.length > 0) { networkStats.value = { nodes: net.nodes.length, edges: net.edges.length }; await nextTick(); renderNetwork(net.nodes, net.edges) }
     else { networkStats.value = { nodes: 0, edges: 0 }; if (cyInstance) { cyInstance.destroy(); cyInstance = null } }
   } catch (e) { console.error('网络图加载失败:', e) }
   finally { loadingNetwork.value = false }

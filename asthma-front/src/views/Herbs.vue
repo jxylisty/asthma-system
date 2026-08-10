@@ -164,7 +164,8 @@ function toggleFilter(list, val) {
 async function loadFilterOptions() {
   filterLoading.value = true
   try {
-    const data = await getHerbFilterOptions()
+    const raw = await getHerbFilterOptions()
+    const data = raw.data || raw
     filterOptions.value = { categories: data.categories || [] }
   } catch (e) { console.error('Filter options:', e) }
   finally { filterLoading.value = false }
@@ -173,13 +174,14 @@ async function loadFilterOptions() {
 async function loadHerbs() {
   loading.value = true
   try {
-    const data = await getHerbs({
+    const raw = await getHerbs({
       page: currentPage.value, page_size: pageSize.value,
       keyword: searchQuery.value,
       category: selectedCategories.value.join(','),
       asthma_related: asthmaOnly.value || undefined,
       min_compound_count: minCompoundCount.value || undefined
     })
+    const data = raw.data || raw
     herbs.value = (data.items || []).map(item => ({
       id: item.id, name: item.name, pinyin: item.pinyin || '',
       category: item.category || '', nature: item.nature || '',
