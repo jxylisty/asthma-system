@@ -679,38 +679,39 @@ async function runSmilesPrediction() {
       ...(Object.keys(admePayload).length > 0 ? { adme_overrides: admePayload } : {})
     })
 
-    predictionResult.value = res
+    const data = res.data || res
+    predictionResult.value = data
 
     // 保存原始 ADME 值用于校准
-    if (res.adme_features) {
-      originalAdmeValues.value = { ...res.adme_features }
+    if (data.adme_features) {
+      originalAdmeValues.value = { ...data.adme_features }
       // 初始化校准值
-      Object.keys(res.adme_features).forEach(k => {
-        calibrateValues[k] = res.adme_features[k]
+      Object.keys(data.adme_features).forEach(k => {
+        calibrateValues[k] = data.adme_features[k]
       })
     }
 
     // 保存历史
     saveRecord({
       smiles: form.smiles.trim(),
-      compound_name: res.compound_name || form.compoundName || form.smiles.trim().substring(0, 30) + '...',
-      model_name: res.model_name,
-      probability: res.probability,
-      level: res.level,
-      mw: res.mw,
-      logp: res.features_computed ? res.features_computed.LogP : null,
-      features_computed: res.features_computed,
-      core_features: res.core_features,
-      rdkit_topology_features: res.rdkit_topology_features,
-      adme_features: res.adme_features,
-      adme_estimated: res.adme_estimated
+      compound_name: data.compound_name || form.compoundName || form.smiles.trim().substring(0, 30) + '...',
+      model_name: data.model_name,
+      probability: data.probability,
+      level: data.level,
+      mw: data.mw,
+      logp: data.features_computed ? data.features_computed.LogP : null,
+      features_computed: data.features_computed,
+      core_features: data.core_features,
+      rdkit_topology_features: data.rdkit_topology_features,
+      adme_features: data.adme_features,
+      adme_estimated: data.adme_estimated
     })
 
     // 渲染网络图
     await nextTick()
-    renderNetwork(res.compound_name || form.compoundName || 'Unknown', res.probability)
+    renderNetwork(data.compound_name || form.compoundName || 'Unknown', data.probability)
 
-    ElMessage.success(`预测完成！入血概率 ${(res.probability * 100).toFixed(1)}%`)
+    ElMessage.success(`预测完成！入血概率 ${(data.probability * 100).toFixed(1)}%`)
   } catch (e) {
     console.error('SMILES prediction failed:', e)
     ElMessage.error(e.message || '预测失败，请检查 SMILES 格式')
@@ -761,19 +762,20 @@ async function recalculateWithCalibration() {
       adme_overrides: overrides
     })
 
-    predictionResult.value = res
+    const data = res.data || res
+    predictionResult.value = data
 
     // 更新校准值
-    if (res.adme_features) {
-      Object.keys(res.adme_features).forEach(k => {
-        calibrateValues[k] = res.adme_features[k]
+    if (data.adme_features) {
+      Object.keys(data.adme_features).forEach(k => {
+        calibrateValues[k] = data.adme_features[k]
       })
     }
 
     await nextTick()
-    renderNetwork(res.compound_name || form.compoundName || 'Unknown', res.probability)
+    renderNetwork(data.compound_name || form.compoundName || 'Unknown', data.probability)
 
-    ElMessage.success(`校准后重新计算完成！入血概率 ${(res.probability * 100).toFixed(1)}%`)
+    ElMessage.success(`校准后重新计算完成！入血概率 ${(data.probability * 100).toFixed(1)}%`)
   } catch (e) {
     console.error('Calibration failed:', e)
     ElMessage.error(e.message || '校准预测失败，请重试')
@@ -844,10 +846,11 @@ async function runBatchPrediction() {
     const formData = new FormData()
     formData.append('file', batchFile.value)
     const res = await uploadAndPredict(formData, batchForm.model.toLowerCase())
-    batchResult.value = res
-    batchProgress.total = res.total
-    batchProgress.done = res.success + res.failed
-    ElMessage.success(`批量预测完成！成功 ${res.success} 条`)
+    const data = res.data || res
+    batchResult.value = data
+    batchProgress.total = data.total
+    batchProgress.done = data.success + data.failed
+    ElMessage.success(`批量预测完成！成功 ${data.success} 条`)
   } catch (e) {
     console.error('Batch prediction failed:', e)
     ElMessage.error(e.message || '批量预测失败')
