@@ -1,7 +1,11 @@
 import axios from 'axios'
 
+// 开发环境：Vite proxy 代理 /api → localhost:8000
+// 生产环境：读取环境变量 VITE_API_URL，指向实际后端地址
+const API_BASE = import.meta.env.VITE_API_URL || '/api/v1'
+
 const api = axios.create({
-  baseURL: '/api/v1',
+  baseURL: API_BASE,
   timeout: 60000
 })
 

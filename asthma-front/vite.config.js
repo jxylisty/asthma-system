@@ -11,5 +11,7 @@ export default defineConfig({
         changeOrigin: true
       }
     }
-  }
+  },
+  // Vercel 部署：设置基础路径为 /
+  base: '/'
 })
