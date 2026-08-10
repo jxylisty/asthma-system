@@ -260,18 +260,17 @@ def _format_compounds_md(compounds: list) -> str:
     if not compounds:
         return "（暂无符合条件的化合物数据）"
 
-    header = "| 排名 | 化合物名称 | 来源中药 | ccTCM概率 | HERB概率 | 入血概率 | MW | LogP | 哮喘相关 |\n"
-    sep = "|------|-----------|---------|----------|---------|---------|----|------|---------|\n"
+    header = "| 排名 | 化合物名称 | 来源中药 | ccTCM 2.0 | HERB 2.0 | 分子量 | LogP | 哮喘相关 |\n"
+    sep = "|------|-----------|---------|-----------|---------|-------|------|---------|\n"
     rows = []
     for i, c in enumerate(compounds, 1):
         pcc = f"{c['prob_cctcm']*100:.1f}%" if c.get('prob_cctcm') is not None else "未预测"
         phb = f"{c['prob_herb']*100:.1f}%" if c.get('prob_herb') is not None else "无"
-        bp = f"{c['blood_prob']*100:.1f}%" if c.get('blood_prob') is not None else "未预测"
         mw = f"{c['mw']:.1f}" if c.get('mw') is not None else "—"
         lp = f"{c['logp']:.2f}" if c.get('logp') is not None else "—"
         ast = "是" if c.get('asthma_related') else "否"
         rows.append(
-            f"| {i} | {c['name']} | {c.get('herb_name', '—')} | {pcc} | {phb} | {bp} | {mw} | {lp} | {ast} |"
+            f"| {i} | {c['name']} | {c.get('herb_name', '—')} | {pcc} | {phb} | {mw} | {lp} | {ast} |"
         )
     return header + sep + "\n".join(rows)
 

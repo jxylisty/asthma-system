@@ -158,21 +158,21 @@
                 <el-table-column type="index" label="#" width="40" />
                 <el-table-column prop="name" label="化合物" min-width="140" show-overflow-tooltip />
                 <el-table-column prop="herb_name" label="来源" width="80" show-overflow-tooltip />
-                <el-table-column label="ccTCM" width="80">
+                <el-table-column label="ccTCM 2.0" width="82">
                   <template #default="{ row }">
                     <span :class="['prob-text', probClass(row.prob_cctcm)]">
                       {{ row.prob_cctcm != null ? (row.prob_cctcm * 100).toFixed(1) + '%' : '—' }}
                     </span>
                   </template>
                 </el-table-column>
-                <el-table-column label="入血概率" width="90">
+                <el-table-column label="HERB 2.0" width="82">
                   <template #default="{ row }">
                     <span :class="['prob-text', probClass(row.blood_prob)]">
                       {{ row.blood_prob != null ? (row.blood_prob * 100).toFixed(1) + '%' : '—' }}
                     </span>
                   </template>
                 </el-table-column>
-                <el-table-column label="MW" width="70">
+                <el-table-column label="分子量" width="80">
                   <template #default="{ row }">{{ row.mw != null ? row.mw.toFixed(1) : '—' }}</template>
                 </el-table-column>
               </el-table>

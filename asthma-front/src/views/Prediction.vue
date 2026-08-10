@@ -186,7 +186,7 @@
                     </template>
                   </el-table-column>
                   <el-table-column prop="level" label="等级" width="60" />
-                  <el-table-column prop="mw" label="MW" width="80" />
+                  <el-table-column prop="mw" label="分子量" width="80" />
                 </el-table>
               </div>
             </el-form>

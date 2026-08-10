@@ -1,1 +1,1 @@
-fix: pin bcrypt==4.0.1 for passlib compat
+fix: clear compound table labels (ccTCM 2.0 / HERB 2.0 / MW to molecular weight)
