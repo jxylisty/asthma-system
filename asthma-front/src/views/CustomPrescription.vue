@@ -167,8 +167,8 @@
                 </el-table-column>
                 <el-table-column label="HERB 2.0" width="82">
                   <template #default="{ row }">
-                    <span :class="['prob-text', probClass(row.blood_prob)]">
-                      {{ row.blood_prob != null ? (row.blood_prob * 100).toFixed(1) + '%' : '—' }}
+                    <span :class="['prob-text', probClass(row.prob_herb)]">
+                      {{ row.prob_herb != null ? (row.prob_herb * 100).toFixed(1) + '%' : '—' }}
                     </span>
                   </template>
                 </el-table-column>
@@ -663,7 +663,7 @@ async function runAiReport() {
             compound_count: data.compounds.length,
             target_count: data.targets.length,
             asthma_target_count: data.targets.filter(t => t.asthma_related).length,
-            high_prob_compound_count: data.compounds.filter(c => (c.blood_prob || 0) >= 0.7).length,
+            high_prob_compound_count: data.compounds.filter(c => (c.prob_cctcm || 0) >= 0.7).length,
           },
         }
       }
