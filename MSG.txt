@@ -1,1 +1,1 @@
-feat: add Vercel deployment config
+fix: add root vercel.json for monorepo deployment
