@@ -1,1 +1,1 @@
-fix: clear compound table labels (ccTCM 2.0 / HERB 2.0 / MW to molecular weight)
+fix: unpack API response .data layer in Prediction.vue (null features display)
