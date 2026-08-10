@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: asthma-api
+    env: python
+    # 构建命令：安装 Python 依赖
+    buildCommand: pip install -r requirements.txt
+    # 启动命令：Render 会自动注入 $PORT 环境变量
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DB_PATH
+        value: data/asthma_v2.db
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: CORS_EXTRA_ORIGINS
+        sync: false

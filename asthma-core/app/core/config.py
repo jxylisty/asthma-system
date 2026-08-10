@@ -14,11 +14,18 @@ DB_PATH = os.getenv(
 DATABASE_URL = f"sqlite:///{DB_PATH}"
 
 # CORS 允许的前端域名
+# 开发环境默认值，生产环境通过 CORS_EXTRA_ORIGINS 环境变量追加
 CORS_ORIGINS = [
-    "http://localhost:5173",   # 前端开发服务器
+    "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
 ]
+
+# Render / Vercel 生产域名（通过环境变量动态追加）
+# 格式: "https://my-app.vercel.app,https://my-api.onrender.com"
+EXTRA_ORIGINS = os.getenv("CORS_EXTRA_ORIGINS", "")
+if EXTRA_ORIGINS:
+    CORS_ORIGINS.extend([o.strip() for o in EXTRA_ORIGINS.split(",") if o.strip()])
 
 # ORM 模型目录路径（已内联到 app/models/tables.py，不再需要外部目录）
 DATABASE_DIR = os.path.join(PROJECT_ROOT, "data")

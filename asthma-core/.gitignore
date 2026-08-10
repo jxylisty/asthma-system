@@ -10,11 +10,11 @@ env/
 .pytest_cache/
 .mypy_cache/
 
-# === 数据库（通过 GitHub Release 分发） ===
+# === 数据库（仅部署用 ashma_v2.db 入库，其他 db 排除） ===
 *.db
 *.sqlite
 *.sqlite3
-data/*.db
+!data/asthma_v2.db
 data/*.sqlite
 data/*.zip
 
