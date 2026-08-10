@@ -1,1 +1,1 @@
-fix: add root vercel.json for monorepo deployment
+feat: add Render deployment config (render.yaml + CORS + DB tracking)
