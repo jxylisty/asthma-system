@@ -1,1 +1,1 @@
-fix: CORS wildcard - allow asterisk with credentials off
+fix: pin bcrypt==4.0.1 for passlib compat
