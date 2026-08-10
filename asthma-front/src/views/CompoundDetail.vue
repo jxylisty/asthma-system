@@ -400,7 +400,8 @@ async function load3DStructure(compoundId) {
   }
   loadingStructure.value = true
   try {
-    const res = await getCompoundStructure(compoundId)
+    const raw = await getCompoundStructure(compoundId)
+    const res = raw.data || raw
     if (res && res.molblock) {
       compound.value.molblock = res.molblock
       hasStructure.value = true

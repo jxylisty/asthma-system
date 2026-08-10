@@ -127,7 +127,8 @@ const filteredPrescriptions = computed(() => {
 async function loadPrescriptions() {
   loading.value = true
   try {
-    const data = await getPrescriptions(currentPage.value, pageSize.value, searchQuery.value.trim())
+    const raw = await getPrescriptions(currentPage.value, pageSize.value, searchQuery.value.trim())
+    const data = raw.data || raw
     prescriptions.value = (data.items || []).map(item => ({
       id: item.id,
       name: item.name,

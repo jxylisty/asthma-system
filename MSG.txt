@@ -1,1 +1,1 @@
-fix: swap HERB prob field + patch sklearn SimpleImputer compat
+fix: unwrap API .data layer across all views (same bug as Prediction.vue)

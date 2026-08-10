@@ -163,7 +163,8 @@ const totalCompounds = ref(0)
 async function loadCompounds() {
   loading.value = true
   try {
-    const data = await getCompounds(currentPage.value, pageSize.value, searchQuery.value)
+    const raw = await getCompounds(currentPage.value, pageSize.value, searchQuery.value)
+    const data = raw.data || raw
     compounds.value = (data.items || []).map(item => ({
       id: item.id,
       name: item.name,
