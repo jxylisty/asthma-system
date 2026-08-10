@@ -143,8 +143,20 @@ def load_cctcm_model():
     _cctcm_model = bundle['model']
     _cctcm_scaler = bundle['scaler']
     _cctcm_imputer = bundle['imputer']
+    _patch_sklearn_imputer(_cctcm_imputer)
 
     return _cctcm_model, _cctcm_scaler, _cctcm_imputer
+
+
+def _patch_sklearn_imputer(imputer):
+    """兼容 scikit-learn 版本差异：旧版 joblib 序列化的 SimpleImputer 在新版 sklearn 上缺少 _fill_dtype"""
+    if hasattr(imputer, '_fill_dtype'):
+        return
+    # sklearn 1.3+ 移除了 _fill_dtype，需要在 transform 前补上
+    try:
+        object.__setattr__(imputer, '_fill_dtype', None)
+    except Exception:
+        pass
 
 
 def load_herb_model():
@@ -158,6 +170,7 @@ def load_herb_model():
     _herb_model = bundle['model']
     _herb_scaler = bundle['scaler']
     _herb_imputer = bundle['imputer']
+    _patch_sklearn_imputer(_herb_imputer)
 
     return _herb_model, _herb_scaler, _herb_imputer
 
