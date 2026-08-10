@@ -1,1 +1,1 @@
-feat: add Render deployment config (render.yaml + CORS + DB tracking)
+fix: lock Python 3.11 for Render (3.14 breaks pydantic-core compile)
