@@ -590,4 +590,22 @@ textarea::placeholder {
   background-color: var(--bg-card) !important;
   background: var(--bg-card) !important;
 }
+
+/* ===== 弹窗层级与居中修复 ===== */
+.el-overlay {
+  z-index: 2999 !important;
+}
+.el-overlay-dialog {
+  z-index: 3000 !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+.el-dialog {
+  z-index: 3000 !important;
+  margin: 0 auto !important;
+  display: inline-block !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+}
 </style>
