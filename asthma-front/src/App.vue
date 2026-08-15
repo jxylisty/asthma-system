@@ -369,4 +369,178 @@ html, body {
 .el-divider {
   background-color: var(--border-color) !important;
 }
+
+/* ===== 分页组件暗色主题 ===== */
+.el-pagination {
+  background: var(--bg-card) !important;
+  padding: 12px 16px !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-secondary) !important;
+  backdrop-filter: blur(10px);
+}
+
+.el-pagination .el-pagination__total {
+  color: var(--text-secondary) !important;
+}
+
+.el-pagination .el-pagination__sizes .el-input .el-input__wrapper {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.el-pagination .btn-prev,
+.el-pagination .btn-next {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: var(--text-secondary) !important;
+}
+
+.el-pagination .el-pager li {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: var(--text-secondary) !important;
+  border-radius: 4px !important;
+  margin: 0 2px !important;
+}
+
+.el-pagination .el-pager li:hover {
+  color: var(--color-primary) !important;
+}
+
+.el-pagination .el-pager li.is-active {
+  background: var(--color-primary) !important;
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+.el-pagination .el-pagination__jump {
+  color: var(--text-secondary) !important;
+}
+
+.el-pagination .el-pagination__jump .el-input__wrapper {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* ===== 标签组件暗色主题 ===== */
+.el-tag {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+.el-tag--info {
+  background: rgba(148, 163, 184, 0.15) !important;
+  border-color: rgba(148, 163, 184, 0.3) !important;
+  color: #cbd5e1 !important;
+}
+
+.el-tag--success {
+  background: rgba(52, 211, 153, 0.15) !important;
+  border-color: rgba(52, 211, 153, 0.3) !important;
+  color: #34d399 !important;
+}
+
+.el-tag--warning {
+  background: rgba(251, 191, 36, 0.15) !important;
+  border-color: rgba(251, 191, 36, 0.3) !important;
+  color: #fbbf24 !important;
+}
+
+.el-tag--danger {
+  background: rgba(248, 113, 113, 0.15) !important;
+  border-color: rgba(248, 113, 113, 0.3) !important;
+  color: #f87171 !important;
+}
+
+.el-tag--primary {
+  background: rgba(45, 212, 191, 0.15) !important;
+  border-color: rgba(45, 212, 191, 0.3) !important;
+  color: var(--color-primary) !important;
+}
+
+/* ===== 下拉菜单暗色主题 ===== */
+.el-dropdown-menu {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 6px !important;
+}
+
+.el-dropdown-menu__item {
+  color: var(--text-secondary) !important;
+  border-radius: 4px !important;
+}
+
+.el-dropdown-menu__item:hover {
+  background: rgba(45, 212, 191, 0.1) !important;
+  color: var(--color-primary) !important;
+}
+
+/* ===== 日期/时间选择器暗色主题 ===== */
+.el-picker-panel {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+}
+
+.el-date-table th {
+  color: var(--text-muted) !important;
+}
+
+.el-date-table td.available:hover {
+  background: rgba(45, 212, 191, 0.1) !important;
+}
+
+.el-date-table td.today .el-date-table-cell__text {
+  color: var(--color-primary) !important;
+}
+
+/* ===== 开关组件 ===== */
+.el-switch__core {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--border-color) !important;
+}
+
+.el-switch.is-checked .el-switch__core {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+/* ===== 复选框 ===== */
+.el-checkbox__label {
+  color: var(--text-secondary) !important;
+}
+
+.el-checkbox__inner {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: var(--text-disabled) !important;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+/* ===== 空状态 ===== */
+.el-empty__description p {
+  color: var(--text-muted) !important;
+}
+
+/* ===== 面包屑 ===== */
+.el-breadcrumb__inner {
+  color: var(--text-muted) !important;
+}
+
+.el-breadcrumb__inner.is-link:hover {
+  color: var(--color-primary) !important;
+}
+
+/* ===== 加载动画 ===== */
+.el-loading-mask {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+.el-loading-text {
+  color: var(--color-primary) !important;
+}
 </style>
