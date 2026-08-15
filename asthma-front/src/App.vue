@@ -593,10 +593,20 @@ textarea::placeholder {
 
 
 
-/* ===== 确保弹窗在侧边栏之上 ===== */
-.el-overlay { z-index: 9998 !important; }
-.el-overlay-dialog { z-index: 9999 !important; }
-.el-dialog { z-index: 9999 !important; }
-.el-drawer { z-index: 9999 !important; }
-.el-message-box { z-index: 9999 !important; }
+
+/* ===== 弹窗在内容区域居中，不被侧边栏遮挡 ===== */
+.el-overlay {
+  z-index: 9998 !important;
+}
+.el-overlay-dialog {
+  z-index: 9999 !important;
+  padding-left: 230px !important;
+  box-sizing: border-box !important;
+}
+.el-dialog {
+  z-index: 9999 !important;
+}
+.el-drawer {
+  z-index: 9999 !important;
+}
 </style>

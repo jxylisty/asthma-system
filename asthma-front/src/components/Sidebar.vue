@@ -93,7 +93,7 @@ function handleLogout() {
   backdrop-filter: blur(10px);
   border-right: 1px solid var(--border-color);
   display: flex; flex-direction: column;
-  position: fixed; left: 0; top: 0; z-index: 100;
+  position: fixed; left: 0; top: 0; z-index: 1 !important;
 }
 .sidebar-header {
   padding: 24px 20px 20px;
