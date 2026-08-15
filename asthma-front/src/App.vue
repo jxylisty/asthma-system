@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <template v-if="isLoginPage">
     <router-view />
   </template>
@@ -542,5 +542,52 @@ html, body {
 
 .el-loading-text {
   color: var(--color-primary) !important;
+}
+
+/* ===== 原生表单控件暗色主题 ===== */
+select {
+  background: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+  color-scheme: dark;
+}
+
+select option {
+  background: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+  padding: 8px 12px;
+}
+
+select option:hover,
+select option:checked {
+  background: rgba(45, 212, 191, 0.2) !important;
+  color: var(--color-primary) !important;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  color: var(--text-color) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-disabled) !important;
+}
+
+/* ===== 通用白色背景兜底修复 ===== */
+[style*="background-color: rgb(255, 255, 255)"],
+[style*="background-color: #fff"],
+[style*="background-color: #ffffff"],
+[style*="background: rgb(255, 255, 255)"],
+[style*="background: #fff"],
+[style*="background: #ffffff"] {
+  background-color: var(--bg-card) !important;
+  background: var(--bg-card) !important;
 }
 </style>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="cp-container">
     <div class="page-header">
       <h2 class="page-title">自定义处方分析</h2>
@@ -786,21 +786,21 @@ onMounted(() => {
   gap: 12px;
   margin-bottom: 16px;
   padding: 10px 16px;
-  background: #fff;
+  background: var(--bg-card);
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
 }
 
 .collapsed-info {
   font-size: 13px;
-  color: #606266;
+  color: var(--text-secondary);
 }
 
 .card {
-  background: #fff;
+  background: var(--bg-card);
   border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-card);
   margin-bottom: 16px;
 }
 
@@ -814,7 +814,7 @@ onMounted(() => {
 .card-header h3 {
   font-size: 16px;
   font-weight: 600;
-  color: #303133;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -828,7 +828,7 @@ onMounted(() => {
   font-size: 12px;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #409eff, #67c23a);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   border-radius: 11px;
 }
 
@@ -844,13 +844,13 @@ onMounted(() => {
 
 .builder-form :deep(.el-form-item__label) {
   font-weight: 500;
-  color: #606266;
+  color: var(--text-secondary);
   padding-bottom: 4px;
 }
 
 .threshold-value {
   margin-left: 12px;
-  color: #409eff;
+  color: var(--color-primary);
   font-weight: 600;
   font-size: 14px;
 }
@@ -862,7 +862,7 @@ onMounted(() => {
 .section-title {
   font-size: 13px;
   font-weight: 600;
-  color: #606266;
+  color: var(--text-secondary);
   margin-bottom: 10px;
 }
 
@@ -880,9 +880,9 @@ onMounted(() => {
 
 .herb-row {
   padding: 10px 12px;
-  background: #f9fafc;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
-  border-left: 3px solid #409eff;
+  border-left: 3px solid var(--color-primary);
 }
 
 .herb-row-line1 {
@@ -910,7 +910,7 @@ onMounted(() => {
   height: 20px;
   line-height: 20px;
   text-align: center;
-  background: #409eff;
+  background: var(--color-primary);
   color: #fff;
   border-radius: 50%;
   font-size: 11px;
@@ -921,7 +921,7 @@ onMounted(() => {
 .herb-name {
   font-size: 14px;
   font-weight: 600;
-  color: #303133;
+  color: var(--text-color);
   white-space: nowrap;
 }
 
@@ -935,7 +935,7 @@ onMounted(() => {
 .builder-actions {
   margin-top: 18px;
   padding-top: 16px;
-  border-top: 1px solid #ebeef5;
+  border-top: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -969,21 +969,21 @@ onMounted(() => {
 }
 
 .stat-card {
-  background: #fff;
+  background: var(--bg-card);
   border-radius: 10px;
   padding: 14px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
 }
 
 .stat-card.highlight {
-  background: linear-gradient(135deg, #fff 0%, #ecf5ff 100%);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(96, 165, 250, 0.1) 100%);
 }
 
 .stat-value {
   font-size: 26px;
   font-weight: 700;
-  color: #409eff;
+  color: var(--color-primary);
   line-height: 1.2;
 }
 
@@ -993,7 +993,7 @@ onMounted(() => {
 
 .stat-label {
   font-size: 12px;
-  color: #909399;
+  color: var(--text-muted);
   margin-top: 4px;
 }
 
@@ -1014,10 +1014,10 @@ onMounted(() => {
   overflow-y: auto;
 }
 
-.prob-text.high { color: #f56c6c; font-weight: 600; }
+.prob-text.high { color: var(--color-danger); font-weight: 600; }
 .prob-text.mid { color: #e6a23c; font-weight: 600; }
-.prob-text.low { color: #409eff; }
-.prob-text.gray { color: #c0c4cc; }
+.prob-text.low { color: var(--color-primary); }
+.prob-text.gray { color: var(--text-disabled); }
 
 .target-tags {
   display: flex;
@@ -1031,7 +1031,7 @@ onMounted(() => {
 
 /* ===== AI 报告 ===== */
 .ai-report-card {
-  border: 2px solid #409eff;
+  border: 2px solid var(--color-primary);
 }
 
 .report-actions {
@@ -1042,7 +1042,7 @@ onMounted(() => {
 .report-body {
   font-size: 14px;
   line-height: 1.8;
-  color: #303133;
+  color: var(--text-color);
   max-height: 700px;
   overflow-y: auto;
   padding: 8px 4px;
@@ -1052,8 +1052,8 @@ onMounted(() => {
   font-size: 22px;
   font-weight: 700;
   margin: 16px 0 12px;
-  color: #303133;
-  border-bottom: 2px solid #409eff;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--color-primary);
   padding-bottom: 8px;
 }
 
@@ -1061,8 +1061,8 @@ onMounted(() => {
   font-size: 18px;
   font-weight: 600;
   margin: 14px 0 10px;
-  color: #303133;
-  border-left: 4px solid #409eff;
+  color: var(--text-color);
+  border-left: 4px solid var(--color-primary);
   padding-left: 10px;
 }
 
@@ -1070,7 +1070,7 @@ onMounted(() => {
   font-size: 16px;
   font-weight: 600;
   margin: 12px 0 8px;
-  color: #409eff;
+  color: var(--color-primary);
 }
 
 .markdown-content :deep(p) {
@@ -1086,23 +1086,23 @@ onMounted(() => {
 
 .markdown-content :deep(th),
 .markdown-content :deep(td) {
-  border: 1px solid #ebeef5;
+  border: 1px solid var(--border-color);
   padding: 8px 10px;
   text-align: left;
 }
 
 .markdown-content :deep(th) {
-  background: #f5f7fa;
+  background: rgba(255, 255, 255, 0.04);
   font-weight: 600;
-  color: #303133;
+  color: var(--text-color);
 }
 
 .markdown-content :deep(tr:nth-child(even)) {
-  background: #fafbfc;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .markdown-content :deep(strong) {
-  color: #f56c6c;
+  color: var(--color-danger);
   font-weight: 600;
 }
 
@@ -1117,16 +1117,16 @@ onMounted(() => {
 }
 
 .markdown-content :deep(blockquote) {
-  border-left: 4px solid #e6a23c;
-  background: #fdf6ec;
+  border-left: 4px solid var(--color-warning);
+  background: rgba(251, 191, 36, 0.1);
   padding: 8px 12px;
   margin: 10px 0;
-  color: #606266;
+  color: var(--text-secondary);
 }
 
 .cursor-blink {
   display: inline-block;
-  color: #409eff;
+  color: var(--color-primary);
   animation: blink 1s infinite;
 }
 
@@ -1159,14 +1159,14 @@ onMounted(() => {
 .dialog-filter-section {
   margin-bottom: 14px;
   padding: 10px 12px;
-  background: #f9fafc;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
 }
 
 .dialog-filter-label {
   font-size: 13px;
   font-weight: 600;
-  color: #606266;
+  color: var(--text-secondary);
   margin-right: 8px;
 }
 
@@ -1192,8 +1192,8 @@ onMounted(() => {
 }
 
 .dialog-herb-card {
-  background: #fff;
-  border: 1px solid #ebeef5;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 12px;
   transition: all 0.2s;
@@ -1202,13 +1202,13 @@ onMounted(() => {
 }
 
 .dialog-herb-card:hover {
-  box-shadow: 0 2px 12px rgba(64, 158, 255, 0.15);
-  border-color: #409eff;
+  box-shadow: 0 2px 12px rgba(45, 212, 191, 0.15);
+  border-color: var(--color-primary);
 }
 
 .dialog-herb-card.is-selected {
-  border-color: #67c23a;
-  background: #f0f9eb;
+  border-color: var(--color-success);
+  background: rgba(52, 211, 153, 0.1);
 }
 
 .dialog-card-header {
@@ -1221,7 +1221,7 @@ onMounted(() => {
 .dialog-card-title {
   font-size: 15px;
   font-weight: 600;
-  color: #303133;
+  color: var(--text-color);
   margin: 0;
   flex: 1;
 }
@@ -1229,7 +1229,7 @@ onMounted(() => {
 .dialog-card-body {
   flex: 1;
   font-size: 12px;
-  color: #606266;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -1239,7 +1239,7 @@ onMounted(() => {
 }
 
 .dialog-label {
-  color: #909399;
+  color: var(--text-muted);
   white-space: nowrap;
   min-width: 56px;
 }
@@ -1260,7 +1260,7 @@ onMounted(() => {
   font-size: 11px;
   font-weight: 600;
   color: #fff;
-  background: #409eff;
+  background: var(--color-primary);
   border-radius: 9px;
 }
 
@@ -1284,7 +1284,7 @@ onMounted(() => {
 .dialog-selected-count {
   font-size: 14px;
   font-weight: 600;
-  color: #409eff;
+  color: var(--color-primary);
 }
 
 @media (max-width: 1200px) {
