@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="compounds-container">
     <div class="page-header">
       <h2 class="page-title">化合物详情</h2>

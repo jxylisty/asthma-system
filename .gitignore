@@ -20,6 +20,9 @@ venv/
 *.db
 *.sqlite
 *.sqlite3
+# 但保留项目运行必需的数据库
+!asthma-core/data/*.db
+!asthma-core-standalone/data/*.db
 
 # === 旧版数据库目录 ===
 database/
@@ -47,3 +50,8 @@ desktop.ini
 tmp/
 temp/
 ~$*
+
+# === IDE 配置 ===
+.idea/
+.vscode/
+*.iml

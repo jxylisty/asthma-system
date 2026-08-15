@@ -89,19 +89,20 @@ function handleLogout() {
 <style scoped>
 .sidebar {
   width: 230px; height: 100vh;
-  background: #111827;
-  border-right: 1px solid rgba(255,255,255,0.06);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid var(--border-color);
   display: flex; flex-direction: column;
   position: fixed; left: 0; top: 0; z-index: 1000;
 }
 .sidebar-header {
   padding: 24px 20px 20px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 10px;
 }
 .logo { display: flex; align-items: center; gap: 10px }
-.logo-icon { font-size: 24px; color: #38bdf8 }
-.logo-text { font-size: 17px; font-weight: 700; color: #e2e8f0; letter-spacing: 1px }
+.logo-icon { font-size: 24px; color: var(--color-primary) }
+.logo-text { font-size: 17px; font-weight: 700; color: var(--text-color); letter-spacing: 1px }
 
 /* 导航 */
 .nav-menu { flex: 1; padding: 0 12px }
@@ -109,25 +110,25 @@ function handleLogout() {
   display: flex; align-items: center; gap: 11px;
   padding: 10px 14px; margin-bottom: 3px;
   border-radius: 8px;
-  font-size: 14px; color: #94a3b8;
+  font-size: 14px; color: var(--text-muted);
   text-decoration: none;
   transition: all 0.18s;
 }
-.nav-item:hover { background: rgba(255,255,255,0.06); color: #cbd5e1 }
+.nav-item:hover { background: rgba(255,255,255,0.06); color: var(--text-secondary) }
 .nav-active {
-  background: rgba(16,185,129,0.1) !important;
-  color: #34d399 !important;
+  background: rgba(45, 212, 191, 0.1) !important;
+  color: var(--color-primary) !important;
   font-weight: 600;
-  box-shadow: inset 2px 0 0 0 #10b981;
+  box-shadow: inset 2px 0 0 0 var(--color-primary);
 }
 .nav-icon { font-size: 19px; flex-shrink: 0 }
-.nav-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 10px 14px }
+.nav-divider { height: 1px; background: var(--border-color); margin: 10px 14px }
 
 /* 底部 */
-.sidebar-footer { padding: 16px 18px; border-top: 1px solid rgba(255,255,255,0.06); margin-top: auto }
+.sidebar-footer { padding: 16px 18px; border-top: 1px solid var(--border-color); margin-top: auto }
 .user-row { display: flex; align-items: center; gap: 8px }
-.user-icon { font-size: 18px; color: #38bdf8 }
-.user-name { flex: 1; font-size: 14px; color: #cbd5e1; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
-.logout-btn { display: flex; align-items: center; gap: 4px; font-size: 12px; color: #64748b; background: none; border: none; cursor: pointer; padding: 2px 4px; transition: color 0.15s }
-.logout-btn:hover { color: #f87171 }
+.user-icon { font-size: 18px; color: var(--color-secondary) }
+.user-name { flex: 1; font-size: 14px; color: var(--text-secondary); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.logout-btn { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--text-disabled); background: none; border: none; cursor: pointer; padding: 2px 4px; transition: color 0.15s }
+.logout-btn:hover { color: var(--color-danger) }
 </style>

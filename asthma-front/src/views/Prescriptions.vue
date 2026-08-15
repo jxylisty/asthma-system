@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="prescriptions-container">
     <div class="page-header">
       <h2 class="page-title">方剂列表</h2>
