@@ -167,7 +167,7 @@ onMounted(loadPrescriptions)
 .prescriptions-container {
   padding: 24px 32px;
   min-height: 100vh;
-  background: var(--bg-gradient);
+  background: transparent;
 }
 .page-header { margin-bottom: 20px }
 .page-title { font-size: 24px; font-weight: 700; color: var(--text-color); margin: 0 0 4px 0 }

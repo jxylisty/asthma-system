@@ -225,7 +225,7 @@ function handleCurrentChange(v) { currentPage.value = v; loadCompounds() }
 </script>
 
 <style scoped>
-.compounds-container { padding: 40px; background: var(--bg-gradient); min-height: 100vh }
+.compounds-container { padding: 40px; background: transparent; min-height: 100vh }
 .page-header { margin-bottom: 32px }
 .page-title { font-size: 32px; font-weight: 700; color: var(--text-color); margin-bottom: 8px }
 .page-desc { font-size: 16px; color: var(--text-secondary) }
