@@ -1,10 +1,10 @@
-<template>
+﻿<template>
   <div class="prediction-container">
     <!-- 左侧控制区 -->
     <div class="control-panel">
       <div class="panel-header">
-        <h2 class="panel-title">入血预测控制台</h2>
-        <p class="panel-desc">AI 驱动的化合物入血概率预测</p>
+        <h2 class="panel-title">入血预测</h2>
+        <p class="panel-desc">化合物入血概率预测</p>
       </div>
 
       <!-- 功能标签页：仅 2 个 -->
@@ -56,8 +56,8 @@
                 <el-collapse v-model="admeActiveNames" class="dark-collapse">
                   <el-collapse-item name="adme">
                     <template #title>
-                      <span class="collapse-title">⚙️ 高阶 ADME 实验值校准（可选）</span>
-                      <span class="collapse-hint">留空将由 CCTCM 算法自动推算</span>
+                      <span class="collapse-title">⚙️ ADME 实验值校准（可选）</span>
+                      <span class="collapse-hint">留空由算法自动推算</span>
                     </template>
                     <div class="adme-grid">
                       <div class="adme-field" v-for="f in admeFields" :key="f.key">
@@ -94,7 +94,7 @@
                   @click="runSmilesPrediction"
                 >
                   <el-icon v-if="!predicting"><MagicStick /></el-icon>
-                  {{ predicting ? (form.model === 'CCTCM' ? '🧪 正在提取11维拓扑特征并计算ADME描述符...' : '🔬 模型推理中...') : '发起预测' }}
+                  {{ predicting ? (form.model === 'CCTCM' ? '预测中...' : '预测中...') : '发起预测' }}
                 </el-button>
               </el-form-item>
             </el-form>
@@ -223,8 +223,8 @@
           <template #reference>
             <span class="adme-warning-trigger">
               <el-icon class="warning-icon"><WarningFilled /></el-icon>
-              当前 7 项高阶 ADME 特征为系统基于 SMILES 推算
-              <el-tag size="small" type="warning" effect="plain">估算误差 ~10%~15%</el-tag>
+              7 项 ADME 特征由系统基于 SMILES 推算
+              <el-tag size="small" type="warning" effect="plain">估算误差约 10%-15%</el-tag>
               <el-icon class="info-icon"><InfoFilled /></el-icon>
             </span>
           </template>
@@ -248,7 +248,7 @@
       <!-- CCTCM 专用：已校准提示 -->
       <div v-if="predictionResult && form.model === 'CCTCM' && !predictionResult.adme_estimated" class="adme-calibrated-banner">
         <el-icon class="calibrated-icon"><SuccessFilled /></el-icon>
-        ADME 特征已使用实验值校准，预测精度提升
+        ADME 特征已使用实验值校准
       </div>
 
       <!-- 核心特征展示区 -->
@@ -338,30 +338,30 @@
       </div>
 
       <!-- 网络图 -->
-      <div class="network-wrapper" v-loading="predicting || recalculating" element-loading-text="AI 正在分析网络关系...">
+      <div class="network-wrapper" v-loading="predicting || recalculating" element-loading-text="正在分析...">
         <div ref="networkContainer" class="network-container"></div>
         <!-- 空状态：功能特色三卡片 -->
         <div class="network-empty" v-if="!predictionResult && !predicting && !recalculating">
           <div class="empty-welcome">
             <el-icon class="empty-main-icon"><DataAnalysis /></el-icon>
-            <p class="empty-title">AI 驱动的入血预测</p>
-            <p class="empty-subtitle">仅需输入 SMILES 结构式，一键获得高精度预测结果</p>
+            <p class="empty-title">入血预测</p>
+            <p class="empty-subtitle">输入 SMILES 结构式，获取预测结果</p>
           </div>
           <div class="empty-feature-cards">
             <div class="empty-feature-card">
               <el-icon class="efc-icon" style="color:#409eff"><MagicStick /></el-icon>
               <span class="efc-title">SMILES 结构解析</span>
-              <span class="efc-desc">RDKit 精确计算 11 项拓扑特征，零误差</span>
+              <span class="efc-desc">RDKit 计算 11 项拓扑特征</span>
             </div>
             <div class="empty-feature-card">
               <el-icon class="efc-icon" style="color:#67c23a"><Cpu /></el-icon>
-              <span class="efc-title">CCTCM 2.0 高维预测</span>
-              <span class="efc-desc">PU 学习模型 + 7 项 ADME 特征推算</span>
+              <span class="efc-title">CCTCM 2.0 模型预测</span>
+              <span class="efc-desc">PU 学习模型，含 7 项 ADME 特征</span>
             </div>
             <div class="empty-feature-card">
               <el-icon class="efc-icon" style="color:#e6a23c"><Download /></el-icon>
-              <span class="efc-title">批量导出结果</span>
-              <span class="efc-desc">上传 .xlsx/.csv 文件，一键下载预测报告</span>
+              <span class="efc-title">结果导出</span>
+              <span class="efc-desc">支持 .xlsx/.csv 批量预测</span>
             </div>
           </div>
         </div>

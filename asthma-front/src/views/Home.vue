@@ -5,11 +5,11 @@
     <div class="main-content">
       <!-- 标题区 -->
       <div class="header-section">
-        <h1 class="system-title">哮喘方剂智能分析系统</h1>
-        <p class="system-subtitle">基于入血预测的中医治疗儿童哮喘作用机制分析平台</p>
+        <h1 class="system-title">儿童哮喘方剂智能分析系统</h1>
+        <p class="system-subtitle">基于入血预测的中医治疗作用机制研究平台</p>
       </div>
 
-      <!-- 统计指标区：4 卡片 -->
+      <!-- 统计指标区 -->
       <div class="data-ticker">
         <div class="ticker-card" v-for="(item, index) in tickerData" :key="index">
           <div class="ticker-icon">{{ item.icon }}</div>
@@ -24,7 +24,6 @@
       <!-- 搜索区 -->
       <div class="search-center">
         <div class="search-bar-outer">
-          <!-- 分类选择 + 分隔线 + 搜索框：使用原生 select，彻底无白底 -->
           <select v-model="searchCategory" class="cat-sel-native">
             <option value="prescription">方剂</option>
             <option value="herb">中药材</option>
@@ -36,7 +35,7 @@
             <input
               v-model="searchQuery"
               class="search-input-native"
-              placeholder="请输入方剂名称、中药或化合物..."
+              placeholder="输入方剂、中药或化合物名称..."
               @keyup.enter="handleSearch"
               @focus="handleInputFocus"
             />
@@ -57,9 +56,9 @@
             <div class="tag-preview">
               <div class="tp-name">{{ tag.name }}</div>
               <div class="tp-stats">
-                <span>🌿 {{ tag.herbCount }} 味</span>
-                <span>🧪 {{ tag.bloodCount }} 入血</span>
-                <span>🎯 {{ tag.targetCount }} 靶点</span>
+                <span>{{ tag.herbCount }} 味中药</span>
+                <span>{{ tag.bloodCount }} 入血成分</span>
+                <span>{{ tag.targetCount }} 靶点</span>
               </div>
             </div>
           </el-popover>
@@ -76,28 +75,34 @@
 
       <!-- 快捷分析入口 -->
       <div class="quick-actions">
-        <div class="qa-title">⚡ 快捷分析入口</div>
+        <div class="qa-title">快捷功能</div>
         <div class="qa-grid">
-          <div class="qa-card group" @click="$router.push('/prediction')">
-            <div class="qa-icon-box">🩸</div>
+          <div class="qa-card" @click="$router.push('/prediction')">
+            <div class="qa-icon-box">
+              <el-icon><DataAnalysis /></el-icon>
+            </div>
             <div class="qa-info">
               <div class="qa-name">化合物入血预测</div>
               <div class="qa-desc">输入 SMILES 或上传分子文件</div>
             </div>
             <div class="qa-arrow">→</div>
           </div>
-          <div class="qa-card group" @click="$router.push('/custom-prescription')">
-            <div class="qa-icon-box">📝</div>
+          <div class="qa-card" @click="$router.push('/custom-prescription')">
+            <div class="qa-icon-box">
+              <el-icon><EditPen /></el-icon>
+            </div>
             <div class="qa-info">
               <div class="qa-name">自定义方剂分析</div>
-              <div class="qa-desc">自由组合中药，一键智能分析</div>
+              <div class="qa-desc">组合中药，分析作用机制</div>
             </div>
             <div class="qa-arrow">→</div>
           </div>
-          <div class="qa-card group" @click="$router.push('/prescriptions')">
-            <div class="qa-icon-box">🕸️</div>
+          <div class="qa-card" @click="$router.push('/prescriptions')">
+            <div class="qa-icon-box">
+              <el-icon><Share /></el-icon>
+            </div>
             <div class="qa-info">
-              <div class="qa-name">异构网络图谱</div>
+              <div class="qa-name">网络图谱</div>
               <div class="qa-desc">可视化方剂作用机制</div>
             </div>
             <div class="qa-arrow">→</div>
@@ -107,15 +112,14 @@
 
       <!-- 热门方剂 -->
       <div class="explore-cards">
-        <div class="explore-title">📊 热门方剂</div>
+        <div class="explore-title">常用方剂</div>
         <div class="explore-grid">
           <div v-for="card in exploreCards" :key="card.name" class="explore-card" @click="handlePrescriptionClick(card)">
-            <div class="ec-emoji">{{ card.emoji }}</div>
             <div class="ec-name">{{ card.name }}</div>
             <div class="ec-stats">
-              <span>🌿 {{ card.herbCount }}味</span>
-              <span>🧪 {{ card.bloodCount }}入血</span>
-              <span>🎯 {{ card.targetCount }}靶点</span>
+              <span>{{ card.herbCount }} 味中药</span>
+              <span>{{ card.bloodCount }} 入血成分</span>
+              <span>{{ card.targetCount }} 靶点</span>
             </div>
           </div>
         </div>
@@ -138,7 +142,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { Search, Microphone } from '@element-plus/icons-vue'
+import { Search, Microphone, DataAnalysis, EditPen, Share } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import { getStatistics, search, getPrescriptions } from '../api'
 
@@ -147,12 +151,10 @@ const searchCategory = ref('prescription')
 const searchQuery = ref('')
 const showSuggestions = ref(false)
 const hotTags = ref([])
-const emojiList = ['🍵', '🌿', '💊']
 const exploreCards = ref([])
 
 const suggestions = ref([])
 
-// 联想下拉：调用后端搜索 API（支持拼音首字母 + 药材名反查）
 let suggestTimer = null
 function fetchSuggestions(q) {
   if (!q.trim()) { suggestions.value = []; return }
@@ -175,24 +177,22 @@ const filteredSuggestions = computed(() => suggestions.value)
 function selectSuggestion(item) {
   searchQuery.value = item.name
   showSuggestions.value = false
-  // 根据类型直接路由
   if (item.type === 'rx') router.push({ path: '/detail', query: { id: item.id } })
   else if (item.type === 'herb') router.push({ path: '/herbs/detail', query: { id: item.id, name: item.name } })
   else if (item.type === 'compound') router.push({ path: `/compounds/detail/${item.id}` })
 }
 
 const tickerData = ref([
-  { icon: '🍵', label: '经典方剂', value: 46, displayValue: 0, unit: '首' },
-  { icon: '🌿', label: '涵盖中药', value: 278, displayValue: 0, unit: '味' },
-  { icon: '🧪', label: '入血预测化合物', value: 569, displayValue: 0, unit: '维特征' },
-  { icon: '🎯', label: '哮喘相关靶点', value: 7398, displayValue: 0, unit: '个' }
+  { icon: '📋', label: '经典方剂', value: 46, displayValue: 0, unit: '首' },
+  { icon: '🌿', label: '中药', value: 278, displayValue: 0, unit: '味' },
+  { icon: '🧪', label: '入血化合物', value: 569, displayValue: 0, unit: '个' },
+  { icon: '🎯', label: '相关靶点', value: 7398, displayValue: 0, unit: '个' }
 ])
 
 const loadingVisible = ref(false)
 const loadingText = ref('')
 const progressWidth = ref(0)
 
-// 粒子
 const particleCanvas = ref(null)
 let animationId, particles, ctx
 
@@ -203,12 +203,12 @@ function initParticles() {
   canvas.width = canvas.parentElement.clientWidth
   canvas.height = canvas.parentElement.clientHeight
   particles = []
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 60; i++) {
     particles.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.8,
-      vy: (Math.random() - 0.5) * 0.8,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
       radius: Math.random() * 2 + 1
     })
   }
@@ -219,19 +219,19 @@ function drawParticles() {
   const canvas = particleCanvas.value
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   particles.forEach(p => { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > canvas.width) p.vx *= -1; if (p.y < 0 || p.y > canvas.height) p.vy *= -1 })
-  ctx.strokeStyle = 'rgba(64,158,255,0.15)'; ctx.lineWidth = 1
+  ctx.strokeStyle = 'rgba(45, 212, 191, 0.1)'; ctx.lineWidth = 1
   for (let i = 0; i < particles.length; i++) {
     for (let j = i + 1; j < particles.length; j++) {
       const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y
       if (Math.sqrt(dx * dx + dy * dy) < 120) { ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke() }
     }
   }
-  particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2); ctx.fillStyle = 'rgba(64,158,255,0.6)'; ctx.fill() })
+  particles.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2); ctx.fillStyle = 'rgba(45, 212, 191, 0.5)'; ctx.fill() })
   animationId = requestAnimationFrame(drawParticles)
 }
 
 function animateNumber(item) {
-  const duration = 2000, steps = 60, stepValue = item.value / steps
+  const duration = 1500, steps = 50, stepValue = item.value / steps
   let step = 0
   const timer = setInterval(() => {
     step++
@@ -251,8 +251,8 @@ async function handleSearch() {
   loadingVisible.value = true; progressWidth.value = 0
   let searchResult = null
   const searchPromise = search(q).then(res => { searchResult = res }).catch(e => { console.error(e) })
-  const steps = [{ text: '正在智能检索中...', progress: 40 }, { text: '分析完成，即将跳转 ✨', progress: 100 }]
-  for (const step of steps) { loadingText.value = step.text; progressWidth.value = step.progress; await new Promise(r => setTimeout(r, 400)) }
+  const steps = [{ text: '正在检索...', progress: 50 }, { text: '检索完成', progress: 100 }]
+  for (const step of steps) { loadingText.value = step.text; progressWidth.value = step.progress; await new Promise(r => setTimeout(r, 300)) }
   await searchPromise
   loadingVisible.value = false
 
@@ -298,11 +298,11 @@ onMounted(async () => {
       const sorted = [...allRx].sort((a, b) => (b.blood_compound_count || 0) - (a.blood_compound_count || 0))
       const top3 = sorted.slice(0, 3)
       hotTags.value = top3.map(r => ({ name: r.name, herbCount: r.herb_count || 0, bloodCount: r.blood_compound_count || 0, targetCount: r.asthma_target_count || 0, id: r.id }))
-      exploreCards.value = top3.map((r, i) => ({ name: r.name, id: r.id, herbCount: r.herb_count || 0, bloodCount: r.blood_compound_count || 0, targetCount: r.asthma_target_count || 0, emoji: emojiList[i] }))
+      exploreCards.value = top3.map(r => ({ name: r.name, id: r.id, herbCount: r.herb_count || 0, bloodCount: r.blood_compound_count || 0, targetCount: r.asthma_target_count || 0 }))
     }
   } catch (e) { console.error('Rx:', e) }
 
-  tickerData.value.forEach((item, i) => setTimeout(() => animateNumber(item), i * 200))
+  tickerData.value.forEach((item, i) => setTimeout(() => animateNumber(item), i * 150))
   window.addEventListener('resize', initParticles)
 })
 
@@ -313,138 +313,131 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.home-container { position: relative; width: 100%; height: 100vh; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); overflow: hidden }
+.home-container { position: relative; width: 100%; height: 100vh; background: var(--bg-gradient); overflow: hidden }
 .particle-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0 }
-.main-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 100vh; padding: 20px 20px 16px; overflow-y: auto }
+.main-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 100vh; padding: 24px 20px 16px; overflow-y: auto }
 
 /* 标题 */
-.header-section { text-align: center; margin-bottom: 16px; flex-shrink: 0 }
-.system-title { font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 4px; text-shadow: 0 2px 16px rgba(64,158,255,0.25) }
-.system-subtitle { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 300 }
+.header-section { text-align: center; margin-bottom: 20px; flex-shrink: 0 }
+.system-title { font-size: 28px; font-weight: 700; color: var(--text-color); margin-bottom: 6px; letter-spacing: 1px }
+.system-subtitle { font-size: 14px; color: var(--text-muted); font-weight: 400 }
 
 /* 统计 */
-.data-ticker { display: flex; gap: 12px; margin-bottom: 24px; flex-shrink: 0 }
-.ticker-card { background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 22px; text-align: center; transition: all 0.25s; min-width: 130px }
-.ticker-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.15) }
+.data-ticker { display: flex; gap: 12px; margin-bottom: 28px; flex-shrink: 0 }
+.ticker-card { background: var(--bg-card); backdrop-filter: blur(10px); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 24px; text-align: center; transition: all 0.25s; min-width: 130px }
+.ticker-card:hover { background: var(--bg-card-hover); transform: translateY(-2px); box-shadow: var(--shadow-card) }
 .ticker-icon { font-size: 18px; margin-bottom: 4px }
-.ticker-label { font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 4px }
+.ticker-label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px }
 .ticker-value { display: flex; align-items: baseline; justify-content: center; gap: 2px }
-.ticker-number { font-size: 26px; font-weight: 700; color: #409eff; font-family: 'DIN Alternate','Helvetica Neue',sans-serif; line-height: 1 }
-.ticker-unit { font-size: 12px; color: rgba(255,255,255,0.45); white-space: nowrap }
+.ticker-number { font-size: 26px; font-weight: 700; color: var(--color-primary); font-family: 'DIN Alternate','Helvetica Neue',sans-serif; line-height: 1 }
+.ticker-unit { font-size: 12px; color: var(--text-disabled); white-space: nowrap }
 
-/* 搜索栏：暗色融合外壳 */
+/* 搜索栏 */
 .search-center { width: 100%; max-width: 640px; flex-shrink: 0 }
 .search-bar-outer {
   display: flex; align-items: center;
-  background: rgba(255,255,255,0.08);
+  background: var(--bg-card);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 28px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
   height: 48px;
   overflow: hidden;
+  transition: border-color 0.2s;
 }
+.search-bar-outer:focus-within { border-color: var(--color-primary) }
 
-/* 分类选择：原生 select，彻底无白底 */
 .cat-sel-native {
   width: 90px; flex-shrink: 0;
   background: transparent; border: none; outline: none;
-  color: #93c5fd; font-size: 12px; font-weight: 600;
-  cursor: pointer; padding: 0 4px 0 14px;
-  border-right: 1px solid #334155;
+  color: var(--color-primary); font-size: 13px; font-weight: 600;
+  cursor: pointer; padding: 0 4px 0 16px;
+  border-right: 1px solid var(--border-color);
   text-align: center;
   appearance: none; -webkit-appearance: none;
   color-scheme: dark;
-  /* 自定义下拉箭头 */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' fill='none' stroke='%2394a3b8' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 6px center;
   padding-right: 20px;
 }
 
-/* 下拉面板 - 全部替换为原生 select 不再需要 */
+.cat-divider { width: 1px; height: 20px; background: var(--border-color); flex-shrink: 0 }
 
-/* 分隔线 */
-.cat-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); flex-shrink: 0 }
-
-/* 搜索输入区 */
-.search-input-wrap { flex: 1; display: flex; align-items: center; padding: 0 18px; height: 48px }
-.search-ic { font-size: 18px; color: #60a5fa; flex-shrink: 0; margin-right: 10px }
-.voice-ic { font-size: 18px; color: #60a5fa; flex-shrink: 0; margin-left: 10px; cursor: pointer; transition: color 0.2s }
-.voice-ic:hover { color: #34d399 }
+.search-input-wrap { flex: 1; display: flex; align-items: center; padding: 0 16px; height: 48px }
+.search-ic { font-size: 18px; color: var(--color-primary); flex-shrink: 0; margin-right: 10px }
+.voice-ic { font-size: 18px; color: var(--text-muted); flex-shrink: 0; margin-left: 10px; cursor: pointer; transition: color 0.2s }
+.voice-ic:hover { color: var(--color-primary) }
 .search-input-native {
   flex: 1; background: transparent; border: none; outline: none;
-  font-size: 15px; color: #e2e8f0; caret-color: #60a5fa;
+  font-size: 15px; color: var(--text-color); caret-color: var(--color-primary);
   font-family: inherit;
 }
-.search-input-native::placeholder { color: rgba(148,163,184,0.5) }
+.search-input-native::placeholder { color: var(--text-disabled) }
 
 /* 热门标签 */
-.hot-tags { display: flex; align-items: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; justify-content: center }
-.tag-label { color: rgba(255,255,255,0.45); font-size: 12px }
-.hot-tag { cursor: pointer; transition: all 0.25s; background: rgba(56,189,248,0.1) !important; border: 1px solid rgba(56,189,248,0.3) !important; color: rgba(255,255,255,0.85) !important; box-shadow: 0 0 8px rgba(56,189,248,0.1) }
-.hot-tag:hover { background: rgba(56,189,248,0.22) !important; border-color: #38bdf8 !important; color: #fff !important; box-shadow: 0 0 18px rgba(56,189,248,0.35); transform: translateY(-2px) }
+.hot-tags { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; justify-content: center }
+.tag-label { color: var(--text-muted); font-size: 12px }
+.hot-tag { cursor: pointer; transition: all 0.25s; background: rgba(45, 212, 191, 0.08) !important; border: 1px solid rgba(45, 212, 191, 0.25) !important; color: var(--text-secondary) !important }
+.hot-tag:hover { background: rgba(45, 212, 191, 0.15) !important; border-color: var(--color-primary) !important; color: var(--text-color) !important; transform: translateY(-1px) }
 .tag-preview { font-size: 13px; line-height: 1.8 }
-.tp-name { font-weight: 600; font-size: 15px; color: #303133; margin-bottom: 6px }
-.tp-stats { display: flex; gap: 12px; color: #606266 }
+.tp-name { font-weight: 600; font-size: 15px; color: var(--text-color); margin-bottom: 6px }
+.tp-stats { display: flex; gap: 12px; color: var(--text-muted); flex-wrap: wrap }
 .tp-stats span { white-space: nowrap }
 
 /* 联想 */
-.suggestions { position: absolute; top: 100%; left: 0; right: 0; background: #1e293b; border-radius: 12px; margin-top: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 100; overflow: hidden; border: 1px solid rgba(255,255,255,0.08) }
-.suggestion-item { padding: 11px 20px; cursor: pointer; transition: background 0.15s; color: #94a3b8; font-size: 14px; display: flex; justify-content: space-between; align-items: center }
-.suggestion-item:hover { background: rgba(56,189,248,0.1); color: #38bdf8 }
-.sug-type { font-size: 10px; color: #64748b; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 4px; flex-shrink: 0 }
+.suggestions { position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-secondary); border-radius: var(--radius-md); margin-top: 8px; box-shadow: var(--shadow-hover); z-index: 100; overflow: hidden; border: 1px solid var(--border-color) }
+.suggestion-item { padding: 11px 20px; cursor: pointer; transition: background 0.15s; color: var(--text-secondary); font-size: 14px; display: flex; justify-content: space-between; align-items: center }
+.suggestion-item:hover { background: rgba(45, 212, 191, 0.08); color: var(--color-primary) }
+.sug-type { font-size: 11px; color: var(--text-disabled); background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; flex-shrink: 0 }
 
-/* 快捷入口 - 横向工业风 */
-.quick-actions { width: 100%; max-width: 720px; margin-top: 20px; flex-shrink: 0 }
+/* 快捷入口 */
+.quick-actions { width: 100%; max-width: 720px; margin-top: 28px; flex-shrink: 0 }
 .qa-title {
-  font-size: 11px; font-weight: 700; color: #94a3b8;
-  text-transform: uppercase; letter-spacing: 1.5px;
-  display: flex; align-items: center; gap: 8px;
-  margin-bottom: 10px; margin-top: 4px;
+  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 .qa-grid { display: flex; gap: 12px }
 .qa-card {
   flex: 1; display: flex; align-items: center; gap: 12px;
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px; padding: 12px 14px; cursor: pointer;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-md); padding: 14px 16px; cursor: pointer;
   transition: all 0.25s;
 }
-.qa-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(64,158,255,0.3); box-shadow: 0 4px 16px rgba(0,0,0,0.25) }
+.qa-card:hover { background: var(--bg-card-hover); border-color: var(--border-color-hover); box-shadow: var(--shadow-card) }
 .qa-icon-box {
   width: 40px; height: 40px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 10px; font-size: 20px;
+  background: rgba(45, 212, 191, 0.1); border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: var(--radius-sm); font-size: 20px; color: var(--color-primary);
 }
 .qa-info { flex: 1; min-width: 0 }
-.qa-name { font-weight: 600; color: #e2e8f0; font-size: 13px; margin-bottom: 3px }
-.qa-desc { font-size: 11px; color: #64748b }
-.qa-arrow { font-size: 14px; color: #475569; transition: all 0.2s; flex-shrink: 0 }
-.qa-card:hover .qa-arrow { color: #409eff; transform: translateX(3px) }
+.qa-name { font-weight: 600; color: var(--text-color); font-size: 14px; margin-bottom: 3px }
+.qa-desc { font-size: 12px; color: var(--text-muted) }
+.qa-arrow { font-size: 16px; color: var(--text-disabled); transition: all 0.2s; flex-shrink: 0 }
+.qa-card:hover .qa-arrow { color: var(--color-primary); transform: translateX(3px) }
 
 /* 热门方剂 */
-.explore-cards { width: 100%; max-width: 720px; margin-top: 20px; flex-shrink: 0; padding-bottom: 16px }
+.explore-cards { width: 100%; max-width: 720px; margin-top: 24px; flex-shrink: 0; padding-bottom: 16px }
 .explore-title {
-  font-size: 11px; font-weight: 700; color: #94a3b8;
-  text-transform: uppercase; letter-spacing: 1.5px;
-  display: flex; align-items: center; gap: 8px;
-  margin-bottom: 10px; margin-top: 4px;
+  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 .explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
-.explore-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; text-align: center; cursor: pointer; transition: all 0.25s }
-.explore-card:hover { background: rgba(56,189,248,0.1); border-color: rgba(56,189,248,0.3); transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.25) }
-.ec-emoji { font-size: 24px; margin-bottom: 6px }
-.ec-name { font-weight: 600; color: #e2e8f0; font-size: 14px; margin-bottom: 2px }
-.ec-stats { display: flex; flex-direction: column; gap: 1px; font-size: 10px; color: rgba(148,163,184,0.5) }
+.explore-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: center; cursor: pointer; transition: all 0.25s }
+.explore-card:hover { background: var(--bg-card-hover); border-color: var(--border-color-hover); transform: translateY(-2px); box-shadow: var(--shadow-card) }
+.ec-name { font-weight: 600; color: var(--text-color); font-size: 15px; margin-bottom: 8px }
+.ec-stats { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--text-muted) }
 
 /* Loading */
 :deep(.loading-dialog) { background: transparent !important }
-:deep(.el-dialog) { background: rgba(17,24,39,0.96) !important; border-radius: 20px !important; border: 1px solid rgba(56,189,248,0.25) !important }
+:deep(.el-dialog) { background: rgba(15, 23, 42, 0.98) !important; border-radius: var(--radius-lg) !important; border: 1px solid var(--border-color) !important }
 :deep(.el-dialog__header), :deep(.el-dialog__body) { padding: 28px 36px !important }
 .loading-content { text-align: center }
-.loading-spinner { width: 52px; height: 52px; margin: 0 auto 20px; border: 3px solid rgba(56,189,248,0.15); border-top-color: #38bdf8; border-radius: 50%; animation: spin 1s linear infinite }
+.loading-spinner { width: 48px; height: 48px; margin: 0 auto 20px; border: 3px solid rgba(45, 212, 191, 0.15); border-top-color: var(--color-primary); border-radius: 50%; animation: spin 1s linear infinite }
 @keyframes spin { to { transform: rotate(360deg) } }
-.loading-text { color: #e2e8f0; font-size: 14px; margin-bottom: 16px; min-height: 20px }
-.loading-progress { width: 100%; height: 3px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden }
-.progress-bar { height: 100%; background: linear-gradient(90deg, #38bdf8, #34d399); transition: width 0.3s }
+.loading-text { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; min-height: 20px }
+.loading-progress { width: 100%; height: 3px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden }
+.progress-bar { height: 100%; background: var(--color-primary); transition: width 0.3s }
 </style>

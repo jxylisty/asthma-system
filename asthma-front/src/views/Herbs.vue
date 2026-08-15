@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="herbs-container">
     <div class="page-header">
       <h2 class="page-title">中药详情</h2>
