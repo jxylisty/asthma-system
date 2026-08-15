@@ -592,37 +592,11 @@ textarea::placeholder {
 }
 
 
-/* ===== 弹窗层级与居中修复（最高优先级）===== */
-body > .el-overlay {
-  z-index: 2999 !important;
-}
-body > .el-overlay > .el-overlay-dialog {
-  z-index: 3000 !important;
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-body > .el-overlay > .el-overlay-dialog > .el-dialog {
-  z-index: 3000 !important;
-  margin: 0 auto !important;
-  display: inline-block !important;
-  text-align: left !important;
-  float: none !important;
-  position: relative !important;
-  left: auto !important;
-  right: auto !important;
-}
 
-/* ===== 中药选择弹窗强制居中 ===== */
-.herb-select-dialog {
-  margin: 0 auto !important;
-  display: block !important;
-  float: none !important;
-  position: relative !important;
-  left: auto !important;
-  right: auto !important;
-  transform: none !important;
-}
+/* ===== 确保弹窗在侧边栏之上 ===== */
+.el-overlay { z-index: 9998 !important; }
+.el-overlay-dialog { z-index: 9999 !important; }
+.el-dialog { z-index: 9999 !important; }
+.el-drawer { z-index: 9999 !important; }
+.el-message-box { z-index: 9999 !important; }
 </style>
