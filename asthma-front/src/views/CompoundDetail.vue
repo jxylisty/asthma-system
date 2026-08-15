@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="compound-detail-container" v-loading="loading">
     <template v-if="compound">
       <!-- 返回按钮 -->
@@ -557,7 +557,7 @@ onUnmounted(() => {
 }
 
 .info-card, .structure-card, .radar-card, .targets-overview-card, .targets-card {
-  background: #fff;
+  background: var(--bg-card);
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -584,7 +584,7 @@ onUnmounted(() => {
 
 .formula-text {
   font-size: 13px;
-  color: #909399;
+  color: var(--text-muted);
   font-family: 'Courier New', monospace;
 }
 
@@ -601,7 +601,7 @@ onUnmounted(() => {
 .prob-bar .prob-label {
   font-size: 13px;
   font-weight: 600;
-  color: #606266;
+  color: var(--text-secondary);
   white-space: nowrap;
 }
 
@@ -628,20 +628,20 @@ onUnmounted(() => {
   justify-content: space-between;
   align-items: baseline;
   padding: 6px 10px;
-  background: #f9fafc;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 6px;
 }
 
 .prop-key {
   font-size: 12px;
-  color: #909399;
+  color: var(--text-muted);
   font-weight: 500;
 }
 
 .prop-val {
   font-size: 14px;
   font-weight: 600;
-  color: #303133;
+  color: var(--text-color);
 }
 
 .prop-val small {
@@ -668,7 +668,7 @@ onUnmounted(() => {
 
 .lipinski-text {
   font-size: 13px;
-  color: #606266;
+  color: var(--text-secondary);
 }
 
 /* SMILES */
@@ -687,7 +687,7 @@ onUnmounted(() => {
 .smiles-label {
   font-size: 13px;
   font-weight: 600;
-  color: #606266;
+  color: var(--text-secondary);
 }
 
 .smiles-actions { display: flex; gap: 4px; }
@@ -727,7 +727,7 @@ onUnmounted(() => {
 .structure-title {
   font-size: 16px;
   font-weight: 600;
-  color: #303133;
+  color: var(--text-color);
 }
 
 .structure-controls { display: flex; gap: 4px; }
@@ -736,7 +736,7 @@ onUnmounted(() => {
   width: 100%;
   height: 320px;
   border-radius: 8px;
-  border: 1px solid #ebeef5;
+  border: 1px solid var(--border-color);
   background: #fafbfc;
   position: relative;
 }
@@ -768,7 +768,7 @@ onUnmounted(() => {
 .card-header h2 {
   font-size: 16px;
   font-weight: 600;
-  color: #303133;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -795,7 +795,7 @@ onUnmounted(() => {
   gap: 2px;
 }
 
-.summary-label { font-size: 11px; color: #909399; }
+.summary-label { font-size: 11px; color: var(--text-muted); }
 .summary-value { font-size: 18px; font-weight: 700; color: #409eff; }
 
 /* 靶点概览 */
@@ -821,11 +821,11 @@ onUnmounted(() => {
 }
 
 .stat-item.asthma .stat-num { color: #f56c6c; }
-.stat-item.total .stat-num { color: #303133; }
+.stat-item.total .stat-num { color: var(--text-color); }
 
 .stat-label {
   font-size: 12px;
-  color: #909399;
+  color: var(--text-muted);
 }
 
 .source-herbs {
@@ -839,7 +839,7 @@ onUnmounted(() => {
 
 .herb-label {
   font-size: 12px;
-  color: #909399;
+  color: var(--text-muted);
   font-weight: 600;
 }
 
@@ -848,7 +848,7 @@ onUnmounted(() => {
 /* 靶点表 */
 .targets-card { margin-bottom: 16px; }
 
-.target-gene { font-weight: 600; color: #303133; }
+.target-gene { font-weight: 600; color: var(--text-color); }
 
 .target-pagination {
   display: flex;
@@ -857,7 +857,7 @@ onUnmounted(() => {
 }
 
 .speech-btn {
-  color: #909399;
+  color: var(--text-muted);
   transition: all 0.3s ease;
 }
 .speech-btn:hover { color: #409eff; }

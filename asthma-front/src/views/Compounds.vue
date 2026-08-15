@@ -282,5 +282,5 @@ function handleCurrentChange(v) { currentPage.value = v; loadCompounds() }
 .cc-footer { display: flex; justify-content: flex-end; padding-top: 2px }
 
 .pagination-wrapper { display: flex; justify-content: center; margin-top: 40px }
-.pagination-wrapper :deep(.el-pagination) { background: var(--card-bg,#fff); padding: 16px 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08) }
+.pagination-wrapper :deep(.el-pagination) { background: var(--bg-card); padding: 16px 24px; border-radius: 12px; box-shadow: var(--shadow-card) }
 </style>

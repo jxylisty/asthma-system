@@ -227,15 +227,15 @@ function handleCurrentChange(v) { currentPage.value = v; loadHerbs() }
 .extra-filters { display: flex; align-items: center; gap: 16px; flex-wrap: wrap }
 .asthma-switch { margin-right: 4px }
 .compound-input { width: 160px }
-.compound-prefix { font-size: 12px; color: #909399; white-space: nowrap }
+.compound-prefix { font-size: 12px; color: var(--text-muted); white-space: nowrap }
 
-.filter-section { background: var(--card-bg, #fff); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08) }
+.filter-section { background: var(--bg-card); border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; box-shadow: var(--shadow-card) }
 .filter-row { display: flex; align-items: flex-start; gap: 12px }
-.filter-label { flex-shrink: 0; width: 72px; padding-top: 4px; font-size: 14px; font-weight: 600; color: #303133 }
+.filter-label { flex-shrink: 0; width: 72px; padding-top: 4px; font-size: 14px; font-weight: 600; color: var(--text-color) }
 .filter-tags { display: flex; flex-wrap: wrap; gap: 8px; flex: 1 }
 .filter-tag { cursor: pointer; user-select: none; transition: all 0.2s; border-radius: 6px }
 .filter-tag:hover { transform: translateY(-1px) }
-.empty-tip { font-size: 13px; color: #c0c4cc; line-height: 28px }
+.empty-tip { font-size: 13px; color: var(--text-disabled); line-height: 28px }
 
 /* Grid */
 .herb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 20px; min-height: 200px }
@@ -267,5 +267,5 @@ function handleCurrentChange(v) { currentPage.value = v; loadHerbs() }
 .hc-stat strong { color: var(--text-color,#333); font-size: 16px; margin-right: 2px }
 
 .pagination-wrapper { display: flex; justify-content: center; margin-top: 40px }
-.pagination-wrapper :deep(.el-pagination) { background: var(--card-bg,#fff); padding: 16px 24px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08) }
+.pagination-wrapper :deep(.el-pagination) { background: var(--bg-card); padding: 16px 24px; border-radius: 12px; box-shadow: var(--shadow-card) }
 </style>
