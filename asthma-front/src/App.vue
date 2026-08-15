@@ -546,7 +546,7 @@ html, body {
 
 /* ===== 原生表单控件暗色主题 ===== */
 select {
-  background: var(--bg-secondary) !important;
+  background-color: var(--bg-secondary) !important;
   color: var(--text-color) !important;
   border: 1px solid var(--border-color) !important;
   color-scheme: dark;
