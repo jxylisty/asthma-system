@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="detail-container">
     <div class="top-bar">
       <div class="logo" @click="$router.push('/')">

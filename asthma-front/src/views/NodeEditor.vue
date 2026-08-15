@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="node-editor-container">
     <div class="editor-header">
       <div class="header-left">
@@ -778,7 +778,7 @@ function findReachableNodes(startNodeIds) {
 <style scoped>
 .node-editor-container {
   padding: 20px;
-  background: var(--bg-gradient);
+  background: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

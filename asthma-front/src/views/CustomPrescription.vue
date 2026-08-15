@@ -749,7 +749,7 @@ onMounted(() => {
 <style scoped>
 .cp-container {
   padding: 32px;
-  background: var(--bg-gradient);
+  background: transparent;
   min-height: 100vh;
 }
 

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="herb-detail-container" v-loading="loading">
     <template v-if="herb">
       <!-- 返回按钮 -->
@@ -367,7 +367,7 @@ onMounted(() => {
 <style scoped>
 .herb-detail-container {
   padding: 40px;
-  background: var(--bg-gradient);
+  background: transparent;
   min-height: 100vh;
 }
 

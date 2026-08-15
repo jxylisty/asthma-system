@@ -540,7 +540,7 @@ onUnmounted(() => {
 <style scoped>
 .compound-detail-container {
   padding: 16px 24px;
-  background: var(--bg-gradient);
+  background: transparent;
   min-height: 100vh;
   max-width: 1500px;
   margin: 0 auto;

@@ -956,7 +956,7 @@ onUnmounted(() => {
 <style scoped>
 .prediction-container {
   display: flex; height: 100vh;
-  background: var(--bg-gradient); overflow: hidden;
+  background: transparent; overflow: hidden;
 }
 
 .control-panel {
