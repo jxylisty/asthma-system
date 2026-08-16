@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="prediction-container">
     <!-- 左侧控制区 -->
     <div class="control-panel">

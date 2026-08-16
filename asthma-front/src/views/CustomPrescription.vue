@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="cp-container">
     <div class="page-header">
       <h2 class="page-title">自定义处方分析</h2>

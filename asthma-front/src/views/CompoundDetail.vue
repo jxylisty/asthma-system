@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="compound-detail-container" v-loading="loading">
     <template v-if="compound">
       <!-- 返回按钮 -->

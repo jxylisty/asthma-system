@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <template v-if="isLoginPage">
     <router-view />
   </template>

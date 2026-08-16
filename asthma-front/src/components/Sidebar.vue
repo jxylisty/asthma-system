@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <aside class="sidebar">
     <!-- Logo 区 -->
     <div class="sidebar-header">
