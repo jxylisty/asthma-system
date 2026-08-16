@@ -36,6 +36,8 @@ class PredictResultData(BaseModel):
     probability: float  # 入血概率 [0, 1]
     level: str          # 高/中/低
     features_used: List[str]  # 实际使用的特征列
+    threshold: Optional[float] = None  # 模型工作阈值（V2）
+    pred: Optional[int] = None  # 1=预测入血（probability >= threshold）
 
 
 # ==================== SMILES 预测 Schema ====================
@@ -64,6 +66,8 @@ class SmilesPredictResultData(BaseModel):
     rdkit_topology_features: Dict[str, Any] = {}  # 11 个 RDKit 拓扑特征（只读）
     adme_features: Dict[str, Any] = {}  # 7 个 ADME 特征（可校准）
     adme_estimated: bool = True  # ADME 是否为算法推算（True=推算，False=用户已校准）
+    threshold: Optional[float] = None  # 模型工作阈值（V2）
+    pred: Optional[int] = None  # 1=预测入血（probability >= threshold）
 
 
 class BatchSmilesPredictRequest(BaseModel):
