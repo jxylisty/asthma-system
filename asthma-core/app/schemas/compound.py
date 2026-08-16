@@ -10,9 +10,9 @@ class HighPotentialCompound(BaseModel):
     name: str
     prob_cctcm: Optional[float] = None
     prob_herb: Optional[float] = None
-    avg_prob: Optional[float] = None  # (prob_cctcm + prob_herb) / 2
-    blood_prob: Optional[float] = None  # 同 blood_entry_probability，兼容前端字段名
-    blood_entry_probability: Optional[float] = None  # V2 数据库入血概率
+    avg_prob: Optional[float] = None  # prob_cctcm（ccTCM 主力模型）
+    blood_prob: Optional[float] = None  # prob_cctcm 别名（兼容前端字段名）
+    blood_entry_probability: Optional[float] = None  # prob_cctcm 别名
     mw: Optional[float] = None
     logp: Optional[float] = None
 

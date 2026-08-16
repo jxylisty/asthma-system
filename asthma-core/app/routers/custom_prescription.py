@@ -86,11 +86,11 @@ def _collect_compounds_for_herbs(
 
     # min_prob > 0 时过滤
     if min_prob > 0:
-        rows = [r for r in rows if (r.Compound.blood_entry_probability or 0) >= min_prob]
+        rows = [r for r in rows if (r.Compound.prob_cctcm or 0) >= min_prob]
 
     # 按入血概率降序
     rows.sort(
-        key=lambda r: r.Compound.blood_entry_probability or 0,
+        key=lambda r: r.Compound.prob_cctcm or 0,
         reverse=True,
     )
     return rows
@@ -100,7 +100,7 @@ def _compute_radar_scores(db: Session, herb_ids: List[str]) -> List[dict]:
     """按入血概率加权平均预计算 radar_* 字段"""
     compounds = (
         db.query(
-            Compound.blood_entry_probability,
+            Compound.prob_cctcm,
             Compound.radar_anti_inflammatory,
             Compound.radar_immune_regulation,
             Compound.radar_airway_repair,
@@ -108,7 +108,7 @@ def _compute_radar_scores(db: Session, herb_ids: List[str]) -> List[dict]:
         .join(RelHerbCompound, RelHerbCompound.compound_id == Compound.id)
         .join(Herb, Herb.id == RelHerbCompound.herb_id)
         .filter(Herb.id.in_(herb_ids))
-        .filter(func.coalesce(Compound.blood_entry_probability, 0) >= 0.5)
+        .filter(func.coalesce(Compound.prob_cctcm, 0) >= 0.5)
         .distinct()
         .all()
     )
@@ -121,9 +121,9 @@ def _compute_radar_scores(db: Session, herb_ids: List[str]) -> List[dict]:
             return int(sum(s for s, _ in pairs) / len(pairs))
         return int(sum(s * w for s, w in pairs) / total_w)
 
-    anti = weighted([(c.radar_anti_inflammatory, c.blood_entry_probability or 0.5) for c in compounds if c.radar_anti_inflammatory is not None])
-    immune = weighted([(c.radar_immune_regulation, c.blood_entry_probability or 0.5) for c in compounds if c.radar_immune_regulation is not None])
-    repair = weighted([(c.radar_airway_repair, c.blood_entry_probability or 0.5) for c in compounds if c.radar_airway_repair is not None])
+    anti = weighted([(c.radar_anti_inflammatory, c.prob_cctcm or 0.5) for c in compounds if c.radar_anti_inflammatory is not None])
+    immune = weighted([(c.radar_immune_regulation, c.prob_cctcm or 0.5) for c in compounds if c.radar_immune_regulation is not None])
+    repair = weighted([(c.radar_airway_repair, c.prob_cctcm or 0.5) for c in compounds if c.radar_airway_repair is not None])
 
     return [
         {"efficacy_type": "抗炎效能", "count": anti},
@@ -207,7 +207,7 @@ async def analyze_custom_prescription(
             "logp": c.logp,
             "prob_cctcm": round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
             "prob_herb": round(c.prob_herb, 4) if c.prob_herb is not None else None,
-            "blood_prob": round(c.blood_entry_probability, 4) if c.blood_entry_probability is not None else None,
+            "blood_prob": round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
             "asthma_related": c.asthma_related,
             "herb_name": r.herb_name,
         })
@@ -422,7 +422,7 @@ async def generate_custom_ai_report(
             "logp": r.Compound.logp,
             "prob_cctcm": round(r.Compound.prob_cctcm, 4) if r.Compound.prob_cctcm is not None else None,
             "prob_herb": round(r.Compound.prob_herb, 4) if r.Compound.prob_herb is not None else None,
-            "blood_prob": round(r.Compound.blood_entry_probability, 4) if r.Compound.blood_entry_probability is not None else None,
+            "blood_prob": round(r.Compound.prob_cctcm, 4) if r.Compound.prob_cctcm is not None else None,
             "asthma_related": r.Compound.asthma_related,
             "herb_name": r.herb_name,
         }
@@ -532,7 +532,7 @@ async def generate_existing_ai_report(
             "logp": r.Compound.logp,
             "prob_cctcm": round(r.Compound.prob_cctcm, 4) if r.Compound.prob_cctcm is not None else None,
             "prob_herb": round(r.Compound.prob_herb, 4) if r.Compound.prob_herb is not None else None,
-            "blood_prob": round(r.Compound.blood_entry_probability, 4) if r.Compound.blood_entry_probability is not None else None,
+            "blood_prob": round(r.Compound.prob_cctcm, 4) if r.Compound.prob_cctcm is not None else None,
             "asthma_related": r.Compound.asthma_related,
             "herb_name": r.herb_name,
         }

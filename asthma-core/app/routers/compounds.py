@@ -61,7 +61,7 @@ async def get_compounds(
 ):
     """
     全量化合物列表（分页 + 搜索 + 概率过滤）
-    按入血概率降序排列（V2 使用 blood_entry_probability）
+    按入血概率降序排列（ccTCM 模型 prob_cctcm）
     """
     base_query = db.query(Compound)
 
@@ -72,7 +72,7 @@ async def get_compounds(
     # 概率过滤：min_prob > 0 时才过滤
     if min_prob > 0:
         base_query = base_query.filter(
-            func.coalesce(Compound.blood_entry_probability, 0) >= min_prob
+            func.coalesce(Compound.prob_cctcm, 0) >= min_prob
         )
 
     total = base_query.count()
@@ -80,12 +80,12 @@ async def get_compounds(
     # 按入血概率降序
     offset = (page - 1) * page_size
     compounds = base_query.order_by(
-        func.coalesce(Compound.blood_entry_probability, 0).desc()
+        func.coalesce(Compound.prob_cctcm, 0).desc()
     ).offset(offset).limit(page_size).all()
 
     items = []
     for c in compounds:
-        blood_prob = c.blood_entry_probability
+        blood_prob = c.prob_cctcm
 
         # 查询来源药材名称
         herb_names = (
@@ -101,7 +101,7 @@ async def get_compounds(
             prob_cctcm=round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
             prob_herb=round(c.prob_herb, 4) if c.prob_herb is not None else None,
             blood_prob=round(blood_prob, 4) if blood_prob is not None else None,
-            blood_entry_probability=round(c.blood_entry_probability, 4) if c.blood_entry_probability is not None else None,
+            blood_entry_probability=round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
             asthma_related=c.asthma_related,
             smile_short=c.smile_short,
             smiles=c.smiles,               # 完整 SMILES
@@ -133,10 +133,10 @@ async def get_high_potential_compounds(
         Compound.prob_herb >= 0.85
     )
 
-    # 降级：如果双模型结果为空（HERB 概率缺失），改用 blood_entry_probability >= 0.85
+    # 降级：如果双模型结果为空（HERB 概率缺失），改用 prob_cctcm >= 0.85
     if base_query.count() == 0:
         base_query = db.query(Compound).filter(
-            Compound.blood_entry_probability >= 0.85
+            Compound.prob_cctcm >= 0.85
         )
 
     total = base_query.count()
@@ -144,7 +144,7 @@ async def get_high_potential_compounds(
     # 按入血概率降序排列
     offset = (page - 1) * page_size
     compounds = base_query.order_by(
-        func.coalesce(Compound.blood_entry_probability, Compound.prob_cctcm, 0).desc()
+        func.coalesce(Compound.prob_cctcm, Compound.prob_herb, 0).desc()
     ).offset(offset).limit(page_size).all()
 
     items = [HighPotentialCompound(
@@ -152,9 +152,9 @@ async def get_high_potential_compounds(
         name=c.name,
         prob_cctcm=round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
         prob_herb=round(c.prob_herb, 4) if c.prob_herb is not None else None,
-        avg_prob=round(c.blood_entry_probability, 4) if c.blood_entry_probability is not None else None,
-        blood_prob=round(c.blood_entry_probability, 4) if c.blood_entry_probability is not None else None,
-        blood_entry_probability=round(c.blood_entry_probability, 4) if c.blood_entry_probability is not None else None,
+        avg_prob=round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
+        blood_prob=round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
+        blood_entry_probability=round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
         mw=c.mw,
         logp=c.logp
     ) for c in compounds]
@@ -181,7 +181,7 @@ async def get_compound_detail(
         .all()
     )
 
-    blood_prob = compound.blood_entry_probability
+    blood_prob = compound.prob_cctcm
 
     # RDKit 计算分子物理化学属性
     rdkit_props = _compute_rdkit_properties(compound.smiles)
@@ -192,7 +192,7 @@ async def get_compound_detail(
         prob_cctcm=round(compound.prob_cctcm, 4) if compound.prob_cctcm is not None else None,
         prob_herb=round(compound.prob_herb, 4) if compound.prob_herb is not None else None,
         blood_prob=round(blood_prob, 4) if blood_prob is not None else None,
-        blood_entry_probability=round(compound.blood_entry_probability, 4) if compound.blood_entry_probability is not None else None,
+        blood_entry_probability=round(compound.prob_cctcm, 4) if compound.prob_cctcm is not None else None,
         asthma_related=compound.asthma_related,
         herb_names=[h[0] for h in herb_names],
         smiles=compound.smiles,
