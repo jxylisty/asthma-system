@@ -1,18 +1,27 @@
 # -*- coding: utf-8 -*-
 """
-SMILES → 19 维特征自动计算引擎
-- 11 个 RDKit 拓扑特征：直接计算
-- LogP：RDKit Crippen.MolLogP 估算
+SMILES → 特征自动计算引擎（V2 模型配套）
+- 11 个 RDKit 拓扑特征 + LogP：与 V2 训练脚本
+  (入血预测/cctcm2.0_v2/pu_blood_prediction_v2.py rdkit_fill_and_fingerprint)
+  的定义逐项对齐，定义差异会导致预测失真，勿随意改动：
+    nHet = 杂原子数(CalcNumHeteroatoms)；fChar = 净形式电荷(GetFormalCharge)；
+    nRig = 总键数 - 可旋转键；Flex = 可旋转键 / 总键数（pkCSM 同型定义）；
+    nStereo = CalcNumAtomStereoCenters
 - 7 个 ADME 特征：RDKit 无法直接计算，留 NaN 由模型 imputer 填补
+- Morgan 指纹 1024 位（radius=2）：V2 模型（ccTCM 1043 维 / HERB 1037 维）必需
+- HERB 13 个描述符：11 个 RDKit 可算，Drug_likeness / OB_score 来自 HERB 库留 NaN
 """
 import numpy as np
 from typing import Optional, Dict
 from rdkit import Chem
-from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors
+from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors, QED
 from rdkit import RDLogger
 
 # 关闭 RDKit 冗余日志
 RDLogger.DisableLog('rdApp.*')
+
+# Morgan 指纹位数（与 V2 训练一致）
+FP_BITS = 1024
 
 # ==================== 19 维特征列名（与模型训练一致） ====================
 CCTCM_FEATURE_COLS = [
@@ -32,42 +41,6 @@ def _max_ring_size(mol) -> float:
     if not ring_info.AtomRings():
         return 0.0
     return float(max(len(r) for r in ring_info.AtomRings()))
-
-
-def _count_rigid_bonds(mol) -> float:
-    """刚性键数：环内键 + 双键/三键"""
-    count = 0
-    for bond in mol.GetBonds():
-        if bond.IsInRing():
-            count += 1
-        elif bond.GetBondTypeAsDouble() > 1:
-            count += 1
-    return float(count)
-
-
-def _calc_flex(mol) -> float:
-    """柔韧性 = 可旋转键数 / 总键数"""
-    total_bonds = mol.GetNumBonds()
-    if total_bonds == 0:
-        return 0.0
-    rot = Descriptors.NumRotatableBonds(mol)
-    return float(round(rot / total_bonds, 4))
-
-
-def _count_stereo_centers(mol) -> float:
-    """立体中心数（含指定 + 未指定）"""
-    try:
-        unspecified = rdMolDescriptors.CalcNumUnspecifiedAtomStereoCenters(mol)
-    except Exception:
-        unspecified = 0
-    try:
-        chiral_centers = Chem.FindMolChiralCenters(
-            mol, includeUnassigned=True, useLegacyImplementation=False
-        )
-        specified = len(chiral_centers)
-    except Exception:
-        specified = 0
-    return float(unspecified + specified)
 
 
 # ==================== SMILES 解析 ====================
@@ -99,25 +72,27 @@ def validate_smiles(smiles: str) -> bool:
 def compute_rdkit_features(mol) -> Dict[str, float]:
     """
     用 RDKit 计算 11 个拓扑特征 + LogP
-    这些特征可由 RDKit 直接、精确地计算
+    定义与 V2 训练脚本逐项对齐（rdkit_fill_and_fingerprint）
     """
+    n_bonds = mol.GetNumBonds()
+    n_rot = rdMolDescriptors.CalcNumRotatableBonds(mol)
     features = {
         # ---- 11 个拓扑特征 ----
-        'Num. H-bond acceptors': float(Descriptors.NumHAcceptors(mol)),
-        'Num. H-bond donors': float(Descriptors.NumHDonors(mol)),
-        'TPSA': float(round(Descriptors.TPSA(mol), 4)),
-        'Num. Rotatable bonds': float(Descriptors.NumRotatableBonds(mol)),
+        'Num. H-bond acceptors': float(rdMolDescriptors.CalcNumHBA(mol)),
+        'Num. H-bond donors': float(rdMolDescriptors.CalcNumHBD(mol)),
+        'TPSA': float(rdMolDescriptors.CalcTPSA(mol)),
+        'Num. Rotatable bonds': float(n_rot),
         'Num. Rings': float(rdMolDescriptors.CalcNumRings(mol)),
         'MaxRing': _max_ring_size(mol),
-        'nHet': float(mol.GetNumHeavyAtoms()),
-        'fChar': float(sum(abs(a.GetFormalCharge()) for a in mol.GetAtoms())),
-        'nRig': _count_rigid_bonds(mol),
-        'Flex': _calc_flex(mol),
-        'nStereo': _count_stereo_centers(mol),
+        'nHet': float(rdMolDescriptors.CalcNumHeteroatoms(mol)),
+        'fChar': float(Chem.GetFormalCharge(mol)),
+        'nRig': float(n_bonds - n_rot),
+        'Flex': (n_rot / n_bonds) if n_bonds > 0 else 0.0,
+        'nStereo': float(rdMolDescriptors.CalcNumAtomStereoCenters(mol)),
     }
 
     # ---- LogP（RDKit Crippen 估算）----
-    features['LogP'] = float(round(Crippen.MolLogP(mol), 4))
+    features['LogP'] = float(Crippen.MolLogP(mol))
 
     return features
 
@@ -169,6 +144,57 @@ def compute_all_19_features(smiles: str) -> Optional[Dict[str, float]]:
             features[col] = np.nan
 
     return features
+
+
+# ==================== Morgan 指纹（V2 模型必需） ====================
+
+def morgan_fp(mol) -> np.ndarray:
+    """
+    计算 1024 位 Morgan 指纹（radius=2），与 V2 训练一致。
+    入参为 RDKit Mol 对象；失败/无效分子返回全零。
+    """
+    if mol is None:
+        return np.zeros(FP_BITS, dtype=np.int8)
+    fp = rdMolDescriptors.GetMorganFingerprintAsBitVect(mol, 2, nBits=FP_BITS)
+    return np.array(fp, dtype=np.int8)
+
+
+# ==================== HERB 13 维描述符（V2） ====================
+
+# HERB 模型完整特征列（13 描述符；Drug_likeness / OB_score 来自 HERB 库，无数据时 NaN）
+HERB_FULL_FEATURE_COLS = [
+    'MolWt', 'NumHAcceptors', 'NumHDonors', 'MolLogP',
+    'NumRotatableBonds', 'Drug_likeness', 'OB_score',
+    'TPSA', 'MolMR', 'FractionCSP3',
+    'NumAromaticRings', 'NumAliphaticRings', 'QED'
+]
+
+
+def compute_herb_features(mol) -> Optional[Dict[str, float]]:
+    """
+    用 RDKit 计算 HERB V2 模型的 13 个描述符。
+    定义与训练脚本 compute_extended_features 对齐。
+    Drug_likeness / OB_score 来自 HERB 数据库，无数据时为 NaN
+    （由模型 imputer 中位数填补，预测偏保守，属正常兜底模式）。
+    返回 None 表示分子无效。
+    """
+    if mol is None:
+        return None
+    return {
+        'MolWt': float(Descriptors.MolWt(mol)),
+        'NumHAcceptors': float(rdMolDescriptors.CalcNumHBA(mol)),
+        'NumHDonors': float(rdMolDescriptors.CalcNumHBD(mol)),
+        'MolLogP': float(Crippen.MolLogP(mol)),
+        'NumRotatableBonds': float(rdMolDescriptors.CalcNumRotatableBonds(mol)),
+        'Drug_likeness': np.nan,
+        'OB_score': np.nan,
+        'TPSA': float(Descriptors.TPSA(mol)),
+        'MolMR': float(Descriptors.MolMR(mol)),
+        'FractionCSP3': float(Descriptors.FractionCSP3(mol)),
+        'NumAromaticRings': float(Descriptors.NumAromaticRings(mol)),
+        'NumAliphaticRings': float(Descriptors.NumAliphaticRings(mol)),
+        'QED': float(QED.qed(mol)),
+    }
 
 
 def features_to_vector(features: Dict[str, float]) -> np.ndarray:

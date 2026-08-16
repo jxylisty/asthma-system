@@ -13,7 +13,6 @@ import uuid
 import tempfile
 import pandas as pd
 from datetime import datetime, timedelta
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from fastapi import APIRouter, UploadFile, File
 from app.schemas import (
     ResponseModel, FeatureFieldInfo, ModelInfoData,
@@ -22,8 +21,8 @@ from app.schemas import (
     BatchSmilesPredictRequest, BatchSmilesPredictResultData
 )
 from app.services.ml import (
-    predict_cctcm, predict_herb, predict_smiles,
-    CCTCM_FEATURE_COLS, HERB_FEATURE_COLS
+    predict_cctcm, predict_herb, predict_smiles, predict_smiles_batch,
+    get_model_threshold, CCTCM_FEATURE_COLS, HERB_FEATURE_COLS
 )
 from app.services.feature_engine import (
     compute_mw, get_core_features, validate_smiles
@@ -67,8 +66,19 @@ HERB_FEATURE_LABELS = {
 }
 
 
-def prob_to_level(prob: float) -> str:
-    """概率转等级标签"""
+def prob_to_level(prob: float, threshold: float = None) -> str:
+    """
+    概率转等级标签。
+    V2 模型按工作阈值动态分档：≥ threshold+0.2 高 / ≥ threshold 中 / 其余低；
+    未提供阈值时沿用旧固定分档（≥0.85 高 / ≥0.5 中）。
+    """
+    if threshold is not None:
+        if prob >= threshold + 0.2:
+            return "高"
+        elif prob >= threshold:
+            return "中"
+        else:
+            return "低"
     if prob >= 0.85:
         return "高"
     elif prob >= 0.5:
@@ -104,13 +114,13 @@ async def get_model_info():
     data = [
         ModelInfoData(
             model_name="cctcm",
-            description="ccTCM 三表融合 PU Learning 模型（19维特征，对称抽样 1:1）",
+            description="ccTCM 三表融合 PU Learning 模型 V2（19维特征 + Morgan指纹，对称抽样 1:1，工作阈值 0.56）",
             feature_count=len(CCTCM_FEATURE_COLS),
             features=cctcm_features
         ),
         ModelInfoData(
             model_name="herb",
-            description="HERB 中药数据库 PU Learning 模型（7维特征，非对称抽样 1:3）",
+            description="HERB 中药数据库 PU Learning 模型 V2（7维输入特征，服务端自动补算描述符与Morgan指纹，非对称抽样 1:5，工作阈值 0.62）",
             feature_count=len(HERB_FEATURE_COLS),
             features=herb_features
         )
@@ -130,12 +140,15 @@ async def predict_with_cctcm(req: PredictRequest):
     except Exception as e:
         return ResponseModel(code=500, message=f"ccTCM 模型预测失败: {str(e)}", data=None)
 
+    threshold = get_model_threshold('cctcm')
     data = PredictResultData(
         compound_name=req.compound_name,
         model_name="ccTCM PU Learning",
         probability=round(prob, 4),
-        level=prob_to_level(prob),
-        features_used=list(req.features.keys())
+        level=prob_to_level(prob, threshold),
+        features_used=list(req.features.keys()),
+        threshold=round(threshold, 4),
+        pred=int(prob >= threshold)
     )
 
     return ResponseModel(data=data)
@@ -152,12 +165,15 @@ async def predict_with_herb(req: PredictRequest):
     except Exception as e:
         return ResponseModel(code=500, message=f"HERB 模型预测失败: {str(e)}", data=None)
 
+    threshold = get_model_threshold('herb')
     data = PredictResultData(
         compound_name=req.compound_name,
         model_name="HERB PU Learning",
         probability=round(prob, 4),
-        level=prob_to_level(prob),
-        features_used=list(req.features.keys())
+        level=prob_to_level(prob, threshold),
+        features_used=list(req.features.keys()),
+        threshold=round(threshold, 4),
+        pred=int(prob >= threshold)
     )
 
     return ResponseModel(data=data)
@@ -175,7 +191,9 @@ def _build_smiles_result(smiles: str, compound_name: str,
                          features_computed: dict,
                          rdkit_topology: dict = None,
                          adme_features: dict = None,
-                         adme_estimated: bool = True) -> SmilesPredictResultData:
+                         adme_estimated: bool = True,
+                         threshold: float = None,
+                         pred: int = None) -> SmilesPredictResultData:
     """构建 SMILES 预测结果对象"""
     mw = compute_mw(smiles)
     core_feats = get_core_features(features_computed)
@@ -203,12 +221,14 @@ def _build_smiles_result(smiles: str, compound_name: str,
         compound_name=compound_name,
         model_name=model_name,
         probability=round(prob, 4),
-        level=prob_to_level(prob),
+        level=prob_to_level(prob, threshold),
         mw=mw,
         features_computed=clean_features,
         rdkit_topology_features=clean_rdkit,
         adme_features=clean_adme,
         adme_estimated=adme_estimated,
+        threshold=round(threshold, 4) if threshold is not None else None,
+        pred=pred,
         core_features=[
             {
                 'name': f['name'],
@@ -249,7 +269,9 @@ async def predict_with_smiles(req: SmilesPredictRequest):
         features_computed=result['features_computed'],
         rdkit_topology=result.get('rdkit_topology'),
         adme_features=result.get('adme_features'),
-        adme_estimated=result.get('adme_estimated', True)
+        adme_estimated=result.get('adme_estimated', True),
+        threshold=result.get('threshold'),
+        pred=result.get('pred')
     )
 
     return ResponseModel(data=data)
@@ -266,42 +288,34 @@ async def batch_predict_smiles(req: BatchSmilesPredictRequest):
     if len(req.smiles_list) > 500:
         return ResponseModel(code=422, message="单次批量预测最多 500 条", data=None)
 
+    # 矩阵化批量预测（V2 大模型逐条调用过慢）
+    try:
+        batch_results = predict_smiles_batch(req.smiles_list, req.model_name)
+    except ValueError as e:
+        return ResponseModel(code=422, message=str(e), data=None)
+    except Exception as e:
+        return ResponseModel(code=500, message=f"批量预测失败: {str(e)}", data=None)
+
     results = []
     errors = []
     compound_names = req.compound_names or []
 
-    # 并发预测
-    def _do_predict(idx: int, smiles: str):
+    for idx, r in enumerate(batch_results):
+        smiles = req.smiles_list[idx]
         cname = compound_names[idx] if idx < len(compound_names) else ""
-        try:
-            if not validate_smiles(smiles):
-                return idx, None, {"smiles": smiles, "error": "SMILES 解析失败"}
-            r = predict_smiles(smiles, req.model_name)
-            return idx, _build_smiles_result(
-                smiles=smiles.strip(), compound_name=cname,
-                model_name=req.model_name, prob=r['probability'],
-                features_computed=r['features_computed'],
-                rdkit_topology=r.get('rdkit_topology'),
-                adme_features=r.get('adme_features'),
-                adme_estimated=r.get('adme_estimated', True)
-            ), None
-        except Exception as e:
-            return idx, None, {"smiles": smiles, "compound_name": cname, "error": str(e)}
-
-    with ThreadPoolExecutor(max_workers=4) as executor:
-        futures = {
-            executor.submit(_do_predict, i, s): i
-            for i, s in enumerate(req.smiles_list)
-        }
-        batch_results = [None] * len(req.smiles_list)
-        for future in as_completed(futures):
-            idx, result, error = future.result()
-            if result:
-                batch_results[idx] = result
-            if error:
-                errors.append(error)
-
-    results = [r for r in batch_results if r is not None]
+        if r is None:
+            errors.append({"smiles": smiles, "compound_name": cname, "error": "SMILES 解析失败"})
+            continue
+        results.append(_build_smiles_result(
+            smiles=smiles.strip(), compound_name=cname,
+            model_name=req.model_name, prob=r['probability'],
+            features_computed=r['features_computed'],
+            rdkit_topology=r.get('rdkit_topology'),
+            adme_features=r.get('adme_features'),
+            adme_estimated=r.get('adme_estimated', True),
+            threshold=r.get('threshold'),
+            pred=r.get('pred')
+        ))
 
     data = BatchSmilesPredictResultData(
         total=len(req.smiles_list),
@@ -389,43 +403,35 @@ async def upload_and_predict(
             unique_smiles.append(s)
             unique_names.append(n)
 
-    # 并发预测
-    def _do_predict(idx: int, smiles: str):
-        cname = unique_names[idx] if idx < len(unique_names) else ""
-        try:
-            if not validate_smiles(smiles):
-                return idx, smiles, None, "SMILES 解析失败"
-            r = predict_smiles(smiles, model_name)
-            return idx, smiles, {
-                'probability': round(r['probability'], 4),
-                'level': prob_to_level(r['probability']),
-                'mw': compute_mw(smiles),
-            }, None
-        except Exception as e:
-            return idx, smiles, None, str(e)
+    # 矩阵化批量预测（V2 大模型逐条调用过慢）
+    try:
+        batch_results = predict_smiles_batch(unique_smiles, model_name)
+    except ValueError as e:
+        return ResponseModel(code=422, message=str(e), data=None)
+    except Exception as e:
+        return ResponseModel(code=500, message=f"批量预测失败: {str(e)}", data=None)
 
-    pred_results = [None] * len(unique_smiles)
+    pred_results = []
     errors = []
-
-    with ThreadPoolExecutor(max_workers=4) as executor:
-        futures = {
-            executor.submit(_do_predict, i, s): i
-            for i, s in enumerate(unique_smiles)
-        }
-        for future in as_completed(futures):
-            idx, smiles, result, error = future.result()
-            if result:
-                pred_results[idx] = {
-                    'smiles': smiles,
-                    'compound_name': unique_names[idx] if idx < len(unique_names) else "",
-                    **result
-                }
-            if error:
-                errors.append({
-                    'smiles': smiles,
-                    'compound_name': unique_names[idx] if idx < len(unique_names) else "",
-                    'error': error
-                })
+    for idx, r in enumerate(batch_results):
+        smiles = unique_smiles[idx]
+        cname = unique_names[idx] if idx < len(unique_names) else ""
+        if r is None:
+            errors.append({
+                'smiles': smiles,
+                'compound_name': cname,
+                'error': 'SMILES 解析失败'
+            })
+            continue
+        pred_results.append({
+            'smiles': smiles,
+            'compound_name': cname,
+            'probability': round(r['probability'], 4),
+            'level': prob_to_level(r['probability'], r.get('threshold')),
+            'mw': compute_mw(smiles),
+            'threshold': round(r['threshold'], 4) if r.get('threshold') is not None else None,
+            'pred': r.get('pred'),
+        })
 
     # 合并到原 DataFrame
     prob_map = {}
