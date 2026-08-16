@@ -37,7 +37,7 @@
 
         <!-- Row 2: 预测入血概率条 -->
         <div class="cc-prob-section">
-          <span class="cc-prob-label">预测入血概率</span>
+          <span class="cc-prob-label">ccTCM 入血概率</span>
           <div class="cc-prob-bar-wrap">
             <div class="cc-prob-bar">
               <div
@@ -171,7 +171,7 @@ async function loadCompounds() {
       mw: item.mw,
       logp: item.logp,
       tpsa: item.tpsa,
-      bloodEntryProbability: item.blood_entry_probability || item.blood_prob || 0,
+      bloodEntryProbability: item.prob_cctcm ?? item.blood_entry_probability ?? 0,
       targetCount: item.target_count || 0,
       asthmaRelated: item.asthma_related || false,
       smileShort: item.smile_short || '',
