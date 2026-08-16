@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="node-editor-container">
     <div class="editor-header">
       <div class="header-left">

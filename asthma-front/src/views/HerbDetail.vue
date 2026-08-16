@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="herb-detail-container" v-loading="loading">
     <template v-if="herb">
       <!-- 返回按钮 -->
