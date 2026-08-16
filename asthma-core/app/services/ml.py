@@ -27,6 +27,12 @@ _pre_model_dir = os.path.join(
 if _pre_model_dir not in sys.path:
     sys.path.insert(0, _pre_model_dir)
 
+# ccTCM 模型文件可通过环境变量切换：
+#   完整版（默认，本地）: cctcm_pu_model_v2.joblib     93MB  ROC 0.823
+#   精简版（云端 512MB 内存）: cctcm_pu_model_v2_lite.joblib 31MB  ROC 0.815
+# 两者概率相关系数 0.9956（详见 入血预测/cctcm2.0_v2/union_lite_results.md）
+CCTCM_MODEL_FILE = os.environ.get('CCTCM_MODEL_FILE', 'cctcm_pu_model_v2.joblib')
+
 # Morgan 指纹位数（与 feature_engine / 训练一致）
 FP_BITS = 1024
 # 无结构信息时（手动输入特征模式）的指纹回退：全零（训练时解析失败行同样为全零）
@@ -57,13 +63,13 @@ _load_lock = threading.Lock()
 
 
 def load_cctcm_model():
-    """懒加载 ccTCM V2 模型 bundle（约 93MB，首次加载需数秒解压）"""
+    """懒加载 ccTCM V2 模型 bundle（完整版 93MB / 精简版 31MB，首次加载需数秒解压）"""
     global _cctcm_bundle
     if _cctcm_bundle is None:
         with _load_lock:
             if _cctcm_bundle is None:
                 _cctcm_bundle = joblib.load(
-                    os.path.join(_pre_model_dir, 'cctcm_pu_model_v2.joblib')
+                    os.path.join(_pre_model_dir, CCTCM_MODEL_FILE)
                 )
     return _cctcm_bundle
 

@@ -9,6 +9,10 @@ services:
         value: "3.11"
       - key: DB_PATH
         value: data/asthma_v2.db
+      # 云端 512MB 内存用精简版 ccTCM 模型（31MB，ROC 0.815 vs 完整版 0.823）；
+      # 本地默认加载完整版 cctcm_pu_model_v2.joblib（93MB）
+      - key: CCTCM_MODEL_FILE
+        value: cctcm_pu_model_v2_lite.joblib
       - key: JWT_SECRET_KEY
         generateValue: true
       - key: CORS_EXTRA_ORIGINS
