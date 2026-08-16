@@ -72,7 +72,6 @@ class Compound(Base):
     mw = Column(Float, comment='分子量')
     logp = Column(Float, comment='脂水分配系数')
 
-    blood_entry_probability = Column(Float, comment='入血概率（前端展示用）')
     prob_cctcm = Column(Float, comment='ccTCM模型预测入血概率（高精度精英库）')
     prob_herb = Column(Float, comment='HERB模型预测入血概率（兜底全库）')
 
@@ -90,7 +89,6 @@ class Compound(Base):
 
     __table_args__ = (
         Index('idx_compound_name', 'name'),
-        Index('idx_compound_blood_prob', 'blood_entry_probability'),
         Index('idx_compound_prob_cctcm', 'prob_cctcm'),
         Index('idx_compound_prob_herb', 'prob_herb'),
         Index('idx_compound_asthma_related', 'asthma_related'),

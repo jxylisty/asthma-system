@@ -224,14 +224,14 @@ def main():
     n_upd = 0
     for (_, r), pc, ph in zip(df.iterrows(), prob_cctcm_new, prob_herb_new):
         cur.execute(
-            'UPDATE compound SET prob_cctcm=?, prob_herb=?, blood_entry_probability=? WHERE id=?',
-            (round(float(pc), 4), round(float(ph), 4), round(float(pc), 4), str(r['id'])))
+            'UPDATE compound SET prob_cctcm=?, prob_herb=? WHERE id=?',
+            (round(float(pc), 4), round(float(ph), 4), str(r['id'])))
         n_upd += cur.rowcount
     con.commit()
 
     chk = pd.read_sql('SELECT COUNT(*) n FROM compound WHERE prob_cctcm IS NULL', con)
     print(f"\n[apply] 已更新 {n_upd} 行；prob_cctcm 空值 {int(chk['n'][0])} 行")
-    print("blood_entry_probability 已重定义为 prob_cctcm 派生值（旧手填值见审计 CSV 与备份库）")
+    print("注：blood_entry_probability 列已于 2026-08-16 最终清理时删除（响应字段保留为 prob_cctcm 别名）")
     con.close()
 
 

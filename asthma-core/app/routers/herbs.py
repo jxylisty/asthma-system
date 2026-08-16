@@ -178,7 +178,7 @@ async def get_herb_compounds(
 ):
     """
     获取该药材包含的化合物列表
-    按入血概率降序排列（V2 使用 blood_entry_probability）
+    按入血概率降序排列（ccTCM 模型 prob_cctcm）
     """
     herb = db.query(Herb).filter(Herb.id == herb_id).first()
     if not herb:
@@ -190,14 +190,14 @@ async def get_herb_compounds(
     # 构建返回数据，按入血概率降序排列
     compound_items = []
     for c in compounds:
-        blood_prob = c.blood_entry_probability
+        blood_prob = c.prob_cctcm
         compound_items.append({
             "id": c.id,
             "name": c.name,
             "prob_cctcm": c.prob_cctcm,
             "prob_herb": c.prob_herb,
             "blood_prob": round(blood_prob, 4) if blood_prob is not None else None,
-            "blood_entry_probability": round(c.blood_entry_probability, 4) if c.blood_entry_probability is not None else None,
+            "blood_entry_probability": round(c.prob_cctcm, 4) if c.prob_cctcm is not None else None,
             "mw": c.mw,
             "logp": c.logp
         })

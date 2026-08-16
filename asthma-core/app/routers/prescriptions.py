@@ -144,7 +144,7 @@ async def get_prescriptions(
         ).subquery()
         blood_count = db.query(func.count(Compound.id)).filter(
             Compound.id.in_(comp_sub),
-            func.coalesce(Compound.blood_entry_probability, 0) >= 0.5
+            func.coalesce(Compound.prob_cctcm, 0) >= 0.5
         ).scalar() or 0
         target_count = db.query(func.count(func.distinct(RelCompoundTarget.target_gene))).filter(
             RelCompoundTarget.compound_id.in_(comp_sub)
@@ -221,7 +221,7 @@ async def get_prescription_detail(
     ).subquery()
     blood_count = db.query(func.count(Compound.id)).filter(
         Compound.id.in_(comp_sub),
-        Compound.blood_entry_probability >= 0.5
+        Compound.prob_cctcm >= 0.5
     ).scalar() or 0
     target_count = db.query(func.count(func.distinct(RelCompoundTarget.target_gene))).filter(
         RelCompoundTarget.compound_id.in_(comp_sub)
@@ -263,7 +263,7 @@ async def get_prescription_network(
     """
     核心拓扑图数据接口
     查询 方剂→药材→化合物→靶点 完整层级，返回 Cytoscape.js 格式
-    入血概率使用 V2 的 blood_entry_probability
+    入血概率使用 ccTCM 模型 prob_cctcm
     asthma_only=True 时仅返回哮喘相关靶点节点
     为避免节点过多导致前端卡顿，对化合物和靶点数量做上限控制
     """
@@ -288,7 +288,7 @@ async def get_prescription_network(
     all_compounds = []
     for herb in herbs:
         for compound in herb.compounds:
-            blood_prob = compound.blood_entry_probability
+            blood_prob = compound.prob_cctcm
             if blood_prob is None or blood_prob < min_prob:
                 continue
             all_compounds.append((compound, herb, blood_prob))
@@ -354,8 +354,8 @@ async def get_prescription_radar(
     疗效雷达图数据（基于预计算 compound.radar_* 字段聚合）
 
     策略：
-      1. 查询方剂下所有入血化合物（blood_entry_probability >= 0.5）
-      2. 按 blood_entry_probability 加权平均 3 个疗效维度分数
+      1. 查询方剂下所有入血化合物（prob_cctcm >= 0.5）
+      2. 按 prob_cctcm 加权平均 3 个疗效维度分数
       3. 若预计算字段全为 NULL，降级到 GSEA 富集分析
     """
     prescription = db.query(Prescription).filter(Prescription.id == prescription_id).first()
@@ -365,7 +365,7 @@ async def get_prescription_radar(
     # 查询方剂下所有化合物及其预计算雷达评分
     compounds = (
         db.query(
-            Compound.blood_entry_probability,
+            Compound.prob_cctcm,
             Compound.radar_anti_inflammatory,
             Compound.radar_immune_regulation,
             Compound.radar_airway_repair,
@@ -374,7 +374,7 @@ async def get_prescription_radar(
         .join(Herb, Herb.id == RelHerbCompound.herb_id)
         .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_name == Herb.name)
         .filter(RelPrescriptionHerb.prescription_id == prescription_id)
-        .filter(func.coalesce(Compound.blood_entry_probability, 0) >= 0.5)
+        .filter(func.coalesce(Compound.prob_cctcm, 0) >= 0.5)
         .distinct()
         .all()
     )
@@ -383,7 +383,7 @@ async def get_prescription_radar(
         # 降级1：无入血化合物，尝试所有化合物
         compounds = (
             db.query(
-                Compound.blood_entry_probability,
+                Compound.prob_cctcm,
                 Compound.radar_anti_inflammatory,
                 Compound.radar_immune_regulation,
                 Compound.radar_airway_repair,
@@ -397,9 +397,9 @@ async def get_prescription_radar(
         )
 
     # 按入血概率加权平均预计算雷达分数
-    anti_scores = [(c.radar_anti_inflammatory, c.blood_entry_probability or 0.5) for c in compounds if c.radar_anti_inflammatory is not None]
-    immune_scores = [(c.radar_immune_regulation, c.blood_entry_probability or 0.5) for c in compounds if c.radar_immune_regulation is not None]
-    repair_scores = [(c.radar_airway_repair, c.blood_entry_probability or 0.5) for c in compounds if c.radar_airway_repair is not None]
+    anti_scores = [(c.radar_anti_inflammatory, c.prob_cctcm or 0.5) for c in compounds if c.radar_anti_inflammatory is not None]
+    immune_scores = [(c.radar_immune_regulation, c.prob_cctcm or 0.5) for c in compounds if c.radar_immune_regulation is not None]
+    repair_scores = [(c.radar_airway_repair, c.prob_cctcm or 0.5) for c in compounds if c.radar_airway_repair is not None]
 
     def weighted_avg(pairs):
         if not pairs:
@@ -469,7 +469,6 @@ async def get_prescription_compounds(
             Compound.name,
             Compound.prob_cctcm,
             Compound.prob_herb,
-            Compound.blood_entry_probability,
             Herb.name.label("herb_name")
         )
         .join(RelHerbCompound, RelHerbCompound.compound_id == Compound.id)
@@ -481,10 +480,10 @@ async def get_prescription_compounds(
     # min_prob > 0 时过滤低概率化合物（NULL 视为 0，低于阈值则排除）
     if min_prob > 0:
         base_query = base_query.filter(
-            func.coalesce(Compound.blood_entry_probability, 0) >= min_prob
+            func.coalesce(Compound.prob_cctcm, 0) >= min_prob
         )
 
-    query = base_query.order_by(func.coalesce(Compound.blood_entry_probability, 0).desc())
+    query = base_query.order_by(func.coalesce(Compound.prob_cctcm, 0).desc())
 
     results = query.all()
 
@@ -500,8 +499,8 @@ async def get_prescription_compounds(
             name=row.name,
             prob_cctcm=round(row.prob_cctcm, 4) if row.prob_cctcm is not None else None,
             prob_herb=round(row.prob_herb, 4) if row.prob_herb is not None else None,
-            blood_prob=round(row.blood_entry_probability, 4) if row.blood_entry_probability is not None else None,
-            blood_entry_probability=round(row.blood_entry_probability, 4) if row.blood_entry_probability is not None else None,
+            blood_prob=round(row.prob_cctcm, 4) if row.prob_cctcm is not None else None,
+            blood_entry_probability=round(row.prob_cctcm, 4) if row.prob_cctcm is not None else None,
             herb_name=row.herb_name
         ))
 
