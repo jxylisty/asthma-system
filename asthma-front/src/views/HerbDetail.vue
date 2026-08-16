@@ -134,7 +134,7 @@
               {{ row.mw || '—' }}
             </template>
           </el-table-column>
-          <el-table-column label="预测入血概率" width="180" align="center">
+          <el-table-column label="ccTCM 入血概率" width="180" align="center">
             <template #default="{ row }">
               <el-progress
                 :percentage="Math.round((row.bloodEntryProbability || 0) * 100)"
@@ -214,7 +214,7 @@ function toggleSpeakCompounds() {
   } else {
     stopOtherSpeaking()
     const list = filteredCompoundDetails.value
-    const text = `${herb.value.name}含有的化合物，共${list.length}个。${list.map((c, i) => `第${i + 1}个，${c.name}，分子量${c.mw}，预测入血概率${Math.round(c.bloodEntryProbability * 100)}%`).join('。')}。`
+    const text = `${herb.value.name}含有的化合物，共${list.length}个。${list.map((c, i) => `第${i + 1}个，${c.name}，分子量${c.mw}，ccTCM入血概率${Math.round(c.bloodEntryProbability * 100)}%`).join('。')}。`
     speak(text, { voice: speechVoice.value, rate: speechRate.value, pitch: speechPitch.value })
     isSpeakingCompounds.value = true
   }
@@ -266,7 +266,7 @@ async function loadHerb() {
           name: c.name,
           mw: c.mw,
           logp: c.logp,
-          bloodEntryProbability: c.blood_entry_probability || 0,
+          bloodEntryProbability: c.prob_cctcm ?? c.blood_entry_probability ?? 0,
           id: c.id,
           herbName: c.herb_name || ''
         }))
@@ -303,7 +303,7 @@ async function loadCompoundDetails(herbId, compoundNames) {
       compoundDetails.value = (compounds || []).map(c => ({
         name: c.name,
         mw: null,
-        bloodEntryProbability: c.blood_entry_probability || 0,
+        bloodEntryProbability: c.prob_cctcm ?? c.blood_entry_probability ?? 0,
         id: c.id,
         herbName: c.herb_name || ''
       }))

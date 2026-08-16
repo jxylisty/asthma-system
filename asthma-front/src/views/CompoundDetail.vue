@@ -27,7 +27,7 @@
 
           <!-- 入血概率 -->
           <div class="prob-bar">
-            <span class="prob-label">预测入血概率</span>
+            <span class="prob-label">ccTCM 入血概率</span>
             <el-progress
               :percentage="Math.round((compound.bloodEntryProbability || 0) * 100)"
               :color="getProbabilityColor(compound.bloodEntryProbability)"
@@ -487,7 +487,7 @@ async function loadCompound() {
         numAromaticRings: d.num_aromatic_rings,
         numHeavyAtoms: d.num_heavy_atoms,
         molecularFormula: d.molecular_formula,
-        bloodEntryProbability: d.blood_entry_probability || 0,
+        bloodEntryProbability: d.prob_cctcm ?? d.blood_entry_probability ?? 0,
         smiles: d.smiles || '',
         asthmaRelated: d.asthma_related || false,
         herbNames: d.herb_names || [],
