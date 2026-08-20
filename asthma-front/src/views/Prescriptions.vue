@@ -18,11 +18,12 @@
       </el-input>
     </div>
 
-    <div v-loading="loading" class="rx-grid">
+    <div v-loading="loading" class="rx-grid stagger-grid">
       <div
-        v-for="item in filteredPrescriptions"
+        v-for="(item, index) in filteredPrescriptions"
         :key="item.id"
-        class="rx-card"
+        class="rx-card stagger-item"
+        :style="{ '--i': String(index) }"
         @click="handleViewDetail(item)"
       >
         <div class="rx-head">
@@ -165,85 +166,142 @@ onMounted(loadPrescriptions)
 
 <style scoped>
 .prescriptions-container {
-  padding: 24px 32px;
+  padding: 16px 40px;
   min-height: 100vh;
-  background: transparent;
+  background: var(--bg-gradient);
 }
 .page-header { margin-bottom: 20px }
-.page-title { font-size: 24px; font-weight: 700; color: var(--text-color); margin: 0 0 4px 0 }
-.page-desc { font-size: 13px; color: var(--text-secondary); margin: 0 }
-.search-bar { margin-bottom: 20px; max-width: 480px }
-.search-input :deep(.el-input__inner) { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1) }
+.page-title { font-size: var(--fs-h1); font-weight: var(--fw-bold); color: var(--text-color); margin: 0 0 6px 0 }
+.page-desc { font-size: var(--fs-body); color: var(--text-secondary); margin: 0 }
+.search-bar { margin-bottom: 20px; max-width: 600px }
+.search-input { height: 44px }
+.search-input :deep(.el-input__wrapper) {
+  background: rgba(30,41,59,0.6) !important;
+  box-shadow: 0 0 0 1px rgba(148,163,184,0.15) inset !important;
+  border-radius: 10px;
+}
+.search-input :deep(.el-input__inner) { color: var(--text-color) !important }
+.search-input :deep(.el-input__inner::placeholder) { color: var(--text-muted) }
+.search-input :deep(.el-input__prefix),
+.search-input :deep(.el-input__suffix) { color: var(--text-muted) }
 
 .rx-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 16px;
+  min-height: 200px;
 }
 .rx-card {
-  background: rgba(30, 41, 59, 0.85);
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  border-radius: 12px;
-  padding: 20px;
+  background: rgba(30,41,59,0.6) !important;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+  border-radius: 14px;
+  padding: 18px 20px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
 }
 .rx-card:hover {
-  border-color: rgba(64, 158, 255, 0.3);
-  background: rgba(30, 41, 59, 0.95);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border-color: rgba(64,158,255,0.4) !important;
+  background: rgba(30,41,59,0.8) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
 }
 .rx-head {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 14px;
+  gap: 8px;
 }
 .rx-name {
-  font-size: 18px; font-weight: 700; color: var(--text-color);
+  font-size: var(--fs-h3); font-weight: var(--fw-bold); color: var(--text-color);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   margin: 0; flex: 1; min-width: 0;
 }
-.rx-speech { color: var(--text-muted); padding: 4px; flex-shrink: 0 }
-.rx-speech.speaking { color: #67c23a }
 
-.rx-herbs { margin-bottom: 14px }
-.rx-label { font-size: 13px; color: var(--text-secondary); display: block; margin-bottom: 8px }
+/* 方剂播报按钮（App.vue 全局已兜底，这里加强选择器） */
+.rx-speech :deep(.el-button__text) {
+  color: var(--text-secondary) !important;
+}
+.rx-speech.speaking :deep(.el-button__text) {
+  color: #67c23a !important;
+}
+
+.rx-herbs {
+  margin-bottom: 14px;
+  background: rgba(255,255,255,0.03);
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(148,163,184,0.06);
+}
+.rx-label { font-size: var(--fs-sub); color: var(--text-muted); display: block; margin-bottom: 8px; font-weight: var(--fw-medium) }
 .rx-dosage-list { display: flex; flex-wrap: wrap; gap: 6px }
 .dosage-chip {
   display: inline-block;
   padding: 3px 10px;
   background: rgba(99, 179, 237, 0.1);
-  border: 1px solid rgba(99, 179, 237, 0.2);
+  border: 1px solid rgba(99, 179, 237, 0.22);
   border-radius: 6px;
-  font-size: 13px; color: #93c5fd;
+  font-size: var(--fs-body); color: #93c5fd;
   white-space: nowrap;
+  font-weight: var(--fw-medium);
 }
 .dosage-more {
   display: inline-block;
   padding: 3px 8px;
-  font-size: 12px; color: var(--text-muted);
+  font-size: var(--fs-sub); color: var(--text-muted);
   line-height: 1.6;
 }
 
 .rx-stats {
-  display: flex; gap: 16px;
+  display: flex; gap: 12px;
   margin-bottom: 14px;
 }
 .rx-stat {
   display: flex; align-items: center; gap: 6px;
   padding: 6px 12px;
-  background: rgba(148, 163, 184, 0.05);
+  background: rgba(148,163,184,0.06);
+  border: 1px solid rgba(148,163,184,0.08);
   border-radius: 8px;
   flex: 1;
 }
-.rx-stat-icon { font-size: 14px; flex-shrink: 0 }
-.rx-stat-label { font-size: 12px; color: var(--text-secondary); white-space: nowrap }
-.rx-stat-val { font-size: 13px; font-weight: 600; color: var(--text-color); margin-left: auto }
+.rx-stat-icon { font-size: var(--fs-h3); flex-shrink: 0 }
+.rx-stat-label { font-size: var(--fs-sub); color: var(--text-muted); white-space: nowrap; font-weight: var(--fw-medium) }
+.rx-stat-val { font-size: var(--fs-body); font-weight: var(--fw-bold); color: var(--text-color); margin-left: auto }
 .rx-footer {
   display: flex; justify-content: flex-end;
   padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(148,163,184,0.1);
+}
+.rx-footer :deep(.el-button--text) {
+  color: var(--text-secondary) !important;
+  font-weight: var(--fw-medium);
+}
+.rx-footer :deep(.el-button--text:hover) {
+  color: #409eff !important;
+  background: rgba(64,158,255,0.08);
 }
 .pagination-wrapper { margin-top: 24px; display: flex; justify-content: center }
-.rx-no-dosage { font-size: 13px; color: var(--text-muted) }
+.pagination-wrapper :deep(.el-pagination) {
+  color: var(--text-secondary);
+  background: rgba(30,41,59,0.6);
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,0.1);
+}
+.pagination-wrapper :deep(.el-pagination .el-pager li),
+.pagination-wrapper :deep(.el-pagination button) {
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+  border-radius: 6px;
+}
+.pagination-wrapper :deep(.el-pagination .el-pager li.is-active) {
+  background: #409eff !important;
+  color: #fff !important;
+  border-color: #409eff !important;
+}
+.rx-no-dosage { font-size: var(--fs-body); color: var(--text-muted) }
+
+@media (max-width: 1200px) {
+  .prescriptions-container { padding: 16px }
+  .rx-grid { grid-template-columns: 1fr }
+}
 </style>

@@ -18,11 +18,12 @@
       </el-input>
     </div>
 
-    <div v-loading="loading" class="compound-grid">
+    <div v-loading="loading" class="compound-grid stagger-grid">
       <el-card
-        v-for="item in compounds"
+        v-for="(item, index) in compounds"
         :key="item.id"
-        class="compound-card"
+        class="compound-card stagger-item"
+        :style="{ '--i': String(index) }"
         @click="handleCardClick(item)"
       >
         <!-- Row 1: 名称 + 哮喘标签 -->
@@ -225,62 +226,147 @@ function handleCurrentChange(v) { currentPage.value = v; loadCompounds() }
 </script>
 
 <style scoped>
-.compounds-container { padding: 40px; background: transparent; min-height: 100vh }
-.page-header { margin-bottom: 32px }
-.page-title { font-size: 32px; font-weight: 700; color: var(--text-color); margin-bottom: 8px }
-.page-desc { font-size: 16px; color: var(--text-secondary) }
+.compounds-container {
+  padding: 16px 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+}
+.page-header { margin-bottom: 24px }
+.page-title { font-size: var(--fs-h1); font-weight: var(--fw-bold); color: var(--text-color); margin-bottom: 6px }
+.page-desc { font-size: var(--fs-body); color: var(--text-secondary) }
 
-.search-bar { display: flex; gap: 16px; margin-bottom: 32px; max-width: 600px }
+.search-bar { display: flex; gap: 16px; margin-bottom: 24px; max-width: 600px }
 .search-input { flex: 1; height: 44px }
+.search-input :deep(.el-input__wrapper) {
+  background: rgba(30,41,59,0.6) !important;
+  box-shadow: 0 0 0 1px rgba(148,163,184,0.15) inset !important;
+  border-radius: 10px;
+}
+.search-input :deep(.el-input__inner) { color: var(--text-color) !important }
+.search-input :deep(.el-input__inner::placeholder) { color: var(--text-muted) }
+.search-input :deep(.el-input__prefix),
+.search-input :deep(.el-input__suffix) { color: var(--text-muted) }
 
 /* Grid */
-.compound-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; min-height: 200px }
+.compound-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; min-height: 200px }
 
-/* Card */
-.compound-card { cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(8px) }
-.compound-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.18) }
-.compound-card :deep(.el-card__body) { padding: 20px 22px }
+/* Card：与 HerbDetail/Detail 一致的半透明深蓝卡片 */
+.compound-card {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(30,41,59,0.6) !important;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+  backdrop-filter: blur(8px);
+}
+.compound-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  border-color: rgba(64,158,255,0.4) !important;
+}
+.compound-card :deep(.el-card__body) {
+  padding: 18px 20px;
+  color: var(--text-color);
+}
 
 /* Top: 名称行 */
 .cc-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px }
 .cc-name-line { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1 }
-.cc-icon { font-size: 20px; flex-shrink: 0 }
-.cc-name { font-size: 18px; font-weight: 700; color: var(--text-color); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.cc-icon { font-size: var(--fs-h2); flex-shrink: 0 }
+.cc-name { font-size: var(--fs-h3); font-weight: var(--fw-bold); color: var(--text-color); overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
 
 /* 概率条 */
 .cc-prob-section { display: flex; align-items: center; gap: 12px; margin-bottom: 10px }
-.cc-prob-label { font-size: 13px; color: var(--text-secondary, #999); white-space: nowrap; font-weight: 500 }
+.cc-prob-label { font-size: var(--fs-body); color: var(--text-secondary); white-space: nowrap; font-weight: var(--fw-medium) }
 .cc-prob-bar-wrap { flex: 1; display: flex; align-items: center; gap: 12px }
-.cc-prob-bar { flex: 1; height: 10px; background: rgba(255,255,255,0.08); border-radius: 5px; overflow: hidden }
+.cc-prob-bar { flex: 1; height: 10px; background: rgba(255,255,255,0.06); border-radius: 5px; overflow: hidden }
 .cc-prob-fill { height: 100%; border-radius: 5px; transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1) }
-.cc-prob-num { font-size: 16px; font-weight: 700; white-space: nowrap; min-width: 56px; text-align: right }
+.cc-prob-num { font-size: var(--fs-h3); font-weight: var(--fw-bold); white-space: nowrap; min-width: 56px; text-align: right }
 
-.cc-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 14px 0 }
+.cc-divider { height: 1px; background: rgba(148,163,184,0.1); margin: 14px 0 }
 
 /* Metrics */
-.cc-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px }
-.cc-metric { display: flex; flex-direction: column; gap: 3px; padding: 4px 0 }
+.cc-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(148,163,184,0.06);
+}
+.cc-metric { display: flex; flex-direction: column; gap: 3px; padding: 2px 0 }
 .cc-metric-wide { grid-column: span 2 }
-.cc-m-label { font-size: 12px; color: var(--text-muted,#999); font-weight: 500 }
-.cc-m-value { font-size: 15px; font-weight: 600; color: var(--text-color,#fff) }
-.cc-m-value-muted { font-size: 15px; font-weight: 500; color: var(--text-muted,#999) }
+.cc-m-label { font-size: var(--fs-sub); color: var(--text-muted); font-weight: var(--fw-medium) }
+.cc-m-value { font-size: 15px; font-weight: var(--fw-semi); color: var(--text-color) }
+.cc-m-value-muted { font-size: 15px; font-weight: var(--fw-medium); color: var(--text-muted) }
 .cc-highlight { color: #67c23a !important }
 
 /* 来源药材标签 */
 .cc-herb-tags { display: flex; flex-wrap: wrap; gap: 4px; align-items: center }
-.cc-herb-tag { font-size: 11px !important }
-.cc-more-herbs { font-size: 11px; color: var(--text-muted,#999); margin-left: 2px }
+.cc-herb-tag { font-size: var(--fs-tiny) !important }
+.cc-more-herbs { font-size: var(--fs-tiny); color: var(--text-muted); margin-left: 2px }
 
 /* SMILES 行 */
-.cc-smiles-row { display: flex; align-items: center; justify-content: space-between; gap: 12px }
+.cc-smiles-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(255,255,255,0.03);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(148,163,184,0.06);
+}
 .cc-smiles-info { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0 }
-.cc-smiles-label { font-size: 11px; color: var(--text-muted,#999); font-weight: 500; white-space: nowrap }
-.cc-smiles-text { font-size: 12px; color: var(--text-secondary,#aaa); font-family: 'SF Mono', 'Fira Code', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1 }
-.cc-trunc-icon { font-size: 13px; color: #e6a23c; flex-shrink: 0 }
-.cc-copy-btn { flex-shrink: 0; font-weight: 500 }
+.cc-smiles-label { font-size: var(--fs-tiny); color: var(--text-muted); font-weight: var(--fw-medium); white-space: nowrap }
+.cc-smiles-text { font-size: var(--fs-sub); color: var(--text-secondary); font-family: 'SF Mono', 'Fira Code', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1 }
+.cc-trunc-icon { font-size: var(--fs-body); color: #e6a23c; flex-shrink: 0 }
+.cc-copy-btn {
+  flex-shrink: 0;
+  font-weight: var(--fw-medium);
+  color: #409eff !important;
+}
+.cc-copy-btn :deep(.el-button__text) { color: inherit !important }
+.cc-copy-btn:hover { background: rgba(64,158,255,0.1) }
 
+/* 底部详情按钮 */
 .cc-footer { display: flex; justify-content: flex-end; padding-top: 2px }
+.cc-footer :deep(.el-button--text) {
+  color: var(--text-secondary) !important;
+  font-weight: var(--fw-medium);
+}
+.cc-footer :deep(.el-button--text:hover) {
+  color: #409eff !important;
+  background: rgba(64,158,255,0.08);
+}
 
-.pagination-wrapper { display: flex; justify-content: center; margin-top: 40px }
-.pagination-wrapper :deep(.el-pagination) { background: var(--bg-card); padding: 16px 24px; border-radius: 12px; box-shadow: var(--shadow-card) }
+.pagination-wrapper { display: flex; justify-content: center; margin-top: 32px }
+.pagination-wrapper :deep(.el-pagination) {
+  color: var(--text-secondary);
+  background: rgba(30,41,59,0.6);
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,0.1);
+}
+.pagination-wrapper :deep(.el-pagination .el-pager li),
+.pagination-wrapper :deep(.el-pagination button) {
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+  border-radius: 6px;
+}
+.pagination-wrapper :deep(.el-pagination .el-pager li.is-active) {
+  background: #409eff !important;
+  color: #fff !important;
+  border-color: #409eff !important;
+}
+
+@media (max-width: 1200px) {
+  .compounds-container { padding: 16px }
+  .compound-grid { grid-template-columns: 1fr }
+}
 </style>

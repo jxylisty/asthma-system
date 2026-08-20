@@ -10,8 +10,13 @@
       </div>
 
       <!-- 统计指标区 -->
-      <div class="data-ticker">
-        <div class="ticker-card" v-for="(item, index) in tickerData" :key="index">
+      <div class="data-ticker stagger-grid">
+        <div
+          class="ticker-card stagger-item"
+          v-for="(item, index) in tickerData"
+          :key="index"
+          :style="{ '--i': String(index) }"
+        >
           <div class="ticker-icon">{{ item.icon }}</div>
           <div class="ticker-label">{{ item.label }}</div>
           <div class="ticker-value">
@@ -74,10 +79,14 @@
       </div>
 
       <!-- 快捷分析入口 -->
-      <div class="quick-actions">
+      <div class="quick-actions stagger-grid">
         <div class="qa-title">快捷功能</div>
         <div class="qa-grid">
-          <div class="qa-card" @click="$router.push('/prediction')">
+          <div
+            class="qa-card stagger-item"
+            :style="{ '--i': '0' }"
+            @click="$router.push('/prediction')"
+          >
             <div class="qa-icon-box">
               <el-icon><DataAnalysis /></el-icon>
             </div>
@@ -87,7 +96,11 @@
             </div>
             <div class="qa-arrow">→</div>
           </div>
-          <div class="qa-card" @click="$router.push('/custom-prescription')">
+          <div
+            class="qa-card stagger-item"
+            :style="{ '--i': '1' }"
+            @click="$router.push('/custom-prescription')"
+          >
             <div class="qa-icon-box">
               <el-icon><EditPen /></el-icon>
             </div>
@@ -97,7 +110,11 @@
             </div>
             <div class="qa-arrow">→</div>
           </div>
-          <div class="qa-card" @click="$router.push('/prescriptions')">
+          <div
+            class="qa-card stagger-item"
+            :style="{ '--i': '2' }"
+            @click="$router.push('/prescriptions')"
+          >
             <div class="qa-icon-box">
               <el-icon><Share /></el-icon>
             </div>
@@ -111,10 +128,16 @@
       </div>
 
       <!-- 热门方剂 -->
-      <div class="explore-cards">
+      <div class="explore-cards stagger-grid">
         <div class="explore-title">常用方剂</div>
         <div class="explore-grid">
-          <div v-for="card in exploreCards" :key="card.name" class="explore-card" @click="handlePrescriptionClick(card)">
+          <div
+            v-for="(card, index) in exploreCards"
+            :key="card.name"
+            class="explore-card stagger-item"
+            :style="{ '--i': String(index) }"
+            @click="handlePrescriptionClick(card)"
+          >
             <div class="ec-name">{{ card.name }}</div>
             <div class="ec-stats">
               <span>{{ card.herbCount }} 味中药</span>
@@ -319,18 +342,18 @@ onUnmounted(() => {
 
 /* 标题 */
 .header-section { text-align: center; margin-bottom: 20px; flex-shrink: 0 }
-.system-title { font-size: 28px; font-weight: 700; color: var(--text-color); margin-bottom: 6px; letter-spacing: 1px }
-.system-subtitle { font-size: 14px; color: var(--text-muted); font-weight: 400 }
+.system-title { font-size: var(--fs-h1); font-weight: var(--fw-bold); color: var(--text-color); margin-bottom: 6px; letter-spacing: 1px }
+.system-subtitle { font-size: var(--fs-body); color: var(--text-muted); font-weight: var(--fw-regular) }
 
 /* 统计 */
 .data-ticker { display: flex; gap: 12px; margin-bottom: 28px; flex-shrink: 0 }
 .ticker-card { background: var(--bg-card); backdrop-filter: blur(10px); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 24px; text-align: center; transition: all 0.25s; min-width: 130px }
 .ticker-card:hover { background: var(--bg-card-hover); transform: translateY(-2px); box-shadow: var(--shadow-card) }
-.ticker-icon { font-size: 18px; margin-bottom: 4px }
-.ticker-label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px }
+.ticker-icon { font-size: var(--fs-h3); margin-bottom: 4px }
+.ticker-label { font-size: var(--fs-sub); color: var(--text-muted); margin-bottom: 4px }
 .ticker-value { display: flex; align-items: baseline; justify-content: center; gap: 2px }
-.ticker-number { font-size: 26px; font-weight: 700; color: var(--color-primary); font-family: 'DIN Alternate','Helvetica Neue',sans-serif; line-height: 1 }
-.ticker-unit { font-size: 12px; color: var(--text-disabled); white-space: nowrap }
+.ticker-number { font-size: 26px; font-weight: var(--fw-bold); color: var(--color-primary); font-family: 'DIN Alternate','Helvetica Neue',sans-serif; line-height: 1 }
+.ticker-unit { font-size: var(--fs-sub); color: var(--text-disabled); white-space: nowrap }
 
 /* 搜索栏 */
 .search-center { width: 100%; max-width: 640px; flex-shrink: 0 }
@@ -350,7 +373,7 @@ onUnmounted(() => {
 .cat-sel-native {
   width: 90px; flex-shrink: 0;
   background: transparent; border: none; outline: none;
-  color: var(--color-primary); font-size: 13px; font-weight: 600;
+  color: var(--color-primary); font-size: var(--fs-body); font-weight: var(--fw-semi);
   cursor: pointer; padding: 0 4px 0 16px;
   border-right: 1px solid var(--border-color);
   text-align: center;
@@ -364,8 +387,8 @@ onUnmounted(() => {
 .cat-divider { width: 1px; height: 20px; background: var(--border-color); flex-shrink: 0 }
 
 .search-input-wrap { flex: 1; display: flex; align-items: center; padding: 0 16px; height: 48px }
-.search-ic { font-size: 18px; color: var(--color-primary); flex-shrink: 0; margin-right: 10px }
-.voice-ic { font-size: 18px; color: var(--text-muted); flex-shrink: 0; margin-left: 10px; cursor: pointer; transition: color 0.2s }
+.search-ic { font-size: var(--fs-h3); color: var(--color-primary); flex-shrink: 0; margin-right: 10px }
+.voice-ic { font-size: var(--fs-h3); color: var(--text-muted); flex-shrink: 0; margin-left: 10px; cursor: pointer; transition: color 0.2s }
 .voice-ic:hover { color: var(--color-primary) }
 .search-input-native {
   flex: 1; background: transparent; border: none; outline: none;
@@ -376,24 +399,24 @@ onUnmounted(() => {
 
 /* 热门标签 */
 .hot-tags { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; justify-content: center }
-.tag-label { color: var(--text-muted); font-size: 12px }
+.tag-label { color: var(--text-muted); font-size: var(--fs-sub) }
 .hot-tag { cursor: pointer; transition: all 0.25s; background: rgba(45, 212, 191, 0.08) !important; border: 1px solid rgba(45, 212, 191, 0.25) !important; color: var(--text-secondary) !important }
 .hot-tag:hover { background: rgba(45, 212, 191, 0.15) !important; border-color: var(--color-primary) !important; color: var(--text-color) !important; transform: translateY(-1px) }
-.tag-preview { font-size: 13px; line-height: 1.8 }
-.tp-name { font-weight: 600; font-size: 15px; color: var(--text-color); margin-bottom: 6px }
+.tag-preview { font-size: var(--fs-body); line-height: 1.8 }
+.tp-name { font-weight: var(--fw-semi); font-size: 15px; color: var(--text-color); margin-bottom: 6px }
 .tp-stats { display: flex; gap: 12px; color: var(--text-muted); flex-wrap: wrap }
 .tp-stats span { white-space: nowrap }
 
 /* 联想 */
 .suggestions { position: absolute; top: 100%; left: 0; right: 0; background: var(--bg-secondary); border-radius: var(--radius-md); margin-top: 8px; box-shadow: var(--shadow-hover); z-index: 100; overflow: hidden; border: 1px solid var(--border-color) }
-.suggestion-item { padding: 11px 20px; cursor: pointer; transition: background 0.15s; color: var(--text-secondary); font-size: 14px; display: flex; justify-content: space-between; align-items: center }
+.suggestion-item { padding: 11px 20px; cursor: pointer; transition: background 0.15s; color: var(--text-secondary); font-size: var(--fs-body); display: flex; justify-content: space-between; align-items: center }
 .suggestion-item:hover { background: rgba(45, 212, 191, 0.08); color: var(--color-primary) }
-.sug-type { font-size: 11px; color: var(--text-disabled); background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; flex-shrink: 0 }
+.sug-type { font-size: var(--fs-tiny); color: var(--text-disabled); background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; flex-shrink: 0 }
 
 /* 快捷入口 */
 .quick-actions { width: 100%; max-width: 720px; margin-top: 28px; flex-shrink: 0 }
 .qa-title {
-  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  font-size: var(--fs-sub); font-weight: var(--fw-semi); color: var(--text-muted);
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -412,23 +435,23 @@ onUnmounted(() => {
   border-radius: var(--radius-sm); font-size: 20px; color: var(--color-primary);
 }
 .qa-info { flex: 1; min-width: 0 }
-.qa-name { font-weight: 600; color: var(--text-color); font-size: 14px; margin-bottom: 3px }
-.qa-desc { font-size: 12px; color: var(--text-muted) }
-.qa-arrow { font-size: 16px; color: var(--text-disabled); transition: all 0.2s; flex-shrink: 0 }
+.qa-name { font-weight: var(--fw-semi); color: var(--text-color); font-size: var(--fs-body); margin-bottom: 3px }
+.qa-desc { font-size: var(--fs-sub); color: var(--text-muted) }
+.qa-arrow { font-size: var(--fs-h3); color: var(--text-disabled); transition: all 0.2s; flex-shrink: 0 }
 .qa-card:hover .qa-arrow { color: var(--color-primary); transform: translateX(3px) }
 
 /* 热门方剂 */
 .explore-cards { width: 100%; max-width: 720px; margin-top: 24px; flex-shrink: 0; padding-bottom: 16px }
 .explore-title {
-  font-size: 12px; font-weight: 600; color: var(--text-muted);
+  font-size: var(--fs-sub); font-weight: var(--fw-semi); color: var(--text-muted);
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
 .explore-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
 .explore-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: center; cursor: pointer; transition: all 0.25s }
 .explore-card:hover { background: var(--bg-card-hover); border-color: var(--border-color-hover); transform: translateY(-2px); box-shadow: var(--shadow-card) }
-.ec-name { font-weight: 600; color: var(--text-color); font-size: 15px; margin-bottom: 8px }
-.ec-stats { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--text-muted) }
+.ec-name { font-weight: var(--fw-semi); color: var(--text-color); font-size: 15px; margin-bottom: 8px }
+.ec-stats { display: flex; flex-direction: column; gap: 3px; font-size: var(--fs-sub); color: var(--text-muted) }
 
 /* Loading */
 :deep(.loading-dialog) { background: transparent !important }

@@ -366,18 +366,45 @@ onMounted(() => {
 
 <style scoped>
 .herb-detail-container {
-  padding: 40px;
-  background: transparent;
+  padding: 16px 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: var(--bg-gradient);
   min-height: 100vh;
 }
 
 .back-bar {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+}
+.back-bar :deep(.el-button--text) {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.back-bar :deep(.el-button--text:hover) {
+  color: #409eff;
 }
 
-.info-card {
-  border-radius: 16px;
-  margin-bottom: 24px;
+/* ==== 统一卡片：与 Detail.vue 的 .card 对齐 ==== */
+.info-card,
+.compounds-card {
+  background: rgba(30,41,59,0.6) !important;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+.info-card :deep(.el-card__body),
+.compounds-card :deep(.el-card__body) {
+  padding: 0;
+  color: var(--text-color);
+}
+.info-card :deep(.el-card__header),
+.compounds-card :deep(.el-card__header) {
+  border-bottom: 1px solid rgba(148,163,184,0.1) !important;
+  background: transparent !important;
+  padding: 0 0 14px 0;
+  margin-bottom: 20px;
 }
 
 .herb-header {
@@ -385,6 +412,8 @@ onMounted(() => {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .herb-title-area {
@@ -395,15 +424,15 @@ onMounted(() => {
 }
 
 .herb-name {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1a1a2e;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-color);
   margin: 0;
 }
 
 .herb-pinyin {
-  font-size: 16px;
-  color: #999;
+  font-size: 15px;
+  color: var(--text-muted);
   font-style: italic;
 }
 
@@ -412,8 +441,11 @@ onMounted(() => {
 }
 
 .speech-btn {
-  color: #909399;
+  color: var(--text-muted);
   transition: all 0.3s ease;
+}
+.speech-btn :deep(.el-button__text) {
+  color: inherit;
 }
 
 .speech-btn:hover {
@@ -436,6 +468,8 @@ onMounted(() => {
   border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
+  border: 1px solid rgba(148,163,184,0.15);
+  background: rgba(0,0,0,0.15);
 }
 
 .herb-image img {
@@ -448,6 +482,10 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  padding: 16px 18px;
+  border: 1px solid rgba(148,163,184,0.08);
 }
 
 .info-item {
@@ -462,18 +500,19 @@ onMounted(() => {
 
 .info-item .label {
   font-size: 12px;
-  color: #999;
-  font-weight: 500;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .info-item .value {
   font-size: 14px;
-  color: #333;
-  line-height: 1.6;
+  color: var(--text-color);
+  line-height: 1.7;
 }
 
 .compounds-card {
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
 .section-header {
@@ -489,10 +528,10 @@ onMounted(() => {
 }
 
 .section-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1a1a2e;
+  font-size: 16px;
+  color: var(--text-color);
   margin: 0;
+  font-weight: 600;
 }
 
 .compound-search {
@@ -503,9 +542,92 @@ onMounted(() => {
 .compound-search-input {
   height: 40px;
 }
+.compound-search-input :deep(.el-input__wrapper) {
+  background: rgba(255,255,255,0.05) !important;
+  box-shadow: 0 0 0 1px rgba(148,163,184,0.15) inset !important;
+  border-radius: 8px;
+}
+.compound-search-input :deep(.el-input__inner) {
+  color: var(--text-color) !important;
+}
+.compound-search-input :deep(.el-input__inner::placeholder) {
+  color: var(--text-muted);
+}
+.compound-search-input :deep(.el-input__prefix),
+.compound-search-input :deep(.el-input__suffix) {
+  color: var(--text-muted);
+}
+
+/* ==== el-table 深色适配 ==== */
+.compounds-card :deep(.el-table) {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: rgba(255,255,255,0.04);
+  --el-table-header-text-color: var(--text-secondary);
+  --el-table-text-color: var(--text-color);
+  --el-table-border-color: rgba(148,163,184,0.1);
+  --el-table-row-hover-bg-color: rgba(64,158,255,0.08);
+  color: var(--text-color);
+  background: transparent;
+}
+.compounds-card :deep(.el-table::before) {
+  background-color: rgba(148,163,184,0.1);
+}
+.compounds-card :deep(.el-table th.el-table__cell) {
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--text-secondary) !important;
+  border-bottom: 1px solid rgba(148,163,184,0.12);
+  font-weight: 600;
+}
+.compounds-card :deep(.el-table td.el-table__cell) {
+  border-bottom: 1px solid rgba(148,163,184,0.08);
+  color: var(--text-color);
+}
+.compounds-card :deep(.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell) {
+  background: rgba(255,255,255,0.02) !important;
+}
+.compounds-card :deep(.el-table__body tr:hover > td.el-table__cell) {
+  background: rgba(64,158,255,0.08) !important;
+}
+.compounds-card :deep(.el-table .cell) {
+  color: inherit;
+}
+
+/* ==== el-pagination 深色适配（如果 compounds 表格有分页） ==== */
+.compounds-card :deep(.el-pagination) {
+  color: var(--text-secondary);
+  --el-pagination-bg-color: transparent;
+  --el-pagination-hover-color: #409eff;
+}
+.compounds-card :deep(.el-pagination button),
+.compounds-card :deep(.el-pagination .el-pager li) {
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+}
+.compounds-card :deep(.el-pagination .el-pager li.is-active) {
+  background: #409eff !important;
+  color: #fff !important;
+  border-color: #409eff !important;
+}
+
+/* ==== el-tag / el-button 在卡片里的文字修正 ==== */
+.compounds-card :deep(.el-tag--primary) {
+  color: #fff;
+}
+
+/* ==== el-empty 深色适配 ==== */
+.herb-detail-container :deep(.el-empty__description) {
+  color: var(--text-muted);
+}
 
 .compound-name {
   font-weight: 500;
-  color: #1a1a2e;
+  color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+  .herb-detail-container { padding: 16px; }
+  .herb-info-grid { grid-template-columns: 1fr; }
 }
 </style>
