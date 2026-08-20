@@ -539,14 +539,21 @@ onUnmounted(() => {
 
 <style scoped>
 .compound-detail-container {
-  padding: 16px 24px;
-  background: transparent;
+  padding: 16px 40px;
+  background: var(--bg-gradient);
   min-height: 100vh;
-  max-width: 1500px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
-.back-bar { margin-bottom: 12px; }
+.back-bar { margin-bottom: 16px; }
+.back-bar :deep(.el-button--text) {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.back-bar :deep(.el-button--text:hover) {
+  color: #409eff;
+}
 
 /* 顶部并排 */
 .top-row {
@@ -556,11 +563,14 @@ onUnmounted(() => {
   margin-bottom: 16px;
 }
 
+/* 统一卡片：与 Detail.vue 的 .card 对齐 */
 .info-card, .structure-card, .radar-card, .targets-overview-card, .targets-card {
-  background: var(--bg-card);
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  background: rgba(30,41,59,0.6) !important;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  color: var(--text-color);
 }
 
 /* 化合物头部 */
@@ -576,8 +586,8 @@ onUnmounted(() => {
 
 .compound-name {
   font-size: 24px;
-  font-weight: 700;
-  color: #1a1a2e;
+  font-weight: 800;
+  color: var(--text-color);
   margin: 0;
   line-height: 1.2;
 }
@@ -606,6 +616,9 @@ onUnmounted(() => {
 }
 
 .prob-bar .prob-progress { flex: 1; }
+.prob-bar .prob-progress :deep(.el-progress-bar__outer) {
+  background-color: rgba(255,255,255,0.06);
+}
 
 .prob-bar .prob-value {
   font-size: 14px;
@@ -621,14 +634,17 @@ onUnmounted(() => {
   grid-template-columns: 1fr 1fr;
   gap: 8px 16px;
   margin-bottom: 12px;
+  background: rgba(255,255,255,0.03);
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(148,163,184,0.06);
 }
 
 .prop-item {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 6px 10px;
-  background: rgba(255, 255, 255, 0.03);
+  padding: 4px 8px;
   border-radius: 6px;
 }
 
@@ -646,7 +662,7 @@ onUnmounted(() => {
 
 .prop-val small {
   font-size: 11px;
-  color: #c0c4cc;
+  color: var(--text-muted);
   font-weight: 400;
 }
 
@@ -655,11 +671,15 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border-radius: 8px;
   margin-bottom: 12px;
-  background: #f0f9ff;
-  border: 1px solid #d0e3f5;
+  background: rgba(103,194,58,0.08);
+  border: 1px solid rgba(103,194,58,0.2);
+}
+.lipinski-bar:has(.lipinski-fail) {
+  background: rgba(245,108,108,0.08);
+  border-color: rgba(245,108,108,0.2);
 }
 
 .lipinski-bar .el-icon { font-size: 18px; }
@@ -670,18 +690,19 @@ onUnmounted(() => {
   font-size: 13px;
   color: var(--text-secondary);
 }
+.lipinski-text strong { color: inherit; font-weight: 700 }
 
 /* SMILES */
 .smiles-section {
-  border-top: 1px solid #ebeef5;
-  padding-top: 10px;
+  border-top: 1px solid rgba(148,163,184,0.1);
+  padding-top: 12px;
 }
 
 .smiles-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .smiles-label {
@@ -691,14 +712,22 @@ onUnmounted(() => {
 }
 
 .smiles-actions { display: flex; gap: 4px; }
+.smiles-actions :deep(.el-button--text) {
+  color: var(--text-secondary) !important;
+}
+.smiles-actions :deep(.el-button--text:hover) {
+  color: #409eff !important;
+  background: rgba(64,158,255,0.08);
+}
 
 .smiles-code {
-  font-family: 'Courier New', monospace;
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
   font-size: 12px;
-  color: #409eff;
-  background: rgba(64, 158, 255, 0.06);
-  padding: 8px 12px;
-  border-radius: 6px;
+  color: #7dd3fc;
+  background: rgba(125, 211, 252, 0.08);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(125, 211, 252, 0.15);
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -731,13 +760,26 @@ onUnmounted(() => {
 }
 
 .structure-controls { display: flex; gap: 4px; }
+.structure-controls :deep(.el-button) {
+  color: var(--text-secondary) !important;
+  background: rgba(255,255,255,0.04) !important;
+  border-color: rgba(148,163,184,0.15) !important;
+}
+.structure-controls :deep(.el-button--primary) {
+  color: #fff !important;
+  background: #409eff !important;
+  border-color: #409eff !important;
+}
+.structure-controls :deep(.el-button:hover) {
+  opacity: 0.9;
+}
 
 .mol-viewer {
   width: 100%;
   height: 320px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  background: #fafbfc;
+  border-radius: 10px;
+  border: 1px solid rgba(148,163,184,0.12);
+  background: #1e293b;
   position: relative;
 }
 
@@ -747,8 +789,9 @@ onUnmounted(() => {
   gap: 6px;
   margin-top: 8px;
   font-size: 11px;
-  color: #c0c4cc;
+  color: var(--text-muted);
 }
+.structure-tip .el-icon { color: var(--text-muted) }
 
 /* 中部并排 */
 .mid-row {
@@ -773,7 +816,15 @@ onUnmounted(() => {
 }
 
 .header-right { display: flex; align-items: center; gap: 8px; }
-.target-search { width: 200px; }
+.target-search { width: 220px; }
+.target-search :deep(.el-input__wrapper) {
+  background: rgba(255,255,255,0.05) !important;
+  box-shadow: 0 0 0 1px rgba(148,163,184,0.15) inset !important;
+  border-radius: 8px;
+}
+.target-search :deep(.el-input__inner) { color: var(--text-color) !important }
+.target-search :deep(.el-input__inner::placeholder) { color: var(--text-muted) }
+.target-search :deep(.el-input__prefix) { color: var(--text-muted) }
 
 /* 雷达图 */
 .radar-chart {
@@ -784,8 +835,8 @@ onUnmounted(() => {
 .radar-summary {
   display: flex;
   justify-content: space-around;
-  padding-top: 8px;
-  border-top: 1px solid #ebeef5;
+  padding-top: 10px;
+  border-top: 1px solid rgba(148,163,184,0.1);
 }
 
 .radar-summary-item {
@@ -804,7 +855,11 @@ onUnmounted(() => {
 .targets-stats {
   display: flex;
   justify-content: space-around;
-  padding: 12px 0;
+  padding: 16px 0 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(148,163,184,0.06);
+  margin-bottom: 12px;
 }
 
 .stat-item {
@@ -826,6 +881,7 @@ onUnmounted(() => {
 .stat-label {
   font-size: 12px;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
 .source-herbs {
@@ -834,7 +890,7 @@ onUnmounted(() => {
   gap: 6px;
   flex-wrap: wrap;
   padding-top: 10px;
-  border-top: 1px solid #ebeef5;
+  border-top: 1px solid rgba(148,163,184,0.1);
 }
 
 .herb-label {
@@ -848,6 +904,38 @@ onUnmounted(() => {
 /* 靶点表 */
 .targets-card { margin-bottom: 16px; }
 
+.targets-card :deep(.el-table) {
+  --el-table-bg-color: transparent;
+  --el-table-tr-bg-color: transparent;
+  --el-table-header-bg-color: rgba(255,255,255,0.04);
+  --el-table-header-text-color: var(--text-secondary);
+  --el-table-text-color: var(--text-color);
+  --el-table-border-color: rgba(148,163,184,0.1);
+  --el-table-row-hover-bg-color: rgba(64,158,255,0.08);
+  color: var(--text-color);
+  background: transparent;
+}
+.targets-card :deep(.el-table::before) {
+  background-color: rgba(148,163,184,0.1);
+}
+.targets-card :deep(.el-table th.el-table__cell) {
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--text-secondary) !important;
+  border-bottom: 1px solid rgba(148,163,184,0.12);
+  font-weight: 600;
+}
+.targets-card :deep(.el-table td.el-table__cell) {
+  border-bottom: 1px solid rgba(148,163,184,0.08);
+  color: var(--text-color);
+}
+.targets-card :deep(.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell) {
+  background: rgba(255,255,255,0.02) !important;
+}
+.targets-card :deep(.el-table__body tr:hover > td.el-table__cell) {
+  background: rgba(64,158,255,0.08) !important;
+}
+.targets-card :deep(.el-table .cell) { color: inherit; }
+
 .target-gene { font-weight: 600; color: var(--text-color); }
 
 .target-pagination {
@@ -855,13 +943,52 @@ onUnmounted(() => {
   justify-content: center;
   margin-top: 12px;
 }
-
-.speech-btn {
-  color: var(--text-muted);
-  transition: all 0.3s ease;
+.target-pagination :deep(.el-pagination) { color: var(--text-secondary) }
+.target-pagination :deep(.el-pagination .el-pager li),
+.target-pagination :deep(.el-pagination button) {
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(148,163,184,0.1) !important;
+  border-radius: 6px;
 }
-.speech-btn:hover { color: #409eff; }
-.speech-btn.speaking { color: #67c23a; animation: pulse 1s infinite; }
+.target-pagination :deep(.el-pagination .el-pager li.is-active) {
+  background: #409eff !important;
+  color: #fff !important;
+  border-color: #409eff !important;
+}
+
+/* 播报按钮 —— 关键：穿透 el-button__text，默认态足够清晰 */
+.speech-btn {
+  color: var(--text-secondary) !important;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid rgba(148,163,184,0.12) !important;
+  border-radius: 6px;
+  padding: 0 10px;
+}
+.speech-btn :deep(.el-button__text) {
+  color: inherit !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.speech-btn:hover {
+  color: #409eff !important;
+  border-color: rgba(64,158,255,0.35) !important;
+  background: rgba(64,158,255,0.1) !important;
+}
+.speech-btn.speaking {
+  color: #67c23a !important;
+  border-color: rgba(103,194,58,0.4) !important;
+  background: rgba(103,194,58,0.1) !important;
+  animation: pulse 1s infinite;
+}
+.speech-btn.speaking :deep(.el-button__text) { color: inherit !important }
+
+/* el-empty */
+.compound-detail-container :deep(.el-empty__description) {
+  color: var(--text-muted);
+}
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
@@ -873,6 +1000,6 @@ onUnmounted(() => {
   .top-row, .mid-row {
     grid-template-columns: 1fr;
   }
-  .compound-detail-container { padding: 12px; }
+  .compound-detail-container { padding: 16px; }
 }
 </style>

@@ -239,8 +239,8 @@ onMounted(loadDbStats)
   background: transparent;
 }
 .page-header { margin-bottom: 28px }
-.page-title { font-size: 24px; font-weight: 700; color: var(--text-color); margin-bottom: 6px }
-.page-desc { font-size: 14px; color: var(--text-muted) }
+.page-title { font-size: var(--fs-h1); font-weight: var(--fw-bold); color: var(--text-color); margin-bottom: 6px }
+.page-desc { font-size: var(--fs-body); color: var(--text-muted) }
 
 .settings-grid {
   display: grid;
@@ -259,16 +259,16 @@ onMounted(loadDbStats)
 .card-header {
   display: flex; align-items: center; gap: 10px;
 }
-.header-icon { font-size: 18px; color: var(--color-primary) }
-.header-title { font-size: 15px; font-weight: 600; color: var(--text-color) }
+.header-icon { font-size: var(--fs-h3); color: var(--color-primary) }
+.header-title { font-size: var(--fs-body); font-weight: var(--fw-semi); color: var(--text-color) }
 .config-status { margin-left: auto }
 
 .settings-form :deep(.el-form-item) { margin-bottom: 20px }
 .settings-form :deep(.el-form-item__label) {
-  font-weight: 500; color: var(--text-secondary); font-size: 13px;
+  font-weight: var(--fw-medium); color: var(--text-secondary); font-size: var(--fs-body);
 }
 
-.form-hint { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5 }
+.form-hint { font-size: var(--fs-sub); color: var(--text-muted); margin-top: 4px; line-height: 1.5 }
 
 .slider-row { width: 100% }
 .slider-row :deep(.el-slider) { margin-right: 8px }
@@ -279,15 +279,15 @@ onMounted(loadDbStats)
   margin-bottom: 18px; padding: 16px;
   background: rgba(255,255,255,0.03); border-radius: var(--radius-md);
 }
-.db-stat { display: flex; align-items: baseline; gap: 6px; font-size: 13px; color: var(--text-muted) }
-.db-stat strong { color: var(--color-primary); font-size: 20px; font-weight: 700 }
+.db-stat { display: flex; align-items: baseline; gap: 6px; font-size: var(--fs-body); color: var(--text-muted) }
+.db-stat strong { color: var(--color-primary); font-size: var(--fs-h2); font-weight: var(--fw-bold) }
 
 /* 关于 */
 .about-grid { display: flex; flex-direction: column; gap: 4px }
 .about-item {
   display: flex; justify-content: space-between; align-items: center;
   padding: 10px 0; border-bottom: 1px solid var(--border-color);
-  font-size: 13px; color: var(--text-secondary);
+  font-size: var(--fs-body); color: var(--text-secondary);
 }
 .about-item:last-child { border-bottom: none }
 .about-label { color: var(--text-muted); flex-shrink: 0; margin-right: 12px }

@@ -47,15 +47,33 @@ const isLoginPage = computed(() => route.path === '/login')
   --color-info: #60a5fa;
 
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-size-base: 14px;
-  --font-size-sm: 12px;
-  --font-size-lg: 16px;
+
+  /* ===== 字体层级规范（H1 → H2 → H3 → 正文 → 辅助 → 最小） ===== */
+  --fs-h1: 28px;        /* 页面主标题 */
+  --fs-h2: 22px;        /* 模块 / 卡片标题 */
+  --fs-h3: 18px;        /* 子模块 / 条目标题 */
+  --fs-body: 14px;      /* 正文默认（正文、数值、列表） */
+  --fs-sub: 12px;       /* 辅助：key 标签、时间、次要信息 */
+  --fs-tiny: 11px;      /* 最小：角标、说明、小标签 */
+  --fs-display: 36px;   /* 登录/首页展示性大标题 */
+
+  --fw-black: 900;
+  --fw-bold: 800;
+  --fw-semi: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  --font-size-base: var(--fs-body);
+  --font-size-sm: var(--fs-sub);
+  --font-size-lg: var(--fs-h3);
 
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
 
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --shadow-card-sm: 0 2px 8px rgba(0, 0, 0, 0.18);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.22);
+  --shadow-card-lg: 0 12px 40px rgba(0, 0, 0, 0.35);
   --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -608,5 +626,175 @@ textarea::placeholder {
 }
 .el-drawer {
   z-index: 9999 !important;
+}
+
+/* ===== 全局语音播报按钮：统一样式 + 彻底解决"看不清" ===== */
+.el-button.speech-btn,
+.el-button.rx-speech {
+  color: var(--text-secondary) !important;
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(148,163,184,0.18) !important;
+  border-radius: 6px !important;
+  padding: 4px 10px !important;
+  min-width: 44px !important;
+  transition: all 0.2s ease !important;
+}
+.el-button.speech-btn .el-button__text,
+.el-button.rx-speech .el-button__text {
+  color: inherit !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-weight: 500 !important;
+}
+.el-button.speech-btn:hover,
+.el-button.rx-speech:hover {
+  color: #409eff !important;
+  border-color: rgba(64,158,255,0.4) !important;
+  background: rgba(64,158,255,0.1) !important;
+}
+.el-button.speech-btn.speaking,
+.el-button.rx-speech.speaking {
+  color: #67c23a !important;
+  border-color: rgba(103,194,58,0.45) !important;
+  background: rgba(103,194,58,0.12) !important;
+  animation: speech-pulse 1s infinite;
+}
+.el-button.speech-btn.speaking .el-button__text,
+.el-button.rx-speech.speaking .el-button__text {
+  color: inherit !important;
+}
+
+@keyframes speech-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(103,194,58,0); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 6px rgba(103,194,58,0.08); }
+}
+
+/* ===== 列表页面板容器全局统一：背景 + padding + max-width ===== */
+.prescriptions-container,
+.herbs-container,
+.compounds-container {
+  max-width: 1600px !important;
+  margin: 0 auto !important;
+}
+
+/* ===== 主要操作按钮：Micro-Bounce（按下微弹跳反馈） =====
+   —— 适用于所有带文字标签的 type=primary / type=success / type=warning / 自定义强调色按钮，
+      以及登录、提交、搜索、体验测试账号等"下一步/行动"按钮。
+*/
+.el-button--primary,
+.el-button--success,
+.el-button--warning,
+.el-button--danger,
+.submit-btn,
+.guest-btn {
+  transform-origin: center center;
+  transform-box: border-box;
+  transition:
+    transform 180ms cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    box-shadow 200ms ease,
+    background 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease !important;
+  will-change: transform;
+}
+
+/* hover：抬起 + 轻微放大 */
+.el-button--primary:hover,
+.el-button--success:hover,
+.el-button--warning:hover,
+.el-button--danger:hover,
+.submit-btn:hover,
+.guest-btn:hover {
+  transform: translateY(-1px) scale(1.015) !important;
+}
+
+/* focus 键盘可达：轻微抬升 */
+.el-button--primary:focus-visible,
+.el-button--success:focus-visible,
+.el-button--warning:focus-visible,
+.el-button--danger:focus-visible,
+.submit-btn:focus-visible,
+.guest-btn:focus-visible {
+  transform: translateY(-1px) scale(1.01) !important;
+  outline: 2px solid rgba(45,212,191,0.35);
+  outline-offset: 2px;
+}
+
+/* ⭐ 按下 Micro-Bounce：先压 96% → 回弹 101.2% → 归位（像按压真按钮） */
+.el-button--primary:active,
+.el-button--success:active,
+.el-button--warning:active,
+.el-button--danger:active,
+.submit-btn:active,
+.guest-btn:active {
+  animation: btn-micro-bounce 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes btn-micro-bounce {
+  0%   { transform: translateY(0)    scale(1); }
+  30%  { transform: translateY(2px)  scale(0.965); }       /* 按下沉 */
+  60%  { transform: translateY(-1px) scale(1.018); }       /* 弹起过冲 */
+  80%  { transform: translateY(0)    scale(1.005); }       /* 回落 */
+  100% { transform: translateY(0)    scale(1); }           /* 归位 */
+}
+
+/* disabled 态不允许互动反馈 */
+.el-button.is-disabled,
+.el-button[disabled] {
+  animation: none !important;
+  transform: none !important;
+  cursor: not-allowed !important;
+}
+
+/* =========================================================================
+ * 全站卡片入场 Stagger 动画（统一命名，纯 CSS，零 JS）
+ * 用法：
+ *   1. 容器加 class="stagger-grid"（可选，仅语义）
+ *   2. 循环卡片加 class="stagger-item"
+ *   3. 循环上通过 :style="{ '--i': String(index) }" 把 index 传给 CSS
+ *   4. 需要"每次数据变化都重新播放"时，给 :key 绑定能代表"这次渲染批次"的变量，
+ *      或使用 Vue 的 <TransitionGroup>；本实现默认对"首次挂载"生效（最常见场景）。
+ * ========================================================================= */
+.stagger-item {
+  /* 关键帧：透明度 0→1 + 上浮 16px 归位 + 轻微缩放 */
+  animation-name: stagger-card-enter;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;                      /* 动画前停留在 0 态，动画后保留 1 态 */
+  animation-duration: 620ms;
+  /* 核心：每张卡根据 index（自定义属性 --i）延迟 50ms，最多延迟 500ms 封顶，
+     避免数据 >10 条时后入场要等太久 */
+  animation-delay: calc(60ms * var(--i, 0));
+  will-change: transform, opacity;
+}
+
+/* 容器本身做 80ms 前置延迟（给列表里第一个 60ms 不要太抢，header/search 先出来） */
+.stagger-grid .stagger-item:first-child,
+.stagger-grid + * { /* 预留：stagger-grid 之后的模块也有延迟 */ }
+
+@keyframes stagger-card-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.975);
+    filter: blur(4px);
+  }
+  55% {
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* ===== 可访问性兜底：用户开启"减少动效"时，所有 stagger 失效 ===== */
+@media (prefers-reduced-motion: reduce) {
+  .stagger-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }
 </style>
