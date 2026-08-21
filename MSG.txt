@@ -1,1 +1,1 @@
-fix: login bg image, detail title color, global bg with overlay
+fix: sticky header - make main-content scrollable, top-bar sticky
