@@ -1,1 +1,1 @@
-chore: remove stray files
+fix: login bg image, detail title color, global bg with overlay
