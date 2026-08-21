@@ -37,10 +37,11 @@ const isLoginPage = computed(() => route.path === '/login')
   --color-secondary: #38bdf8;
   --color-accent: #a78bfa;
 
+  --text-primary: #f8fafc;
   --text-color: #f1f5f9;
   --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-disabled: #64748b;
+  --text-muted: #cbd5e1;
+  --text-disabled: #94a3b8;
 
   --border-color: rgba(255, 255, 255, 0.08);
   --border-color-hover: rgba(45, 212, 191, 0.3);
@@ -79,6 +80,36 @@ const isLoginPage = computed(() => route.path === '/login')
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.22);
   --shadow-card-lg: 0 12px 40px rgba(0, 0, 0, 0.35);
   --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+  /* ===== Element Plus 暗色主题变量覆盖（全局生效） ===== */
+  --el-color-white: #1e293b;
+  --el-color-black: #f1f5f9;
+  --el-text-color-primary: #f1f5f9;
+  --el-text-color-regular: #cbd5e1;
+  --el-text-color-secondary: #94a3b8;
+  --el-text-color-placeholder: #64748b;
+  --el-text-color-disabled: #475569;
+  --el-bg-color: #0f172a;
+  --el-bg-color-overlay: #1e293b;
+  --el-bg-color-page: #0f172a;
+  --el-fill-color-blank: #0f172a;
+  --el-fill-color: rgba(255,255,255,0.04);
+  --el-fill-color-light: rgba(255,255,255,0.06);
+  --el-fill-color-lighter: rgba(255,255,255,0.02);
+  --el-border-color: rgba(255,255,255,0.08);
+  --el-border-color-light: rgba(255,255,255,0.06);
+  --el-border-color-lighter: rgba(255,255,255,0.04);
+  --el-border-color-extra-light: rgba(255,255,255,0.02);
+  --el-border-color-dark: rgba(255,255,255,0.12);
+  --el-overlay-color: rgba(0,0,0,0.6);
+  --el-overlay-color-light: rgba(0,0,0,0.3);
+  --el-color-primary-light-3: rgba(45,212,191,0.2);
+  --el-color-primary-light-5: rgba(45,212,191,0.15);
+  --el-color-primary-light-7: rgba(45,212,191,0.08);
+  --el-color-primary-light-8: rgba(45,212,191,0.05);
+  --el-color-primary-light-9: rgba(45,212,191,0.02);
+  --el-color-primary-dark-2: #14b8a6;
+  color-scheme: dark;
 }
 
 * {
