@@ -225,7 +225,7 @@ function fillGuestAccount() {
 .auth-wrap {
   min-height: 100vh;
   display: flex;
-  background: #0f172a;
+  background: #0b1120;
   width: 100%;
 }
 
@@ -373,7 +373,7 @@ function fillGuestAccount() {
 .auth-form {
   width: 540px;
   flex-shrink: 0;
-  background: linear-gradient(180deg, #0f172a 0%, #12233d 100%);
+  background: #0b1120;
   display: flex;
   align-items: center;
   justify-content: center;
