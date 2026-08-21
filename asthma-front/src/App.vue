@@ -98,11 +98,6 @@ html, body {
   width: 100%;
   min-height: 100vh;
   background: var(--bg-gradient);
-  background-image: url('/现代国风暗色科技感背景.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
 }
 
 ::-webkit-scrollbar {

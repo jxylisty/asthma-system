@@ -1,1 +1,1 @@
-fix: sticky header - make main-content scrollable, top-bar sticky
+fix: move bg image from #app to Layout main-content (login page unaffected)
