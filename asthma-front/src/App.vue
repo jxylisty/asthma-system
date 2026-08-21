@@ -97,7 +97,7 @@ html, body {
 #app {
   width: 100%;
   min-height: 100vh;
-  background: var(--bg-gradient);
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar {
