@@ -1,1 +1,1 @@
-fix: remove blend-mode, make page bg transparent so Layout image shows through
+fix: restore login bg, hardcode #app dark bg (transparent var broke login)

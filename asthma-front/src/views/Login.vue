@@ -233,7 +233,7 @@ function fillGuestAccount() {
 .auth-brand {
   flex: 1;
   min-width: 0;
-  background-image: url('/现代国风暗色科技感背景.png');
+  background-image: url('/public/登入界面.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
