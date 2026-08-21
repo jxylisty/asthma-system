@@ -382,7 +382,7 @@ onMounted(() => { loadDetail() })
 
 
 <style scoped>
-.detail-container { min-height: 100vh; background: var(--bg-gradient) }
+.detail-container { min-height: 100vh; background: transparent !important; background-image: none !important; }
 .top-bar { display: flex; align-items: center; padding: 12px 40px; position: sticky; top: 0; z-index: 100; }
 .detail-header-sticky {
   background-color: rgba(11, 17, 32, 0.85);

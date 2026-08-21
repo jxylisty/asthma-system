@@ -1,11 +1,14 @@
 <template>
-  <template v-if="isLoginPage">
-    <router-view />
-  </template>
-  <template v-else>
-    <Layout />
-    <ClickEffect />
-  </template>
+  <div id="app-container">
+    <GlobalParticles v-if="!isLoginPage" class="global-particles-bg" />
+    <template v-if="isLoginPage">
+      <router-view class="main-router-view" />
+    </template>
+    <template v-else>
+      <Layout class="main-router-view" />
+      <ClickEffect />
+    </template>
+  </div>
 </template>
 
 <script setup>
@@ -13,6 +16,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import Layout from './components/Layout.vue'
 import ClickEffect from './components/ClickEffect.vue'
+import GlobalParticles from './components/ParticleBackground.vue'
 
 const route = useRoute()
 const isLoginPage = computed(() => route.path === '/login')
@@ -21,11 +25,11 @@ const isLoginPage = computed(() => route.path === '/login')
 <style>
 /* ===== 全局主题变量（统一设计规范） ===== */
 :root {
-  --bg-primary: #0b1120;
+  --bg-primary: #111827;
   --bg-secondary: #1e293b;
-  --bg-card: rgba(30, 41, 59, 0.7);
-  --bg-card-hover: rgba(30, 41, 59, 0.9);
-  --bg-gradient: #0b1120;
+  --bg-card: rgba(31, 41, 55, 0.8);
+  --bg-card-hover: rgba(31, 41, 55, 0.95);
+  --bg-gradient: #111827;
 
   --color-primary: #2dd4bf;
   --color-primary-light: #5eead4;
@@ -90,18 +94,31 @@ html, body {
   font-size: var(--font-size-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0b1120 !important;
+  background-color: #111827 !important;
+  background-image: none !important;
   color: var(--text-color);
 }
 
-html {
-  background-color: #0b1120 !important;
-}
-
-#app {
+#app, #app-container {
   width: 100%;
   min-height: 100vh;
-  background: #0b1120;
+  background-color: #111827 !important;
+  background-image: none !important;
+}
+
+.global-particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.main-router-view {
+  position: relative;
+  z-index: 1;
 }
 
 ::-webkit-scrollbar {
@@ -263,53 +280,18 @@ html {
 }
 
 .el-dialog {
-  background: #1e293b !important;
-  border: 1px solid rgba(255,255,255,0.1) !important;
-  border-radius: 12px !important;
-  color: #f1f5f9 !important;
-  box-shadow: 0 16px 48px rgba(0,0,0,0.6) !important;
-  z-index: 9999 !important;
-}
-
-.el-dialog__header {
-  padding: 20px 24px 0 !important;
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
+  color: var(--text-color) !important;
 }
 
 .el-dialog__title {
-  color: #f8fafc !important;
-  font-weight: 600 !important;
-  font-size: 16px !important;
+  color: var(--text-color) !important;
 }
 
 .el-dialog__body {
-  color: #cbd5e1 !important;
-  padding: 20px 24px !important;
-}
-
-.el-dialog__footer {
-  padding: 12px 24px 20px !important;
-}
-
-/* 弹窗内表格适配 */
-.el-dialog .el-table {
-  --el-table-bg-color: #1e293b;
-  --el-table-tr-bg-color: #1e293b;
-  --el-table-text-color: #e2e8f0;
-  --el-table-header-bg-color: #0f172a;
-  --el-table-header-text-color: #f8fafc;
-  --el-table-border-color: rgba(255,255,255,0.08);
-  background: #1e293b !important;
-}
-.el-dialog .el-table th.el-table__cell {
-  background: #0f172a !important;
-  color: #f8fafc !important;
-  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
-}
-.el-dialog .el-table td.el-table__cell {
-  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
-}
-.el-dialog .el-table--striped .el-table__body tr.el-table__row--striped td {
-  background: rgba(255,255,255,0.02) !important;
+  color: var(--text-secondary) !important;
 }
 
 .el-drawer {
@@ -690,6 +672,9 @@ textarea::placeholder {
   z-index: 9999 !important;
   padding-left: 230px !important;
   box-sizing: border-box !important;
+}
+.el-dialog {
+  z-index: 9999 !important;
 }
 .el-drawer {
   z-index: 9999 !important;

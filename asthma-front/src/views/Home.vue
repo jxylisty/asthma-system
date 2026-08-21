@@ -1,6 +1,5 @@
 <template>
   <div class="home-container">
-    <canvas ref="particleCanvas" class="particle-bg"></canvas>
 
     <div class="main-content">
       <!-- 标题区 -->
@@ -336,8 +335,8 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.home-container { position: relative; width: 100%; height: 100vh; background: var(--bg-gradient); overflow: hidden }
-.particle-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0 }
+.home-container { position: relative; width: 100%; height: 100vh; background: transparent !important; background-image: none !important; overflow: hidden }
+.particle-bg { display: none }
 .main-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 100vh; padding: 24px 20px 16px; overflow-y: auto }
 
 /* 标题 */
