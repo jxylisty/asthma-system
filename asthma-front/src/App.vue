@@ -25,7 +25,7 @@ const isLoginPage = computed(() => route.path === '/login')
   --bg-secondary: #1e293b;
   --bg-card: rgba(30, 41, 59, 0.7);
   --bg-card-hover: rgba(30, 41, 59, 0.9);
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #0f172a 100%);
+  --bg-gradient: transparent;
 
   --color-primary: #2dd4bf;
   --color-primary-light: #5eead4;
