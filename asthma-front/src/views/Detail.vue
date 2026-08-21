@@ -383,11 +383,11 @@ onMounted(() => { loadDetail() })
 
 <style scoped>
 .detail-container { min-height: 100vh; background: var(--bg-gradient) }
-.top-bar { display: flex; align-items: center; padding: 12px 40px; background: rgba(15,23,42,0.95); box-shadow: 0 2px 12px rgba(0,0,0,0.4); position: fixed; top: 0; left: 230px; right: 0; z-index: 100; border-bottom: 1px solid rgba(148,163,184,0.1); backdrop-filter: blur(16px) }
+.top-bar { display: flex; align-items: center; padding: 12px 40px; background: rgba(15,23,42,0.95); box-shadow: 0 2px 12px rgba(0,0,0,0.4); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(148,163,184,0.1); backdrop-filter: blur(16px) }
 .logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; color: #e2e8f0; cursor: pointer }
 .logo:hover { color: #409eff }
 .logo .el-icon { font-size: 24px }
-.main-content { padding: 72px 40px 16px; max-width: 1600px; margin: 0 auto }
+.main-content { padding: 16px 40px; max-width: 1600px; margin: 0 auto }
 .detail-tabs :deep(.el-tabs__header) { margin-bottom: 16px }
 .detail-tabs :deep(.el-tabs__item) { font-size: 15px; font-weight: 600; color: var(--text-secondary) }
 .detail-tabs :deep(.el-tabs__item.is-active) { color: var(--text-color) }

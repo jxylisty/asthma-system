@@ -25,7 +25,8 @@ const isCollapse = ref(false)
 
 .main-content {
   flex: 1;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: auto;
   position: relative;
   z-index: 1;
   transition: margin-left 0.28s cubic-bezier(0.4, 0, 0.2, 1);
