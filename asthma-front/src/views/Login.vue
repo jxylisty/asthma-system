@@ -462,26 +462,30 @@ function fillGuestAccount() {
   line-height: 1;
 }
 .form-panel :deep(.el-input__wrapper) {
-  border-radius: 10px;
-  padding: 4px 14px;
-  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.15) inset !important;
-  background: rgba(30, 41, 59, 0.7);
+  background-color: #0f172a !important;
+  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.25) inset !important;
+  border-radius: 8px;
+  padding: 8px 12px;
   transition: all 0.2s ease;
 }
-.form-panel :deep(.el-input__wrapper:hover) {
-  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.35) inset !important;
-}
 .form-panel :deep(.el-input__wrapper.is-focus) {
-  box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.8) inset !important;
-  background: rgba(30, 41, 59, 0.9);
+  box-shadow: 0 0 0 1px #2dd4bf inset !important;
 }
 .form-panel :deep(.el-input__inner) {
-  color: #f1f5f9;
+  color: #f8fafc !important;
+  background-color: transparent !important;
   font-size: 14px;
-  background: transparent;
 }
 .form-panel :deep(.el-input__inner::placeholder) {
-  color: #64748b;
+  color: #64748b !important;
+}
+.form-panel :deep(input:-webkit-autofill),
+.form-panel :deep(input:-webkit-autofill:hover),
+.form-panel :deep(input:-webkit-autofill:focus),
+.form-panel :deep(input:-webkit-autofill:active) {
+  -webkit-text-fill-color: #f8fafc !important;
+  box-shadow: 0 0 0px 1000px #0f172a inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 .form-panel :deep(.el-input__prefix-inner .el-icon) {
   color: #2dd4bf !important;

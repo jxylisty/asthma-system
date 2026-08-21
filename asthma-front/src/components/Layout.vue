@@ -30,7 +30,7 @@ const isCollapse = ref(false)
   position: relative;
   z-index: 1;
   transition: margin-left 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #0f172a;
+  background-color: #0b1120;
   background-image: url('/现代国风暗色科技感背景.png');
   background-size: cover;
   background-position: center;
