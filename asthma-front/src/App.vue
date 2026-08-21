@@ -21,7 +21,7 @@ const isLoginPage = computed(() => route.path === '/login')
 <style>
 /* ===== 全局主题变量（统一设计规范） ===== */
 :root {
-  --bg-primary: #0f172a;
+  --bg-primary: #0b1120;
   --bg-secondary: #1e293b;
   --bg-card: rgba(30, 41, 59, 0.7);
   --bg-card-hover: rgba(30, 41, 59, 0.9);
@@ -90,8 +90,12 @@ html, body {
   font-size: var(--font-size-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--bg-primary);
+  background: #0b1120 !important;
   color: var(--text-color);
+}
+
+html {
+  background-color: #0b1120 !important;
 }
 
 #app {

@@ -1,1 +1,1 @@
-fix: 4 UI fixes - login inputs, global bg #0b1120, dark dialog, sticky header
+fix: eliminate yellow-green tint - unify all bg to #0b1120, remove #12233d gradient
