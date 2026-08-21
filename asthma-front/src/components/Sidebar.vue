@@ -221,13 +221,13 @@ function handleLogout() {
   display: flex; align-items: center; gap: 11px;
   padding: 10px 14px; margin-bottom: 3px;
   border-radius: 8px;
-  font-size: 14px; color: var(--text-muted);
+  font-size: 14px; color: #cbd5e1;
   text-decoration: none;
   transition: all 0.18s;
   white-space: nowrap;
   min-height: 40px;
 }
-.nav-item:hover { background: rgba(255,255,255,0.06); color: var(--text-secondary) }
+.nav-item:hover { background: rgba(255,255,255,0.06); color: #e2e8f0 }
 .nav-active {
   background: rgba(45, 212, 191, 0.1) !important;
   color: var(--color-primary) !important;

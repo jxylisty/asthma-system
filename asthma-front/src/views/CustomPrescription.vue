@@ -1192,8 +1192,8 @@ onMounted(() => {
 }
 
 .dialog-herb-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 8px;
   padding: 12px;
   transition: all 0.2s;
@@ -1221,7 +1221,7 @@ onMounted(() => {
 .dialog-card-title {
   font-size: 15px;
   font-weight: 600;
-  color: var(--text-color);
+  color: #e2e8f0;
   margin: 0;
   flex: 1;
 }
@@ -1229,7 +1229,7 @@ onMounted(() => {
 .dialog-card-body {
   flex: 1;
   font-size: 12px;
-  color: var(--text-secondary);
+  color: #94a3b8;
   line-height: 1.6;
 }
 
@@ -1239,7 +1239,7 @@ onMounted(() => {
 }
 
 .dialog-label {
-  color: var(--text-muted);
+  color: #64748b;
   white-space: nowrap;
   min-width: 56px;
 }
