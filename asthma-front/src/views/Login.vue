@@ -464,16 +464,16 @@ function fillGuestAccount() {
 .form-panel :deep(.el-input__wrapper) {
   border-radius: 10px;
   padding: 4px 14px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset !important;
-  background: rgba(30, 41, 59, 0.7);
+  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.15) inset !important;
+  background: rgba(15, 23, 42, 0.95);
   transition: all 0.2s ease;
 }
 .form-panel :deep(.el-input__wrapper:hover) {
-  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.3) inset !important;
+  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.35) inset !important;
 }
 .form-panel :deep(.el-input__wrapper.is-focus) {
   box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.8) inset !important;
-  background: rgba(30, 41, 59, 0.9);
+  background: rgba(15, 23, 42, 1);
 }
 .form-panel :deep(.el-input__inner) {
   color: #f1f5f9;
@@ -481,7 +481,7 @@ function fillGuestAccount() {
   background: transparent;
 }
 .form-panel :deep(.el-input__inner::placeholder) {
-  color: #64748b;
+  color: #475569;
 }
 .form-panel :deep(.el-input__prefix-inner .el-icon) {
   color: #2dd4bf !important;

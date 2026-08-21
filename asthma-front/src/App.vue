@@ -25,7 +25,7 @@ const isLoginPage = computed(() => route.path === '/login')
   --bg-secondary: #1e293b;
   --bg-card: rgba(30, 41, 59, 0.7);
   --bg-card-hover: rgba(30, 41, 59, 0.9);
-  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1a2744 50%, #0f172a 100%);
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #0f172a 100%);
 
   --color-primary: #2dd4bf;
   --color-primary-light: #5eead4;
@@ -306,15 +306,46 @@ html, body {
 .el-message-box {
   background: var(--bg-secondary) !important;
   border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
   color: var(--text-color) !important;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.5) !important;
+}
+
+.el-message-box__header {
+  padding: 20px 24px 0 !important;
 }
 
 .el-message-box__title {
   color: var(--text-color) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
 }
 
 .el-message-box__message {
   color: var(--text-secondary) !important;
+  padding: 16px 24px !important;
+  font-size: 14px !important;
+}
+
+.el-message-box__btns {
+  padding: 12px 24px 20px !important;
+}
+
+.el-message-box__btns .el-button {
+  border-radius: 8px !important;
+  padding: 8px 20px !important;
+  font-weight: 600 !important;
+}
+
+.el-message-box__btns .el-button--primary {
+  background: var(--color-danger) !important;
+  border-color: var(--color-danger) !important;
+  color: #fff !important;
+}
+
+.el-message-box__btns .el-button--primary:hover {
+  background: #ef4444 !important;
+  border-color: #ef4444 !important;
 }
 
 .el-popover {

@@ -1,0 +1,1 @@
+fix: UI polish - login contrast, dark bg, sticky header, dialog colors, sidebar brightness
