@@ -233,7 +233,7 @@ function fillGuestAccount() {
 .auth-brand {
   flex: 1;
   min-width: 0;
-  background-image: url('/public/登入界面.png');
+  background-image: url('/现代国风暗色科技感背景.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -465,7 +465,7 @@ function fillGuestAccount() {
   border-radius: 10px;
   padding: 4px 14px;
   box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.15) inset !important;
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(30, 41, 59, 0.7);
   transition: all 0.2s ease;
 }
 .form-panel :deep(.el-input__wrapper:hover) {
@@ -473,7 +473,7 @@ function fillGuestAccount() {
 }
 .form-panel :deep(.el-input__wrapper.is-focus) {
   box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.8) inset !important;
-  background: rgba(15, 23, 42, 1);
+  background: rgba(30, 41, 59, 0.9);
 }
 .form-panel :deep(.el-input__inner) {
   color: #f1f5f9;
@@ -481,7 +481,7 @@ function fillGuestAccount() {
   background: transparent;
 }
 .form-panel :deep(.el-input__inner::placeholder) {
-  color: #475569;
+  color: #64748b;
 }
 .form-panel :deep(.el-input__prefix-inner .el-icon) {
   color: #2dd4bf !important;
