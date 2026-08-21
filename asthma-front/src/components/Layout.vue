@@ -1,6 +1,5 @@
 <template>
   <div class="layout-container">
-    <ParticleBackground />
     <Sidebar v-model:isCollapse="isCollapse" />
     <main class="main-content" :style="{ marginLeft: isCollapse ? '68px' : '230px' }">
       <router-view />
@@ -11,7 +10,6 @@
 <script setup>
 import { ref } from 'vue'
 import Sidebar from './Sidebar.vue'
-import ParticleBackground from './ParticleBackground.vue'
 
 const isCollapse = ref(false)
 </script>
@@ -21,8 +19,8 @@ const isCollapse = ref(false)
   display: flex;
   min-height: 100vh;
   position: relative;
+  background-color: transparent !important;
 }
-
 .main-content {
   flex: 1;
   height: 100vh;
@@ -30,10 +28,7 @@ const isCollapse = ref(false)
   position: relative;
   z-index: 1;
   transition: margin-left 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #0b1120;
-  background-image: url('/现代国风暗色科技感背景.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: transparent !important;
+  background-image: none !important;
 }
 </style>
