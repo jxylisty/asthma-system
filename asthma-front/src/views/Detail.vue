@@ -1,6 +1,6 @@
 <template>
   <div class="detail-container">
-    <div class="top-bar">
+    <div class="top-bar detail-header-sticky">
       <div class="logo" @click="$router.push('/')">
         <el-icon><HomeFilled /></el-icon>
         <span>哮喘方剂智能分析系统</span>
@@ -383,7 +383,13 @@ onMounted(() => { loadDetail() })
 
 <style scoped>
 .detail-container { min-height: 100vh; background: var(--bg-gradient) }
-.top-bar { display: flex; align-items: center; padding: 12px 40px; background: rgba(15,23,42,0.95); box-shadow: 0 2px 12px rgba(0,0,0,0.4); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(148,163,184,0.1); backdrop-filter: blur(16px) }
+.top-bar { display: flex; align-items: center; padding: 12px 40px; position: sticky; top: 0; z-index: 100; }
+.detail-header-sticky {
+  background-color: rgba(11, 17, 32, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 .logo { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 600; color: #e2e8f0; cursor: pointer }
 .logo:hover { color: #409eff }
 .logo .el-icon { font-size: 24px }

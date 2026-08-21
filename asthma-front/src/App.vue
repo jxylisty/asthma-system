@@ -25,7 +25,7 @@ const isLoginPage = computed(() => route.path === '/login')
   --bg-secondary: #1e293b;
   --bg-card: rgba(30, 41, 59, 0.7);
   --bg-card-hover: rgba(30, 41, 59, 0.9);
-  --bg-gradient: transparent;
+  --bg-gradient: #0b1120;
 
   --color-primary: #2dd4bf;
   --color-primary-light: #5eead4;
@@ -97,7 +97,7 @@ html, body {
 #app {
   width: 100%;
   min-height: 100vh;
-  background: #0f172a;
+  background: #0b1120;
 }
 
 ::-webkit-scrollbar {
@@ -259,18 +259,53 @@ html, body {
 }
 
 .el-dialog {
-  background: var(--bg-secondary) !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: var(--radius-lg) !important;
-  color: var(--text-color) !important;
+  background: #1e293b !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 12px !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6) !important;
+  z-index: 9999 !important;
+}
+
+.el-dialog__header {
+  padding: 20px 24px 0 !important;
 }
 
 .el-dialog__title {
-  color: var(--text-color) !important;
+  color: #f8fafc !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
 }
 
 .el-dialog__body {
-  color: var(--text-secondary) !important;
+  color: #cbd5e1 !important;
+  padding: 20px 24px !important;
+}
+
+.el-dialog__footer {
+  padding: 12px 24px 20px !important;
+}
+
+/* 弹窗内表格适配 */
+.el-dialog .el-table {
+  --el-table-bg-color: #1e293b;
+  --el-table-tr-bg-color: #1e293b;
+  --el-table-text-color: #e2e8f0;
+  --el-table-header-bg-color: #0f172a;
+  --el-table-header-text-color: #f8fafc;
+  --el-table-border-color: rgba(255,255,255,0.08);
+  background: #1e293b !important;
+}
+.el-dialog .el-table th.el-table__cell {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+.el-dialog .el-table td.el-table__cell {
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+.el-dialog .el-table--striped .el-table__body tr.el-table__row--striped td {
+  background: rgba(255,255,255,0.02) !important;
 }
 
 .el-drawer {
@@ -651,9 +686,6 @@ textarea::placeholder {
   z-index: 9999 !important;
   padding-left: 230px !important;
   box-sizing: border-box !important;
-}
-.el-dialog {
-  z-index: 9999 !important;
 }
 .el-drawer {
   z-index: 9999 !important;
