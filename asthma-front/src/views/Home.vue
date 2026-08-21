@@ -28,11 +28,11 @@
       <!-- 搜索区 -->
       <div class="search-center">
         <div class="search-bar-outer">
-          <select v-model="searchCategory" class="cat-sel-native">
-            <option value="prescription">方剂</option>
-            <option value="herb">中药材</option>
-            <option value="compound">化合物</option>
-          </select>
+          <el-select v-model="searchCategory" class="cat-sel" popper-class="search-cat-popper" :teleported="true">
+            <el-option label="方剂" value="prescription" />
+            <el-option label="中药材" value="herb" />
+            <el-option label="化合物" value="compound" />
+          </el-select>
           <span class="cat-divider" />
           <div class="search-input-wrap">
             <el-icon class="search-ic"><Search /></el-icon>
@@ -369,18 +369,30 @@ onUnmounted(() => {
 }
 .search-bar-outer:focus-within { border-color: var(--color-primary) }
 
-.cat-sel-native {
-  width: 90px; flex-shrink: 0;
-  background: transparent; border: none; outline: none;
-  color: var(--color-primary); font-size: var(--fs-body); font-weight: var(--fw-semi);
-  cursor: pointer; padding: 0 4px 0 16px;
-  border-right: 1px solid var(--border-color);
-  text-align: center;
-  appearance: none; -webkit-appearance: none;
-  color-scheme: dark;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' fill='none' stroke='%2394a3b8' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 6px center;
-  padding-right: 20px;
+.cat-sel { width: 96px; flex-shrink: 0; }
+.cat-sel :deep(.el-select__wrapper) {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0 4px 0 16px;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 0;
+}
+.cat-sel :deep(.el-select__wrapper:hover),
+.cat-sel :deep(.el-select__wrapper.is-focused) {
+  background: transparent;
+  box-shadow: none;
+}
+.cat-sel :deep(.el-select__selected-item),
+.cat-sel :deep(.el-select__placeholder) {
+  color: var(--color-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semi);
+}
+.cat-sel :deep(.el-select__caret) {
+  color: var(--text-muted);
+  font-size: 12px;
 }
 
 .cat-divider { width: 1px; height: 20px; background: var(--border-color); flex-shrink: 0 }
@@ -462,4 +474,33 @@ onUnmounted(() => {
 .loading-text { color: var(--text-secondary); font-size: 14px; margin-bottom: 16px; min-height: 20px }
 .loading-progress { width: 100%; height: 3px; background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden }
 .progress-bar { height: 100%; background: var(--color-primary); transition: width 0.3s }
+</style>
+
+<!-- 下拉面板渲染在 body 下，popper 样式必须非 scoped -->
+<style>
+.search-cat-popper {
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35) !important;
+  overflow: hidden;
+  background: #1e293b !important;
+}
+.search-cat-popper .el-select-dropdown__item {
+  border-radius: 8px;
+  margin: 2px 6px;
+  padding: 8px 12px;
+  color: #cbd5e1;
+}
+.search-cat-popper .el-select-dropdown__item.is-hovering {
+  background: rgba(45, 212, 191, 0.12) !important;
+  color: #5eead4 !important;
+}
+.search-cat-popper .el-select-dropdown__item.is-selected {
+  color: #2dd4bf !important;
+  font-weight: 600;
+}
+.search-cat-popper .el-popper__arrow::before {
+  background: #1e293b !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
 </style>

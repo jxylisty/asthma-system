@@ -152,19 +152,127 @@
           </div>
         </div>
       </el-card>
+
+      <!-- 板块5：外观设置（仅管理员） -->
+      <el-card v-if="isAdmin" class="settings-card" shadow="never">
+        <template #header>
+          <div class="card-header">
+            <el-icon class="header-icon"><Brush /></el-icon>
+            <span class="header-title">外观设置</span>
+            <el-tag type="warning" size="small" effect="dark" class="config-status">管理员</el-tag>
+          </div>
+        </template>
+
+        <div class="settings-form">
+          <!-- 预设主题 -->
+          <el-form-item label="预设主题">
+            <div class="theme-presets">
+              <button
+                v-for="t in themePresets" :key="t.name"
+                :class="['theme-preset-btn', { active: activePreset === t.name }]"
+                :style="{ background: t.preview }"
+                :title="t.label"
+                @click="applyPreset(t)"
+              >
+                <span class="preset-dot" :style="{ background: t.accent }"></span>
+                <span class="preset-label">{{ t.label }}</span>
+              </button>
+            </div>
+          </el-form-item>
+
+          <!-- 背景色 -->
+          <el-form-item label="页面背景色">
+            <div class="color-picker-row">
+              <el-color-picker v-model="themeColors.bgPrimary" @change="applyTheme" />
+              <el-input v-model="themeColors.bgPrimary" size="small" class="color-input" />
+              <span class="color-label">--bg-primary</span>
+            </div>
+          </el-form-item>
+
+          <el-form-item label="卡片背景色">
+            <div class="color-picker-row">
+              <el-color-picker v-model="themeColors.bgSecondary" @change="applyTheme" />
+              <el-input v-model="themeColors.bgSecondary" size="small" class="color-input" />
+              <span class="color-label">--bg-secondary</span>
+            </div>
+          </el-form-item>
+
+          <el-form-item label="主文字颜色">
+            <div class="color-picker-row">
+              <el-color-picker v-model="themeColors.textColor" @change="applyTheme" />
+              <el-input v-model="themeColors.textColor" size="small" class="color-input" />
+              <span class="color-label">--text-color</span>
+            </div>
+          </el-form-item>
+
+          <el-form-item label="次要文字颜色">
+            <div class="color-picker-row">
+              <el-color-picker v-model="themeColors.textSecondary" @change="applyTheme" />
+              <el-input v-model="themeColors.textSecondary" size="small" class="color-input" />
+              <span class="color-label">--text-secondary</span>
+            </div>
+          </el-form-item>
+
+          <el-form-item label="主题强调色">
+            <div class="color-picker-row">
+              <el-color-picker v-model="themeColors.colorPrimary" @change="applyTheme" />
+              <el-input v-model="themeColors.colorPrimary" size="small" class="color-input" />
+              <span class="color-label">--color-primary</span>
+            </div>
+          </el-form-item>
+
+          <!-- 实时预览 -->
+          <el-form-item label="预览">
+            <div class="theme-preview" :style="previewStyle">
+              <div class="preview-header">
+                <span class="preview-dot" :style="{ background: themeColors.colorPrimary }"></span>
+                <span class="preview-title">儿童哮喘方剂智能分析系统</span>
+              </div>
+              <div class="preview-body">
+                <div class="preview-card">
+                  <span class="preview-card-title">方剂名称</span>
+                  <span class="preview-card-sub">12 味中药 · 36 个化合物</span>
+                </div>
+                <div class="preview-card">
+                  <span class="preview-card-title">目标靶点</span>
+                  <span class="preview-card-sub">MAPK · EGFR · IL6 · TNF</span>
+                </div>
+              </div>
+              <div class="preview-footer">
+                <span class="preview-tag"># 哮喘</span>
+                <span class="preview-tag"># 中药</span>
+                <span class="preview-tag"># 入血预测</span>
+              </div>
+            </div>
+          </el-form-item>
+
+          <el-form-item>
+            <el-button type="primary" @click="applyTheme">
+              <el-icon><Check /></el-icon> 应用外观
+            </el-button>
+            <el-button @click="resetTheme">
+              <el-icon><RefreshLeft /></el-icon> 恢复默认
+            </el-button>
+          </el-form-item>
+        </div>
+      </el-card>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, computed } from 'vue'
 import { ElMessage } from 'element-plus'
 import {
   MagicStick, Key, Link, Check, RefreshLeft, CircleCheckFilled,
-  DataAnalysis, Coin, Delete, InfoFilled
+  DataAnalysis, Coin, Delete, InfoFilled, Brush, Sunny, Moon, Picture
 } from '@element-plus/icons-vue'
 import { useAiSettings } from '../composables/useAiSettings'
+import { useAuth } from '../composables/useAuth'
 import { getStatistics } from '../api'
+
+const { user } = useAuth()
+const isAdmin = computed(() => (user.value?.role === 'admin' || user.value?.username === 'admin'))
 
 const {
   provider, apiKey, baseUrl, model, providerPresets,
@@ -230,6 +338,93 @@ function resetAll() {
 }
 
 onMounted(loadDbStats)
+
+// ===== 外观设置（管理员） =====
+const themePresets = [
+  { name: 'default', label: '默认暗色', preview: 'linear-gradient(135deg, #0f172a, #1e293b)', accent: '#2dd4bf',
+    bgPrimary: '#0f172a', bgSecondary: '#1e293b', textColor: '#f1f5f9', textSecondary: '#cbd5e1', colorPrimary: '#2dd4bf' },
+  { name: 'deep-blue', label: '深蓝', preview: 'linear-gradient(135deg, #0a1628, #132240)', accent: '#38bdf8',
+    bgPrimary: '#0a1628', bgSecondary: '#132240', textColor: '#e2e8f0', textSecondary: '#94a3b8', colorPrimary: '#38bdf8' },
+  { name: 'pure-dark', label: '纯黑', preview: 'linear-gradient(135deg, #09090b, #18181b)', accent: '#a78bfa',
+    bgPrimary: '#09090b', bgSecondary: '#18181b', textColor: '#fafafa', textSecondary: '#a1a1aa', colorPrimary: '#a78bfa' },
+  { name: 'forest', label: '墨绿', preview: 'linear-gradient(135deg, #0f1a14, #1a3028)', accent: '#34d399',
+    bgPrimary: '#0f1a14', bgSecondary: '#1a3028', textColor: '#ecfdf5', textSecondary: '#a7f3d0', colorPrimary: '#34d399' },
+  { name: 'warm', label: '暖棕', preview: 'linear-gradient(135deg, #1c120c, #2d1f14)', accent: '#fbbf24',
+    bgPrimary: '#1c120c', bgSecondary: '#2d1f14', textColor: '#fef3c7', textSecondary: '#fcd34d', colorPrimary: '#fbbf24' },
+]
+
+const activePreset = ref(localStorage.getItem('theme_preset') || 'default')
+const themeColors = ref({
+  bgPrimary: '#0f172a',
+  bgSecondary: '#1e293b',
+  textColor: '#f1f5f9',
+  textSecondary: '#cbd5e1',
+  colorPrimary: '#2dd4bf',
+})
+
+// 初始化：从 localStorage 恢复
+const saved = localStorage.getItem('theme_colors')
+if (saved) {
+  try { themeColors.value = JSON.parse(saved) } catch {}
+}
+
+const previewStyle = computed(() => ({
+  background: themeColors.value.bgPrimary,
+  color: themeColors.value.textColor,
+  borderColor: themeColors.value.bgSecondary,
+}))
+
+function applyPreset(t) {
+  activePreset.value = t.name
+  themeColors.value = {
+    bgPrimary: t.bgPrimary,
+    bgSecondary: t.bgSecondary,
+    textColor: t.textColor,
+    textSecondary: t.textSecondary,
+    colorPrimary: t.colorPrimary,
+  }
+  applyTheme()
+}
+
+function applyTheme() {
+  const c = themeColors.value
+  const root = document.documentElement
+  root.style.setProperty('--bg-primary', c.bgPrimary)
+  root.style.setProperty('--bg-secondary', c.bgSecondary)
+  root.style.setProperty('--bg-gradient', c.bgPrimary)
+  root.style.setProperty('--text-color', c.textColor)
+  root.style.setProperty('--text-secondary', c.textSecondary)
+  root.style.setProperty('--color-primary', c.colorPrimary)
+  root.style.setProperty('--color-primary-light', adjustColor(c.colorPrimary, 20))
+  root.style.setProperty('--el-bg-color', c.bgPrimary)
+  root.style.setProperty('--el-bg-color-overlay', c.bgSecondary)
+  root.style.setProperty('--el-bg-color-page', c.bgPrimary)
+  root.style.setProperty('--el-fill-color-blank', c.bgPrimary)
+  root.style.setProperty('--el-text-color-primary', c.textColor)
+  root.style.setProperty('--el-text-color-regular', c.textSecondary)
+  localStorage.setItem('theme_preset', activePreset.value)
+  localStorage.setItem('theme_colors', JSON.stringify(c))
+  ElMessage.success('外观已应用')
+}
+
+function adjustColor(hex, amount) {
+  const num = parseInt(hex.replace('#', ''), 16)
+  const r = Math.min(255, (num >> 16) + amount)
+  const g = Math.min(255, ((num >> 8) & 0x00FF) + amount)
+  const b = Math.min(255, (num & 0x0000FF) + amount)
+  return `#${(r << 16 | g << 8 | b).toString(16).padStart(6, '0')}`
+}
+
+function resetTheme() {
+  localStorage.removeItem('theme_preset')
+  localStorage.removeItem('theme_colors')
+  const def = themePresets[0]
+  applyPreset(def)
+  ElMessage.success('已恢复默认外观')
+}
+
+// 页面加载时自动应用已保存主题
+onMounted(() => { if (saved) applyTheme() })
 </script>
 
 <style scoped>
@@ -293,4 +488,40 @@ onMounted(loadDbStats)
 .about-label { color: var(--text-muted); flex-shrink: 0; margin-right: 12px }
 
 .model-radio { display: flex; flex-direction: column; gap: 8px }
+
+/* 外观设置 */
+.theme-presets { display: flex; gap: 10px; flex-wrap: wrap }
+.theme-preset-btn {
+  width: 90px; height: 52px; border-radius: 10px; border: 2px solid transparent;
+  cursor: pointer; position: relative; overflow: hidden;
+  transition: all 0.2s; padding: 0;
+}
+.theme-preset-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.4) }
+.theme-preset-btn.active { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(45,212,191,0.25) }
+.preset-dot { position: absolute; top: 8px; right: 8px; width: 10px; height: 10px; border-radius: 50% }
+.preset-label { position: absolute; bottom: 6px; left: 8px; font-size: 11px; color: rgba(255,255,255,0.85); font-weight: 600 }
+
+.color-picker-row { display: flex; align-items: center; gap: 10px }
+.color-input { width: 120px }
+.color-label { font-size: var(--fs-sub); color: var(--text-muted); white-space: nowrap }
+
+/* 预览卡片 */
+.theme-preview {
+  border-radius: 12px; border: 1px solid; padding: 16px; width: 100%;
+  transition: all 0.3s;
+}
+.preview-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px }
+.preview-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0 }
+.preview-title { font-size: 14px; font-weight: 700 }
+.preview-body { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px }
+.preview-card {
+  padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.06);
+}
+.preview-card-title { font-size: 13px; font-weight: 600; display: block; margin-bottom: 3px; opacity: 0.9 }
+.preview-card-sub { font-size: 11px; opacity: 0.55 }
+.preview-footer { display: flex; gap: 6px; flex-wrap: wrap }
+.preview-tag {
+  font-size: 10px; padding: 2px 8px; border-radius: 4px;
+  background: rgba(255,255,255,0.08); opacity: 0.7;
+}
 </style>
