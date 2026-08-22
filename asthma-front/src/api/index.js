@@ -179,3 +179,60 @@ export const downloadBatchResult = (filename) => `${api.defaults.baseURL}/predic
 // ===== 专家模式 =====
 export const getExpertMetrics = () => api.get('/expert/metrics')
 export const getFeatureImportance = () => api.get('/expert/feature-importance')
+
+// ===== AI 智能问答 =====
+export async function streamAiChat({ messages, aiHeaders, onDelta, onError, onDone, signal }) {
+  const token = localStorage.getItem('token')
+  const headers = {
+    'Content-Type': 'application/json',
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    ...aiHeaders,
+  }
+
+  let resp
+  try {
+    resp = await fetch(`${api.defaults.baseURL}/ai/chat`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ messages }),
+      signal,
+    })
+  } catch (e) {
+    if (e.name !== 'AbortError') onError(e)
+    return
+  }
+
+  if (!resp.ok) {
+    const text = await resp.text().catch(() => '')
+    onError(new Error(text || `HTTP ${resp.status}`))
+    return
+  }
+
+  const reader = resp.body.getReader()
+  const decoder = new TextDecoder()
+  let buffer = ''
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      buffer += decoder.decode(value, { stream: true })
+      const lines = buffer.split('\n')
+      buffer = lines.pop() || ''
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          const data = line.slice(6).trim()
+          if (data === '[DONE]') { onDone(); return }
+          try {
+            const parsed = JSON.parse(data)
+            if (parsed.error) { onError(new Error(parsed.error)); return }
+            if (parsed.delta) onDelta(parsed.delta)
+          } catch {}
+        }
+      }
+    }
+    onDone()
+  } catch (e) {
+    if (e.name !== 'AbortError') onError(e)
+  }
+}

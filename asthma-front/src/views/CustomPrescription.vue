@@ -212,7 +212,7 @@
                 @click="exportPdf"
               >
                 <el-icon><Download /></el-icon>
-                导出 PDF
+                导出完整报告
               </el-button>
               <el-button
                 v-if="reportContent && !generatingReport"
@@ -699,26 +699,62 @@ function abortReport() {
 
 // ===== 导出 PDF =====
 async function exportPdf() {
-  if (!reportContent.value) return
+  if (!reportContent.value && !analysisData.value) return
   try {
     const html2pdf = (await import('html2pdf.js')).default
     const container = document.createElement('div')
     container.style.padding = '24px'
+    container.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif'
+
+    const s = analysisData.value?.stats
+    const topCompounds = (analysisData.value?.compounds || []).slice(0, 10)
+    const topTargets = (analysisData.value?.targets || []).filter(t => t.asthma_related).slice(0, 15)
+
+    const statsHtml = s ? `
+      <div style="display:flex;gap:12px;justify-content:center;margin:16px 0;flex-wrap:wrap">
+        <div style="background:#f0fdf4;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#166534">${s.herb_count}</div><div style="font-size:11px;color:#4ade80">中药数</div></div>
+        <div style="background:#eff6ff;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1e40af">${s.compound_count}</div><div style="font-size:11px;color:#60a5fa">化合物</div></div>
+        <div style="background:#fef3c7;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#92400e">${s.target_count}</div><div style="font-size:11px;color:#fbbf24">靶点</div></div>
+        <div style="background:#fef2f2;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#991b1b">${s.asthma_target_count}</div><div style="font-size:11px;color:#f87171">哮喘靶点</div></div>
+        <div style="background:#f5f3ff;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#5b21b6">${s.high_prob_compound_count}</div><div style="font-size:11px;color:#a78bfa">高入血概率</div></div>
+      </div>
+    ` : ''
+
+    const compoundsTable = topCompounds.length ? `
+      <h2 style="font-size:16px;margin:20px 0 8px;border-left:4px solid #2dd4bf;padding-left:10px">📊 Top 10 入血化合物</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:16px">
+        <tr style="background:#f8fafc"><th style="padding:6px 8px;border:1px solid #e2e8f0;text-align:left">化合物</th><th style="padding:6px 8px;border:1px solid #e2e8f0">入血概率</th><th style="padding:6px 8px;border:1px solid #e2e8f0">靶点数</th></tr>
+        ${topCompounds.map(c => `<tr><td style="padding:6px 8px;border:1px solid #e2e8f0">${c.name}</td><td style="padding:6px 8px;border:1px solid #e2e8f0;text-align:center">${(c.prob_cctcm || 0).toFixed(1)}%</td><td style="padding:6px 8px;border:1px solid #e2e8f0;text-align:center">${c.target_count || 0}</td></tr>`).join('')}
+      </table>
+    ` : ''
+
+    const targetsList = topTargets.length ? `
+      <h2 style="font-size:16px;margin:20px 0 8px;border-left:4px solid #e74c3c;padding-left:10px">🎯 哮喘相关靶点</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">
+        ${topTargets.map(t => `<span style="background:#fef2f2;color:#991b1b;padding:4px 10px;border-radius:6px;font-size:12px;border:1px solid #fecaca">${t.symbol || t.name}</span>`).join('')}
+      </div>
+    ` : ''
+
     container.innerHTML = `
-      <h1 style="text-align:center;font-size:22px;margin-bottom:8px;">${prescriptionName.value} - AI 智能分析报告</h1>
-      <p style="text-align:center;color:#666;font-size:13px;margin-bottom:24px;">生成时间：${new Date().toLocaleString('zh-CN')}</p>
-      <div style="font-size:14px;line-height:1.8;">${renderedReport.value}</div>
+      <h1 style="text-align:center;font-size:22px;margin-bottom:4px;color:#0f172a">${prescriptionName.value} - 完整分析报告</h1>
+      <p style="text-align:center;color:#666;font-size:13px;margin-bottom:16px">生成时间：${new Date().toLocaleString('zh-CN')} | 东方智喘 · 哮喘方剂智能分析系统</p>
+      ${statsHtml}
+      ${compoundsTable}
+      ${targetsList}
+      <h2 style="font-size:16px;margin:20px 0 8px;border-left:4px solid #a78bfa;padding-left:10px">🤖 AI 智能分析</h2>
+      <div style="font-size:14px;line-height:1.8;color:#1e293b">${renderedReport.value || '（暂无 AI 分析内容）'}</div>
+      <div style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;color:#94a3b8;font-size:11px">本报告由东方智喘系统自动生成 · 仅供科研参考</div>
     `
     document.body.appendChild(container)
     await html2pdf().set({
       margin: [10, 10],
-      filename: `${prescriptionName.value}_AI分析报告.pdf`,
+      filename: `${prescriptionName.value}_完整分析报告.pdf`,
       image: { type: 'jpeg', quality: 0.95 },
       html2canvas: { scale: 2, useCORS: true },
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
     }).from(container).save()
     document.body.removeChild(container)
-    ElMessage.success('PDF 导出成功')
+    ElMessage.success('完整报告 PDF 导出成功')
   } catch (e) {
     ElMessage.error('导出失败：' + e.message)
   }
