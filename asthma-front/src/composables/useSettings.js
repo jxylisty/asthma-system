@@ -75,19 +75,13 @@ const speechEnabled = ref(defaultSettings.speechEnabled)
 function applySettings() {
   const root = document.documentElement
   const selectedColor = bgColors.find(c => c.value === bgColor.value)
-  
+
   if (selectedColor) {
     root.style.setProperty('--bg-gradient', selectedColor.gradient)
   }
-  
+
   root.style.setProperty('--font-family', fontFamilyMap[fontFamily.value])
   root.style.setProperty('--font-size-base', fontSizeMap[fontSize.value])
-  
-  const isDark = darkBgColors.includes(bgColor.value)
-  root.style.setProperty('--is-dark', isDark ? 'true' : 'false')
-  root.style.setProperty('--text-color', isDark ? '#fff' : '#1a1a2e')
-  root.style.setProperty('--text-secondary', isDark ? 'rgba(255, 255, 255, 0.6)' : '#666')
-  root.style.setProperty('--text-muted', isDark ? 'rgba(255, 255, 255, 0.4)' : '#999')
 }
 
 function saveSettings() {
