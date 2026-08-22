@@ -388,7 +388,7 @@ function renderMolecule(style) {
     viewer3D.setStyle({}, { line: { linewidth: 2, colorscheme: 'Jmol' } })
   }
 
-  viewer3D.setBackgroundColor('#fafbfc')
+  viewer3D.setBackgroundColor('#0f172a')
   viewer3D.zoomTo()
   viewer3D.render()
 }
@@ -408,7 +408,7 @@ async function load3DStructure(compoundId) {
       await nextTick()
       if (molViewer.value) {
         viewer3D = window.$3Dmol.createViewer(molViewer.value, {
-          backgroundColor: '#fafbfc',
+          backgroundColor: '#0f172a',
           antialias: true
         })
         renderMolecule(currentStyle.value)
@@ -442,7 +442,7 @@ function initRadarChart() {
       shape: 'polygon',
       splitNumber: 4,
       radius: '58%',
-      axisName: { color: '#666', fontSize: 12 },
+      axisName: { color: '#94a3b8', fontSize: 12 },
       splitLine: { lineStyle: { color: 'rgba(64,158,255,0.2)' } },
       splitArea: { areaStyle: { color: ['rgba(64,158,255,0.05)', 'rgba(64,158,255,0.1)'] } },
       axisLine: { lineStyle: { color: 'rgba(64,158,255,0.3)' } }
