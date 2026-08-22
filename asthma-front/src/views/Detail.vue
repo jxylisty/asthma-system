@@ -341,7 +341,7 @@ function renderNetwork(nodes, edges) {
       { selector: 'node[category="compound"]', style: { 'background-color': '#3498db', 'width': 40, 'height': 40, 'font-size': '9px', 'border-color': '#2471a3' } },
       { selector: 'node[category="target"]', style: { 'background-color': '#f39c12', 'width': 32, 'height': 32, 'font-size': '8px' } },
       { selector: 'node[?asthma_related]', style: { 'background-color': '#e74c3c', 'border-color': '#922b21', 'border-width': 3 } },
-      { selector: 'edge', style: { 'width': 1.5, 'line-color': '#bbb', 'target-arrow-color': '#bbb', 'target-arrow-shape': 'triangle', 'curve-style': 'bezier', 'opacity': 0.6 } },
+      { selector: 'edge', style: { 'width': 1.5, 'line-color': '#64748b', 'target-arrow-color': '#64748b', 'target-arrow-shape': 'triangle', 'curve-style': 'bezier', 'opacity': 0.6 } },
       { selector: 'edge[category="p2h"]', style: { 'line-color': '#e74c3c', 'target-arrow-color': '#e74c3c' } },
       { selector: 'edge[category="h2c"]', style: { 'line-color': '#27ae60', 'target-arrow-color': '#27ae60' } },
       { selector: 'edge[category="c2t"]', style: { 'line-color': '#3498db', 'target-arrow-color': '#3498db' } },
@@ -365,7 +365,7 @@ function initRadarChart() {
     radar: {
       indicator: radarData.value.map(item => ({ name: item.name, max: 100 })),
       shape: 'polygon', splitNumber: 4, radius: '60%', center: ['50%', '50%'],
-      axisName: { color: '#666', fontSize: 12 },
+      axisName: { color: '#94a3b8', fontSize: 12 },
       splitLine: { lineStyle: { color: 'rgba(64,158,255,0.2)' } },
       splitArea: { areaStyle: { color: ['rgba(64,158,255,0.05)', 'rgba(64,158,255,0.1)'] } },
       axisLine: { lineStyle: { color: 'rgba(64,158,255,0.3)' } }

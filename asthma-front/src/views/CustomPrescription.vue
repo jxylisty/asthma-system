@@ -605,7 +605,7 @@ function initRadar(radarData) {
       indicator: radarData.map(r => ({ name: r.efficacy_type, max: 100 })),
       shape: 'polygon',
       radius: '60%',
-      axisName: { color: '#666', fontSize: 12 },
+      axisName: { color: '#94a3b8', fontSize: 12 },
       splitArea: { areaStyle: { color: ['rgba(64,158,255,0.05)', 'rgba(64,158,255,0.1)'] } },
     },
     series: [{

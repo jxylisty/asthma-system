@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="expert-container">
     <!-- 顶部导航栏 -->
     <div class="top-bar">
@@ -122,7 +122,7 @@ function initROCChart() {
       nameGap: 25,
       min: 0,
       max: 1,
-      axisLine: { lineStyle: { color: '#666' } }
+      axisLine: { lineStyle: { color: '#475569' } }
     },
     yAxis: {
       type: 'value',
@@ -131,7 +131,7 @@ function initROCChart() {
       nameGap: 40,
       min: 0,
       max: 1,
-      axisLine: { lineStyle: { color: '#666' } }
+      axisLine: { lineStyle: { color: '#475569' } }
     },
     series: [
       {
@@ -187,7 +187,7 @@ function initPRChart() {
       nameGap: 25,
       min: 0,
       max: 1,
-      axisLine: { lineStyle: { color: '#666' } }
+      axisLine: { lineStyle: { color: '#475569' } }
     },
     yAxis: {
       type: 'value',
@@ -196,7 +196,7 @@ function initPRChart() {
       nameGap: 40,
       min: 0,
       max: 1,
-      axisLine: { lineStyle: { color: '#666' } }
+      axisLine: { lineStyle: { color: '#475569' } }
     },
     series: [
       {
