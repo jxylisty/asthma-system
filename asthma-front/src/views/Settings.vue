@@ -256,6 +256,51 @@
           </el-form-item>
         </div>
       </el-card>
+
+      <!-- 板块6：语音播报设置 -->
+      <el-card class="settings-card" shadow="never">
+        <template #header>
+          <div class="card-header">
+            <el-icon class="header-icon"><Microphone /></el-icon>
+            <span class="header-title">语音播报设置</span>
+            <el-tag v-if="speechEnabled" type="success" size="small" effect="dark" class="config-status">已启用</el-tag>
+            <el-tag v-else type="info" size="small" effect="dark" class="config-status">已禁用</el-tag>
+          </div>
+        </template>
+
+        <div class="settings-form">
+          <el-form-item label="语音播报">
+            <el-switch v-model="speechEnabled" active-text="启用" inactive-text="关闭" />
+            <div class="form-hint">开启后可在详情页点击播报按钮朗读数据</div>
+          </el-form-item>
+
+          <el-form-item label="语音音色">
+            <el-select v-model="speechVoice" placeholder="选择语音" clearable :disabled="!speechEnabled">
+              <el-option v-for="v in voiceList" :key="v.name" :label="v.name" :value="v.name" />
+            </el-select>
+            <div class="form-hint">选择中文语音效果最佳，留空则使用浏览器默认语音</div>
+          </el-form-item>
+
+          <el-form-item label="语速">
+            <el-slider v-model="speechRate" :min="0.5" :max="2" :step="0.1" show-input :disabled="!speechEnabled" />
+            <div class="form-hint">正常语速为 1.0，数值越大越快</div>
+          </el-form-item>
+
+          <el-form-item label="音调">
+            <el-slider v-model="speechPitch" :min="0.5" :max="2" :step="0.1" show-input :disabled="!speechEnabled" />
+            <div class="form-hint">正常音调为 1.0，数值越大越尖锐</div>
+          </el-form-item>
+
+          <el-form-item>
+            <el-button type="primary" :disabled="!speechEnabled" @click="testSpeech">
+              <el-icon><Microphone /></el-icon> {{ isSpeaking ? '停止测试' : '测试播报' }}
+            </el-button>
+            <el-button :disabled="!speechEnabled" @click="refreshVoices">
+              <el-icon><RefreshLeft /></el-icon> 刷新语音列表
+            </el-button>
+          </el-form-item>
+        </div>
+      </el-card>
     </div>
   </div>
 </template>
@@ -265,14 +310,19 @@ import { ref, onMounted, watch, computed, onBeforeUnmount } from 'vue'
 import { ElMessage } from 'element-plus'
 import {
   MagicStick, Key, Link, Check, RefreshLeft, CircleCheckFilled,
-  DataAnalysis, Coin, Delete, InfoFilled, Brush, Sunny, Moon, Picture
+  DataAnalysis, Coin, Delete, InfoFilled, Brush, Sunny, Moon, Picture, Microphone
 } from '@element-plus/icons-vue'
 import { useAiSettings } from '../composables/useAiSettings'
 import { useAuth } from '../composables/useAuth'
+import { useSpeech } from '../composables/useSpeech'
+import { useSettings } from '../composables/useSettings'
 import { getStatistics } from '../api'
 
 const { user } = useAuth()
 const isAdmin = computed(() => (user.value?.role === 'admin' || user.value?.username === 'admin'))
+
+const { speak, stop, getVoices, isSpeaking } = useSpeech()
+const { speechVoice, speechRate, speechPitch, speechEnabled } = useSettings()
 
 const {
   provider, apiKey, baseUrl, model, providerPresets,
@@ -294,6 +344,25 @@ watch(defaultModel, v => localStorage.setItem('settings_defaultModel', v))
 watch(defaultThreshold, v => localStorage.setItem('settings_defaultThreshold', String(v)))
 watch(exportFormat, v => localStorage.setItem('settings_exportFormat', v))
 watch(maxNetworkNodes, v => localStorage.setItem('settings_maxNetworkNodes', String(v)))
+
+// ===== 语音播报设置 =====
+const voiceList = ref([])
+function refreshVoices() {
+  voiceList.value = getVoices()
+  if (voiceList.value.length === 0) {
+    // 有些浏览器需要异步加载语音
+    setTimeout(() => { voiceList.value = getVoices() }, 500)
+  }
+}
+function testSpeech() {
+  if (isSpeaking.value) { stop(); return }
+  speak('您好，这是语音播报测试。当前语速为' + speechRate.value + '，音调为' + speechPitch.value + '。', {
+    voice: speechVoice.value,
+    rate: speechRate.value,
+    pitch: speechPitch.value
+  })
+}
+onMounted(() => { refreshVoices() })
 
 const dbStats = ref({ prescriptions: '—', herbs: '—', compounds: '—', targets: '—' })
 async function loadDbStats() {
