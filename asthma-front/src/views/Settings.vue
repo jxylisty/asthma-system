@@ -261,7 +261,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch, computed } from 'vue'
+import { ref, onMounted, watch, computed, onBeforeUnmount } from 'vue'
 import { ElMessage } from 'element-plus'
 import {
   MagicStick, Key, Link, Check, RefreshLeft, CircleCheckFilled,
@@ -423,8 +423,18 @@ function resetTheme() {
   ElMessage.success('已恢复默认外观')
 }
 
-// 页面加载时自动应用已保存主题
-onMounted(() => { if (saved) applyTheme() })
+// 离开设置页时清除内联样式，恢复 App.vue 的 CSS 变量默认值
+function clearThemeInline() {
+  const root = document.documentElement
+  const vars = [
+    '--bg-primary', '--bg-secondary', '--bg-gradient',
+    '--text-color', '--text-secondary', '--color-primary', '--color-primary-light',
+    '--el-bg-color', '--el-bg-color-overlay', '--el-bg-color-page', '--el-fill-color-blank',
+    '--el-text-color-primary', '--el-text-color-regular'
+  ]
+  vars.forEach(v => root.style.removeProperty(v))
+}
+onBeforeUnmount(clearThemeInline)
 </script>
 
 <style scoped>
