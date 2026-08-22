@@ -7,6 +7,7 @@
     <template v-else>
       <Layout class="main-router-view" />
       <ClickEffect />
+      <AiChat />
     </template>
   </div>
 </template>
@@ -17,6 +18,7 @@ import { useRoute } from 'vue-router'
 import Layout from './components/Layout.vue'
 import ClickEffect from './components/ClickEffect.vue'
 import GlobalParticles from './components/ParticleBackground.vue'
+import AiChat from './components/AiChat.vue'
 
 const route = useRoute()
 const isLoginPage = computed(() => route.path === '/login')

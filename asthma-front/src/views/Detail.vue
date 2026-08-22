@@ -168,7 +168,7 @@
     <!-- AI 报告对话框 -->
     <el-dialog v-model="aiReportVisible" title="AI 智能分析报告" width="70%" top="5vh" :close-on-click-modal="false">
       <div class="ai-dialog-actions" style="margin-bottom:12px;display:flex;gap:8px">
-        <el-button v-if="aiReportContent && !generatingAiReport" type="primary" size="small" plain @click="exportAiPdf"><el-icon><Download /></el-icon> 导出 PDF</el-button>
+        <el-button v-if="aiReportContent && !generatingAiReport" type="primary" size="small" plain @click="exportAiPdf"><el-icon><Download /></el-icon> 导出完整报告</el-button>
         <el-button v-if="aiReportContent && !generatingAiReport" size="small" @click="copyAiReport"><el-icon><DocumentCopy /></el-icon> 复制</el-button>
         <el-button v-if="generatingAiReport" type="danger" size="small" plain @click="stopAiReport"><el-icon><VideoPause /></el-icon> 停止生成</el-button>
       </div>
@@ -230,10 +230,29 @@ async function exportAiPdf() {
     const html2pdf = (await import('html2pdf.js')).default
     const container = document.createElement('div')
     container.style.padding = '24px'
-    container.innerHTML = `<h1 style="text-align:center;font-size:22px;margin-bottom:8px">${prescriptionInfo.value?.name || ''} - AI 智能分析报告</h1><p style="text-align:center;color:#666;font-size:13px;margin-bottom:24px">${new Date().toLocaleString('zh-CN')}</p><div style="font-size:14px;line-height:1.8">${renderedAiReport.value}</div>`
+    container.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif'
+
+    const info = prescriptionInfo.value
+    const stats = info?.stats
+    const statsHtml = stats ? `
+      <div style="display:flex;gap:12px;justify-content:center;margin:16px 0;flex-wrap:wrap">
+        <div style="background:#eff6ff;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#1e40af">${stats.blood_compound_count ?? '—'}</div><div style="font-size:11px;color:#60a5fa">入血成分</div></div>
+        <div style="background:#fef2f2;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#991b1b">${stats.asthma_target_count ?? '—'}</div><div style="font-size:11px;color:#f87171">哮喘靶点</div></div>
+        <div style="background:#f5f3ff;border-radius:8px;padding:10px 16px;text-align:center"><div style="font-size:20px;font-weight:700;color:#5b21b6">${stats.pathway_count ?? '—'}</div><div style="font-size:11px;color:#a78bfa">信号通路</div></div>
+      </div>
+    ` : ''
+
+    container.innerHTML = `
+      <h1 style="text-align:center;font-size:22px;margin-bottom:4px;color:#0f172a">${info?.name || '方剂'} - 完整分析报告</h1>
+      <p style="text-align:center;color:#666;font-size:13px;margin-bottom:16px">${new Date().toLocaleString('zh-CN')} | 东方智喘 · 哮喘方剂智能分析系统</p>
+      ${statsHtml}
+      <h2 style="font-size:16px;margin:20px 0 8px;border-left:4px solid #a78bfa;padding-left:10px">🤖 AI 智能分析</h2>
+      <div style="font-size:14px;line-height:1.8;color:#1e293b">${renderedAiReport.value}</div>
+      <div style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;color:#94a3b8;font-size:11px">本报告由东方智喘系统自动生成 · 仅供科研参考</div>
+    `
     document.body.appendChild(container)
-    await html2pdf().set({ margin: [10, 10], filename: `${prescriptionInfo.value?.name || '方剂'}_AI报告.pdf`, image: { type: 'jpeg', quality: 0.95 }, html2canvas: { scale: 2, useCORS: true }, jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } }).from(container).save()
-    document.body.removeChild(container); ElMessage.success('PDF 导出成功')
+    await html2pdf().set({ margin: [10, 10], filename: `${info?.name || '方剂'}_完整分析报告.pdf`, image: { type: 'jpeg', quality: 0.95 }, html2canvas: { scale: 2, useCORS: true }, jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } }).from(container).save()
+    document.body.removeChild(container); ElMessage.success('完整报告 PDF 导出成功')
   } catch (e) { ElMessage.error('导出失败：' + e.message) }
 }
 async function copyAiReport() { try { await navigator.clipboard.writeText(aiReportContent.value); ElMessage.success('已复制') } catch { ElMessage.error('复制失败') } }
