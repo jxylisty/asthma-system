@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import Layout from './components/Layout.vue'
 import ClickEffect from './components/ClickEffect.vue'
@@ -20,6 +20,18 @@ import GlobalParticles from './components/ParticleBackground.vue'
 
 const route = useRoute()
 const isLoginPage = computed(() => route.path === '/login')
+
+// 全局清理外观设置残留的内联样式（防止管理员切换主题后残留）
+onMounted(() => {
+  const root = document.documentElement
+  const themeVars = [
+    '--bg-primary', '--bg-secondary', '--bg-gradient',
+    '--text-color', '--text-secondary', '--color-primary', '--color-primary-light',
+    '--el-bg-color', '--el-bg-color-overlay', '--el-bg-color-page', '--el-fill-color-blank',
+    '--el-text-color-primary', '--el-text-color-regular'
+  ]
+  themeVars.forEach(v => root.style.removeProperty(v))
+})
 </script>
 
 <style>
