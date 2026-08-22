@@ -322,7 +322,7 @@ const { user } = useAuth()
 const isAdmin = computed(() => (user.value?.role === 'admin' || user.value?.username === 'admin'))
 
 const { speak, stop, getVoices, isSpeaking } = useSpeech()
-const { speechVoice, speechRate, speechPitch, speechEnabled } = useSettings()
+const { speechVoice, speechRate, speechPitch, speechEnabled, saveSettings } = useSettings()
 
 const {
   provider, apiKey, baseUrl, model, providerPresets,
@@ -363,6 +363,8 @@ function testSpeech() {
   })
 }
 onMounted(() => { refreshVoices() })
+// 语音设置变化时持久化
+watch([speechVoice, speechRate, speechPitch, speechEnabled], () => saveSettings())
 
 const dbStats = ref({ prescriptions: '—', herbs: '—', compounds: '—', targets: '—' })
 async function loadDbStats() {
