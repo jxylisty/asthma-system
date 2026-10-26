@@ -154,6 +154,9 @@
               <span class="summary-value">{{ compound.radarScores.airwayRepair }}</span>
             </div>
           </div>
+          <p class="radar-source">
+            基于该成分人类靶点基因集的 KEGG / GO 富集分析（Enrichr）计算，分值为相对强度参考
+          </p>
         </div>
 
         <!-- 靶点统计概要 -->
@@ -388,7 +391,7 @@ function renderMolecule(style) {
     viewer3D.setStyle({}, { line: { linewidth: 2, colorscheme: 'Jmol' } })
   }
 
-  viewer3D.setBackgroundColor('#fafbfc')
+  viewer3D.setBackgroundColor('#0f172a')
   viewer3D.zoomTo()
   viewer3D.render()
 }
@@ -408,7 +411,7 @@ async function load3DStructure(compoundId) {
       await nextTick()
       if (molViewer.value) {
         viewer3D = window.$3Dmol.createViewer(molViewer.value, {
-          backgroundColor: '#fafbfc',
+          backgroundColor: '#0f172a',
           antialias: true
         })
         renderMolecule(currentStyle.value)
@@ -442,7 +445,7 @@ function initRadarChart() {
       shape: 'polygon',
       splitNumber: 4,
       radius: '58%',
-      axisName: { color: '#666', fontSize: 12 },
+      axisName: { color: '#94a3b8', fontSize: 12 },
       splitLine: { lineStyle: { color: 'rgba(64,158,255,0.2)' } },
       splitArea: { areaStyle: { color: ['rgba(64,158,255,0.05)', 'rgba(64,158,255,0.1)'] } },
       axisLine: { lineStyle: { color: 'rgba(64,158,255,0.3)' } }
@@ -848,6 +851,16 @@ onUnmounted(() => {
 
 .summary-label { font-size: 11px; color: var(--text-muted); }
 .summary-value { font-size: 18px; font-weight: 700; color: #409eff; }
+
+.radar-source {
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(148,163,184,0.1);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
 
 /* 靶点概览 */
 .targets-overview-card { display: flex; flex-direction: column; }
