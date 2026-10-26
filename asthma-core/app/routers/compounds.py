@@ -304,7 +304,30 @@ async def get_compound_efficacy_radar(
     if not compound:
         return ResponseModel(code=404, message="化合物不存在", data=None)
 
-    # 优先使用预计算雷达评分
+    # 优先使用真实 GSEA 富集结果（radar_*_gsea，由 scripts/recompute_radar_gsea.py 生成）
+    gsea_anti = compound.radar_anti_inflammatory_gsea
+    gsea_immune = compound.radar_immune_regulation_gsea
+    gsea_repair = compound.radar_airway_repair_gsea
+
+    if gsea_anti is not None or gsea_immune is not None or gsea_repair is not None:
+        scores = {
+            "抗炎效能": int(gsea_anti) if gsea_anti is not None else 0,
+            "免疫调节": int(gsea_immune) if gsea_immune is not None else 0,
+            "气道修复": int(gsea_repair) if gsea_repair is not None else 0,
+        }
+        data = EfficacyRadarResponse(
+            id=compound.id,
+            compound_name=compound.name,
+            gene_count=compound.target_count or 0,
+            scores=scores,
+            anti_inflammatory=scores["抗炎效能"],
+            immune_regulation=scores["免疫调节"],
+            airway_repair=scores["气道修复"],
+            fallback=False
+        )
+        return ResponseModel(data=data)
+
+    # 其次：无 GSEA 结果时退回预计算字段（来源待核实的旧值，保留以兼容历史数据）
     pre_anti = compound.radar_anti_inflammatory
     pre_immune = compound.radar_immune_regulation
     pre_repair = compound.radar_airway_repair

@@ -154,6 +154,9 @@
               <span class="summary-value">{{ compound.radarScores.airwayRepair }}</span>
             </div>
           </div>
+          <p class="radar-source">
+            基于该成分人类靶点基因集的 KEGG / GO 富集分析（Enrichr）计算，分值为相对强度参考
+          </p>
         </div>
 
         <!-- 靶点统计概要 -->
@@ -848,6 +851,16 @@ onUnmounted(() => {
 
 .summary-label { font-size: 11px; color: var(--text-muted); }
 .summary-value { font-size: 18px; font-weight: 700; color: #409eff; }
+
+.radar-source {
+  margin: 10px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(148,163,184,0.1);
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
 
 /* 靶点概览 */
 .targets-overview-card { display: flex; flex-direction: column; }

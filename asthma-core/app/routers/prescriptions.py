@@ -362,17 +362,17 @@ async def get_prescription_radar(
     if not prescription:
         return ResponseModel(code=404, message="方剂不存在", data=None)
 
-    # 查询方剂下所有化合物及其预计算雷达评分
+    # 查询方剂下所有化合物及其真实 GSEA 雷达评分
     compounds = (
         db.query(
             Compound.prob_cctcm,
-            Compound.radar_anti_inflammatory,
-            Compound.radar_immune_regulation,
-            Compound.radar_airway_repair,
+            Compound.radar_anti_inflammatory_gsea,
+            Compound.radar_immune_regulation_gsea,
+            Compound.radar_airway_repair_gsea,
         )
         .join(RelHerbCompound, RelHerbCompound.compound_id == Compound.id)
         .join(Herb, Herb.id == RelHerbCompound.herb_id)
-        .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_name == Herb.name)
+        .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_id == Herb.id)
         .filter(RelPrescriptionHerb.prescription_id == prescription_id)
         .filter(func.coalesce(Compound.prob_cctcm, 0) >= 0.5)
         .distinct()
@@ -384,22 +384,22 @@ async def get_prescription_radar(
         compounds = (
             db.query(
                 Compound.prob_cctcm,
-                Compound.radar_anti_inflammatory,
-                Compound.radar_immune_regulation,
-                Compound.radar_airway_repair,
+                Compound.radar_anti_inflammatory_gsea,
+                Compound.radar_immune_regulation_gsea,
+                Compound.radar_airway_repair_gsea,
             )
             .join(RelHerbCompound, RelHerbCompound.compound_id == Compound.id)
             .join(Herb, Herb.id == RelHerbCompound.herb_id)
-            .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_name == Herb.name)
+            .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_id == Herb.id)
             .filter(RelPrescriptionHerb.prescription_id == prescription_id)
             .distinct()
             .all()
         )
 
-    # 按入血概率加权平均预计算雷达分数
-    anti_scores = [(c.radar_anti_inflammatory, c.prob_cctcm or 0.5) for c in compounds if c.radar_anti_inflammatory is not None]
-    immune_scores = [(c.radar_immune_regulation, c.prob_cctcm or 0.5) for c in compounds if c.radar_immune_regulation is not None]
-    repair_scores = [(c.radar_airway_repair, c.prob_cctcm or 0.5) for c in compounds if c.radar_airway_repair is not None]
+    # 按入血概率加权平均 GSEA 雷达分数
+    anti_scores = [(c.radar_anti_inflammatory_gsea, c.prob_cctcm or 0.5) for c in compounds if c.radar_anti_inflammatory_gsea is not None]
+    immune_scores = [(c.radar_immune_regulation_gsea, c.prob_cctcm or 0.5) for c in compounds if c.radar_immune_regulation_gsea is not None]
+    repair_scores = [(c.radar_airway_repair_gsea, c.prob_cctcm or 0.5) for c in compounds if c.radar_airway_repair_gsea is not None]
 
     def weighted_avg(pairs):
         if not pairs:
@@ -422,14 +422,14 @@ async def get_prescription_radar(
         ]
         return ResponseModel(data=data)
 
-    # 降级2：预计算字段全为 NULL，使用 GSEA 富集分析
+    # 降级2：GSEA 字段全为 NULL，直接调用 Enrichr 富集分析
     gene_rows = (
         db.query(Target.gene)
         .join(RelCompoundTarget, RelCompoundTarget.target_gene == Target.gene)
         .join(Compound, Compound.id == RelCompoundTarget.compound_id)
         .join(RelHerbCompound, RelHerbCompound.compound_id == Compound.id)
         .join(Herb, Herb.id == RelHerbCompound.herb_id)
-        .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_name == Herb.name)
+        .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_id == Herb.id)
         .filter(RelPrescriptionHerb.prescription_id == prescription_id)
         .distinct()
         .all()
@@ -473,7 +473,7 @@ async def get_prescription_compounds(
         )
         .join(RelHerbCompound, RelHerbCompound.compound_id == Compound.id)
         .join(Herb, Herb.id == RelHerbCompound.herb_id)
-        .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_name == Herb.name)
+        .join(RelPrescriptionHerb, RelPrescriptionHerb.herb_id == Herb.id)
         .filter(RelPrescriptionHerb.prescription_id == prescription_id)
     )
 
