@@ -138,13 +138,22 @@ def repair_compound_props(con, apply):
     RDLogger.DisableLog("rdApp.*")
 
     # 导师理化表：按 SMILES 反查真实 logP
+    # 注意：该表有 957 行整体右移一列（LogS 列填了分子式、LogD 列填了分子量、
+    #       LogP 列填了重原子数），这些行的 LogP 不可用，必须排除
     wb = openpyxl.load_workbook(XLSX_PHYSCHEM, read_only=True, data_only=True)
     ws = wb[wb.sheetnames[0]]
     phys_by_smiles = {}
+    shifted = 0
     for r in ws.iter_rows(min_row=3, values_only=True):
-        if r[1]:
-            phys_by_smiles.setdefault(str(r[1]).strip(), r)
+        if not r[1]:
+            continue
+        # 错位判定：LogS 列存的是分子式字符串而非数值
+        if isinstance(r[2], str):
+            shifted += 1
+            continue
+        phys_by_smiles.setdefault(str(r[1]).strip(), r)
     wb.close()
+    print(f"  理化表跳过 {shifted} 行错位数据（LogS 列为分子式字符串）")
 
     # 化合物主表：按化合物代码反查权威 SMILES（用于修复库内损坏的 SMILES）
     wb = openpyxl.load_workbook(XLSX_COMPOUND, read_only=True, data_only=True)
