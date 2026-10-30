@@ -6,6 +6,7 @@
 
 ## 目录
 
+- [界面预览](#界面预览)
 - [系统架构](#系统架构)
 - [核心功能](#核心功能)
 - [入血预测模型（V2）](#入血预测模型v2)
@@ -16,6 +17,36 @@
 - [配置说明](#配置说明)
 - [项目结构](#项目结构)
 - [License](#license)
+
+## 界面预览
+
+### 入血预测控制台
+
+单化合物精准预测：粘贴 SMILES 结构式，实时返回入血概率、预测等级与 19 维特征明细。
+
+![入血预测-单化合物](screenshots/02-prediction-result.png)
+
+批量文件预测：上传 `.xlsx` / `.csv`（须含 SMILES 列），服务端矩阵化批量推理。
+
+![入血预测-批量](screenshots/03-prediction-batch.png)
+
+### 工作台
+
+![工作台](screenshots/04-home.png)
+
+### 方剂智能分析
+
+方剂详情：核心入血化合物排序 + 疗效雷达图。
+
+![方剂详情](screenshots/05-prescription-network.png)
+
+方剂—中药—化合物—靶点异构网络图谱（Cytoscape.js）。
+
+![网络图谱](screenshots/06-network-graph.png)
+
+### 化合物库
+
+![化合物库](screenshots/07-compounds.png)
 
 ## 系统架构
 
