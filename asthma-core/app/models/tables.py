@@ -77,9 +77,13 @@ class Compound(Base):
 
     asthma_related = Column(Boolean, default=False, comment='是否哮喘相关')
 
-    radar_anti_inflammatory = Column(Float, comment='抗炎评分')
-    radar_immune_regulation = Column(Float, comment='免疫调节评分')
-    radar_airway_repair = Column(Float, comment='气道修复评分')
+    radar_anti_inflammatory = Column(Float, comment='抗炎评分（旧值，来源未核实，勿用于新分析）')
+    radar_immune_regulation = Column(Float, comment='免疫调节评分（旧值，来源未核实，勿用于新分析）')
+    radar_airway_repair = Column(Float, comment='气道修复评分（旧值，来源未核实，勿用于新分析）')
+
+    radar_anti_inflammatory_gsea = Column(Float, comment='抗炎评分（Enrichr GSEA 实测）')
+    radar_immune_regulation_gsea = Column(Float, comment='免疫调节评分（Enrichr GSEA 实测）')
+    radar_airway_repair_gsea = Column(Float, comment='气道修复评分（Enrichr GSEA 实测）')
 
     target_count = Column(Integer, comment='靶点数量')
     create_time = Column(DateTime, default=datetime.now, comment='创建时间')

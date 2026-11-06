@@ -8,7 +8,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from sqlalchemy.exc import SQLAlchemyError
 
-from app.routers import system, prescriptions, herbs, compounds, prediction, expert, auth, custom_prescription
+from app.routers import system, prescriptions, herbs, compounds, prediction, expert, auth, custom_prescription, ai
 from app.schemas import ResponseModel
 from app.core.config import CORS_ORIGINS
 
@@ -69,6 +69,7 @@ app.include_router(compounds.router, prefix="/api/v1/compounds", tags=["化合�
 app.include_router(prediction.router, prefix="/api/v1/prediction", tags=["入血预测"])
 app.include_router(expert.router, prefix="/api/v1/expert", tags=["专家模式"])
 app.include_router(custom_prescription.router, prefix="/api/v1/prescriptions", tags=["自定义处方分析"])
+app.include_router(ai.router, prefix="/api/v1/ai", tags=["AI 智能问答"])
 
 
 @app.get("/")

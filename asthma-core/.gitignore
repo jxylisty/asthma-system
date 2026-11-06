@@ -43,3 +43,8 @@ check_api*.py
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# === 数据修复中间产物 ===
+scripts/gsea_cache.json
+scripts/reports/
+*.log
