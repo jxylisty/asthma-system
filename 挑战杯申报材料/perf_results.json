@@ -1,0 +1,83 @@
+[
+  {
+    "endpoint": "/api/v1/health",
+    "n": 7,
+    "p50_ms": 21.4,
+    "p95_ms": 24.4,
+    "min_ms": 14.4,
+    "max_ms": 26.3,
+    "size_kb": 0.2
+  },
+  {
+    "endpoint": "/api/v1/recipes?page=1&size=10",
+    "n": 7,
+    "p50_ms": 178.8,
+    "p95_ms": 319.1,
+    "min_ms": 89.2,
+    "max_ms": 349.3,
+    "size_kb": 2.6
+  },
+  {
+    "endpoint": "/api/v1/recipes/1",
+    "n": 7,
+    "p50_ms": 41.2,
+    "p95_ms": 46.2,
+    "min_ms": 31.0,
+    "max_ms": 51.2,
+    "size_kb": 4.1
+  },
+  {
+    "endpoint": "/api/v1/recipes/1/chain",
+    "n": 7,
+    "p50_ms": 90.3,
+    "p95_ms": 91.8,
+    "min_ms": 78.6,
+    "max_ms": 162.9,
+    "size_kb": 5.6
+  },
+  {
+    "endpoint": "/api/v1/herbs?page=1&size=20",
+    "n": 7,
+    "p50_ms": 25.2,
+    "p95_ms": 35.0,
+    "min_ms": 22.4,
+    "max_ms": 35.3,
+    "size_kb": 39.2
+  },
+  {
+    "endpoint": "/api/v1/compounds?page=1&size=20",
+    "n": 7,
+    "p50_ms": 41.1,
+    "p95_ms": 50.3,
+    "min_ms": 37.3,
+    "max_ms": 126.6,
+    "size_kb": 20.9
+  },
+  {
+    "endpoint": "/api/v1/explain/map?max_points=500",
+    "n": 7,
+    "p50_ms": 170.7,
+    "p95_ms": 181.7,
+    "min_ms": 163.9,
+    "max_ms": 252.6,
+    "size_kb": 106.1
+  },
+  {
+    "endpoint": "/api/v1/open/stats",
+    "n": 7,
+    "p50_ms": 24.6,
+    "p95_ms": 35.7,
+    "min_ms": 22.3,
+    "max_ms": 190.7,
+    "size_kb": 0.6
+  },
+  {
+    "endpoint": "/api/v1/recipes/1/exposure",
+    "n": 7,
+    "p50_ms": 28.5,
+    "p95_ms": 30.7,
+    "min_ms": 17.8,
+    "max_ms": 41.9,
+    "size_kb": 2.5
+  }
+]

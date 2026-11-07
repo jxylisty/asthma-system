@@ -1,0 +1,29 @@
+[
+  {
+    "load_ms": 638.7,
+    "networkidle_ms": 613.7,
+    "domContentLoaded": 271,
+    "loadEvent": 632,
+    "transferSize": 1005,
+    "resourceCount": 63,
+    "resourceBytes": 12526570
+  },
+  {
+    "load_ms": 569.3,
+    "networkidle_ms": 627.2,
+    "domContentLoaded": 236,
+    "loadEvent": 566,
+    "transferSize": 1005,
+    "resourceCount": 63,
+    "resourceBytes": 12526570
+  },
+  {
+    "load_ms": 639.9,
+    "networkidle_ms": 697.3,
+    "domContentLoaded": 212,
+    "loadEvent": 629,
+    "transferSize": 1005,
+    "resourceCount": 63,
+    "resourceBytes": 12526570
+  }
+]
